@@ -4,14 +4,15 @@ package Modelo;
 import java.util.ArrayList;
 import java.util.Random;
 import Modelo.Personaje;
+import java.util.Collections;
 
 
 public class Escenario {
     // Atributos y creacion de una matriz para el Escenario
     private Casilla[][] matrizEscenario = new Casilla[25][25];
     //Declaramos un atributo de tipo ArrayList el cual contendra elementos del tipo Personaje
-    private ArrayList<Personaje> listaPersonajesCPU;
-    private ArrayList<Personaje> listaPersonajesUsuario;
+    private ArrayList<Personaje> listaPersonajesCPU = new ArrayList<>();
+    private ArrayList<Personaje> listaPersonajesUsuario = new ArrayList<>();
     // Referencia de clase personaje para el constructor
     private Personaje personaje;
     
@@ -438,11 +439,7 @@ public class Escenario {
     en las que exista un personaje de la cpu
     */
     public void posicionarPjesCPU(){
-        
-        this.listaPersonajesCPU = new ArrayList<>();
 
-        
-        
        for(int nPjesCPU=0; nPjesCPU < 5;){
             
             
@@ -451,6 +448,7 @@ public class Escenario {
             int posY = (numero.nextInt(11) + 14);
             int tipoDeRol = (numero.nextInt(2));
             
+            int aumentadorDeVelocidad = 50;
             
             if(matrizEscenario[posX][posY].getTipoDeTerreno()== 3){
                 
@@ -467,6 +465,19 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(100);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(20);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(25+aumentadorDeVelocidad);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(50);
+                    
+                    aumentadorDeVelocidad =+ 100;
+                    
+                    
+                    
+                    
                     
                     System.out.println("SI SE PUSO");
                 }
@@ -477,6 +488,16 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(0);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(100);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(50+aumentadorDeVelocidad);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(20);
+                    
+                    aumentadorDeVelocidad =+ 100;
                      
                     
                     System.out.println("SISE PUSO ");
@@ -502,7 +523,11 @@ public class Escenario {
     
  
     public ArrayList<Personaje> getListaPersonajesCPU(){
-        return listaPersonajesCPU;
+        return this.listaPersonajesCPU;
+    }
+    
+    public ArrayList<Personaje> getListaPersonajesUsuario(){
+        return this.listaPersonajesCPU;
     }
     
     
@@ -513,9 +538,9 @@ public class Escenario {
     
     public void PosicionarPjesUsuario(){
         
-        this.listaPersonajesUsuario = new ArrayList<>();
-
         
+
+        int aumentadorDeVelocidad = 50;
         
        for(int nPjesUsuario=0; nPjesUsuario < 5;){
             
@@ -541,6 +566,17 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(100);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(20);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(25+aumentadorDeVelocidad);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(50);
+                    
+                    aumentadorDeVelocidad =+ 100;
+                    
                     System.out.println("SI SE PUSO");
                 }
                 else if(tipoDeRol == 1){
@@ -552,7 +588,19 @@ public class Escenario {
                     
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(0);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(100);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(50+aumentadorDeVelocidad);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(20);
+                    
+                    aumentadorDeVelocidad =+ 100;
+                    
                     System.out.println("SISE PUSO ");
+                    
                 
                 }
 
@@ -568,29 +616,69 @@ public class Escenario {
             }
     
         }
-      
+
+    }
+
+    public void ordenarTurnos(){
+        
+        ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
+        ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
+        int[] lista= new int[1000];
+        
+        
+        for(int numero: lista){    
+            for(Personaje personaje: listaPersonajesUsuario ){
+
+                if(personaje.getPuntosVelocidad() == numero){
+                    System.out.println("hola");
+                    listaTurnosUsuario.add(personaje);
+
+
+
+                }
+
+            }
+
+        }
+    
+        
+        
+        //Collections.reverse(this.listaPersonajesUsuario);
         
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        for(int numero: lista){ 
+            
+            for(Personaje personaje: listaPersonajesCPU ){
+
+                if(personaje.getPuntosVelocidad() == numero){
+                    
+                    listaTurnosCPU.add(personaje);
+
+
+
+                }
+
+            }
+
+        }
+
+        //Collections.reverse(listaPersonajesCPU);
+    
+    
+    
+        for(Personaje personaje: listaTurnosUsuario ){
+            System.out.println(personaje);
+            
+        }
+    
+        for(Personaje personaje: listaTurnosCPU){
+            System.out.println(personaje);
+            
+        }
+
+    
     }
     
     
@@ -603,7 +691,12 @@ public class Escenario {
     
     
     
-    public void ordenarTurnos(){}
+    
+    
+    
+    
+    
+    
     public void efectuarTurnos(){}
     public void eliminarPersonaje(){}
 

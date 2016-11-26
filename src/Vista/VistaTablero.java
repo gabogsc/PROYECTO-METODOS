@@ -9,6 +9,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 
@@ -75,9 +76,9 @@ public class VistaTablero extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnRegresarVT = new javax.swing.JButton();
-        Atacar = new javax.swing.JButton();
-        Mover = new javax.swing.JButton();
-        Pasar = new javax.swing.JButton();
+        btnAtacar = new javax.swing.JButton();
+        btnMover = new javax.swing.JButton();
+        btnPasar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 700));
@@ -96,11 +97,11 @@ public class VistaTablero extends javax.swing.JFrame {
 
         btnRegresarVT.setText("Regresar");
 
-        Atacar.setText("Atacar");
+        btnAtacar.setText("Atacar");
 
-        Mover.setText("Mover");
+        btnMover.setText("Mover");
 
-        Pasar.setText("Pasar");
+        btnPasar.setText("Pasar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -113,13 +114,13 @@ public class VistaTablero extends javax.swing.JFrame {
                     .addComponent(btnRegresarVT)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(61, 61, 61)
-                        .addComponent(Atacar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnAtacar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(Mover, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnMover, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(Pasar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnPasar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,20 +129,20 @@ public class VistaTablero extends javax.swing.JFrame {
                 .addGap(6, 6, 6)
                 .addComponent(btnRegresarVT)
                 .addGap(225, 225, 225)
-                .addComponent(Atacar)
+                .addComponent(btnAtacar)
                 .addGap(53, 53, 53)
-                .addComponent(Mover)
+                .addComponent(btnMover)
                 .addGap(58, 58, 58)
-                .addComponent(Pasar))
+                .addComponent(btnPasar))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Atacar;
-    private javax.swing.JButton Mover;
-    private javax.swing.JButton Pasar;
+    private javax.swing.JButton btnAtacar;
+    private javax.swing.JButton btnMover;
+    private javax.swing.JButton btnPasar;
     private javax.swing.JButton btnRegresarVT;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
@@ -149,13 +150,35 @@ public class VistaTablero extends javax.swing.JFrame {
     public void agregarListener(ActionListener al){ //metodo que escucha botones
         
         btnRegresarVT.addActionListener(al);
+        btnMover.addActionListener(al);
+        btnAtacar.addActionListener(al);
+        btnPasar.addActionListener(al);
         
         
         for(int i= 0; i<25; i++){
             for(int j= 0; j<25;j++){
                 matrizVista[i][j].setFocusPainted(true);
-                matrizVista[i][j].addActionListener(al); //escucha a todos los botones de la matriz
+                matrizVista[i][j].addActionListener(al);
+                //escucha a todos los botones de la matriz
                 matrizVista[i][j].setOpaque(true);
+
+            }
+        }
+    }
+    
+    
+    
+    public void agregarMouseListener(MouseListener m){ //metodo que escucha botones
+        
+       
+        
+        
+        for(int i= 0; i<25; i++){
+            for(int j= 0; j<25;j++){
+                
+                matrizVista[i][j].addMouseListener(m);
+                
+                
 
             }
         }
@@ -168,6 +191,20 @@ public class VistaTablero extends javax.swing.JFrame {
     public JButton[][] getMatrizVista() {
         return this.matrizVista;
     }
+
+    public JButton getBtnAtacar() {
+        return this.btnAtacar;
+    }
+
+    public JButton getBtnMover() {
+        return this.btnMover;
+    }
+
+    public JButton getBtnPasar() {
+        return this.btnPasar;
+    }
+    
+    
 
     
   
