@@ -489,7 +489,7 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
                     
-                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(0);
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(20);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(100);
                     
@@ -589,7 +589,7 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
-                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(0);
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(20);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(100);
                     
@@ -616,6 +616,9 @@ public class Escenario {
             }
     
         }
+       
+       
+       
 
     }
 
@@ -623,23 +626,25 @@ public class Escenario {
         
         ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
         ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
-        int[] lista= new int[1000];
+        int[] lista= new int[5];
         
         
-        for(int numero: lista){    
+          
             for(Personaje personaje: listaPersonajesUsuario ){
+                for(int numero: lista){  
+                    
+                    if(personaje.getPuntosVelocidad() == numero){
 
-                if(personaje.getPuntosVelocidad() == numero){
-                    System.out.println("hola");
-                    listaTurnosUsuario.add(personaje);
+                        System.out.println("hola");
+                        listaTurnosUsuario.add(personaje);
 
 
+
+                    }
 
                 }
 
             }
-
-        }
     
         
         
@@ -668,7 +673,7 @@ public class Escenario {
     
     
     
-        for(Personaje personaje: listaTurnosUsuario ){
+        for(Personaje personaje: listaTurnosUsuario){
             System.out.println(personaje);
             
         }

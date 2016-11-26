@@ -208,7 +208,7 @@ public class Personaje {
     }
 
     public int getPuntosVelocidad() {
-        return puntosVelocidad;
+        return this.puntosVelocidad;
     }
 
     public void setPuntosVelocidad(int puntosVelocidad) {

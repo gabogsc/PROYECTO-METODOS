@@ -38,7 +38,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
             this.esc.PosicionarPjesUsuario();
-            
+            this.esc.ordenarTurnos();
             
         }   
         else if(tipoDeAsignatura == 1){
@@ -494,23 +494,11 @@ public class ControladorTablero implements ActionListener{
             
         }
         
-        for(int i = 0;i<25;i++){
-            for(int j = 0;j<25;j++){
-        
-                if(this.vt.getMatrizVista()[i][j] ==e.getSource()){
-                    System.out.println("\n"+this.vt.matrizVista[i][j].getText());
-                    System.out.println(i+","+j);
-                    System.out.println(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno());
-                    System.out.println(this.esc.getMatrizEscenario()[i][j].isCaminable());
-                    System.out.println(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
-                    
-                
-                }
         
         
-            }   
-        }           
-    
+        
+        
+       
     
     
     
