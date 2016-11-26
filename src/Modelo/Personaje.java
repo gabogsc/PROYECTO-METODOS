@@ -30,13 +30,14 @@ public class Personaje {
     private int puntosMovimiento;
     private int puntosVelocidad;
     private int contrato;
-    private int tipoPersonaje;
+    private String tipoPersonaje;
     private String rolPersonaje;
     private ArrayList<String> inventario;
     private ArrayList<String> equipamiento;
+    private String BandoPersonaje;
     
     
-    public Personaje(String nombrePersonaje, int posX, int posY, int nivelPersonaje, int puntosExperiencia, int puntosVidaTotal, int puntosVidaActual, int putosAtaqueCorto, int putosAtaqueLargo, int putosAtaqueMagia, int putosMagia, int putosDefensa, int putosTraicion, int costePersonaje, int puntosMovimiento, int puntosVelocidad, int contrato, int tipoPersonaje, String rolPersonaje, ArrayList<String> inventario, ArrayList<String> equipamiento) {
+    public Personaje(String nombrePersonaje, int posX, int posY, int nivelPersonaje, int puntosExperiencia, int puntosVidaTotal, int puntosVidaActual, int putosAtaqueCorto, int putosAtaqueLargo, int putosAtaqueMagia, int putosMagia, int putosDefensa, int putosTraicion, int costePersonaje, int puntosMovimiento, int puntosVelocidad, int contrato, String tipoPersonaje, String rolPersonaje, ArrayList<String> inventario, ArrayList<String> equipamiento) {
         this.nombrePersonaje = nombrePersonaje;
         this.posicionX = posX;
         this.posicionY = posY;
@@ -76,12 +77,13 @@ public class Personaje {
         this.puntosMovimiento = 0;
         this.puntosVelocidad = 0;
         this.contrato = 0;
-        this.tipoPersonaje = 0;
+        this.tipoPersonaje = "";
         this.rolPersonaje = "";
         this.inventario = null;
         this.equipamiento = null;
         this.posicionX = 0;
         this.posicionY = 0;
+        this.BandoPersonaje = "";
 
     }
 
@@ -221,11 +223,11 @@ public class Personaje {
         this.contrato = contrato;
     }
 
-    public int getTipoPersonaje() {
+    public String getTipoPersonaje() {
         return tipoPersonaje;
     }
 
-    public void setTipoPersonaje(int tipoPersonaje) {
+    public void setTipoPersonaje(String tipoPersonaje) {
         this.tipoPersonaje = tipoPersonaje;
     }
 
@@ -252,6 +254,18 @@ public class Personaje {
     public void setEquipamiento(ArrayList<String> equipamiento) {
         this.equipamiento = equipamiento;
     }
+
+    public String getBandoPersonaje() {
+        return this.BandoPersonaje;
+    }
+
+    public void setBandoPersonaje(String BandoPersonaje) {
+        this.BandoPersonaje = BandoPersonaje;
+    }
+    
+    
+    
+    
 
     @Override
     public String toString() {

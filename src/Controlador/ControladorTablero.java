@@ -22,7 +22,7 @@ import java.awt.event.ActionListener;
 public class ControladorTablero implements ActionListener{
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
-    private Batalla b = new Batalla();
+    
 
     
    
@@ -31,12 +31,13 @@ public class ControladorTablero implements ActionListener{
     public ControladorTablero(int tipoDeAsignatura){
         // TIPO DE ASIGNATURA QUE ELIGIO EL USUARIO
         
-        this.b.setTablero(esc);
+        
         if(tipoDeAsignatura == 0){
             
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
+            this.esc.PosicionarPjesUsuario();
             
             
         }   
@@ -45,6 +46,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEspecialidad();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
+            this.esc.PosicionarPjesUsuario();
             
         }
         else if(tipoDeAsignatura == 2){
@@ -52,6 +54,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEconomia();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
+            this.esc.PosicionarPjesUsuario();
         }
             
         
@@ -371,30 +374,73 @@ public class ControladorTablero implements ActionListener{
                 
             
                 
-            
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
-                   this.vt.matrizVista[i][j].setText("G");
-                   
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje() == "malo"){    
+                    if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
 
+                       this.vt.matrizVista[i][j].setText("G");
+                       this.vt.matrizVista[i][j].setForeground(Color.red);
+
+                    }
+
+                    else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
+
+                        this.vt.matrizVista[i][j].setText("A");
+                        this.vt.matrizVista[i][j].setForeground(Color.red);
+
+                    }
                 }
-                
-                else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
-                    
-                    this.vt.matrizVista[i][j].setText("A");
-                    
-                    
-                }
-                
-            this.vt.matrizVista[i][j].setForeground(Color.red);
-            
-            
-            
-            
-            
-            
+
             }
     
         }
+
+        // REPRESENTACION DE LOS PERSONAJES DEL USUARIO EN EL TABLERO
+        
+        for (int i = 0;i<25; i++){
+            for(int j=0; j< 25; j++){
+                
+            
+                
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje() == "bueno"){    
+                    if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
+
+                       this.vt.matrizVista[i][j].setText("G");
+                       this.vt.matrizVista[i][j].setForeground(Color.GREEN);
+
+                    }
+
+                    else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
+
+                        this.vt.matrizVista[i][j].setText("A");
+                        this.vt.matrizVista[i][j].setForeground(Color.GREEN);
+
+                    }
+                }
+
+            }
+    
+        }
+        
+        
+        
+
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
@@ -423,11 +469,13 @@ public class ControladorTablero implements ActionListener{
         
                 if(this.vt.getMatrizVista()[i][j] ==e.getSource()){
                     
-                    System.out.println("\n"+i+","+j);
+                    System.out.println("\n"+this.vt.matrizVista[i][j].getText());
+                    System.out.println(i+","+j);
                     System.out.println(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno());
                     System.out.println(this.esc.getMatrizEscenario()[i][j].isCaminable());
                     System.out.println(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
                     
+                
                 }
         
         
@@ -444,6 +492,26 @@ public class ControladorTablero implements ActionListener{
     
     
     
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
     }
 }

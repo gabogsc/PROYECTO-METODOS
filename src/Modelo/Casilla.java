@@ -14,9 +14,10 @@ public class Casilla {
     private boolean caminable;
     private int tipoDeTerreno;
     
+    
     //Metodos
     public Personaje obtenerPersonaje(){
-        return personaje;
+        return this.personaje;
     }
     public boolean verificarPersonaje(int x, int y){
     return false;

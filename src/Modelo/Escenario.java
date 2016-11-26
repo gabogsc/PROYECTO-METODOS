@@ -11,7 +11,7 @@ public class Escenario {
     private Casilla[][] matrizEscenario = new Casilla[25][25];
     //Declaramos un atributo de tipo ArrayList el cual contendra elementos del tipo Personaje
     private ArrayList<Personaje> listaPersonajesCPU;
-
+    private ArrayList<Personaje> listaPersonajesUsuario;
     // Referencia de clase personaje para el constructor
     private Personaje personaje;
     
@@ -444,31 +444,41 @@ public class Escenario {
         
         
        for(int nPjesCPU=0; nPjesCPU < 5;){
-            //Personaje personaje = new Personaje();
+            
             
             Random numero = new Random();
             int posX = (numero.nextInt(25));
             int posY = (numero.nextInt(11) + 14);
-            int tipoPersonaje = (numero.nextInt(2));
+            int tipoDeRol = (numero.nextInt(2));
             
-            //System.out.println(posX + " " + posY);
-            //System.out.println("El tipo de terreno tomado es " + matrizEscenario[posX][posY].getTipoDeTerreno());
-
+            
             if(matrizEscenario[posX][posY].getTipoDeTerreno()== 3){
                 
-                System.out.println(nPjesCPU);
+                
                 System.out.println("NO SE PUSO PERSONAJE");
             }
 
             else {
-                if(tipoPersonaje == 0){
+                if(tipoDeRol == 0){
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
+                    
+                    
                     System.out.println("SI SE PUSO");
                 }
-                else if(tipoPersonaje == 1){
+                else if(tipoDeRol == 1){
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
+                     
+                    
                     System.out.println("SISE PUSO ");
                 
                 }
@@ -490,9 +500,108 @@ public class Escenario {
         }
     }
     
+ 
     public ArrayList<Personaje> getListaPersonajesCPU(){
         return listaPersonajesCPU;
     }
+    
+    
+    
+    
+    
+    
+    
+    public void PosicionarPjesUsuario(){
+        
+        this.listaPersonajesUsuario = new ArrayList<>();
+
+        
+        
+       for(int nPjesUsuario=0; nPjesUsuario < 5;){
+            
+            
+            Random numero = new Random();
+            int posX = (numero.nextInt(25));
+            int posY = (numero.nextInt(13));
+            int tipoDeRol = (numero.nextInt(2));
+            
+            
+            
+            if(matrizEscenario[posX][posY].getTipoDeTerreno()== 3){
+                
+                
+                System.out.println("NO SE PUSO PERSONAJE");
+            }
+
+            else {
+                if(tipoDeRol == 0){
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
+                   
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+                    System.out.println("SI SE PUSO");
+                }
+                else if(tipoDeRol == 1){
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+                    
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+                    System.out.println("SISE PUSO ");
+                
+                }
+
+                
+                matrizEscenario[posX][posY].setCaminable(false);
+                listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                
+                
+                nPjesUsuario++;
+                System.out.println(nPjesUsuario);
+                
+                
+            }
+    
+        }
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     public void ordenarTurnos(){}
     public void efectuarTurnos(){}
