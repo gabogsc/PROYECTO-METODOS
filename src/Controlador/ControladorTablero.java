@@ -63,6 +63,8 @@ public class ControladorTablero implements ActionListener{
         
         vt.agregarListener(this);
         
+        //Al posar el raton sobre una de las casillas
+        
         //Agregar nombre al personaje de la CPU en el tablero
         for (Personaje personaje: esc.getListaPersonajesCPU())
             this.vt.matrizVista[personaje.getPosX()][personaje.getPosY()].setText(personaje.getRolPersonaje());
@@ -364,7 +366,10 @@ public class ControladorTablero implements ActionListener{
                 }
              
             }
-        }   
+        }
+        
+
+        
         
 
         // REPRESENTACION DE LOS PERSONAJES DE LA CPU EN EL TABLERO
@@ -421,34 +426,59 @@ public class ControladorTablero implements ActionListener{
     
         }
         
+        //Mostrar datos por pantalla al usuario al posar el cursor sobre una de las casillas
         
-        
+        for (int i = 0;i<25; i++){
+            for(int j=0; j< 25; j++){
+              
+                String disponibilidad = null;
+                String terreno = null;
+                String altura = null;
+                String rol = null;
+                
+                //Definimos la coordenada en la que se posa el cursor
+                String coordenadas = "Posicion: " + (i+","+j) + "<br/>";
+                
+                
+                //Definimos la altura de la casilla
+                altura = "Altura: " + this.esc.getMatrizEscenario()[i][j].getAltura() + "<br/>";
+                
+                
+                //Ahora determinamos si la casilla en la que se posa el cursor es caminable
+                if (this.esc.getMatrizEscenario()[i][j].isCaminable() == true){
+                    disponibilidad = "Disponibilidad: Caminable" + "<br/>";
+                }
+                else{
+                    disponibilidad = "Disponibilidad: No Caminable" + "<br/>";
+                }
+                
+                
+                //Ahora determinamos el tipo de terreno en el que se posa el cursor
+                if(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno()== 0){
+                    terreno = "Tipo de terreno: Tierra" + "<br/>";
+                }
+                else if(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno()== 1){
+                    terreno = "Tipo de terreno: Bosque" + "<br/>";
+                }
+                else if(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno()== 2){
+                    terreno = "Tipo de terreno: Montaña" + "<br/>";
+                }
+                else{
+                    terreno = "Tipo de terreno: Rio" + "<br/>";
+                }
+                
+                
+                //Determinamos el rol de personaje si existe en la casilla
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
+                    rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje();
+                }
+                else{
+                    rol = "";
+                }
 
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+                this.vt.matrizVista[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + ".<html>");
+            }
+        }
     }
 
     @Override
@@ -468,7 +498,6 @@ public class ControladorTablero implements ActionListener{
             for(int j = 0;j<25;j++){
         
                 if(this.vt.getMatrizVista()[i][j] ==e.getSource()){
-                    
                     System.out.println("\n"+this.vt.matrizVista[i][j].getText());
                     System.out.println(i+","+j);
                     System.out.println(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno());
