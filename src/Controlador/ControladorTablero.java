@@ -47,7 +47,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
             this.esc.PosicionarPjesUsuario();
-            
+            this.esc.ordenarTurnos();
         }
         else if(tipoDeAsignatura == 2){
         
@@ -55,6 +55,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
             this.esc.PosicionarPjesUsuario();
+            this.esc.ordenarTurnos();
         }
             
         

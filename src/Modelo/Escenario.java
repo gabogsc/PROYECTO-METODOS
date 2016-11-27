@@ -674,8 +674,9 @@ public class Escenario {
         Collections.reverse(listaTurnosCPU);
     
     
-    
+        
         for(Personaje personaje: listaTurnosUsuario){
+            
             System.out.println(personaje);
             
         }
