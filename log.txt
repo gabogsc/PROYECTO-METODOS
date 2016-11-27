@@ -354,3 +354,8 @@
 2016/11/27 :: 11:10:44 =Usuario se logea
 2016/11/27 :: 11:13:28 =Usuario se logea
 2016/11/27 :: 12:06:13 =Usuario se logea
+2016/11/27 :: 15:07:07 =Usuario se logea
+2016/11/27 :: 15:11:23 =Usuario se logea
+2016/11/27 :: 15:13:04 =Usuario se logea
+2016/11/27 :: 15:18:30 =Usuario se logea
+2016/11/27 :: 15:19:48 =Usuario se logea

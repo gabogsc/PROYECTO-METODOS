@@ -635,50 +635,43 @@ public class Escenario {
         
         ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
         ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
-        int[] lista= new int[5];
+        int[] lista= new int[1000];
         
         
-          
-            for(Personaje personaje: listaPersonajesUsuario ){
-                for(int numero: lista){  
+        // CREAR LISTA DESDE EL 1 AL 1000
+        for (int a = 0; a < lista.length; a++) {
+            lista[a] = a + 1;
+        }  
+        
+        //RECORRER LA LISTA DE NUMEROS E IR COMPARANDOLOS CON EL ATRIBUTO PUNTOS DE VELOCIDAD E IR ORDENANDOLOS
+        for(int numero: lista){ 
+            for(Personaje personaje: listaPersonajesUsuario){
+                
+                if(personaje.getPuntosVelocidad() == numero){
+                    listaTurnosUsuario.add(personaje);
                     
-                    if(personaje.getPuntosVelocidad() == numero){
-
-                        System.out.println("hola");
-                        listaTurnosUsuario.add(personaje);
-
-
-                        
-                    }
-
                 }
-
             }
+        }
     
         
-        
-        //Collections.reverse(this.listaPersonajesUsuario);
-        
-        
+        //LA LISTA DE TURNOS USUARIO ESTAN ORDENADOS DE MAYOR A MENOR Y CON EL METODO SIGUIENTE LO DEJAREMOS DE MAYOR A MENOR
+        Collections.reverse(listaTurnosUsuario);
         
         
+        
+        //RECORRER LA LISTA DE NUMEROS E IR COMPARANDOLOS CON EL ATRIBUTO PUNTOS DE VELOCIDAD E IR ORDENANDOLOS
         for(int numero: lista){ 
-            
             for(Personaje personaje: listaPersonajesCPU ){
 
                 if(personaje.getPuntosVelocidad() == numero){
                     
                     listaTurnosCPU.add(personaje);
-
-
-
                 }
-
             }
-
         }
-
-        //Collections.reverse(listaPersonajesCPU);
+        //LA LISTA DE TURNOS DE CPU ESTAN ORDENADOS DE MAYOR A MENOR Y CON EL METODO SIGUIENTE LO DEJAREMOS DE MAYOR A MENOR
+        Collections.reverse(listaTurnosCPU);
     
     
     
