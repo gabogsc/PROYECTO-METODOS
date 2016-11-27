@@ -631,7 +631,7 @@ public class Escenario {
 
     }
 
-    public void ordenarTurnos(){
+    public ArrayList<Personaje> ordenarTurnosUsuario(){
         
         ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
         ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
@@ -653,12 +653,24 @@ public class Escenario {
                 }
             }
         }
-    
         
+        for(Personaje personaje: listaTurnosUsuario){
+            
+            System.out.println(personaje);
+            
+        }
         //LA LISTA DE TURNOS USUARIO ESTAN ORDENADOS DE MAYOR A MENOR Y CON EL METODO SIGUIENTE LO DEJAREMOS DE MAYOR A MENOR
         Collections.reverse(listaTurnosUsuario);
         
+        return listaTurnosUsuario;
+    }
         
+        
+        
+    public ArrayList<Personaje> ordenarTurnosCPU(){
+        
+        ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
+        int[] lista= new int[1000];
         
         //RECORRER LA LISTA DE NUMEROS E IR COMPARANDOLOS CON EL ATRIBUTO PUNTOS DE VELOCIDAD E IR ORDENANDOLOS
         for(int numero: lista){ 
@@ -672,23 +684,17 @@ public class Escenario {
         }
         //LA LISTA DE TURNOS DE CPU ESTAN ORDENADOS DE MAYOR A MENOR Y CON EL METODO SIGUIENTE LO DEJAREMOS DE MAYOR A MENOR
         Collections.reverse(listaTurnosCPU);
-    
-    
-        
-        for(Personaje personaje: listaTurnosUsuario){
-            
-            System.out.println(personaje);
-            
-        }
+
     
         for(Personaje personaje: listaTurnosCPU){
             System.out.println(personaje);
             
         }
-
-    
+        
+        return listaTurnosCPU;
+        
     }
-    
+
     
     
     
@@ -709,7 +715,6 @@ public class Escenario {
     public void eliminarPersonaje(){}
 
 
-    
     
     
     

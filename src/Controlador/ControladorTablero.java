@@ -38,7 +38,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
             this.esc.PosicionarPjesUsuario();
-            this.esc.ordenarTurnos();
+
             
         }   
         else if(tipoDeAsignatura == 1){
@@ -47,7 +47,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
             this.esc.PosicionarPjesUsuario();
-            this.esc.ordenarTurnos();
+
         }
         else if(tipoDeAsignatura == 2){
         
@@ -55,7 +55,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
             this.esc.PosicionarPjesUsuario();
-            this.esc.ordenarTurnos();
+
         }
             
         
@@ -484,16 +484,36 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //To change body of generated methods, choose Tools | Templates.
         
-        if(this.vt.getBtnRegresarVT()== e.getSource()){
+        for(Personaje personaje: esc.ordenarTurnosUsuario()){
             
-            vt.dispose();
-            ControladorRamos cr = new ControladorRamos();
+            if(e.getSource() == this.vt.getBtnRegresarVT()){
+            
+                vt.dispose();
+                ControladorRamos cr = new ControladorRamos(); 
+            }
+            
+            else if(e.getSource() == this.vt.getBtnMover()){
+                this.vt.getBtnMover().setEnabled(false);
+            }
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+
         }
+        
+
+
+        
+        
         
         
      
