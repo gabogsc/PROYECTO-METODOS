@@ -16,6 +16,7 @@ public class VistaForoGriego extends javax.swing.JFrame {
      */
     public VistaForoGriego() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

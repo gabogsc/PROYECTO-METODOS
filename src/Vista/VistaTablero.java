@@ -32,6 +32,7 @@ public class VistaTablero extends javax.swing.JFrame {
             e.printStackTrace();
         }
         initComponents();
+        setLocationRelativeTo(null);
         crearEscenario();
         //this.setPreferredSize(new Dimension(800,700));
     }

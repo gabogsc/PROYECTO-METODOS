@@ -16,6 +16,7 @@ public class VistaRamosEjecucion extends javax.swing.JFrame {
      */
     public VistaRamosEjecucion() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

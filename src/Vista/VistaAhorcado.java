@@ -27,6 +27,7 @@ public class VistaAhorcado extends javax.swing.JFrame {
      */
     public VistaAhorcado() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

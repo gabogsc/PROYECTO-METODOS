@@ -18,6 +18,7 @@ public class VistaPrincipalAhorcado extends javax.swing.JFrame {
      */
     public VistaPrincipalAhorcado() {
         initComponents();
+        setLocationRelativeTo(null);
         
     }
 

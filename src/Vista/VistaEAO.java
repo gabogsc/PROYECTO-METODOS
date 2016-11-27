@@ -16,6 +16,7 @@ public class VistaEAO extends javax.swing.JFrame {
      */
     public VistaEAO() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

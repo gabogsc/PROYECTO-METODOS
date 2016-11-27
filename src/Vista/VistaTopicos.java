@@ -18,6 +18,7 @@ public class VistaTopicos extends javax.swing.JFrame {
      */
     public VistaTopicos() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

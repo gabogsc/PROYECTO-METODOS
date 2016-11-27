@@ -19,6 +19,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
      */
     public VistaRamosCivil() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

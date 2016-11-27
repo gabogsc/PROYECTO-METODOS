@@ -20,6 +20,7 @@ public class VistaBibliotecaCentral extends javax.swing.JFrame {
      */
     public VistaBibliotecaCentral() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

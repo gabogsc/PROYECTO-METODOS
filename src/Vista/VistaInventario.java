@@ -16,6 +16,7 @@ public class VistaInventario extends javax.swing.JFrame {
      */
     public VistaInventario() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

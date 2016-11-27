@@ -29,7 +29,8 @@ public class ControladorBibliotecaCentral implements ActionListener{
     public void actionPerformed(ActionEvent e) {
       //To change body of generated methods, choose Tools | Templates.
         if(vbc.getBtnAdivinaLaPalabra() == e.getSource()){
-          
+            controladorInicioMenu cim = new controladorInicioMenu();
+            vbc.setVisible(false); 
           
         }
         if(vbc.getBtnPicApix() == e.getSource()){

@@ -23,6 +23,7 @@ public class VistaGato extends javax.swing.JFrame {
      */
     public VistaGato() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
