@@ -42,10 +42,12 @@ public class ControladorBibliotecaCentral implements ActionListener{
         }
         if(vbc.getBtnGato() == e.getSource()){
           ControladorGato cg = new ControladorGato();
-          vbc.setVisible(false);
+          vbc.dispose();
           
         }
         if(vbc.getBtnAhorcado() == e.getSource()){
+            ControladorPrincipalAhorcado cpa=new ControladorPrincipalAhorcado();
+            vbc.dispose();
           
           
         }
