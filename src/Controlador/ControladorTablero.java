@@ -67,7 +67,7 @@ public class ControladorTablero implements ActionListener{
         
         //Agregar nombre al personaje de la CPU en el tablero
         for (Personaje personaje: esc.getListaPersonajesCPU())
-            this.vt.matrizVista[personaje.getPosX()][personaje.getPosY()].setText(personaje.getRolPersonaje());
+            this.vt.getMatrizVista()[personaje.getPosX()][personaje.getPosY()].setText(personaje.getRolPersonaje());
         
         
         // LOS TIPOS DE TERRENOS QUE SE GENERARAN CON SUS ALTURAS RESPECTIVAS
@@ -82,7 +82,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "0" TIERRA
                        if(this.esc.getMatrizEscenario()[i][j].getAltura() == 0){
                         Color TonalidadTierra= new Color( 120, 66, 18 );
-                        this.vt.matrizVista[i][j].setBackground(TonalidadTierra);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadTierra);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("tierra");
@@ -90,7 +90,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "1" TIERRA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 1){
                         Color TonalidadTierra= new Color(147, 81, 22);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadTierra);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadTierra);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("tierra");
@@ -98,7 +98,7 @@ public class ControladorTablero implements ActionListener{
                     //ALTURA "2" TIERRA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 2){
                         Color TonalidadTierra= new Color( 202, 111, 30 );
-                        this.vt.matrizVista[i][j].setBackground(TonalidadTierra);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadTierra);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("tierra");
@@ -106,7 +106,7 @@ public class ControladorTablero implements ActionListener{
                     //ALTURA "3" TIERRA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 3){
                         Color TonalidadTierra= new Color( 230, 126, 34);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadTierra);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadTierra);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("tierra");
@@ -114,7 +114,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "4" TIERRA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 4){
                         Color TonalidadTierra= new Color( 245, 176, 65);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadTierra);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadTierra);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("tierra");
@@ -122,7 +122,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "5" TIERRA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 5){
                         Color TonalidadTierra= new Color(250, 215, 160);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadTierra);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadTierra);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("tierra");
@@ -137,7 +137,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "0" BOSQUE
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 0){
                         Color TonalidadBosque= new Color( 0, 100, 0 );
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -145,7 +145,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "1" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 1){
                         Color TonalidadBosque= new Color( 0, 115, 0 );
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -153,7 +153,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "2" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 2){
                         Color TonalidadBosque= new Color( 0, 130, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -161,7 +161,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "3" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 3){
                         Color TonalidadBosque= new Color( 0, 145, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -169,7 +169,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "4" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 4){
                         Color TonalidadBosque= new Color( 0, 160, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -177,7 +177,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "5" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 5){
                         Color TonalidadBosque= new Color( 0, 175, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -185,7 +185,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "6" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 6){
                         Color TonalidadBosque= new Color( 0, 190, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -193,7 +193,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "7" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 7){
                         Color TonalidadBosque= new Color( 0, 205, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -201,7 +201,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "8" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 8){
                         Color TonalidadBosque= new Color( 0, 220, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -209,7 +209,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "9" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 9){
                         Color TonalidadBosque= new Color( 0, 235, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -217,7 +217,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "10" BOSQUE
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 10){
                         Color TonalidadBosque= new Color( 0, 250, 0);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadBosque);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadBosque);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -231,7 +231,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "6" MONTAÑA
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 6){
                         Color TonalidadMontaña= new Color( 140, 140, 140);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadMontaña);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadMontaña);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Montaña");
@@ -239,7 +239,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "7" MONTAÑA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 7){
                         Color TonalidadMontaña= new Color( 161, 161, 161);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadMontaña);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadMontaña);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -247,7 +247,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "8" MONTAÑA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 8){
                         Color TonalidadMontaña= new Color( 182, 182, 182);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadMontaña);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadMontaña);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -255,7 +255,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "9" MONTAÑA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 9){
                         Color TonalidadMontaña= new Color( 203, 203, 203);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadMontaña);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadMontaña);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -263,7 +263,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "10" MONTAÑA
                     else if(this.esc.getMatrizEscenario()[i][j].getAltura() == 10){
                         Color TonalidadMontaña= new Color( 224, 224,224);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadMontaña);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadMontaña);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Bosque");
@@ -278,7 +278,7 @@ public class ControladorTablero implements ActionListener{
                     // ALTURA "0" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 0){
                         Color TonalidadRio= new Color( 0, 0, 100);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -286,7 +286,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "1" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 1){
                         Color TonalidadRio= new Color( 0, 0, 115);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -294,7 +294,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "2" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 2){
                         Color TonalidadRio= new Color( 0, 0, 130);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -302,7 +302,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "3" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 3){
                         Color TonalidadRio= new Color( 0, 0, 145);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -310,7 +310,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "4" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 4){
                         Color TonalidadRio= new Color( 0, 0, 160);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -318,7 +318,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "5" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 5){
                         Color TonalidadRio= new Color( 0, 0, 175);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -326,7 +326,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "6" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 6){
                         Color TonalidadRio= new Color( 0, 0, 190);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -334,7 +334,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "7" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 7){
                         Color TonalidadRio= new Color(0, 0, 205);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -342,7 +342,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "8" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 8){
                         Color TonalidadRio= new Color(0, 0, 220);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -350,7 +350,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "9" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 9){
                         Color TonalidadRio= new Color(0, 0, 235);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -358,7 +358,7 @@ public class ControladorTablero implements ActionListener{
                      // ALTURA "10" RIO
                     if(this.esc.getMatrizEscenario()[i][j].getAltura() == 10){
                         Color TonalidadRio= new Color(0, 0, 250);
-                        this.vt.matrizVista[i][j].setBackground(TonalidadRio);
+                        this.vt.getMatrizVista()[i][j].setBackground(TonalidadRio);
                         // PARA PROBAR COLORES
                         
                         //System.out.println("Rio");
@@ -382,15 +382,15 @@ public class ControladorTablero implements ActionListener{
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje() == "malo"){    
                     if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
 
-                       this.vt.matrizVista[i][j].setText("G");
-                       this.vt.matrizVista[i][j].setForeground(Color.red);
+                       this.vt.getMatrizVista()[i][j].setText("G");
+                       this.vt.getMatrizVista()[i][j].setForeground(Color.red);
 
                     }
 
                     else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
 
-                        this.vt.matrizVista[i][j].setText("A");
-                        this.vt.matrizVista[i][j].setForeground(Color.red);
+                        this.vt.getMatrizVista()[i][j].setText("A");
+                        this.vt.getMatrizVista()[i][j].setForeground(Color.red);
 
                     }
                 }
@@ -409,15 +409,15 @@ public class ControladorTablero implements ActionListener{
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje() == "bueno"){    
                     if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
 
-                       this.vt.matrizVista[i][j].setText("G");
-                       this.vt.matrizVista[i][j].setForeground(Color.GREEN);
+                       this.vt.getMatrizVista()[i][j].setText("G");
+                       this.vt.getMatrizVista()[i][j].setForeground(Color.GREEN);
 
                     }
 
                     else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
 
-                        this.vt.matrizVista[i][j].setText("A");
-                        this.vt.matrizVista[i][j].setForeground(Color.GREEN);
+                        this.vt.getMatrizVista()[i][j].setText("A");
+                        this.vt.getMatrizVista()[i][j].setForeground(Color.GREEN);
 
                     }
                 }
@@ -476,7 +476,7 @@ public class ControladorTablero implements ActionListener{
                     rol = "";
                 }
 
-                this.vt.matrizVista[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + ".<html>");
+                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + ".<html>");
             }
         }
     }
@@ -493,6 +493,42 @@ public class ControladorTablero implements ActionListener{
             
             
         }
+        
+        
+     
+        
+        for(Personaje personaje: this.esc.getListaPersonajesUsuario()){
+            
+            if(this.vt.getBtnMover()== e.getSource()){
+                this.vt.getBtnMover().setEnabled(false);
+                
+            //this.vt.clicken la casilla. == this.esc.getMatrizEscenario()[personaje.getPosX()][personaje.getPosy()]
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        }
+        
         
         
         

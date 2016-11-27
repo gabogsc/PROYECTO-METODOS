@@ -473,6 +473,7 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(50);
                     
+                    
                     aumentadorDeVelocidad =+ 100;
                     
                     
@@ -575,6 +576,10 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(50);
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+                    
                     aumentadorDeVelocidad =+ 100;
                     
                     System.out.println("SI SE PUSO");
@@ -596,6 +601,10 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(50+aumentadorDeVelocidad);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(20);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
                     
                     aumentadorDeVelocidad =+ 100;
                     
@@ -639,7 +648,7 @@ public class Escenario {
                         listaTurnosUsuario.add(personaje);
 
 
-
+                        
                     }
 
                 }
