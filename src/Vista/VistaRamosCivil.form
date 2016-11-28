@@ -24,13 +24,13 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <Component id="jButton1" min="-2" pref="100" max="-2" attributes="0"/>
+              <Component id="btnCalculoI" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton8" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-              <Component id="jButton13" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton19" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="14" pref="14" max="-2" attributes="0"/>
+              <Component id="jButton17" min="-2" pref="105" max="-2" attributes="0"/>
+              <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+              <Component id="jButton19" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton25" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -53,9 +53,9 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton9" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton14" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton14" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton20" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton20" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton26" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -76,9 +76,9 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton10" min="-2" pref="100" max="-2" attributes="0"/>
               <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
-              <Component id="jButton15" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton15" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton21" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton21" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton27" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -99,9 +99,9 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton11" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton16" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton16" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton22" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton22" min="-2" pref="105" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton28" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -118,19 +118,43 @@
               <Component id="jButton60" min="-2" max="-2" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
-              <Component id="jButton6" min="-2" pref="100" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jButton6" min="-2" pref="100" max="-2" attributes="0"/>
+                  <Component id="jButton7" min="-2" pref="100" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton12" min="-2" max="-2" attributes="0"/>
+              <Component id="jButton12" min="-2" pref="100" max="-2" attributes="0"/>
+              <EmptySpace min="11" pref="11" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="3" pref="3" max="-2" attributes="0"/>
+                      <Component id="btnFundaEconomia" min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="btnMetodosDeProgramacion" min="-2" pref="105" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton17" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jButton23" min="-2" pref="105" max="-2" attributes="0"/>
+                  <Component id="jButton24" min="-2" pref="105" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton23" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jButton29" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton30" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton29" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton35" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton41" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jButton35" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton36" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Component id="jButton41" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="jButton13" min="-2" max="-2" attributes="0"/>
+              </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton46" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
@@ -140,19 +164,6 @@
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="jButton61" min="-2" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
-              <Component id="jButton7" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-              <Component id="jButton3" min="-2" pref="100" max="-2" attributes="0"/>
-              <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" pref="105" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton24" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton30" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
-              <Component id="jButton36" min="-2" max="-2" attributes="0"/>
-          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -160,9 +171,9 @@
           <Group type="102" attributes="0">
               <EmptySpace min="90" pref="90" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton1" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="btnCalculoI" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton8" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jButton13" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Component id="jButton17" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton19" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton25" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton31" min="-2" pref="41" max="-2" attributes="0"/>
@@ -217,38 +228,49 @@
               </Group>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton6" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton6" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="jButton7" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="jButton12" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jButton17" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jButton23" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jButton29" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jButton35" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Component id="jButton41" min="-2" pref="41" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
+                      <Component id="btnFundaEconomia" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace min="4" pref="4" max="-2" attributes="0"/>
+                      <Component id="btnMetodosDeProgramacion" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton23" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="jButton24" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton29" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="jButton30" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton35" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                      <Component id="jButton36" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jButton41" min="-2" pref="41" max="-2" attributes="0"/>
+                      <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                      <Component id="jButton13" min="-2" pref="41" max="-2" attributes="0"/>
+                  </Group>
                   <Component id="jButton46" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton51" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton56" min="-2" pref="41" max="-2" attributes="0"/>
                   <Component id="jButton61" min="-2" pref="41" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jButton3" min="-2" pref="41" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="5" pref="5" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jButton7" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jButton2" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jButton24" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jButton30" min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="jButton36" min="-2" pref="41" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
               </Group>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="btnCalculoI">
       <Properties>
         <Property name="text" type="java.lang.String" value="CALCULO I"/>
         <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -262,23 +284,20 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton2">
+    <Component class="javax.swing.JButton" name="btnMetodosDeProgramacion">
       <Properties>
         <Property name="text" type="java.lang.String" value="METODOS"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnMetodosDeProgramacionActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
+    <Component class="javax.swing.JButton" name="btnFundaEconomia">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fundamentos de la Economia"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="FUNDAMENTOS DE LA ECONOMIA"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFundaEconomiaActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton4">
@@ -291,39 +310,27 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton5"/>
+        <Property name="text" type="java.lang.String" value="INTRODUCCION A LA INGENIERIA"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton6"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="TALLER DE DESARROLLO PERSONAL E INTEGRAL"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton7"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="METODOS DE ESTUDIO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton8"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="CALCULO II"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton9"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="ALGEBRA II"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
@@ -331,26 +338,17 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton10">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton10"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="FISICA II"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton11">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton11"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="QU&#xcd;MICA"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton12">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton12"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="FUNDAMENTOS DE LA COMPUTACI&#xd3;N Y LA PROGRAMACI&#xd3;N"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
@@ -366,34 +364,22 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton14">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton14"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="COMUNICACION EFECTIVA"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton15">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton15"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="INGLES I"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton16">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton16"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="ECUACIONES DIFERENCIALES"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton17">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton17"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="ELECTRICIDAD Y MAGENTISMO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton18">
@@ -403,50 +389,32 @@
     </Component>
     <Component class="javax.swing.JButton" name="jButton19">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton19"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="CALCULO III"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton20">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton20"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="INGLES II"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton21">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton21"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="ANALISIS ESTADISTICO"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton22">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton22"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="ESTRUCTURA DE COMPUTDORES"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton23">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton23"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="PARADIGMAS DE PROGRAMACI&#xd3;N"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton24">
       <Properties>
-        <Property name="text" type="java.lang.String" value="jButton24"/>
-        <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="null"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="ANALISIS DE DATOS Y ESTRUCTURA DE DATOS"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton25">

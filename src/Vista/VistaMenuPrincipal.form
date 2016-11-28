@@ -96,7 +96,7 @@
   <SubComponents>
     <Component class="javax.swing.JButton" name="btnRamos">
       <Properties>
-        <Property name="text" type="java.lang.String" value="RAMOS"/>
+        <Property name="text" type="java.lang.String" value="MALA CURRICULAR"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnForoGriego">

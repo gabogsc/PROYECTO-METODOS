@@ -37,18 +37,22 @@ public class ControladorLogin implements ActionListener {
         //To change body of generated methods, choose Tools | Templates.
         
         if(vl.getBtnIngresar()== e.getSource()){
+            //String usuario = this.vl.getTxtUsuario();
+            //if(this.vl.getTxtUsuario().equals("gabriel")){
+               // if(this.vl.getTxtContraseña().equals("gabriel")){
             
-            Otros.registroUsuario.actividadUsuario("Usuario se logea");
-            ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
-            vl.dispose();
+          
             
-            
-            
-            
-            
-        
-           
+                    Otros.registroUsuario.actividadUsuario("Usuario se logea");
+                    ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
+                    vl.dispose();
                 
+                
+              //  }else{ JOptionPane.showConfirmDialog(this.vl, "Constraseña Invalida", "error", HEIGHT);}
+                    
+                
+           // }else{ JOptionPane.showConfirmDialog(this.vl, "Usuario Invalido", "error", HEIGHT);}
+
         }
         
        

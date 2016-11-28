@@ -32,7 +32,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnRamos.setText("RAMOS");
+        btnRamos.setText("MALA CURRICULAR");
 
         btnForoGriego.setText("FORO GRIEGO");
 

@@ -37,18 +37,18 @@ public class ControladorRamos implements ActionListener{
         
         //To change body of generated methods, choose Tools | Templates.
         
-        if(vr.getjButton1() == e.getSource()){
+        if(vr.getBtnCalculoI()== e.getSource()){
             ControladorTablero ct = new ControladorTablero(0);
             vr.dispose();
             
         }
         
-        if(vr.getjButton2() == e.getSource()){
+        if(vr.getBtnMetodosDeProgramacion() == e.getSource()){
             ControladorTablero ct = new ControladorTablero(1);
             vr.dispose();
         }
         
-        if(vr.getjButton3() == e.getSource()){
+        if(vr.getBtnFundaEconomia() == e.getSource()){
             ControladorTablero ct = new ControladorTablero(2);
             vr.dispose();
         }
