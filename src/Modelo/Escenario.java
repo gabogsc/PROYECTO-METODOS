@@ -621,15 +621,9 @@ public class Escenario {
                 nPjesUsuario++;
                 System.out.println(nPjesUsuario);
                 
-                
-                
+  
             }
-    
         }
-       
-       
-       
-
     }
 
     public ArrayList<Personaje> ordenarTurnosUsuario(){
@@ -710,11 +704,11 @@ public class Escenario {
                     posicion.add(i);
                     posicion.add(j);
                     posicionesDeshabilitadas.add(posicion);
-                    System.out.println(i + "," + j);
+                    System.out.println(posicion);
                 }
             }
         }
-        
+        System.out.println(posicionesDeshabilitadas);
         return posicionesDeshabilitadas;
     }
     

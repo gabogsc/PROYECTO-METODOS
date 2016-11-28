@@ -100,7 +100,7 @@ public class Personaje {
     }
     
     public void setPosY(int posY){
-        this.posicionX = posY;
+        this.posicionY = posY;
     }
     
     public int getPosX(){

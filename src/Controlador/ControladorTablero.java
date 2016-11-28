@@ -492,11 +492,42 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        
+        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
+            int fila = personaje.getPosX();
+            int columna = personaje.getPosY();
+            
+            if(flagTurno){
+                
+                if(e.getSource() == this.vt.getBtnRegresarVT()){
+                    
+                }
+                
+                else if(e.getSource() == this.vt.getBtnMover()){
+                    this.vt.getBtnMover().setEnabled(false);
+                    for(ArrayList<Integer> posicion: this.esc.casillasFueraRango(fila, columna)){
+                        for (int i = 0;i<25; i++){
+                            for(int j=0; j< 25; j++){
+                                if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                    this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                    
+                                }
+                                
+                            }
+                            }
+                        
+                        }
+                    }
+                    
+                flagTurno = false;
+                }  
+            }
             
             
        
     }
-}
+    }
+
     
         
 
