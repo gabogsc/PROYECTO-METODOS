@@ -25,8 +25,7 @@ public class ControladorTablero implements ActionListener{
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
     private boolean flagTurno = true;
-    private boolean flag0 = true;
-    private boolean flag1 = false;
+    private boolean flagMover = false;
     
 
     
@@ -493,46 +492,64 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(vt.getAtaqueCorto()==e.getSource()){
-            cdm= new ControladorDefMonito();
-        }
-        else{
-            for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
+        
+        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             int fila = personaje.getPosX();
             int columna = personaje.getPosY();
-            
+
             if(flagTurno){
-                
+
                 if(e.getSource() == this.vt.getBtnRegresarVT()){
-                    
+
                 }
-                
+
                 else if(e.getSource() == this.vt.getBtnMover()){
                     this.vt.getBtnMover().setEnabled(false);
-                    for(ArrayList<Integer> posicion: this.esc.casillasFueraRango(fila, columna)){
+                    for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                         for (int i = 0;i<25; i++){
                             for(int j=0; j< 25; j++){
                                 if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                    this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
-                                    
+                                    this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.ORANGE);
+                                    flagTurno = false;
+                                    flagMover = true;
+
                                 }
-                                
                             }
-                            }
-                        
                         }
                     }
-                    
-                flagTurno = false;
-                }  
+                }
+
+                else if (e.getSource() == vt.getAtaqueCorto()){
+                    cdm= new ControladorDefMonito();
+                }     
+            }  
+
+            else if(flagMover){
+                for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                    if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                        if(personaje.getBandoPersonaje() == "bueno"){
+                            if(personaje.getRolPersonaje() == "Guerrero"){
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
+                            }
+
+                            else{
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
+
+                            }
+
+                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
+                            this.vt.matrizVista[fila][columna].setText("");
+                            personaje.setPosX(fila);
+                            personaje.setPosY(columna);
+                            flagMover = false;
+                            flagTurno = true;
+                        }
+                    }
+                }
             }
-            
-        }
-        
-            
-       
+        }  
     }
-    }
+}
 
     
         
@@ -544,8 +561,7 @@ public class ControladorTablero implements ActionListener{
         
         
      
-        
-        
+
             
             
             

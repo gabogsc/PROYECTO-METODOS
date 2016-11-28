@@ -693,7 +693,7 @@ public class Escenario {
     no adyacentes
     */
     
-    public ArrayList<ArrayList<Integer>> casillasFueraRango(int fila, int columna){
+    public ArrayList<ArrayList<Integer>> casillasEnRango(int fila, int columna){
         System.out.println(fila + "," + columna);
         
         ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();
