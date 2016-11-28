@@ -21,6 +21,7 @@ import java.util.ArrayList;
  * @author Gabriel
  */
 public class ControladorTablero implements ActionListener{
+    private ControladorDefMonito cdm;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
     private boolean flagTurno = true;
@@ -492,8 +493,11 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
-        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
+        if(vt.getAtaqueCorto()==e.getSource()){
+            cdm= new ControladorDefMonito();
+        }
+        else{
+            for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             int fila = personaje.getPosX();
             int columna = personaje.getPosY();
             
@@ -523,6 +527,8 @@ public class ControladorTablero implements ActionListener{
                 }  
             }
             
+        }
+        
             
        
     }
