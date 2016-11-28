@@ -622,6 +622,7 @@ public class Escenario {
                 System.out.println(nPjesUsuario);
                 
                 
+                
             }
     
         }
@@ -653,14 +654,13 @@ public class Escenario {
                 }
             }
         }
-        
-        for(Personaje personaje: listaTurnosUsuario){
-            
-            System.out.println(personaje);
-            
-        }
         //LA LISTA DE TURNOS USUARIO ESTAN ORDENADOS DE MAYOR A MENOR Y CON EL METODO SIGUIENTE LO DEJAREMOS DE MAYOR A MENOR
         Collections.reverse(listaTurnosUsuario);
+        
+         for(Personaje personaje: listaTurnosUsuario){
+            
+            System.out.println(personaje);
+        }
         
         return listaTurnosUsuario;
     }
@@ -694,6 +694,30 @@ public class Escenario {
         return listaTurnosCPU;
         
     }
+    
+    /*En este metodo creamos un ArrayList de ArrayList de enteros de aquellas casillas
+    no adyacentes
+    */
+    
+    public ArrayList<ArrayList<Integer>> casillasFueraRango(int fila, int columna){
+        System.out.println(fila + "," + columna);
+        
+        ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();
+        for(int i = 0; i < 25; i++){
+            for( int j = 0; j < 25; j++){
+                ArrayList<Integer> posicion = new ArrayList<>();
+                if((fila==i || fila==(i+2) || fila==(i-2) || fila==(i+1) || fila==(i-1)) && (columna==j || columna==(j+2) || columna==(j-2) || columna==(j+1) || columna==(j-1))){
+                    posicion.add(i);
+                    posicion.add(j);
+                    posicionesDeshabilitadas.add(posicion);
+                    System.out.println(i + "," + j);
+                }
+            }
+        }
+        
+        return posicionesDeshabilitadas;
+    }
+    
 
     
     
@@ -711,7 +735,7 @@ public class Escenario {
     
     
     
-    public void efectuarTurnos(){}
+
     public void eliminarPersonaje(){}
 
 

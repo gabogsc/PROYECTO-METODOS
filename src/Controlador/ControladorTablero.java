@@ -13,6 +13,7 @@ import Vista.VistaTablero;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 
 /**
@@ -22,6 +23,9 @@ import java.awt.event.ActionListener;
 public class ControladorTablero implements ActionListener{
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
+    private boolean flagTurno = true;
+    private boolean flag0 = true;
+    private boolean flag1 = false;
     
 
     
@@ -480,36 +484,22 @@ public class ControladorTablero implements ActionListener{
                 this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + ".<html>");
             }
         }
+        
+        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
+            System.out.println(personaje.getPosX() + "," + personaje.getPosY());
+        }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+            
+            
+       
+    }
+}
+    
         
-        for(Personaje personaje: esc.ordenarTurnosUsuario()){
-            
-            if(e.getSource() == this.vt.getBtnRegresarVT()){
-            
-                vt.dispose();
-                ControladorRamos cr = new ControladorRamos(); 
-            }
-            
-            else if(e.getSource() == this.vt.getBtnMover()){
-                this.vt.getBtnMover().setEnabled(false);
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
-        }
-        
 
 
         
@@ -518,27 +508,7 @@ public class ControladorTablero implements ActionListener{
         
      
         
-        for(Personaje personaje: this.esc.getListaPersonajesUsuario()){
-            
-            if(this.vt.getBtnMover()== e.getSource()){
-                this.vt.getBtnMover().setEnabled(false);
-                
-            //this.vt.clicken la casilla. == this.esc.getMatrizEscenario()[personaje.getPosX()][personaje.getPosy()]
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-            }
+        
             
             
             
@@ -547,8 +517,7 @@ public class ControladorTablero implements ActionListener{
             
             
             
-            
-        }
+        
         
         
         
@@ -587,8 +556,8 @@ public class ControladorTablero implements ActionListener{
         
         
     
-    }
-}
+    
+
     
     
     
