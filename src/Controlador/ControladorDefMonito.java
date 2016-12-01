@@ -28,12 +28,13 @@ public class ControladorDefMonito implements ActionListener {
     public void actionPerformed(ActionEvent e){
         if(vdm.getCharizards()==e.getSource()){
             System.out.println("Se selecciono charizards");
-            vdm.dispose();
+            this.vdm.dispose();
             this.ruta1="src/Imagenes/Charizard X.jpg";
             this.nombreRuta1="Charizard X";
             this.ruta2="src/Imagenes/Charizard Y.jpg";
             this.nombreRuta2="Charizard Y";
             cbc= new ControladorBatallaCorta();
+            vdm.dispose();
             
             
             

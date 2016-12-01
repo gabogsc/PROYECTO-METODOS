@@ -492,6 +492,9 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        if (e.getSource() == vt.getAtaqueCorto()){
+                    cdm= new ControladorDefMonito();
+                }     
         
         for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             int fila = personaje.getPosX();
@@ -519,9 +522,9 @@ public class ControladorTablero implements ActionListener{
                     }
                 }
 
-                else if (e.getSource() == vt.getAtaqueCorto()){
-                    cdm= new ControladorDefMonito();
-                }     
+                //else if (e.getSource() == vt.getAtaqueCorto()){
+                  //  cdm= new ControladorDefMonito();
+                //}     
             }  
 
             else if(flagMover){
