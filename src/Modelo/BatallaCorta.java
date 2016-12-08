@@ -5,7 +5,6 @@
  */
 package Modelo;
 import Controlador.ControladorBatallaCorta;
-import Controlador.ControladorDefMonito;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JButton;
@@ -17,7 +16,6 @@ import javax.swing.JLabel;
  */
 public class BatallaCorta {
     ControladorBatallaCorta cbc;
-    ControladorDefMonito cdm;
     ArrayList<Integer> ataquesJugador;
     ArrayList<Integer> ataquesEnemigo;
     ArrayList<String> ataquesEnemigoCod;

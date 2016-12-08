@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import Modelo.Personaje;
 import java.util.Collections;
+import javax.swing.JButton;
 
 
 public class Escenario {
@@ -15,6 +16,7 @@ public class Escenario {
     private ArrayList<Personaje> listaPersonajesUsuario = new ArrayList<>();
     // Referencia de clase personaje para el constructor
     private Personaje personaje;
+    int[] posicionesPersonajes;
     
     
 
@@ -39,7 +41,7 @@ public class Escenario {
     
     
     public void GenerarTerrenoAreaPlanComun(){
-        //Charlie pasao a pene
+        
         Random rnd = new Random();
         int tipoDeTerreno;
         int alturaTierra;
@@ -368,6 +370,7 @@ public class Escenario {
                         
                         riofaltante--;
                         matrizEscenario[i][j].setTipoDeTerreno(0);
+                        matrizEscenario[i][j].setCaminable(true);
                         matrizEscenario[i][j].setAltura(rndAux.nextInt(6));
                         tierraDemas++;
                  
@@ -416,6 +419,7 @@ public class Escenario {
                     if(contadorRio > 0){
                         
                         matrizEscenario[i][j].setTipoDeTerreno(3);
+                        matrizEscenario[i][j].setCaminable(false);
                         matrizEscenario[i][j].setAltura(rndAux.nextInt(11));
                         riofaltante++;
  
@@ -463,6 +467,10 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Guerrero malo");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/MegaLucarioShiny.png");
+                    
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(100);
@@ -487,6 +495,10 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Arquero malo");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/DecidueyeShiny.png");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("malo");
                     
@@ -556,7 +568,7 @@ public class Escenario {
             if(matrizEscenario[posX][posY].getTipoDeTerreno()== 3){
                 
                 
-                System.out.println("NO SE PUSO PERSONAJE");
+                System.out.println("NO SE PUSO PERSONAJE era un rio");
             }
 
             else {
@@ -567,6 +579,10 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Guerrero bueno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/MegaLucario.png");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(100);
                     
@@ -591,6 +607,9 @@ public class Escenario {
                     // TIPO DE BANDO == bueno, significa que es del equipo del usuario
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Arquero bueno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
@@ -616,9 +635,12 @@ public class Escenario {
                 
                 matrizEscenario[posX][posY].setCaminable(false);
                 listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                System.out.println("personaje Usuario");
+                System.out.println(listaPersonajesUsuario);
                 
                 
                 nPjesUsuario++;
+                System.out.println("numero personajes Usuario");
                 System.out.println(nPjesUsuario);
                 
   
@@ -631,6 +653,7 @@ public class Escenario {
         ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
         ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
         int[] lista= new int[1000];
+        posicionesPersonajes= new int[5];
         
         
         // CREAR LISTA DESDE EL 1 AL 1000
@@ -652,6 +675,7 @@ public class Escenario {
         Collections.reverse(listaTurnosUsuario);
         
          for(Personaje personaje: listaTurnosUsuario){
+             
             
             System.out.println(personaje);
         }
@@ -694,23 +718,138 @@ public class Escenario {
     */
     
     public ArrayList<ArrayList<Integer>> casillasEnRango(int fila, int columna){
-        System.out.println(fila + "," + columna);
+        //System.out.println("FILA Y COLUMNA INGRESADA");
+        //System.out.println(fila + "," + columna);
         
         ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();
         for(int i = 0; i < 25; i++){
             for( int j = 0; j < 25; j++){
                 ArrayList<Integer> posicion = new ArrayList<>();
-                if((fila==i || fila==(i+2) || fila==(i-2) || fila==(i+1) || fila==(i-1)) && (columna==j || columna==(j+2) || columna==(j-2) || columna==(j+1) || columna==(j-1))){
-                    posicion.add(i);
+                if((fila==i || fila==(i+1) || fila==(i-1)) && (columna==j || columna==(j+1) || columna==(j-1))){
+                    if((fila==(i+1) && columna==(j+1) || fila==(i-1)&&columna==(j-1)|| fila==(i+1)&& columna==(j-1)||fila==(i-1)&& columna==(j+1))){
+                        
+                    }else{
+                        posicion.add(i);
                     posicion.add(j);
                     posicionesDeshabilitadas.add(posicion);
-                    System.out.println(posicion);
+                    }
+                    
                 }
             }
         }
-        System.out.println(posicionesDeshabilitadas);
         return posicionesDeshabilitadas;
     }
+    public ArrayList<ArrayList<Integer>> casillasEnRangoAtaque(int fila, int columna){
+        //System.out.println("FILA Y COLUMNA INGRESADA");
+        //System.out.println(fila + "," + columna);
+        ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();
+        for(int i = 0; i < 25; i++){
+            for( int j = 0; j < 25; j++){
+                ArrayList<Integer> posicion = new ArrayList<>();
+                if((fila==i||fila==(i+1)||fila==(i+2)||fila==(i+3)||fila==(i+4)||fila==(i+5)||fila==(i+6)||fila==(i+7)||fila==(i+8)|| fila==(i-1)||fila==(i-2)||fila==(i-3)||fila==(i-4)||fila==(i-5)||fila==(i-6)||fila==(i-7)||fila==(i-8))&&(columna==j||columna==(j+1)||columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8) ||columna==(j-1)||columna==(j-2)||columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                    if((fila==(i+5)&&columna==(j+5)||fila==(i+6)&&columna==(j+6)||fila==(i+7)&&columna==(j+7)||fila==(i+8)&&columna==(j+8)||fila==(i-5)&&columna==(j-5)||fila==(i-6)&&columna==(j-6)||fila==(i-7)&&columna==(j-7)||fila==(i-8)&&columna==(j-8))){
+                        
+                    }else if(fila==(i+8)&&(columna==(j+1)||columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+7)&&(columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+6)&&(columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+5)&&(columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+4)&&(columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+3)&&(columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+2)&&(columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i+1)&&(columna==(j+8))){
+                        
+                    }else if(fila==(i+8)&&(columna==(j-1)||columna==(j-2)||columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+7)&&(columna==(j-2)||columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+6)&&(columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+5)&&(columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+4)&&(columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+3)&&(columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+2)&&(columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i+1)&&(columna==(j-8))){
+                        
+                    }else if(fila==(i-8)&&(columna==(j+1)||columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7))){
+                        
+                    }else if(fila==(i-7)&&(columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i-6)&&(columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i-5)&&(columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i-4)&&(columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i-3)&&(columna==(j+6)||columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i-2)&&(columna==(j+7)||columna==(j+8))){
+                        
+                    }else if(fila==(i-1)&&(columna==(j+8))){
+                        
+                    }else if(fila==(i-8)&&(columna==(j-1)||columna==(j-2)||columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7))){
+                        
+                    }else if(fila==(i-7)&&(columna==(j-2)||columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i-6)&&(columna==(j-3)||columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i-5)&&(columna==(j-4)||columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i-4)&&(columna==(j-5)||columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i-3)&&(columna==(j-6)||columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i-2)&&(columna==(j-7)||columna==(j-8))){
+                        
+                    }else if(fila==(i-1)&&(columna==(j-8))){
+                        
+                    }else if(fila==(i+3)&&(columna==(j+1)||columna==(j-1))){
+                        
+                    }else if(fila==(i-3)&&(columna==(j+1)||columna==(j-1))){
+                        
+                    }else if(fila==(i+2)&&(columna==(j+1)||columna==(j-1))){
+                        
+                    }else if(fila==(i-2)&&(columna==(j+1)||columna==(j-1))){
+                        
+                    }else if(fila==(i+1)&&(columna==(j+2)||columna==(j-2))){
+                        
+                    }else if(fila==(i-1)&&(columna==(j+2)||columna==(j-2))){
+                        
+                    }else if(fila==(i+2)&&(columna==(j+2)||columna==(j-2))){
+                        
+                    }else if(fila==(i-2)&&(columna==(j+2)||columna==(j-2))){
+                        
+                    }else if(fila==(i+1)&&(columna==(j+3)||columna==(j-3))){
+                        
+                    }else if(fila==(i-1)&&(columna==(j+3)||columna==(j-3))){
+                        
+                    }else if((fila==(i+3)||fila==(i+4)||fila==(i-3)||fila==(i-4))&& columna==j){
+                        
+                    }else if(fila==i && (columna==(j+3)||columna==(j+4)||columna==(j-3)||columna==(j-4))){
+                        
+                    }else{
+                        posicion.add(i);
+                    posicion.add(j);
+                    posicionesDeshabilitadas.add(posicion);
+                    }
+                    
+                }
+            }
+        }
+        return posicionesDeshabilitadas;
+    }
+    
+    
     
 
     

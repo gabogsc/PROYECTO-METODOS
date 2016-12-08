@@ -21,11 +21,14 @@ import java.util.ArrayList;
  * @author Gabriel
  */
 public class ControladorTablero implements ActionListener{
-    private ControladorDefMonito cdm;
+    private ControladorRamos cr;
+    private ControladorBatallaCorta bct;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
     private boolean flagTurno = true;
     private boolean flagMover = false;
+    private boolean flagAtacar = false;
+    private int contadorMovimientos;
     
 
     
@@ -492,61 +495,153 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() == vt.getAtaqueCorto()){
-                    cdm= new ControladorDefMonito();
-                }     
+        if(e.getSource() == this.vt.getBtnRegresarVT()){
+            cr=new ControladorRamos();
+            vt.dispose();
+
+                }
         
         for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             int fila = personaje.getPosX();
             int columna = personaje.getPosY();
-
+            int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
+            Personaje jugador=personaje;
+            System.out.println("posicion "+fila+","+columna);
             if(flagTurno){
+                if(e.getSource() == this.vt.getBtnMover()){
+                    if(contadorMovimientos<=3){
+                        if(contadorMovimientos==3){
+                            this.vt.getBtnMover().setEnabled(false);
+                            
+                            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                                for (int i = 0;i<25; i++){
+                                    for(int j=0; j< 25; j++){
+                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                            flagTurno = false;
+                                            flagMover = true;
 
-                if(e.getSource() == this.vt.getBtnRegresarVT()){
+                                            }
+                                        }
+                                    }
+                        
+                             }
+                        }else{
+                            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                                for (int i = 0;i<25; i++){
+                                    for(int j=0; j< 25; j++){
+                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                            flagTurno = false;
+                                            flagMover = true;
 
-                }
-
-                else if(e.getSource() == this.vt.getBtnMover()){
-                    this.vt.getBtnMover().setEnabled(false);
-                    for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
-                        for (int i = 0;i<25; i++){
-                            for(int j=0; j< 25; j++){
-                                if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                    this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.ORANGE);
-                                    flagTurno = false;
-                                    flagMover = true;
-
+                                            }
+                                        }
+                                    }
                                 }
                             }
+                        
                         }
-                    }
-                }
+                    }else if(e.getSource()==vt.getBtnAtacar()){
+                        for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                                for (int i = 0;i<25; i++){
+                                    for(int j=0; j< 25; j++){
+                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                            flagTurno = false;
+                                            flagAtacar = true;
 
-                //else if (e.getSource() == vt.getAtaqueCorto()){
-                  //  cdm= new ControladorDefMonito();
-                //}     
-            }  
-
-            else if(flagMover){
+                                            }
+                                        }
+                                    }
+                        
+                             }
+                        
+                    }   
+            } else if(flagMover){
                 for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                     if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
-                        if(personaje.getBandoPersonaje() == "bueno"){
-                            if(personaje.getRolPersonaje() == "Guerrero"){
-                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
+                        int alturaFinal=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
+                        if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno()==3){
+                            contadorMovimientos=contadorMovimientos;
+                        }else{
+                            if(alturaFinal-alturaInicial>2 || alturaFinal-alturaInicial<(-2)){
+                                contadorMovimientos=contadorMovimientos;
+                            }else{
+                                if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable()==false){
+                                    contadorMovimientos=contadorMovimientos;
+                                }else{
+                                    if(personaje.getBandoPersonaje() == "bueno"){
+                                        if(personaje.getRolPersonaje() == "Guerrero"){
+                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
+                                            this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+                                            
+                                            }
+
+                                            else{
+                                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
+                                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+
+                                            }
+
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
+                                        this.vt.matrizVista[fila][columna].setText("");
+                                        this.esc.getMatrizEscenario()[fila][columna].setCaminable(true);
+                                        System.out.println("posicion despues de mover "+posicion.get(0)+","+posicion.get(1));
+                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
+                                        personaje.setPosX(posicion.get(0));
+                                        personaje.setPosY(posicion.get(1));
+                                        flagMover = false;
+                                        flagTurno = true;
+                                        contadorMovimientos++;
+                                        }
+                                 }
                             }
-
-                            else{
-                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
-
-                            }
-
-                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
-                            this.vt.matrizVista[fila][columna].setText("");
-                            personaje.setPosX(fila);
-                            personaje.setPosY(columna);
-                            flagMover = false;
-                            flagTurno = true;
                         }
+                        
+                    }
+                }
+            }else if(flagAtacar){
+                for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                    if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                        if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
+                            System.out.println("ATAQUE CORTO MUMU");
+                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                                System.out.println("NO HAY PERSONAJE");
+                            }else{
+                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                                bct=new ControladorBatallaCorta(personaje,enemigo);
+                            }
+                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+1||posicion.get(0)==fila+2||posicion.get(0)==fila-1||posicion.get(0)==fila-2)){
+                            System.out.println("ATAQUE CORTO MUMU");
+                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                                System.out.println("NO HAY PERSONAJE");
+                            }else{
+                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                                bct=new ControladorBatallaCorta(personaje,enemigo);
+                            }
+                        }else if(posicion.get(0)==fila+1&&(posicion.get(1)==columna-1||posicion.get(1)==columna+1)){
+                            System.out.println("ATAQUE CORTO MUMU");
+                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                                System.out.println("NO HAY PERSONAJE");
+                                
+                            }else{
+                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                                bct=new ControladorBatallaCorta(personaje,enemigo);
+                            }
+                        }else if(posicion.get(0)==fila-1&&(posicion.get(1)==columna-1||posicion.get(1)==columna+1)){
+                            System.out.println("ATAQUE CORTO MUMU");
+                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                                System.out.println("NO HAY PERSONAJE");
+                            }else{
+                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                                bct=new ControladorBatallaCorta(personaje,enemigo);
+                            }
+                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+5||posicion.get(0)==fila+6||posicion.get(0)==fila+7||posicion.get(0)==fila+8)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }
+                        
+                                               
                     }
                 }
             }

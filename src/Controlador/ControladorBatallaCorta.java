@@ -5,8 +5,6 @@
  */
 package Controlador;
 import Modelo.BatallaCorta;
-import Modelo.CharizardX;
-import Modelo.CharizardY;
 import Vista.VistaBatallaCorta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,23 +12,32 @@ import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import Modelo.Personaje;
 
 /**
  *
  * @author arru
  */
 public class ControladorBatallaCorta implements ActionListener{
-    CharizardX charix;
-    CharizardY chariy;
     VistaBatallaCorta vbc;
-    ControladorDefMonito cdm;
     int contadorAtaques=1;
     BatallaCorta bt;
     JLabel[][] espaciosEnemigo;
+    Personaje delJugador;
+    int hpJugador;
+    int ataqueJugador;
+    int defensaJugador;
+    String nombreJugador;
+    String enlaceJugador;
+    Personaje delEnemigo;
+    int hpEnemigo;
+    int ataqueEnemigo;
+    int defensaEnemigo;
+    String nombreEnemigo;
+    String enlaceEnemigo;
     
-    public ControladorBatallaCorta(){
-        charix= new CharizardX();
-        chariy= new CharizardY();
+    
+    public ControladorBatallaCorta(Personaje jugador, Personaje enemigo){
         bt= new BatallaCorta();
         vbc=new VistaBatallaCorta();
         vbc.setVisible(true);
@@ -45,18 +52,23 @@ public class ControladorBatallaCorta implements ActionListener{
         System.out.println(espacioNombreP);
         JLabel espacioNombreE=vbc.getNombreEnemigo();
         System.out.println(espacioNombreE);
-        String enlace1=ControladorDefMonito.ruta1;
-        System.out.println(enlace1);
-        String enlace2=ControladorDefMonito.ruta2;;
-        System.out.println(enlace2);
-        String nombreEnlace1=ControladorDefMonito.nombreRuta1;
-        System.out.println(nombreEnlace1);
-        String nombreEnlace2=ControladorDefMonito.nombreRuta2;
-        System.out.println(nombreEnlace1);
-        vbc.crearMonito(enlace1, espacioP);
-        vbc.crearMonito(enlace2, espacioE);
-        vbc.ponerNombre(nombreEnlace1, espacioNombreP);
-        vbc.ponerNombre(nombreEnlace2, espacioNombreE);
+        delJugador=jugador;
+        hpJugador= jugador.getPuntosVidaTotal();
+        ataqueJugador=jugador.getPuntosAtaqueCorto();
+        defensaJugador=jugador.getPuntosDefensa();
+        nombreJugador=jugador.getNombrePersonaje();
+        enlaceJugador=jugador.getRuta();
+        
+        delEnemigo=enemigo;
+        hpEnemigo=enemigo.getPuntosVidaTotal();
+        ataqueEnemigo=enemigo.getPuntosAtaqueCorto();
+        defensaEnemigo=enemigo.getPuntosDefensa();
+        nombreEnemigo=enemigo.getNombrePersonaje();
+        enlaceEnemigo=enemigo.getRuta();
+        vbc.crearMonito(enlaceJugador, espacioP);
+        vbc.crearMonito(enlaceEnemigo, espacioE);
+        vbc.ponerNombre(nombreJugador, espacioNombreP);
+        vbc.ponerNombre(nombreEnemigo, espacioNombreE);
         vbc.crearEspaciosJugador();
         vbc.crearEspaciosEnemigo();
         vbc.getCombatir().setEnabled(false);
@@ -238,26 +250,20 @@ public class ControladorBatallaCorta implements ActionListener{
                     //System.out.println(resultanyusFinal.get(i));
                 //}
                 System.out.println(resultanyusFinal);
-                int ataqueCharix=charix.getAtaque();
-                int defensaCharix=charix.getDefensa();
-                int hpCharix=charix.getHp();
-                int ataqueChariy=chariy.getAtaque();
-                int defensaChariy= chariy.getDefensa();
-                int hpChariy=chariy.getHp();
-                int[] daño= bt.calcularDaño(resultanyusFinal, hpCharix, ataqueCharix, defensaCharix, hpChariy, ataqueChariy, defensaChariy);
+                int[] daño= bt.calcularDaño(resultanyusFinal, hpJugador, ataqueJugador, defensaJugador, hpEnemigo, ataqueEnemigo, defensaEnemigo);
                 for(int i=0; i<2; i++){
                    System.out.println(daño[i]);
                 }
-                int HPActualJ= bt.restarHPJugador(daño, hpCharix);
-                int HPActualE= bt.restarHPEnemigo(daño, hpChariy);
+                int HPActualJ= bt.restarHPJugador(daño, hpJugador);
+                int HPActualE= bt.restarHPEnemigo(daño, hpEnemigo);
                 System.out.println("HP jugador antes de calculo daño");
-                System.out.println(hpCharix);
+                System.out.println(hpJugador);
                 System.out.println("HP enemigo antes de calculo daño");
-                System.out.println(hpChariy);
-                charix.cambiarHP(HPActualJ);
-                chariy.cambiarHP(HPActualE);
-                int HPFinalJ= charix.getHp();
-                int HPFinalE=chariy.getHp();
+                System.out.println(hpEnemigo);
+                delJugador.setPuntosVidaTotal(HPActualJ);
+                delEnemigo.setPuntosVidaTotal(HPActualE);
+                int HPFinalJ= delJugador.getPuntosVidaTotal();
+                int HPFinalE=delEnemigo.getPuntosVidaTotal();
                 System.out.println("HP jugador despues de calculo daño");
                 System.out.println(HPFinalJ);
                 System.out.println("HP enemigo despues de calculo daño");

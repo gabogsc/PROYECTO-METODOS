@@ -29,28 +29,20 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="btnRegresarVT" min="-2" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="18" pref="18" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnRegresarVT" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="61" pref="61" max="-2" attributes="0"/>
-                              <Component id="btnAtacar" min="-2" pref="100" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
-                              <Component id="btnMover" min="-2" pref="97" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
-                              <Component id="btnPasar" min="-2" pref="97" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <EmptySpace min="61" pref="61" max="-2" attributes="0"/>
+                      <Component id="btnAtacar" min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                      <Component id="ataqueCorto" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                      <Component id="btnMover" min="-2" pref="97" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
+                      <Component id="btnPasar" min="-2" pref="97" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -62,9 +54,7 @@
           <Group type="102" attributes="0">
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="btnRegresarVT" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
-              <Component id="ataqueCorto" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="225" max="-2" attributes="0"/>
               <Component id="btnAtacar" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
               <Component id="btnMover" min="-2" max="-2" attributes="0"/>
@@ -108,11 +98,6 @@
     <Component class="javax.swing.JButton" name="btnPasar">
       <Properties>
         <Property name="text" type="java.lang.String" value="Pasar"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="ataqueCorto">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Ataque corto :3"/>
       </Properties>
     </Component>
   </SubComponents>
