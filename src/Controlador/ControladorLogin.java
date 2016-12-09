@@ -7,9 +7,11 @@ package Controlador;
 
 import Modelo.Usuario;
 import Vista.VistaLogin;
+import Vista.vistaRegistro;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static java.awt.image.ImageObserver.HEIGHT;
+import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 /**
@@ -36,7 +38,7 @@ public class ControladorLogin implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         //To change body of generated methods, choose Tools | Templates.
         
-        if(vl.getBtnIngresar()== e.getSource()){
+        if(vl.getBtnIngresar()== (JButton)e.getSource()){
             //String usuario = this.vl.getTxtUsuario();
             //if(this.vl.getTxtUsuario().equals("gabriel")){
                // if(this.vl.getTxtContraseña().equals("gabriel")){
@@ -54,11 +56,15 @@ public class ControladorLogin implements ActionListener {
            // }else{ JOptionPane.showConfirmDialog(this.vl, "Usuario Invalido", "error", HEIGHT);}
 
         }
+        if(vl.getBtnRegistrar() == (JButton)e.getSource()){
+            ControladorRegistro cR = new ControladorRegistro();
+            vl.setVisible(false);
         
        
-    }
+        }
     
-    
+    } 
+}
         
         
         
@@ -66,7 +72,7 @@ public class ControladorLogin implements ActionListener {
         
         
         
-}          
+          
         
            
 
