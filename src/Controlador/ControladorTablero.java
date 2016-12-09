@@ -439,7 +439,10 @@ public class ControladorTablero implements ActionListener{
     
         }
         
-        //Mostrar datos por pantalla al usuario al posar el cursor sobre una de las casillas
+        /*Leyendas reacionadas a los datos mostrados por pantalla al posar el cursor
+        sober una de las casillas del tablero
+        */
+        
         
         for (int i = 0;i<25; i++){
             for(int j=0; j< 25; j++){
@@ -452,16 +455,17 @@ public class ControladorTablero implements ActionListener{
                 String puntosAtaqueCorto = null;
                 String traicion = "";
                 String vida = null;
+                String nombre = null;
                 
-                //Definimos la coordenada en la que se posa el cursor
+            //COORDENADAS
                 String coordenadas = "Posicion: " + (i+","+j) + "<br/>";
                 
                 
-                //Definimos la altura de la casilla
+            //ALTURA
                 altura = "Altura: " + this.esc.getMatrizEscenario()[i][j].getAltura() + "<br/>";
                 
                 
-                //Ahora determinamos si la casilla en la que se posa el cursor es caminable
+            //CAMINABLE
                 if (this.esc.getMatrizEscenario()[i][j].isCaminable() == true){
                     disponibilidad = "Disponibilidad: Caminable" + "<br/>";
                 }
@@ -470,7 +474,7 @@ public class ControladorTablero implements ActionListener{
                 }
                 
                 
-                //Ahora determinamos el tipo de terreno en el que se posa el cursor
+            //TIPO DE TERRENO
                 if(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno()== 0){
                     terreno = "Tipo de terreno: Tierra" + "<br/>";
                 }
@@ -485,50 +489,46 @@ public class ControladorTablero implements ActionListener{
                 }
                 
                 
-                //Determinamos el rol de personaje si existe en la casilla
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
-                    rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje();
-                }
-                else{
-                    rol = "";
-                }
-                
-                //Determinamos el rol de personaje si existe en la casilla
+            //ROL DEL PERSONAJE
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
                     traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + "ptos";
-
                 }
-                
                 else{
                     rol = "" + "<br/>";
                 }
                 
-                //Determinamos el ataque a largo alcance
+            //ATAQUE LARGO ALCANCE
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() != 0){
                     puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
                 }
-                
                 else{
                     puntosAtaqueLargo = "";
                 }
                 
-                //Determinamos el ataque a corto alcance
+            //ATAQUE CORTO ALCANCE
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() != 0){
                     puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
                 }
-                
                 else{
                     puntosAtaqueCorto = "";
                 }
                 
-                //Determinamos los puntos de vida del personaje
+            //PUNTOS VIDA PERSONAJE
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() != 0){
                     vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() + " ptos" + "<br/>";
                 }
-                
                 else{
                     vida = "";
+                }
+                
+            //NOMBRE DEL PERSONAJE
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getNombrePersonaje() != ""){
+                    nombre = "Nombre: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getNombrePersonaje() + "<br/>";
+                }
+                else{
+                    nombre = "";
+                    
                 }
                                 
 
@@ -536,7 +536,7 @@ public class ControladorTablero implements ActionListener{
                 Border border = BorderFactory.createLineBorder(new Color(76,79,83));    //#4c4f53
                 UIManager.put("ToolTip.border", border);
                 ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
-                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
+                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + nombre + rol + "<br/>" + vida + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
             }
         }
         
@@ -552,12 +552,13 @@ public class ControladorTablero implements ActionListener{
             vt.dispose();
 
                 }
-            Personaje personaje=personajesOrdenadosU.get(0);
+            Personaje personaje = personajesOrdenadosU.get(0);
             int fila = personaje.getPosX();
             int columna = personaje.getPosY();
             int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
-            Personaje jugador=personaje;
+            Personaje jugador = personaje;
             System.out.println("posicion "+fila+","+columna);
+            
             if(flagTurno){
                 if(e.getSource() == this.vt.getBtnMover()){
                     if(contadorMovimientos<=3){
@@ -571,13 +572,13 @@ public class ControladorTablero implements ActionListener{
                                             this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
                                             flagTurno = false;
                                             flagMover = true;
-
-                                            }
                                         }
                                     }
+                                }
+                            }
+                        }
                         
-                             }
-                        }else{
+                        else{
                             for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                                 for (int i = 0;i<25; i++){
                                     for(int j=0; j< 25; j++){
@@ -585,55 +586,59 @@ public class ControladorTablero implements ActionListener{
                                             this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
                                             flagTurno = false;
                                             flagMover = true;
-
-                                            }
                                         }
                                     }
                                 }
                             }
-                        
                         }
-                    }else if(e.getSource()==vt.getBtnAtacar()){
+                    }
+                }
+                
+                else if(e.getSource()==vt.getBtnAtacar()){
                         for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
-                                for (int i = 0;i<25; i++){
-                                    for(int j=0; j< 25; j++){
-                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
-                                            flagTurno = false;
-                                            flagAtacar = true;
-
-                                            }
-                                        }
+                            for (int i = 0;i<25; i++){
+                                for(int j=0; j< 25; j++){
+                                    if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                        flagTurno = false;
+                                        flagAtacar = true;
                                     }
-                        
-                             }
-                        
+                                }
+                            }
+                        }
                     }   
-            } else if(flagMover){
+            }
+            
+            else if(flagMover){
                 for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                     if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
                         int alturaFinal=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
                         if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno()==3){
                             contadorMovimientos=contadorMovimientos;
-                        }else{
+                            
+                        }
+                        
+                        else{
                             if(alturaFinal-alturaInicial>2 || alturaFinal-alturaInicial<(-2)){
                                 contadorMovimientos=contadorMovimientos;
-                            }else{
+                            }
+                            
+                            else{
                                 if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable()==false){
                                     contadorMovimientos=contadorMovimientos;
-                                }else{
+                                }
+                                
+                                else{
                                     if(personaje.getBandoPersonaje().equals("bueno")){
                                         if(personaje.getRolPersonaje().equals("Guerrero")){
                                             this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
                                             this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
-                                            
-                                            }
+                                        }
 
-                                            else{
-                                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
-                                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
-
-                                            }
+                                        else{
+                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
+                                            this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+                                        }
 
                                         this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
                                         this.vt.matrizVista[fila][columna].setText("");
@@ -645,29 +650,36 @@ public class ControladorTablero implements ActionListener{
                                         flagMover = false;
                                         flagTurno = true;
                                         contadorMovimientos++;
-                                        }
-                                 }
+                                    }
+                                }
                             }
                         }
-                        
                     }
                 }
-            }else if(flagAtacar){
+            }
+            
+            else if(flagAtacar){
                 for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                     if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
                         if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
                             System.out.println("ATAQUE CORTO MUMU");
                             if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
                                 System.out.println("NO HAY PERSONAJE");
-                            }else{
+                            }
+                            
+                            else{
                                 Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                                 bct=new ControladorBatallaCorta(personaje,enemigo);
                             }
-                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+1||posicion.get(0)==fila+2||posicion.get(0)==fila-1||posicion.get(0)==fila-2)){
+                        }
+                        
+                        else if(posicion.get(1)==columna&&(posicion.get(0)==fila+1||posicion.get(0)==fila+2||posicion.get(0)==fila-1||posicion.get(0)==fila-2)){
                             System.out.println("ATAQUE CORTO MUMU");
                             if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
                                 System.out.println("NO HAY PERSONAJE");
-                            }else{
+                            }
+                            
+                            else{
                                 Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                                 bct=new ControladorBatallaCorta(personaje,enemigo);
                             }
