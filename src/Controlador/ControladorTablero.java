@@ -571,8 +571,8 @@ public class ControladorTablero implements ActionListener{
                                 if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable()==false){
                                     contadorMovimientos=contadorMovimientos;
                                 }else{
-                                    if(personaje.getBandoPersonaje() == "bueno"){
-                                        if(personaje.getRolPersonaje() == "Guerrero"){
+                                    if(personaje.getBandoPersonaje().equals("bueno")){
+                                        if(personaje.getRolPersonaje().equals("Guerrero")){
                                             this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
                                             this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
                                             
