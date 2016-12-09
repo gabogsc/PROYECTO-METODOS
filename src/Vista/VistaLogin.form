@@ -30,9 +30,9 @@
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="txtUsuario" min="-2" pref="169" max="-2" attributes="0"/>
-                  <Component id="txtContraseña" min="-2" pref="169" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="txtUsuario" pref="169" max="32767" attributes="0"/>
+                  <Component id="txtContraseña" max="32767" attributes="0"/>
               </Group>
           </Group>
           <Group type="102" alignment="0" attributes="0">
@@ -91,8 +91,6 @@
     </Component>
     <Component class="javax.swing.JTextField" name="txtUsuario">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtContrase&#xf1;a">
-    </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
         <Property name="text" type="java.lang.String" value="Usuario:"/>
@@ -112,6 +110,11 @@
           <Color blue="0" green="66" red="33" type="rgb"/>
         </Property>
         <Property name="text" type="java.lang.String" value="DIINF TACTICS ADVANCE "/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="txtContrase&#xf1;a">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
       </Properties>
     </Component>
   </SubComponents>
