@@ -61,10 +61,13 @@
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="aceptar" min="-2" max="-2" attributes="0"/>
-                          <Component id="hints" alignment="0" min="-2" pref="240" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
+                              <Component id="hints" min="-2" pref="240" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="titulo" alignment="0" min="-2" pref="165" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="192" max="32767" attributes="0"/>
+                      <EmptySpace pref="52" max="32767" attributes="0"/>
                       <Component id="atras" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   </Group>
@@ -84,6 +87,11 @@
                   </Group>
               </Group>
           </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
+              <Component id="hint" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -91,9 +99,11 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
               <Component id="titulo" min="-2" pref="29" max="-2" attributes="0"/>
-              <EmptySpace pref="77" max="32767" attributes="0"/>
+              <EmptySpace pref="73" max="32767" attributes="0"/>
               <Component id="hints" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+              <Component id="hint" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="ingresar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="cantidad" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -136,6 +146,8 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="6"/>
       </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="hint">
     </Component>
   </SubComponents>
 </Form>

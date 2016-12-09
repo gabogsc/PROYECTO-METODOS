@@ -29,11 +29,13 @@ public class controladorJuego implements ActionListener{
         this.ALP = new AdivinaLaPalabra();
         this.vj = new vistaJuego();
         this.vj.ActionListener(this);
+        //this.ALP 
         vj.setVisible(true);
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
+        this.vj.setHint("Salacadula Chachicomula Bibidi Babidi Buu");
         if(ALP.getCantidad() > 0){
             if(vj.getAceptar()== (JButton)ae.getSource()){
                 System.out.println("Acepteichon");
@@ -42,7 +44,7 @@ public class controladorJuego implements ActionListener{
                     vj.dispose();
                     System.out.println("Correcto");
                     JOptionPane.showMessageDialog(frame, "Acertaste, usted ha ganado!.");   
-                    ControladorBibliotecaCentral cbc = new ControladorBibliotecaCentral();
+                    controladorInicioMenu cInicioM = new controladorInicioMenu();
                 }
                 else{
                     System.out.println("Incorrecto");

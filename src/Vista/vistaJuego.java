@@ -44,6 +44,7 @@ public class vistaJuego extends javax.swing.JFrame {
         atras = new javax.swing.JButton();
         cantidad = new javax.swing.JLabel();
         contador = new javax.swing.JLabel();
+        hint = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
         jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -88,9 +89,11 @@ public class vistaJuego extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(aceptar)
-                            .addComponent(hints, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(140, 140, 140)
+                                .addComponent(hints, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 192, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                         .addComponent(atras)
                         .addGap(45, 45, 45))
                     .addGroup(layout.createSequentialGroup()
@@ -103,15 +106,21 @@ public class vistaJuego extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(161, 161, 161)
+                .addComponent(hint)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(hints)
-                .addGap(51, 51, 51)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(hint)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ingresar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cantidad)
@@ -135,7 +144,6 @@ public class vistaJuego extends javax.swing.JFrame {
     }
 
     public void setContador(int jLabel1) {
-        
         contador.setText(Integer.toString(jLabel1));
     }
 
@@ -145,6 +153,7 @@ public class vistaJuego extends javax.swing.JFrame {
     private javax.swing.JButton atras;
     private javax.swing.JLabel cantidad;
     private javax.swing.JLabel contador;
+    private javax.swing.JLabel hint;
     private javax.swing.JLabel hints;
     private javax.swing.JTextField ingresar;
     private javax.swing.JDialog jDialog1;
@@ -179,8 +188,17 @@ public void setAtras(JButton atras) {
 public JLabel getCantidad() {
     return cantidad;
 }
+
 public void setCantidad(int valor) {
     this.cantidad.setText(Integer.toString(valor));
+}
+
+public JLabel getHint(){
+    return hint;
+}
+
+public void setHint(String JLabel) {
+    hint.setText((JLabel));
 }
 
 public void ActionListener(ActionListener f){
