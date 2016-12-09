@@ -26,7 +26,6 @@ import javax.swing.plaf.ColorUIResource;
  * @author Gabriel
  */
 public class ControladorTablero implements ActionListener{
-    private ControladorRamosCivil cr;
     private ControladorBatallaCorta bct;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
@@ -34,6 +33,7 @@ public class ControladorTablero implements ActionListener{
     private boolean flagMover = false;
     private boolean flagAtacar = false;
     private int contadorMovimientos;
+    ArrayList<Personaje> personajesOrdenadosU;
     
 
     
@@ -539,23 +539,20 @@ public class ControladorTablero implements ActionListener{
                 this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
             }
         }
-
+        
         for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             System.out.println(personaje.getPosX() + "," + personaje.getPosY());
         }
+        personajesOrdenadosU=this.esc.ordenarTurnosUsuario();
     }
 
-    
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vt.getBtnRegresarVT()){
-            cr=new ControladorRamosCivil();
             vt.dispose();
 
                 }
-        
-        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
+            Personaje personaje=personajesOrdenadosU.get(0);
             int fila = personaje.getPosX();
             int columna = personaje.getPosY();
             int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
@@ -580,9 +577,7 @@ public class ControladorTablero implements ActionListener{
                                     }
                         
                              }
-                        }
-                        
-                        else{
+                        }else{
                             for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                                 for (int i = 0;i<25; i++){
                                     for(int j=0; j< 25; j++){
@@ -596,10 +591,9 @@ public class ControladorTablero implements ActionListener{
                                     }
                                 }
                             }
+                        
                         }
-                    }
-                
-                else if(e.getSource()==vt.getBtnAtacar()){
+                    }else if(e.getSource()==vt.getBtnAtacar()){
                         for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                                 for (int i = 0;i<25; i++){
                                     for(int j=0; j< 25; j++){
@@ -694,14 +688,30 @@ public class ControladorTablero implements ActionListener{
                                 Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                                 bct=new ControladorBatallaCorta(personaje,enemigo);
                             }
-                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+5||posicion.get(0)==fila+6||posicion.get(0)==fila+7||posicion.get(0)==fila+8)){
+                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+5||posicion.get(0)==fila+6||posicion.get(0)==fila+7||posicion.get(0)==fila+8||posicion.get(0)==fila-5||posicion.get(0)==fila-6||posicion.get(0)==fila-7||posicion.get(0)==fila-8)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if(posicion.get(0)==fila&&(posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna+7||posicion.get(1)==columna+8||posicion.get(1)==columna-5||posicion.get(1)==columna-6||posicion.get(1)==columna-7||posicion.get(1)==columna-8)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if ((posicion.get(0)==fila+5||posicion.get(0)==fila-5)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna-1||posicion.get(1)==columna-2||posicion.get(1)==columna-3)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if((posicion.get(0)==fila+6||posicion.get(0)==fila-6)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if((posicion.get(0)==fila+7||posicion.get(0)==fila-7)&&(posicion.get(1)==columna+1||posicion.get(1)==columna-1)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if((posicion.get(0)==fila+4||posicion.get(0)==fila-4)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna-1||posicion.get(1)==columna-2||posicion.get(1)==columna-3||posicion.get(1)==columna-4)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if((posicion.get(0)==fila+3||posicion.get(0)==fila-3)&&(posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna-2||posicion.get(1)==columna-3||posicion.get(1)==columna-4||posicion.get(1)==columna-5)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if((posicion.get(0)==fila+2||posicion.get(0)==fila-2)&&(posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna-3||posicion.get(1)==columna-4||posicion.get(1)==columna-5||posicion.get(1)==columna-6)){
+                            System.out.println("ATAQUE LARGO OINK");
+                        }else if((posicion.get(0)==fila+1||posicion.get(0)==fila-1)&&(posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna+7||posicion.get(1)==columna-4||posicion.get(1)==columna-5||posicion.get(1)==columna-6||posicion.get(1)==columna-7)){
                             System.out.println("ATAQUE LARGO OINK");
                         }
                         
                                                
                     }
                 }
-            }
+            
         }  
     }
 }

@@ -781,7 +781,7 @@ public class Escenario {
                         
                     }else if(fila==(i+1)&&(columna==(j-8))){
                         
-                    }else if(fila==(i-8)&&(columna==(j+1)||columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7))){
+                    }else if(fila==(i-8)&&(columna==(j+1)||columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
                         
                     }else if(fila==(i-7)&&(columna==(j+2)||columna==(j+3)||columna==(j+4)||columna==(j+5)||columna==(j+6)||columna==(j+7)||columna==(j+8))){
                         
@@ -836,6 +836,8 @@ public class Escenario {
                     }else if((fila==(i+3)||fila==(i+4)||fila==(i-3)||fila==(i-4))&& columna==j){
                         
                     }else if(fila==i && (columna==(j+3)||columna==(j+4)||columna==(j-3)||columna==(j-4))){
+                        
+                    }else if(fila==i+8 && columna==j-8){
                         
                     }else{
                         posicion.add(i);
