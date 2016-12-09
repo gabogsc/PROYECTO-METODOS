@@ -86,6 +86,8 @@ public class VistaTablero extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(900, 700));
         setResizable(false);
 
+        jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -98,12 +100,16 @@ public class VistaTablero extends javax.swing.JFrame {
         );
 
         btnRegresarVT.setText("Regresar");
+        btnRegresarVT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnAtacar.setText("Atacar");
+        btnAtacar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnMover.setText("Mover");
+        btnMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnPasar.setText("Pasar");
+        btnPasar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -128,12 +128,14 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         btnCalculoI.setText("CALCULO I");
+        btnCalculoI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCalculoI.setMaximumSize(new java.awt.Dimension(50, 23));
         btnCalculoI.setMinimumSize(new java.awt.Dimension(50, 23));
         btnCalculoI.setPreferredSize(null);
 
         btnMetodosDeProgramacion.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnMetodosDeProgramacion.setText("<html><center>METODOS <br><center>DE <br><center>PROGRAMACIÓN");
+        btnMetodosDeProgramacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosDeProgramacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMetodosDeProgramacionActionPerformed(evt);
@@ -142,6 +144,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
 
         btnFundaEconomia.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnFundaEconomia.setText("<html><center>FUNDAMENTOS<br><center> DE LA<br><center> ECONOMIA");
+        btnFundaEconomia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFundaEconomia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFundaEconomiaActionPerformed(evt);
@@ -149,10 +152,12 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         });
 
         jButton4.setText("FISICA I");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton4.setPreferredSize(null);
 
         jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jButton5.setText("<html><center>INTRODUCCION <br><center> A LA <br><center>INGENIERIA");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
@@ -161,13 +166,17 @@ public class VistaRamosCivil extends javax.swing.JFrame {
 
         jButton6.setFont(new java.awt.Font("Lucida Grande", 0, 6)); // NOI18N
         jButton6.setText("<html><center>TALLER DE DESARROLLO <center>PERSONAL E INTEGRAL");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton7.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         jButton7.setText("<html><center>METODOS <br><center>DE <br><center>ESTUDIO");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton8.setText("CALCULO II");
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton9.setText("ALGEBRA II");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -175,11 +184,14 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         });
 
         jButton10.setText("FISICA II");
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton11.setText("QUÍMICA");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton12.setFont(new java.awt.Font("Lucida Grande", 0, 5)); // NOI18N
         jButton12.setText("<html><center>FUNDAMENTOS DE LA <br><center>COMPUTACIÓN Y LA <br><center>PROGRAMACIÓN");
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -187,43 +199,58 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         });
 
         jButton13.setText("jButton13");
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton13.setPreferredSize(null);
 
         jButton14.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         jButton14.setText("<html><center>COMUNICACION<br><center> EFECTIVA");
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton15.setText("INGLES I");
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton16.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         jButton16.setText("<html><center>ECUACIONES <br><center>DIFERENCIALES");
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton17.setText("ELECTRICIDAD Y MAGENTISMO");
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton18.setText("ALGEBRA I");
+        jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton19.setText("CALCULO III");
+        jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton20.setText("INGLES II");
+        jButton20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton21.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         jButton21.setText("<html><center>ANALISIS <br><center>ESTADISTICO");
+        jButton21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton22.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         jButton22.setText("<html><center>ESTRUCTURA <br><center>DE <br><center>COMPUTADORES");
+        jButton22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton23.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         jButton23.setText("<html><center>PARADIGMAS<br><center>DE<br><center>PROGRAMACIÓN");
+        jButton23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton24.setFont(new java.awt.Font("Lucida Grande", 0, 7)); // NOI18N
         jButton24.setText("<html><center>ANALISIS DE DATOS Y <br><center>ESTRUCTURA DE DATOS");
+        jButton24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton25.setText("jButton25");
+        jButton25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton25.setPreferredSize(null);
 
         jButton26.setText("jButton26");
+        jButton26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton26.setPreferredSize(null);
 
         jButton27.setText("jButton27");
+        jButton27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton27.setPreferredSize(null);
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -232,24 +259,31 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         });
 
         jButton28.setText("jButton28");
+        jButton28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton28.setPreferredSize(null);
 
         jButton29.setText("jButton29");
+        jButton29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton29.setPreferredSize(null);
 
         jButton30.setText("jButton30");
+        jButton30.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton30.setPreferredSize(null);
 
         jButton31.setText("jButton31");
+        jButton31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton31.setPreferredSize(null);
 
         jButton32.setText("jButton32");
+        jButton32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton32.setPreferredSize(null);
 
         jButton33.setText("jButton33");
+        jButton33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton33.setPreferredSize(null);
 
         jButton34.setText("jButton34");
+        jButton34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton34.setPreferredSize(null);
         jButton34.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -258,26 +292,34 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         });
 
         jButton35.setText("jButton35");
+        jButton35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton35.setPreferredSize(null);
 
         jButton36.setText("jButton36");
+        jButton36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton36.setPreferredSize(null);
 
         jButton37.setText("jButton37");
+        jButton37.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton37.setPreferredSize(null);
 
         jButton38.setText("jButton38");
+        jButton38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton38.setPreferredSize(null);
 
         jButton39.setText("jButton39");
+        jButton39.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton39.setPreferredSize(null);
 
         jButton40.setText("jButton40");
+        jButton40.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton40.setPreferredSize(null);
 
         jButton41.setText("jButton41");
+        jButton41.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton42.setText("jButton42");
+        jButton42.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton42.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton42ActionPerformed(evt);
@@ -285,44 +327,64 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         });
 
         jButton43.setText("jButton43");
+        jButton43.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton44.setText("jButton44");
+        jButton44.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton45.setText("jButton45");
+        jButton45.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton46.setText("jButton46");
+        jButton46.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton47.setText("jButton47");
+        jButton47.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton48.setText("jButton48");
+        jButton48.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton49.setText("jButton49");
+        jButton49.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton50.setText("jButton50");
+        jButton50.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton51.setText("jButton51");
+        jButton51.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton52.setText("jButton52");
+        jButton52.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton53.setText("jButton53");
+        jButton53.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton54.setText("jButton54");
+        jButton54.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton55.setText("jButton55");
+        jButton55.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton56.setText("jButton56");
+        jButton56.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton57.setText("jButton57");
+        jButton57.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton58.setText("jButton58");
+        jButton58.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton59.setText("jButton59");
+        jButton59.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton60.setText("jButton60");
+        jButton60.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton61.setText("jButton61");
+        jButton61.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jButton62.setText("jButton62");
+        jButton62.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jLabel1.setText("Semestre 5");
 

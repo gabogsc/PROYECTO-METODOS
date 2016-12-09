@@ -14,6 +14,11 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import javax.swing.BorderFactory;
+import javax.swing.ToolTipManager;
+import javax.swing.UIManager;
+import javax.swing.border.Border;
+import javax.swing.plaf.ColorUIResource;
 
 
 /**
@@ -443,6 +448,10 @@ public class ControladorTablero implements ActionListener{
                 String terreno = null;
                 String altura = null;
                 String rol = null;
+                String puntosAtaqueLargo = null;
+                String puntosAtaqueCorto = null;
+                String traicion = "";
+                String vida = null;
                 
                 //Definimos la coordenada en la que se posa el cursor
                 String coordenadas = "Posicion: " + (i+","+j) + "<br/>";
@@ -483,16 +492,61 @@ public class ControladorTablero implements ActionListener{
                 else{
                     rol = "";
                 }
+                
+                //Determinamos el rol de personaje si existe en la casilla
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
+                    rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
+                    traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + "ptos";
 
-                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + ".<html>");
+                }
+                
+                else{
+                    rol = "" + "<br/>";
+                }
+                
+                //Determinamos el ataque a largo alcance
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() != 0){
+                    puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
+                }
+                
+                else{
+                    puntosAtaqueLargo = "";
+                }
+                
+                //Determinamos el ataque a corto alcance
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() != 0){
+                    puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
+                }
+                
+                else{
+                    puntosAtaqueCorto = "";
+                }
+                
+                //Determinamos los puntos de vida del personaje
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() != 0){
+                    vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() + " ptos" + "<br/>";
+                }
+                
+                else{
+                    vida = "";
+                }
+                                
+
+                UIManager.put("ToolTip.background", new ColorUIResource(255, 247, 200)); //#fff7c8
+                Border border = BorderFactory.createLineBorder(new Color(76,79,83));    //#4c4f53
+                UIManager.put("ToolTip.border", border);
+                ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
+                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
             }
         }
-        
+
         for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             System.out.println(personaje.getPosX() + "," + personaje.getPosY());
         }
     }
 
+    
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vt.getBtnRegresarVT()){
@@ -526,7 +580,9 @@ public class ControladorTablero implements ActionListener{
                                     }
                         
                              }
-                        }else{
+                        }
+                        
+                        else{
                             for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                                 for (int i = 0;i<25; i++){
                                     for(int j=0; j< 25; j++){
@@ -540,9 +596,10 @@ public class ControladorTablero implements ActionListener{
                                     }
                                 }
                             }
-                        
                         }
-                    }else if(e.getSource()==vt.getBtnAtacar()){
+                    }
+                
+                else if(e.getSource()==vt.getBtnAtacar()){
                         for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                                 for (int i = 0;i<25; i++){
                                     for(int j=0; j< 25; j++){
