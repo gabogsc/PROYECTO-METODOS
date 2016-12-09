@@ -21,7 +21,7 @@ import java.util.ArrayList;
  * @author Gabriel
  */
 public class ControladorTablero implements ActionListener{
-    private ControladorRamos cr;
+    private ControladorRamosCivil cr;
     private ControladorBatallaCorta bct;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
@@ -496,7 +496,7 @@ public class ControladorTablero implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == this.vt.getBtnRegresarVT()){
-            cr=new ControladorRamos();
+            cr=new ControladorRamosCivil();
             vt.dispose();
 
                 }

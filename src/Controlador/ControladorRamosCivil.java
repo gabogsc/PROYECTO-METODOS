@@ -13,12 +13,12 @@ import java.awt.event.ActionListener;
  *
  * @author Gabriel
  */
-public class ControladorRamos implements ActionListener{
+public class ControladorRamosCivil implements ActionListener{
     private VistaRamosCivil vr = new VistaRamosCivil();
    
     
     
-    public ControladorRamos(){
+    public ControladorRamosCivil(){
  
         this.vr.setVisible(true);
         vr.agregarListener(this);

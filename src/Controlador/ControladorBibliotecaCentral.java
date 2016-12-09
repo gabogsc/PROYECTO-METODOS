@@ -33,12 +33,9 @@ public class ControladorBibliotecaCentral implements ActionListener{
             vbc.setVisible(false); 
           
         }
-        if(vbc.getBtnPicApix() == e.getSource()){
-          
-          
-        }
+        
         if(vbc.getBtnSudoku() == e.getSource()){
-          
+         
           
         }
         if(vbc.getBtnGato() == e.getSource()){

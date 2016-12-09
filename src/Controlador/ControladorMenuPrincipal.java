@@ -50,7 +50,7 @@ public class ControladorMenuPrincipal implements ActionListener {
             
         }
         if(vmp.getBtnRamos() == e.getSource()){
-            ControladorRamos cr = new ControladorRamos();
+            ControladorRamosCivil cr = new ControladorRamosCivil();
             vmp.dispose();
             
             
