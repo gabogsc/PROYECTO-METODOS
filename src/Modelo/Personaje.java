@@ -20,6 +20,7 @@ public class Personaje {
     private int nivelPersonaje;
     private int puntosExperiencia;
     private int puntosVidaTotal;
+    private int puntosVidaActual;
     private int puntosAtaqueCorto;
     private int puntosAtaqueLargo;
     private int puntosAtaqueMagia;
@@ -44,6 +45,7 @@ public class Personaje {
         this.nivelPersonaje = nivelPersonaje;
         this.puntosExperiencia = puntosExperiencia;
         this.puntosVidaTotal = puntosVidaTotal;
+        this.puntosVidaActual = puntosVidaActual;
         this.puntosAtaqueCorto = putosAtaqueCorto;
         this.puntosAtaqueLargo = putosAtaqueLargo;
         this.puntosAtaqueMagia = putosAtaqueMagia;
@@ -66,6 +68,7 @@ public class Personaje {
         this.nivelPersonaje = 0;
         this.puntosExperiencia = 0;
         this.puntosVidaTotal = 0;
+        this.puntosVidaActual = 0;
         this.puntosAtaqueCorto = 0;
         this.puntosAtaqueLargo = 0;
         this.puntosAtaqueMagia = 0;
@@ -133,6 +136,16 @@ public class Personaje {
     public void setPuntosVidaTotal(int puntosVidaTotla) {
         this.puntosVidaTotal = puntosVidaTotla;
     }
+
+    public int getPuntosVidaActual() {
+        return puntosVidaActual;
+    }
+
+    public void setPuntosVidaActual(int puntosVidaActual) {
+        this.puntosVidaActual = puntosVidaActual;
+    }
+    
+    
 
 
     public int getPuntosAtaqueCorto() {

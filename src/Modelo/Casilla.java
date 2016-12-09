@@ -16,12 +16,7 @@ public class Casilla {
     
     
     //Metodos
-    public Personaje obtenerPersonaje(){
-        return this.personaje;
-    }
-    public boolean verificarPersonaje(int x, int y){
-    return false;
-    }
+    
     
       
     
@@ -83,6 +78,15 @@ public class Casilla {
         this.altura = altura;
     }
     
+    public Personaje obtenerPersonaje(){
+        return this.personaje;
+    }
+
+    public void setPersonaje(Personaje personaje) {
+        this.personaje = personaje;
+    }
+   
+    
     
     
     
@@ -103,9 +107,9 @@ public class Casilla {
         return personaje;
     }
 
-    public void setPersonaje(Personaje personaje) {
-        this.personaje = personaje;
-    }
+    //public void setPersonaje(Personaje personaje) {
+        //this.personaje = personaje;
+    //}
 
    
     public boolean isCaminable() {
