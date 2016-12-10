@@ -747,7 +747,7 @@ public class Escenario {
     ATAQUE, INHABILITADAS AL ATAQUE DEL PERSONAJE EN TURNO
     */
 
-    public ArrayList<ArrayList<Integer>> casillasEnRangoAtaque(int fila, int columna){
+    public ArrayList<ArrayList<Integer>> casillasFueraDeRangoAtaque(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
         //System.out.println(fila + "," + columna);
         ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();

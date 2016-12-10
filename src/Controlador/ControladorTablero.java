@@ -501,8 +501,8 @@ public class ControladorTablero implements ActionListener{
                     rol = "" + "<br/>";
                 }                               
 
-                UIManager.put("ToolTip.background", new ColorUIResource(255, 247, 200)); //#fff7c8
-                Border border = BorderFactory.createLineBorder(new Color(76,79,83));    //#4c4f53
+                UIManager.put("ToolTip.background", new ColorUIResource(255, 247, 200)); 
+                Border border = BorderFactory.createLineBorder(new Color(76,79,83)); 
                 UIManager.put("ToolTip.border", border);
                 ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
                 this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
@@ -572,7 +572,7 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON ATACAR
             
             else if(e.getSource() == this.vt.getBtnAtacar()){
-                for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
                     for (int i = 0;i<25; i++){
                         for(int j=0; j< 25; j++){
                             if((posicion.get(0)) != i && (posicion.get(1)) != j){
@@ -649,7 +649,7 @@ public class ControladorTablero implements ActionListener{
         else if(flagAtacar){
             
             vt.getBtnAtacar().setEnabled(false);
-            for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+            for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
                     if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
                         System.out.println("ATAQUE CORTO MUMU");
