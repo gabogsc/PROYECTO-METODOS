@@ -6,11 +6,16 @@
 package Controlador;
 
 import Modelo.Usuario;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import Vista.VistaLogin;
 import Vista.vistaRegistro;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static java.awt.image.ImageObserver.HEIGHT;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
@@ -39,10 +44,7 @@ public class ControladorLogin implements ActionListener {
         //To change body of generated methods, choose Tools | Templates.
         
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
-            //String usuario = this.vl.getTxtUsuario();
-            //if(this.vl.getTxtUsuario().equals("gabriel")){
-               // if(this.vl.getTxtContraseña().equals("gabriel")){
-            
+           
           
             
                     Otros.registroUsuario.actividadUsuario("Usuario se logea");
@@ -50,21 +52,43 @@ public class ControladorLogin implements ActionListener {
                     vl.dispose();
                 
                 
-              //  }else{ JOptionPane.showConfirmDialog(this.vl, "Constraseña Invalida", "error", HEIGHT);}
-                    
-                
-           // }else{ JOptionPane.showConfirmDialog(this.vl, "Usuario Invalido", "error", HEIGHT);}
-
+              
         }
         if(vl.getBtnRegistrar() == (JButton)e.getSource()){
             ControladorRegistro cR = new ControladorRegistro();
             vl.setVisible(false);
-        
+            
        
+        }
+        
+        if(vl.getBtnProbarCon()== (JButton)e.getSource()){
+            this.us.conectar();
+            
+            
+            
+            
         }
     
     } 
 }
+        
+        
+        
+        
+        
+        
+        
+          
+        
+           
+
+    
+    
+      
+
+
+    
+
         
         
         

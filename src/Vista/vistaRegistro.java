@@ -7,6 +7,7 @@ package Vista;
 
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 /**
@@ -46,18 +47,18 @@ public class vistaRegistro extends javax.swing.JFrame {
         aceptarBT = new javax.swing.JButton();
         botonAtras = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        textPP = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        textPS = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jRadioButton3 = new javax.swing.JRadioButton();
-        jRadioButton4 = new javax.swing.JRadioButton();
+        radioGuerreroPP = new javax.swing.JRadioButton();
+        radioArqueroPP = new javax.swing.JRadioButton();
+        radioGuerreroPS = new javax.swing.JRadioButton();
+        radioArqueroPS = new javax.swing.JRadioButton();
         jLabel1 = new javax.swing.JLabel();
-        jRadioButton5 = new javax.swing.JRadioButton();
-        jRadioButton6 = new javax.swing.JRadioButton();
+        radioCivil = new javax.swing.JRadioButton();
+        radioEjecu = new javax.swing.JRadioButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -83,9 +84,9 @@ public class vistaRegistro extends javax.swing.JFrame {
 
         jLabel5.setText("<html>Ingrese nombre <br>Personaje Principal:");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        textPP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                textPPActionPerformed(evt);
             }
         });
 
@@ -95,30 +96,30 @@ public class vistaRegistro extends javax.swing.JFrame {
 
         jLabel8.setText("<html>Ingrese nombre <br>Personaje Amigo:");
 
-        GrupBtnsPP.add(jRadioButton1);
-        jRadioButton1.setText("Guerrero");
+        GrupBtnsPP.add(radioGuerreroPP);
+        radioGuerreroPP.setText("Guerrero");
 
-        GrupBtnsPP.add(jRadioButton2);
-        jRadioButton2.setText("Arquero");
+        GrupBtnsPP.add(radioArqueroPP);
+        radioArqueroPP.setText("Arquero");
 
-        GrupBtnsPS.add(jRadioButton3);
-        jRadioButton3.setText("Guerrero");
-        jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
+        GrupBtnsPS.add(radioGuerreroPS);
+        radioGuerreroPS.setText("Guerrero");
+        radioGuerreroPS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton3ActionPerformed(evt);
+                radioGuerreroPSActionPerformed(evt);
             }
         });
 
-        GrupBtnsPS.add(jRadioButton4);
-        jRadioButton4.setText("Arquero");
+        GrupBtnsPS.add(radioArqueroPS);
+        radioArqueroPS.setText("Arquero");
 
         jLabel1.setText("Carrera A elegir:");
 
-        GrupBtnsCarrera.add(jRadioButton5);
-        jRadioButton5.setText("Ingenieria Civil Informatica");
+        GrupBtnsCarrera.add(radioCivil);
+        radioCivil.setText("Ingenieria Civil Informatica");
 
-        GrupBtnsCarrera.add(jRadioButton6);
-        jRadioButton6.setText("Ingenieria en Ejecucion Informatica");
+        GrupBtnsCarrera.add(radioEjecu);
+        radioEjecu.setText("Ingenieria en Ejecucion Informatica");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -140,15 +141,15 @@ public class vistaRegistro extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(150, 150, 150)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jRadioButton4)
-                                    .addComponent(jRadioButton3)))))
+                                    .addComponent(radioArqueroPS)
+                                    .addComponent(radioGuerreroPS)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(300, 300, 300)
                         .addComponent(jLabel1)
                         .addGap(49, 49, 49)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRadioButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jRadioButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(radioEjecu, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(radioCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
                         .addComponent(aceptarBT)
@@ -166,7 +167,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(textPS, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(fieldUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(41, 41, 41)
@@ -174,13 +175,13 @@ public class vistaRegistro extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(textPP, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(28, 28, 28)
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jRadioButton2)
-                                            .addComponent(jRadioButton1))))))))
+                                            .addComponent(radioArqueroPP)
+                                            .addComponent(radioGuerreroPP))))))))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -190,14 +191,14 @@ public class vistaRegistro extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jRadioButton2))
-                    .addComponent(jRadioButton1)
+                        .addComponent(radioArqueroPP))
+                    .addComponent(radioGuerreroPP)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -207,7 +208,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(textPS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(fieldPass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -215,8 +216,8 @@ public class vistaRegistro extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jRadioButton4))
-                    .addComponent(jRadioButton3)
+                        .addComponent(radioArqueroPS))
+                    .addComponent(radioGuerreroPS)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -229,8 +230,8 @@ public class vistaRegistro extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jRadioButton6))
-                    .addComponent(jRadioButton5))
+                        .addComponent(radioEjecu))
+                    .addComponent(radioCivil))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(aceptarBT)
@@ -261,13 +262,13 @@ public class vistaRegistro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldUsuarioActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void textPPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textPPActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_textPPActionPerformed
 
-    private void jRadioButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton3ActionPerformed
+    private void radioGuerreroPSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radioGuerreroPSActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton3ActionPerformed
+    }//GEN-LAST:event_radioGuerreroPSActionPerformed
 
     /**
      * @param args the command line arguments
@@ -293,14 +294,14 @@ public class vistaRegistro extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JRadioButton jRadioButton3;
-    private javax.swing.JRadioButton jRadioButton4;
-    private javax.swing.JRadioButton jRadioButton5;
-    private javax.swing.JRadioButton jRadioButton6;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JRadioButton radioArqueroPP;
+    private javax.swing.JRadioButton radioArqueroPS;
+    private javax.swing.JRadioButton radioCivil;
+    private javax.swing.JRadioButton radioEjecu;
+    private javax.swing.JRadioButton radioGuerreroPP;
+    private javax.swing.JRadioButton radioGuerreroPS;
+    private javax.swing.JTextField textPP;
+    private javax.swing.JTextField textPS;
     // End of variables declaration//GEN-END:variables
 
     public JButton getBoton(){
@@ -310,15 +311,51 @@ public class vistaRegistro extends javax.swing.JFrame {
       return this.botonAtras;
     }
 
-    public String getFieldUsuario() {
-        return fieldUsuario.getText();
+    public JTextField getFieldUsuario() {
+        return fieldUsuario;
     }
-    public String getFieldPass() {
-        return fieldPass.getText();
+    public JTextField getFieldPass() {
+        return fieldPass;
     }
-    public String getFieldPass2() {
-        return fieldPass2.getText();
+    public JTextField getFieldPass2() {
+        return fieldPass2;
     }
+
+    public JTextField getTextPP() {
+        return textPP;
+    }
+
+    public JTextField getTextPS() {
+        return textPS;
+    }
+
+    public JRadioButton getRadioArqueroPP() {
+        return radioArqueroPP;
+    }
+
+    public JRadioButton getRadioArqueroPS() {
+        return radioArqueroPS;
+    }
+
+    public JRadioButton getRadioCivil() {
+        return radioCivil;
+    }
+
+    public JRadioButton getRadioEjecu() {
+        return radioEjecu;
+    }
+
+    public JRadioButton getRadioGuerreroPP() {
+        return radioGuerreroPP;
+    }
+
+    public JRadioButton getRadioGuerreroPS() {
+        return radioGuerreroPS;
+    }
+
+    
+    
+    
     public void ActionListener(ActionListener al){
         this.botonAtras.addActionListener(al);
         this.aceptarBT.addActionListener(al);
