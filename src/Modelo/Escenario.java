@@ -713,12 +713,12 @@ public class Escenario {
         
     }
     
-    /*CREACION LISTA DE POSICIONES ADYACENTES AL PERSONAJE HABILITADAS AL MOVIMIENTO
-    DEL PERSONAJE QUE ESTA EN TURNO.
+    /*CREACION LISTA DE POSICIONES DE LAS CASILLAS DEL TABLERO QUE ESTAN FUERA DEL RANGO DE 
+    MOVIMIENTO, INHABILITADAS AL MOVIMIENTO DEL PERSONAJE EN TURNO
     */
 
     
-    public ArrayList<ArrayList<Integer>> casillasEnRango(int fila, int columna){
+    public ArrayList<ArrayList<Integer>> casillasFueraDeRango(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
         //System.out.println(fila + "," + columna);
         
@@ -743,7 +743,10 @@ public class Escenario {
         return posicionesDeshabilitadas;
     }
     
-    
+    /*CREACION LISTA DE POSICIONES DE LAS CASILLAS DEL TABLERO QUE ESTAN FUERA DEL RANGO DE 
+    ATAQUE, INHABILITADAS AL ATAQUE DEL PERSONAJE EN TURNO
+    */
+
     public ArrayList<ArrayList<Integer>> casillasEnRangoAtaque(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
         //System.out.println(fila + "," + columna);
@@ -846,8 +849,8 @@ public class Escenario {
                         
                     }else{
                         posicion.add(i);
-                    posicion.add(j);
-                    posicionesDeshabilitadas.add(posicion);
+                        posicion.add(j);
+                        posicionesDeshabilitadas.add(posicion);
                     }
                     
                 }

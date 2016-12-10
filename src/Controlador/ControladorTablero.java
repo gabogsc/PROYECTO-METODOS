@@ -540,7 +540,7 @@ public class ControladorTablero implements ActionListener{
                     if(contadorMovimientos==3){
                         this.vt.getBtnMover().setEnabled(false);
 
-                        for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                        for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                             for (int i = 0; i < 25; i++){
                                 for(int j = 0; j < 25; j++){
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
@@ -554,7 +554,7 @@ public class ControladorTablero implements ActionListener{
                     }
                     
                     else{
-                        for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                        for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                             for (int i = 0;i<25; i++){
                                 for(int j=0; j< 25; j++){
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
@@ -571,7 +571,7 @@ public class ControladorTablero implements ActionListener{
             
         //PRESIONAR BOTON ATACAR
             
-            else if(e.getSource()==vt.getBtnAtacar()){
+            else if(e.getSource() == this.vt.getBtnAtacar()){
                 for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                     for (int i = 0;i<25; i++){
                         for(int j=0; j< 25; j++){
@@ -600,7 +600,7 @@ public class ControladorTablero implements ActionListener{
         
         else if(flagMover){
             
-            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+            for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
                     int alturaFinal=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
                     if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno()==3){
