@@ -518,6 +518,7 @@ public class ControladorTablero implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         
+        //PRESIONAR BOTON REGRESAR
         if(e.getSource() == this.vt.getBtnRegresarVT()){
             vt.dispose();
         }
@@ -543,8 +544,11 @@ public class ControladorTablero implements ActionListener{
                         for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                             for (int i = 0; i < 25; i++){
                                 for(int j = 0; j < 25; j++){
+                                    Border borde;
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+
+                                        borde = BorderFactory.createRaisedBevelBorder();
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN));
                                         flagTurno = false;
                                         flagMover = true;
                                     }
@@ -557,8 +561,10 @@ public class ControladorTablero implements ActionListener{
                         for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                             for (int i = 0;i<25; i++){
                                 for(int j=0; j< 25; j++){
+                                    Border borde;
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                        borde = BorderFactory.createRaisedBevelBorder();
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN));
                                         flagTurno = false;
                                         flagMover = true;
                                     }
@@ -575,8 +581,10 @@ public class ControladorTablero implements ActionListener{
                 for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
                     for (int i = 0;i<25; i++){
                         for(int j=0; j< 25; j++){
+                            Border borde;
                             if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                borde = BorderFactory.createRaisedBevelBorder();
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(borde);
                                 flagTurno = false;
                                 flagAtacar = true;
                             }
@@ -587,12 +595,12 @@ public class ControladorTablero implements ActionListener{
             
         //PRESIONAR BOTON TERMINAR
             
-            else if(e.getSource()==vt.getBtnTerminar()){
+            else if(e.getSource() == this.vt.getBtnTerminar()){
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
                 vt.getBtnTerminar().setEnabled(false);
-                flagTurno=false;
-                flagTurnoCPU=true;
+                flagTurno = false;
+                flagTurnoCPU = true;
             }   
         } 
         
@@ -602,17 +610,20 @@ public class ControladorTablero implements ActionListener{
             
             for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
-                    int alturaFinal=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
+                    
+                    int alturaFinal = this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
+                //MOVIMIENTO INHABILITADO POR TIPO DE TERRENO RIO
                     if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno()==3){
                         contadorMovimientos = contadorMovimientos;
                     }
+                //MOVIMIENTO INHABILITADO POR DIFERENCIA DE ALTURAS Y PRESENCIA DE PERSONAJES
                     else{
                         if(alturaFinal-alturaInicial > 2 || alturaFinal-alturaInicial < (-2)){
                             contadorMovimientos = contadorMovimientos;
                         }
                         else{
-                            if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable()==false){
-                                contadorMovimientos=contadorMovimientos;
+                            if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable() == false){
+                                contadorMovimientos = contadorMovimientos;
                             }
                             else{
                                 if(personaje.getBandoPersonaje().equals("bueno")){
@@ -628,15 +639,16 @@ public class ControladorTablero implements ActionListener{
 
                                     this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
                                     this.vt.matrizVista[fila][columna].setText("");
-                                    this.esc.getMatrizEscenario()[fila][columna].setCaminable(true);
-                                    System.out.println("posicion despues de mover "+posicion.get(0)+","+posicion.get(1));
-                                    this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
-                                    personaje.setPosX(posicion.get(0));
-                                    personaje.setPosY(posicion.get(1));
-                                    flagMover = false;
-                                    flagTurno = true;
-                                    contadorMovimientos++;
                                 }
+                                
+                                this.esc.getMatrizEscenario()[fila][columna].setCaminable(true);
+                                System.out.println("posicion despues de mover "+posicion.get(0)+","+posicion.get(1));
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
+                                personaje.setPosX(posicion.get(0));
+                                personaje.setPosY(posicion.get(1));
+                                flagMover = false;
+                                flagTurno = true;
+                                contadorMovimientos++;
                             }
                         }
                     }
