@@ -42,7 +42,7 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="65" pref="65" max="-2" attributes="0"/>
-                      <Component id="btnPasar" min="-2" pref="97" max="-2" attributes="0"/>
+                      <Component id="btnTerminar" min="-2" pref="97" max="-2" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -59,7 +59,7 @@
               <EmptySpace min="53" pref="53" max="-2" attributes="0"/>
               <Component id="btnMover" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="58" pref="58" max="-2" attributes="0"/>
-              <Component id="btnPasar" min="-2" max="-2" attributes="0"/>
+              <Component id="btnTerminar" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,9 +109,9 @@
         </Property>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="btnPasar">
+    <Component class="javax.swing.JButton" name="btnTerminar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Pasar"/>
+        <Property name="text" type="java.lang.String" value="Terminar Turno"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
         </Property>

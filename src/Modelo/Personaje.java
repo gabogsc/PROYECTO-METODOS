@@ -133,20 +133,9 @@ public class Personaje {
         return puntosVidaTotal;
     }
 
-    public void setPuntosVidaTotal(int puntosVidaTotla) {
-        this.puntosVidaTotal = puntosVidaTotla;
+    public void setPuntosVidaTotal(int puntosVida) {
+        this.puntosVidaTotal = puntosVida;
     }
-
-    public int getPuntosVidaActual() {
-        return puntosVidaActual;
-    }
-
-    public void setPuntosVidaActual(int puntosVidaActual) {
-        this.puntosVidaActual = puntosVidaActual;
-    }
-    
-    
-
 
     public int getPuntosAtaqueCorto() {
         return puntosAtaqueCorto;

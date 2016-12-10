@@ -80,7 +80,7 @@ public class VistaTablero extends javax.swing.JFrame {
         btnRegresarVT = new javax.swing.JButton();
         btnAtacar = new javax.swing.JButton();
         btnMover = new javax.swing.JButton();
-        btnPasar = new javax.swing.JButton();
+        btnTerminar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 700));
@@ -108,8 +108,8 @@ public class VistaTablero extends javax.swing.JFrame {
         btnMover.setText("Mover");
         btnMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        btnPasar.setText("Pasar");
-        btnPasar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnTerminar.setText("Terminar Turno");
+        btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,7 +128,7 @@ public class VistaTablero extends javax.swing.JFrame {
                         .addComponent(btnMover, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(65, 65, 65)
-                        .addComponent(btnPasar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(btnTerminar, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,7 +141,7 @@ public class VistaTablero extends javax.swing.JFrame {
                 .addGap(53, 53, 53)
                 .addComponent(btnMover)
                 .addGap(58, 58, 58)
-                .addComponent(btnPasar))
+                .addComponent(btnTerminar))
         );
 
         pack();
@@ -150,8 +150,8 @@ public class VistaTablero extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtacar;
     private javax.swing.JButton btnMover;
-    private javax.swing.JButton btnPasar;
     private javax.swing.JButton btnRegresarVT;
+    private javax.swing.JButton btnTerminar;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
@@ -160,7 +160,7 @@ public class VistaTablero extends javax.swing.JFrame {
         btnRegresarVT.addActionListener(al);
         btnMover.addActionListener(al);
         btnAtacar.addActionListener(al);
-        btnPasar.addActionListener(al);
+        btnTerminar.addActionListener(al);
         
         
         
@@ -209,8 +209,8 @@ public class VistaTablero extends javax.swing.JFrame {
         return this.btnMover;
     }
 
-    public JButton getBtnPasar() {
-        return this.btnPasar;
+    public JButton getBtnTerminar() {
+        return this.btnTerminar;
     }
    
     
