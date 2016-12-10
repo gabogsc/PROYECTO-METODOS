@@ -444,7 +444,7 @@ public class ControladorTablero implements ActionListener{
     
         }
         
-        //Mostrar datos por pantalla al usuario al posar el cursor sobre una de las casillas
+        //MUESTRA UNA LEYENDA CON DATOS RESPECTO A AL CASILLA SOBRE LA QUE SE POSA EL CURSOR
         
         for (int i = 0;i<25; i++){
             for(int j=0; j< 25; j++){
@@ -460,15 +460,13 @@ public class ControladorTablero implements ActionListener{
                 String nombre = "";
                 String defensa = "";
                 
-                //Definimos la coordenada en la que se posa el cursor
+            //POSICION
                 String coordenadas = "Posicion: " + (i+","+j) + "<br/>";
                 
-                
-                //Definimos la altura de la casilla
+            //ALTURA
                 altura = "Altura: " + this.esc.getMatrizEscenario()[i][j].getAltura() + "<br/>";
                 
-                
-                //Ahora determinamos si la casilla en la que se posa el cursor es caminable
+            //CAMINABLE
                 if (this.esc.getMatrizEscenario()[i][j].isCaminable() == true){
                     disponibilidad = "Disponibilidad: Caminable" + "<br/>";
                 }
@@ -476,8 +474,7 @@ public class ControladorTablero implements ActionListener{
                     disponibilidad = "Disponibilidad: No Caminable" + "<br/>";
                 }
                 
-                
-                //Ahora determinamos el tipo de terreno en el que se posa el cursor
+            //TIPO TERRENO
                 if(this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno()== 0){
                     terreno = "Tipo de terreno: Tierra" + "<br/>";
                 }
@@ -491,8 +488,7 @@ public class ControladorTablero implements ActionListener{
                     terreno = "Tipo de terreno: Rio" + "<br/>";
                 }
                 
-                
-                //Determinamos el rol de personaje si existe en la casilla
+            //ROL, TRAICION, ATAQUE LARGO Y CORTO, VIDA Y DEFENSA
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
                     traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + " ptos";
@@ -500,9 +496,7 @@ public class ControladorTablero implements ActionListener{
                     puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
                     vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaActual() + " ptos" + "<br/>";
                     defensa = "-Defensa: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosDefensa() + " ptos" + "<br/>";
-
                 }
-                
                 else{
                     rol = "" + "<br/>";
                 }                               
@@ -523,333 +517,350 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        
         if(e.getSource() == this.vt.getBtnRegresarVT()){
             vt.dispose();
+        }
+        
+        Personaje personaje=personajesOrdenadosU.get(0);
+        int fila = personaje.getPosX();
+        int columna = personaje.getPosY();
+        int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
+        jugador=personaje;
+        System.out.println("posicion "+fila+","+columna);
+        
+        //EVENTOS RELACIONADOS A LA PULSACION DE UN BOTON
+        
+        if(flagTurno){
 
-                }
-            Personaje personaje=personajesOrdenadosU.get(0);
-            int fila = personaje.getPosX();
-            int columna = personaje.getPosY();
-            int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
-            jugador=personaje;
-            System.out.println("posicion "+fila+","+columna);
-            if(flagTurno){
-                
-                if(e.getSource() == this.vt.getBtnMover()){
-                    if(contadorMovimientos<=3){
-                        if(contadorMovimientos==3){
-                            this.vt.getBtnMover().setEnabled(false);
-                            
-                            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
-                                for (int i = 0;i<25; i++){
-                                    for(int j=0; j< 25; j++){
-                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
-                                            flagTurno = false;
-                                            flagMover = true;
+        //PRESIONAR BOTON MOVER
+        
+            if(e.getSource() == this.vt.getBtnMover()){
+                if(contadorMovimientos<=3){
+                    if(contadorMovimientos==3){
+                        this.vt.getBtnMover().setEnabled(false);
 
-                                            }
-                                        }
-                                    }
-                        
-                             }
-                        }else{
-                            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
-                                for (int i = 0;i<25; i++){
-                                    for(int j=0; j< 25; j++){
-                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
-                                            flagTurno = false;
-                                            flagMover = true;
-
-                                            }
-                                        }
+                        for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                            for (int i = 0;i<25; i++){
+                                for(int j=0; j< 25; j++){
+                                    if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                        flagTurno = false;
+                                        flagMover = true;
                                     }
                                 }
                             }
-                        
                         }
-                    }else if(e.getSource()==vt.getBtnAtacar()){
-                        for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
-                                for (int i = 0;i<25; i++){
-                                    for(int j=0; j< 25; j++){
-                                        if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
-                                            flagTurno = false;
-                                            flagAtacar = true;
-
-                                            }
-                                        }
+                    }
+                    
+                    else{
+                        for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                            for (int i = 0;i<25; i++){
+                                for(int j=0; j< 25; j++){
+                                    if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                        flagTurno = false;
+                                        flagMover = true;
                                     }
-                        
-                             }
-                        
-                    }else if(e.getSource()==vt.getBtnTerminar()){
-                        personajesOrdenadosU.remove(0);
-                        personajesOrdenadosU.add(jugador);
-                        vt.getBtnTerminar().setEnabled(false);
-                        flagTurno=false;
-                        flagTurnoCPU=true;
-                    }   
-            } else if(flagMover){
-                for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
-                    if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
-                        int alturaFinal=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
-                        if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno()==3){
-                            contadorMovimientos=contadorMovimientos;
-                        }else{
-                            if(alturaFinal-alturaInicial>2 || alturaFinal-alturaInicial<(-2)){
-                                contadorMovimientos=contadorMovimientos;
-                            }else{
-                                if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable()==false){
-                                    contadorMovimientos=contadorMovimientos;
-                                }else{
-                                    if(personaje.getBandoPersonaje().equals("bueno")){
-                                        if(personaje.getRolPersonaje().equals("Guerrero")){
-                                            this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
-                                            this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
-                                            
-                                            }
-
-                                            else{
-                                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
-                                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
-
-                                            }
-
-                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
-                                        this.vt.matrizVista[fila][columna].setText("");
-                                        this.esc.getMatrizEscenario()[fila][columna].setCaminable(true);
-                                        System.out.println("posicion despues de mover "+posicion.get(0)+","+posicion.get(1));
-                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
-                                        personaje.setPosX(posicion.get(0));
-                                        personaje.setPosY(posicion.get(1));
-                                        flagMover = false;
-                                        flagTurno = true;
-                                        contadorMovimientos++;
-                                        }
-                                 }
+                                }
                             }
                         }
-                        
                     }
                 }
-            }else if(flagAtacar){
-                vt.getBtnAtacar().setEnabled(false);
-                for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
-                    if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
-                        if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
-                            System.out.println("ATAQUE CORTO MUMU");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                bct=new ControladorBatallaCorta(personaje,enemigo);
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+1||posicion.get(0)==fila+2||posicion.get(0)==fila-1||posicion.get(0)==fila-2)){
-                            System.out.println("ATAQUE CORTO MUMU");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                bct=new ControladorBatallaCorta(personaje,enemigo);
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if(posicion.get(0)==fila+1&&(posicion.get(1)==columna-1||posicion.get(1)==columna+1)){
-                            System.out.println("ATAQUE CORTO MUMU");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                bct=new ControladorBatallaCorta(personaje,enemigo);
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if(posicion.get(0)==fila-1&&(posicion.get(1)==columna-1||posicion.get(1)==columna+1)){
-                            System.out.println("ATAQUE CORTO MUMU");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                bct=new ControladorBatallaCorta(personaje,enemigo);
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+5||posicion.get(0)==fila+6||posicion.get(0)==fila+7||posicion.get(0)==fila+8||posicion.get(0)==fila-5||posicion.get(0)==fila-6||posicion.get(0)==fila-7||posicion.get(0)==fila-8)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                                
-                            }
-                        }else if(posicion.get(0)==fila&&(posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna+7||posicion.get(1)==columna+8||posicion.get(1)==columna-5||posicion.get(1)==columna-6||posicion.get(1)==columna-7||posicion.get(1)==columna-8)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if ((posicion.get(0)==fila+5||posicion.get(0)==fila-5)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna-1||posicion.get(1)==columna-2||posicion.get(1)==columna-3)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if((posicion.get(0)==fila+6||posicion.get(0)==fila-6)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if((posicion.get(0)==fila+7||posicion.get(0)==fila-7)&&(posicion.get(1)==columna+1||posicion.get(1)==columna-1)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if((posicion.get(0)==fila+4||posicion.get(0)==fila-4)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna-1||posicion.get(1)==columna-2||posicion.get(1)==columna-3||posicion.get(1)==columna-4)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if((posicion.get(0)==fila+3||posicion.get(0)==fila-3)&&(posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna-2||posicion.get(1)==columna-3||posicion.get(1)==columna-4||posicion.get(1)==columna-5)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if((posicion.get(0)==fila+2||posicion.get(0)==fila-2)&&(posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna-3||posicion.get(1)==columna-4||posicion.get(1)==columna-5||posicion.get(1)==columna-6)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                            }
-                        }else if((posicion.get(0)==fila+1||posicion.get(0)==fila-1)&&(posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna+7||posicion.get(1)==columna-4||posicion.get(1)==columna-5||posicion.get(1)==columna-6||posicion.get(1)==columna-7)){
-                            System.out.println("ATAQUE LARGO OINK");
-                            if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
-                                System.out.println("NO HAY PERSONAJE");
-                                
-                            }else{
-                                Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
-                                int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
-                                int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
-                                if(resultado==0){
-                                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
-                                }else{
-                                    int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                    JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
-                                }
-                                flagAtacar=false;
-                                flagTurno=true;
-                                
-                            }
-                        }
-                        
-                                               
-                    }
-                }
+            }
             
-        }else if(flagTurnoCPU){
+        //PRESIONAR BOTON ATACAR
+            
+            else if(e.getSource()==vt.getBtnAtacar()){
+                for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                    for (int i = 0;i<25; i++){
+                        for(int j=0; j< 25; j++){
+                            if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
+                                flagTurno = false;
+                                flagAtacar = true;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        //PRESIONAR BOTON TERMINAR
+            
+            else if(e.getSource()==vt.getBtnTerminar()){
+                personajesOrdenadosU.remove(0);
+                personajesOrdenadosU.add(jugador);
+                vt.getBtnTerminar().setEnabled(false);
+                flagTurno=false;
+                flagTurnoCPU=true;
+            }   
+        } 
+        
+        //EVENTOS RELACIONADOS AL MOVIMIENTO EL PERSONAJE
+        
+        else if(flagMover){
+            
+            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
+                if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                    int alturaFinal=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
+                    if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno()==3){
+                        contadorMovimientos = contadorMovimientos;
+                    }
+                    else{
+                        if(alturaFinal-alturaInicial > 2 || alturaFinal-alturaInicial < (-2)){
+                            contadorMovimientos = contadorMovimientos;
+                        }
+                        else{
+                            if(this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable()==false){
+                                contadorMovimientos=contadorMovimientos;
+                            }
+                            else{
+                                if(personaje.getBandoPersonaje().equals("bueno")){
+                                    if(personaje.getRolPersonaje().equals("Guerrero")){
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
+                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+                                    }
+
+                                    else{
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
+                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+                                    }
+
+                                    this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
+                                    this.vt.matrizVista[fila][columna].setText("");
+                                    this.esc.getMatrizEscenario()[fila][columna].setCaminable(true);
+                                    System.out.println("posicion despues de mover "+posicion.get(0)+","+posicion.get(1));
+                                    this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
+                                    personaje.setPosX(posicion.get(0));
+                                    personaje.setPosY(posicion.get(1));
+                                    flagMover = false;
+                                    flagTurno = true;
+                                    contadorMovimientos++;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        //EVENTOS RELACIONADOS AL ATAQUE DEL PERSONAJE
+        
+        else if(flagAtacar){
+            
+            vt.getBtnAtacar().setEnabled(false);
+            for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                    if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
+                        System.out.println("ATAQUE CORTO MUMU");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            bct=new ControladorBatallaCorta(personaje,enemigo);
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+1||posicion.get(0)==fila+2||posicion.get(0)==fila-1||posicion.get(0)==fila-2)){
+                        System.out.println("ATAQUE CORTO MUMU");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            bct=new ControladorBatallaCorta(personaje,enemigo);
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if(posicion.get(0)==fila+1&&(posicion.get(1)==columna-1||posicion.get(1)==columna+1)){
+                        System.out.println("ATAQUE CORTO MUMU");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            bct=new ControladorBatallaCorta(personaje,enemigo);
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if(posicion.get(0)==fila-1&&(posicion.get(1)==columna-1||posicion.get(1)==columna+1)){
+                        System.out.println("ATAQUE CORTO MUMU");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            bct=new ControladorBatallaCorta(personaje,enemigo);
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if(posicion.get(1)==columna&&(posicion.get(0)==fila+5||posicion.get(0)==fila+6||posicion.get(0)==fila+7||posicion.get(0)==fila+8||posicion.get(0)==fila-5||posicion.get(0)==fila-6||posicion.get(0)==fila-7||posicion.get(0)==fila-8)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+
+                        }
+                    }else if(posicion.get(0)==fila&&(posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna+7||posicion.get(1)==columna+8||posicion.get(1)==columna-5||posicion.get(1)==columna-6||posicion.get(1)==columna-7||posicion.get(1)==columna-8)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if ((posicion.get(0)==fila+5||posicion.get(0)==fila-5)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna-1||posicion.get(1)==columna-2||posicion.get(1)==columna-3)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if((posicion.get(0)==fila+6||posicion.get(0)==fila-6)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if((posicion.get(0)==fila+7||posicion.get(0)==fila-7)&&(posicion.get(1)==columna+1||posicion.get(1)==columna-1)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if((posicion.get(0)==fila+4||posicion.get(0)==fila-4)&&(posicion.get(1)==columna+1||posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna-1||posicion.get(1)==columna-2||posicion.get(1)==columna-3||posicion.get(1)==columna-4)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if((posicion.get(0)==fila+3||posicion.get(0)==fila-3)&&(posicion.get(1)==columna+2||posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna-2||posicion.get(1)==columna-3||posicion.get(1)==columna-4||posicion.get(1)==columna-5)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if((posicion.get(0)==fila+2||posicion.get(0)==fila-2)&&(posicion.get(1)==columna+3||posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna-3||posicion.get(1)==columna-4||posicion.get(1)==columna-5||posicion.get(1)==columna-6)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }else if((posicion.get(0)==fila+1||posicion.get(0)==fila-1)&&(posicion.get(1)==columna+4||posicion.get(1)==columna+5||posicion.get(1)==columna+6||posicion.get(1)==columna+7||posicion.get(1)==columna-4||posicion.get(1)==columna-5||posicion.get(1)==columna-6||posicion.get(1)==columna-7)){
+                        System.out.println("ATAQUE LARGO OINK");
+                        if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
+                            System.out.println("NO HAY PERSONAJE");
+
+                        }else{
+                            Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
+                            int probabilidadFallo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getProbabilidadDeFallo();
+                            int resultado=bat.atacarLargo(probabilidadFallo, jugador, enemigo);
+                            if(resultado==0){
+                                JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                            }else{
+                                int vidaEnemigo=enemigo.getPuntosVidaTotal();
+                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                            }
+                            flagAtacar=false;
+                            flagTurno=true;
+                        }
+                    }                      
+                }
+            }
+        }
+        
+        else if(flagTurnoCPU){
             contadorMovimientos=0;
             JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
             vt.getBtnAtacar().setEnabled(true);
