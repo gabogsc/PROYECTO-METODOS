@@ -26,6 +26,7 @@ public class VistaBatallaCorta extends javax.swing.JFrame {
      */
     public VistaBatallaCorta() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

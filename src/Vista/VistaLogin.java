@@ -61,8 +61,6 @@ public class VistaLogin extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(51, 102, 0));
         jLabel3.setText("DIINF TACTICS ADVANCE ");
 
-        txtContraseña.setText("jPasswordField1");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
