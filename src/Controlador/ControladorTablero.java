@@ -521,6 +521,7 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON REGRESAR
         if(e.getSource() == this.vt.getBtnRegresarVT()){
             vt.dispose();
+            ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
         }
         
         Personaje personaje=personajesOrdenadosU.get(0);
