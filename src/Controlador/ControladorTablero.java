@@ -544,11 +544,13 @@ public class ControladorTablero implements ActionListener{
                         for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                             for (int i = 0; i < 25; i++){
                                 for(int j = 0; j < 25; j++){
-                                    Border borde;
+                                    Border borde1;
+                                    Border borde2;
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
 
-                                        borde = BorderFactory.createRaisedBevelBorder();
-                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN));
+                                        borde1 = BorderFactory.createRaisedBevelBorder();
+                                        borde2 = BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN);
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createCompoundBorder(borde2, borde1));
                                         flagTurno = false;
                                         flagMover = true;
                                     }
@@ -561,10 +563,12 @@ public class ControladorTablero implements ActionListener{
                         for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                             for (int i = 0;i<25; i++){
                                 for(int j=0; j< 25; j++){
-                                    Border borde;
+                                    Border borde1;
+                                    Border borde2;
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                        borde = BorderFactory.createRaisedBevelBorder();
-                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN));
+                                        borde1 = BorderFactory.createRaisedBevelBorder();
+                                        borde2 = BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN);
+                                        this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createCompoundBorder(borde2, borde1));
                                         flagTurno = false;
                                         flagMover = true;
                                     }
@@ -578,13 +582,20 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON ATACAR
             
             else if(e.getSource() == this.vt.getBtnAtacar()){
+                
+                if(contadorMovimientos > 0){
+                    this.vt.getBtnMover().setEnabled(false);
+                }
+                
                 for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
                     for (int i = 0;i<25; i++){
                         for(int j=0; j< 25; j++){
-                            Border borde;
+                            Border borde1;
+                            Border borde2;
                             if((posicion.get(0)) != i && (posicion.get(1)) != j){
-                                borde = BorderFactory.createRaisedBevelBorder();
-                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(borde);
+                                borde1 = BorderFactory.createRaisedBevelBorder();
+                                borde2 = BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createCompoundBorder(borde2, borde1));
                                 flagTurno = false;
                                 flagAtacar = true;
                             }
@@ -610,6 +621,12 @@ public class ControladorTablero implements ActionListener{
             
             for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                    
+            //ELIMINAMOS LOS BORDES    
+            
+                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasFueraDeRango(fila, columna)){
+                        this.vt.getMatrizVista()[mismaPosicion.get(0)][mismaPosicion.get(1)].setBorder(BorderFactory.createLineBorder(Color.GRAY));
+                    }
                     
                     int alturaFinal = this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getAltura();
                 //MOVIMIENTO INHABILITADO POR TIPO DE TERRENO RIO
@@ -660,9 +677,16 @@ public class ControladorTablero implements ActionListener{
         
         else if(flagAtacar){
             
-            vt.getBtnAtacar().setEnabled(false);
+            this.vt.getBtnAtacar().setEnabled(false);
+            
             for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                    
+            //ELIMINAMOS LOS BORDES
+                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
+                        this.vt.getMatrizVista()[mismaPosicion.get(0)][mismaPosicion.get(1)].setBorder(BorderFactory.createLineBorder(Color.GRAY));
+                    }
+                    
                     if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
                         System.out.println("ATAQUE CORTO MUMU");
                         if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
