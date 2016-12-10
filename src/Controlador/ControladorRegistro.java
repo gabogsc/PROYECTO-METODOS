@@ -9,6 +9,7 @@ import Controlador.ControladorLogin;
 import java.awt.event.ActionEvent;
 import Modelo.Registro;
 import Modelo.Usuario;
+
 import Vista.vistaRegistro;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
@@ -70,6 +71,9 @@ public class ControladorRegistro implements ActionListener {
                     , this.vr.getTextPP().getText(), rolPP, this.vr.getTextPS().getText(), rolPS, carrera , dinero))
              {
                  JOptionPane.showMessageDialog(null, "Jugador Registrado Exitosamente !!!");
+                 this.vr.dispose();
+                 ControladorLogin cl = new ControladorLogin();
+                 
              }
              else
              {

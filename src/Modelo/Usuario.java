@@ -10,6 +10,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -146,5 +147,82 @@ public class Usuario {
         return false;
     }
             
+
+public String[] ingresar(String user){
+   
+    String[] x = new String[8];
+    
+        try {
+            String query = "SELECT * FROM JUGADOR WHERE USUARIO = '"+user+"'";
+            
+            state = con.createStatement();
+            
+            res= state.executeQuery(query);
+            
+            
+            while(res.next()){
+                
+               x[0]=res.getString("USUARIO");
+               x[1]=res.getString("PASS");
+               x[2]=res.getString("PERSONAJE1");
+               x[3]=res.getString("ROL1");
+               x[4]=res.getString("PERSONAJE2");
+               x[5]=res.getString("ROL2");
+               x[6]=res.getString("CARRERA");
+               x[7]=res.getInt("DINERO")+"";
+                
+            }
+            if(x[0]!= null || x[0]!="")
+            {
+                return x;
+                
+            }
+            else {
+                return null;
+            }
+            
+            
+             }
+            catch (SQLException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+ }
+
+public boolean validarInicio(String[] aux, String pss)
+{
+    if (aux[0] == null || aux[0]=="")
+    {
+        JOptionPane.showMessageDialog(null, "El Usuario No existe");
+        return false;
+        
+    }else if (aux[1].equals(pss))
+    {
+        JOptionPane.showMessageDialog(null, "Entraste de vioh!!!");
+        return true;
+        
+    }else{
+        JOptionPane.showMessageDialog(null, "La contraseña esta mala shoro!");
+        return false;
+    }
+        
+        
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
