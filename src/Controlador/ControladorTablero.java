@@ -449,14 +449,16 @@ public class ControladorTablero implements ActionListener{
         for (int i = 0;i<25; i++){
             for(int j=0; j< 25; j++){
               
-                String disponibilidad = null;
-                String terreno = null;
-                String altura = null;
-                String rol = null;
-                String puntosAtaqueLargo = null;
-                String puntosAtaqueCorto = null;
+                String disponibilidad;
+                String terreno;
+                String altura;
+                String rol;
+                String puntosAtaqueLargo = "";
+                String puntosAtaqueCorto = "";
                 String traicion = "";
-                String vida = null;
+                String vida = "";
+                String nombre = "";
+                String defensa = "";
                 
                 //Definimos la coordenada en la que se posa el cursor
                 String coordenadas = "Posicion: " + (i+","+j) + "<br/>";
@@ -492,56 +494,24 @@ public class ControladorTablero implements ActionListener{
                 
                 //Determinamos el rol de personaje si existe en la casilla
                 if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
-                    rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje();
-                }
-                else{
-                    rol = "";
-                }
-                
-                //Determinamos el rol de personaje si existe en la casilla
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
-                    traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + "ptos";
+                    traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + " ptos";
+                    puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
+                    puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
+                    vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaActual() + " ptos" + "<br/>";
+                    defensa = "-Defensa: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosDefensa() + " ptos" + "<br/>";
 
                 }
                 
                 else{
                     rol = "" + "<br/>";
-                }
-                
-                //Determinamos el ataque a largo alcance
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() != 0){
-                    puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
-                }
-                
-                else{
-                    puntosAtaqueLargo = "";
-                }
-                
-                //Determinamos el ataque a corto alcance
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() != 0){
-                    puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
-                }
-                
-                else{
-                    puntosAtaqueCorto = "";
-                }
-                
-                //Determinamos los puntos de vida del personaje
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() != 0){
-                    vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() + " ptos" + "<br/>";
-                }
-                
-                else{
-                    vida = "";
-                }
-                                
+                }                               
 
                 UIManager.put("ToolTip.background", new ColorUIResource(255, 247, 200)); //#fff7c8
                 Border border = BorderFactory.createLineBorder(new Color(76,79,83));    //#4c4f53
                 UIManager.put("ToolTip.border", border);
                 ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
-                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
+                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
             }
         }
         
