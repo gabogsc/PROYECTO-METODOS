@@ -127,11 +127,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        btnCalculoI.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         btnCalculoI.setText("CALCULO I");
         btnCalculoI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCalculoI.setMaximumSize(new java.awt.Dimension(50, 23));
         btnCalculoI.setMinimumSize(new java.awt.Dimension(50, 23));
-        btnCalculoI.setPreferredSize(null);
 
         btnMetodosDeProgramacion.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnMetodosDeProgramacion.setText("<html><center>METODOS <br><center>DE <br><center>PROGRAMACIÓN");
@@ -151,9 +151,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton4.setText("FISICA I");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton4.setPreferredSize(null);
 
         jButton5.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
         jButton5.setText("<html><center>INTRODUCCION <br><center> A LA <br><center>INGENIERIA");
@@ -172,9 +172,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jButton7.setText("<html><center>METODOS <br><center>DE <br><center>ESTUDIO");
         jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton8.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton8.setText("CALCULO II");
         jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton9.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton9.setText("ALGEBRA II");
         jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
@@ -183,9 +185,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
+        jButton10.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton10.setText("FISICA II");
         jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton11.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton11.setText("QUÍMICA");
         jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -206,6 +210,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jButton14.setText("<html><center>COMUNICACION<br><center> EFECTIVA");
         jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton15.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton15.setText("INGLES I");
         jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -213,15 +218,19 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jButton16.setText("<html><center>ECUACIONES <br><center>DIFERENCIALES");
         jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton17.setText("ELECTRICIDAD Y MAGENTISMO");
+        jButton17.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
+        jButton17.setText("<html><center>ELECTRICIDAD <br><center>Y<br><center>MAGENTISMO");
         jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton18.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton18.setText("ALGEBRA I");
         jButton18.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton19.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton19.setText("CALCULO III");
         jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        jButton20.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         jButton20.setText("INGLES II");
         jButton20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -241,38 +250,37 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jButton24.setText("<html><center>ANALISIS DE DATOS Y <br><center>ESTRUCTURA DE DATOS");
         jButton24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jButton25.setText("jButton25");
+        jButton25.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        jButton25.setText("<html><center>INGENIERIA <br><center>DE <br><center>SISTEMAS");
         jButton25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton25.setPreferredSize(null);
 
-        jButton26.setText("jButton26");
+        jButton26.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        jButton26.setText("<html><center>DISEÑO DE<br><center>BASES DE DATOS");
         jButton26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton26.setPreferredSize(null);
 
-        jButton27.setText("jButton27");
+        jButton27.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        jButton27.setText("<html><center>ORGANIZACIÓN <br><center>DE<br><center>COMPUTADORES");
         jButton27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton27.setPreferredSize(null);
         jButton27.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton27ActionPerformed(evt);
             }
         });
 
-        jButton28.setText("jButton28");
+        jButton28.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        jButton28.setText("<html><center>FUNDAMENTOS<br><center>DE INGENIERÍA<br><center> DE SOFTWARE");
         jButton28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton28.setPreferredSize(null);
 
-        jButton29.setText("jButton29");
+        jButton29.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        jButton29.setText("<html><center>ALGORITMOS<br><center>AVANZADOS");
         jButton29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton29.setPreferredSize(null);
 
-        jButton30.setText("jButton30");
+        jButton30.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jButton30.setText("<html><center>INGLES III");
+        jButton30.setToolTipText("<html><center>INGLES III\n");
         jButton30.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton30.setPreferredSize(null);
 
-        jButton31.setText("jButton31");
         jButton31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton31.setPreferredSize(null);
 
         jButton32.setText("jButton32");
         jButton32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -295,9 +303,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jButton35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton35.setPreferredSize(null);
 
-        jButton36.setText("jButton36");
+        jButton36.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        jButton36.setText("<html><center>INGLES IV");
         jButton36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton36.setPreferredSize(null);
 
         jButton37.setText("jButton37");
         jButton37.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
