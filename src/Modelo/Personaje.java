@@ -137,6 +137,11 @@ public class Personaje {
         return puntosVidaActual;
     }
 
+    public void setPuntosVidaActual(int puntosVidaActual) {
+        this.puntosVidaActual = puntosVidaActual;
+    }
+    
+
     public void setPuntosVidaTotal(int puntosVida) {
         this.puntosVidaTotal = puntosVida;
     }

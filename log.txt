@@ -542,3 +542,6 @@
 2016/12/10 :: 17:00:05 =Usuario se logea
 2016/12/10 :: 17:02:42 =Usuario se logea
 2016/12/10 :: 17:03:11 =Usuario se logea
+2016/12/10 :: 19:45:20 =Usuario se logea
+2016/12/10 :: 20:30:19 =Usuario se logea
+2016/12/10 :: 20:30:48 =Usuario se logea
