@@ -512,7 +512,7 @@ public class ControladorTablero implements ActionListener{
         for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
             System.out.println(personaje.getPosX() + "," + personaje.getPosY());
         }
-        personajesOrdenadosU=this.esc.ordenarTurnosUsuario();
+        personajesOrdenadosU = this.esc.ordenarTurnosUsuario();
     }
 
     @Override
@@ -526,8 +526,8 @@ public class ControladorTablero implements ActionListener{
         int fila = personaje.getPosX();
         int columna = personaje.getPosY();
         int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
-        jugador=personaje;
-        System.out.println("posicion "+fila+","+columna);
+        jugador = personaje;
+        System.out.println("posicion " + fila + "," + columna);
         
         //EVENTOS RELACIONADOS A LA PULSACION DE UN BOTON
         
@@ -536,13 +536,13 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON MOVER
         
             if(e.getSource() == this.vt.getBtnMover()){
-                if(contadorMovimientos<=3){
+                if(contadorMovimientos <= 3){
                     if(contadorMovimientos==3){
                         this.vt.getBtnMover().setEnabled(false);
 
                         for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
-                            for (int i = 0;i<25; i++){
-                                for(int j=0; j< 25; j++){
+                            for (int i = 0; i < 25; i++){
+                                for(int j = 0; j < 25; j++){
                                     if((posicion.get(0)) != i && (posicion.get(1)) != j){
                                         this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBackground(Color.RED);
                                         flagTurno = false;

@@ -713,9 +713,10 @@ public class Escenario {
         
     }
     
-    /*En este metodo creamos un ArrayList de ArrayList de enteros de aquellas casillas
-    no adyacentes
+    /*CREACION LISTA DE POSICIONES ADYACENTES AL PERSONAJE HABILITADAS AL MOVIMIENTO
+    DEL PERSONAJE QUE ESTA EN TURNO.
     */
+
     
     public ArrayList<ArrayList<Integer>> casillasEnRango(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
@@ -728,17 +729,21 @@ public class Escenario {
                 if((fila==i || fila==(i+1) || fila==(i-1)) && (columna==j || columna==(j+1) || columna==(j-1))){
                     if((fila==(i+1) && columna==(j+1) || fila==(i-1)&&columna==(j-1)|| fila==(i+1)&& columna==(j-1)||fila==(i-1)&& columna==(j+1))){
                         
-                    }else{
-                        posicion.add(i);
-                    posicion.add(j);
-                    posicionesDeshabilitadas.add(posicion);
                     }
                     
+                    else{
+                        posicion.add(i);
+                        posicion.add(j);
+                        posicionesDeshabilitadas.add(posicion);
+                    }
                 }
             }
         }
+        
         return posicionesDeshabilitadas;
     }
+    
+    
     public ArrayList<ArrayList<Integer>> casillasEnRangoAtaque(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
         //System.out.println(fila + "," + columna);
