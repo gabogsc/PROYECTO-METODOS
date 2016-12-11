@@ -52,6 +52,7 @@ public class ControladorTablero implements ActionListener{
         // TIPO DE ASIGNATURA QUE ELIGIO EL USUARIO
         bat=new Batalla();
         cpu = new CPU();
+        this.vt.getBtnVerificarTerminar().setEnabled(false);
         
         if(tipoDeAsignatura == 0){
             
@@ -617,7 +618,8 @@ public class ControladorTablero implements ActionListener{
                 this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
-                vt.getBtnTerminar().setEnabled(false);
+                this.vt.getBtnTerminar().setEnabled(false);
+                this.vt.getBtnVerificarTerminar().setEnabled(true);
                 flagTurno = false;
                 flagTurnoCPU = true;
             }   
@@ -906,13 +908,19 @@ public class ControladorTablero implements ActionListener{
         
         else if(flagTurnoCPU){
             
-            contadorMovimientos=0;
-            JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
-            vt.getBtnAtacar().setEnabled(true);
-            vt.getBtnMover().setEnabled(true);
-            vt.getBtnTerminar().setEnabled(true);
-            flagTurnoCPU=false;
-            flagTurno=true;
+            if(e.getSource() == this.vt.getBtnVerificarTerminar()){
+                
+                contadorMovimientos=0;
+                JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
+                vt.getBtnAtacar().setEnabled(true);
+                vt.getBtnMover().setEnabled(true);
+                vt.getBtnTerminar().setEnabled(true);
+                flagTurnoCPU=false;
+                flagTurno=true;
+                this.vt.getBtnVerificarTerminar().setEnabled(false);
+                
+            }
+            
         }  
     }
 }
