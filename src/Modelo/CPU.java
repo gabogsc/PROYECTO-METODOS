@@ -54,5 +54,71 @@ public class CPU {
     
     
     
+    
+    
+    
+    
+    
+   public void MovimientoCPU(Personaje PersonajeUsuarioMasCerca, Personaje personajeCPU ){
+       
+       
+        if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() ||
+                
+                personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && 
+                
+			personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
+                            // SETEO POSICION X + 1
+                            personajeCPU.setPosX(personajeCPU.getPosX()+1);
+
+        }
+        
+        else if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() ||
+                
+                    personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && 
+                
+			personajeCPU.getPosX() > PersonajeUsuarioMasCerca.getPosX() ){
+                        // SETEO POSICION X -1
+                            personajeCPU.setPosX(personajeCPU.getPosX()-1);
+
+
+        }
+        else if( (personajeCPU.getPosY()+1 != PersonajeUsuarioMasCerca.getPosY() ||
+                
+                    personajeCPU.getPosY()-1 != PersonajeUsuarioMasCerca.getPosY()  ) && 
+                
+			personajeCPU.getPosY() < PersonajeUsuarioMasCerca.getPosY() ){
+                        // SETEO POSICION Y + 1
+                            personajeCPU.setPosY(personajeCPU.getPosY()+1);
+
+
+        }
+        else if( (personajeCPU.getPosY()+1 != PersonajeUsuarioMasCerca.getPosY() ||
+                
+                    personajeCPU.getPosY()-1 != PersonajeUsuarioMasCerca.getPosY()  ) && 
+                
+			personajeCPU.getPosY() > PersonajeUsuarioMasCerca.getPosY() ){
+                        // SETEO POSICION Y - 1
+                        personajeCPU.setPosY(personajeCPU.getPosY()-1);
+
+
+        }else{
+            
+                // ATACAR 
+        
+        
+        }
+        
+    }
+
+    
+       
+       
+     
+        
+        
+     
+   
+   
+    
     public void ataqueCPU(Personaje personaje, int x, int y){}
 }
