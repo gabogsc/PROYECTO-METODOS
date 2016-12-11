@@ -238,8 +238,8 @@ public class Personaje {
         return rolPersonaje;
     }
 
-    public void setRolPersonaje(String rolPersonaje) {
-        this.rolPersonaje = rolPersonaje;
+    public void setRolPersonaje(String rolDPersonaje) {
+        rolPersonaje = rolDPersonaje;
     }
 
     public ArrayList<String> getInventario() {

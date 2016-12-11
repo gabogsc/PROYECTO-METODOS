@@ -83,7 +83,26 @@ public class Casilla {
     }
 
     public void setPersonaje(Personaje personaje) {
+        String rol=personaje.getRolPersonaje();
+        String bando=personaje.getBandoPersonaje();
+        String nombre=personaje.getNombrePersonaje();
+        String ruta=personaje.getRuta();
+        String tipo=personaje.getTipoPersonaje();
+        int ataqueCorto=personaje.getPuntosAtaqueCorto();
+        int ataqueLargo=personaje.getPuntosAtaqueLargo();
+        int velocidad=personaje.getPuntosVelocidad();
+        int defensa=personaje.getPuntosDefensa();
         this.personaje = personaje;
+        this.personaje.setRolPersonaje(rol);
+        this.personaje.setBandoPersonaje(bando);
+        this.personaje.setNombrePersonaje(nombre);
+        this.personaje.setRuta(ruta);
+        this.personaje.setTipoPersonaje(tipo);
+        this.personaje.setPuntosAtaqueCorto(ataqueCorto);
+        this.personaje.setPuntosAtaqueLargo(ataqueLargo);
+        this.personaje.setPuntosVelocidad(velocidad);
+        this.personaje.setPuntosDefensa(defensa);
+        
     }
    
     
@@ -124,8 +143,8 @@ public class Casilla {
         return this.tipoDeTerreno;
     }
 
-    public void setTipoDeTerreno(int tipoDeTerreno) {
-        this.tipoDeTerreno = tipoDeTerreno;
+    public void setTipoDeTerreno(int tipoTerreno) {
+        this.tipoDeTerreno = tipoTerreno;
     }
 
     @Override

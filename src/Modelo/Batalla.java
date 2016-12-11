@@ -57,7 +57,7 @@ public class Batalla {
             int daño=defensaEnemigo-ataqueJugador;
             System.out.println("daño realizado");
             System.out.println(daño);
-            dañoRealizado=hpEnemigo - daño;
+            dañoRealizado=hpEnemigo + daño;
             System.out.println("resultado ataque");
             System.out.println(dañoRealizado);
             enemigo.setPuntosVidaTotal(dañoRealizado);
@@ -66,14 +66,14 @@ public class Batalla {
             System.out.println(vidaActual);
         }else{
             Random rand=new Random();
-            int probabilidad=rand.nextInt(100);
+            int probabilidad=rand.nextInt(99);
             if ((probabilidad<=25)&&(20<probabilidad)||(probabilidad<=45)&&(probabilidad>40)||(probabilidad<=65)&&(probabilidad>60)||(probabilidad<=85)&&(probabilidad>80)){
                 dañoRealizado=0;
             }else{
                int daño=defensaEnemigo-ataqueJugador;
                 System.out.println("daño realizado");
                 System.out.println(daño);
-                dañoRealizado=hpEnemigo - daño;
+                dañoRealizado=hpEnemigo + daño;
                 System.out.println("resultado ataque");
                 System.out.println(dañoRealizado);
                 enemigo.setPuntosVidaTotal(dañoRealizado);

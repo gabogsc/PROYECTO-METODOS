@@ -41,6 +41,7 @@ public class ControladorTablero implements ActionListener{
     ArrayList<Personaje> personajesOrdenadosU;
     ArrayList<Personaje> personajesOrdenadosCPU;
     Personaje jugador;
+    Personaje personCPU;
     
     
 
@@ -52,7 +53,6 @@ public class ControladorTablero implements ActionListener{
         // TIPO DE ASIGNATURA QUE ELIGIO EL USUARIO
         bat=new Batalla();
         cpu = new CPU();
-        this.vt.getBtnVerificarTerminar().setEnabled(false);
         
         if(tipoDeAsignatura == 0){
             
@@ -494,12 +494,12 @@ public class ControladorTablero implements ActionListener{
                 }
                 
             //ROL, TRAICION, ATAQUE LARGO Y CORTO, VIDA Y DEFENSA
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje().equals("")==false){
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
                     traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + " ptos";
                     puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
                     puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
-                    vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaActual() + " ptos" + "<br/>";
+                    vida = "-Vida: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosVidaTotal() + " ptos" + "<br/>";
                     defensa = "-Defensa: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosDefensa() + " ptos" + "<br/>";
                 }
                 else{
@@ -536,6 +536,7 @@ public class ControladorTablero implements ActionListener{
         int columna = personaje.getPosY();
         int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
         jugador = personaje;
+        personCPU=personajeCPU;
         System.out.println("posicion " + fila + "," + columna);
         
         //EVENTOS RELACIONADOS A LA PULSACION DE UN BOTON
@@ -615,13 +616,12 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON TERMINAR
             
             else if(e.getSource() == this.vt.getBtnTerminar()){
-                
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
-                this.vt.getBtnTerminar().setEnabled(false);
-                this.vt.getBtnVerificarTerminar().setEnabled(true);
-                flagTurno = false;
+                vt.getBtnTerminar().setEnabled(false);
                 flagTurnoCPU = true;
+                flagTurno = false;
+                
             }   
         } 
         
@@ -656,23 +656,26 @@ public class ControladorTablero implements ActionListener{
                                 if(personaje.getBandoPersonaje().equals("bueno")){
                                     if(personaje.getRolPersonaje().equals("Guerrero")){
                                         this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("G");
-                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(jugador);
+                                        
                                     }
 
                                     else{
                                         this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
-                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personaje);
+                                        this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(jugador);
                                     }
 
                                     this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setForeground(Color.GREEN);
                                     this.vt.matrizVista[fila][columna].setText("");
                                 }
                                 
-                                this.esc.getMatrizEscenario()[fila][columna].setCaminable(true);
+                                esc.getMatrizEscenario()[fila][columna].setCaminable(true);
                                 System.out.println("posicion despues de mover "+posicion.get(0)+","+posicion.get(1));
-                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
+                                esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(false);
                                 personaje.setPosX(posicion.get(0));
                                 personaje.setPosY(posicion.get(1));
+                                esc.moverAtributos(jugador, posicion.get(0), posicion.get(1));
+                                esc.getMatrizEscenario()[fila][columna].getPersonaje().setRolPersonaje("");
                                 flagMover = false;
                                 flagTurno = true;
                                 contadorMovimientos++;
@@ -686,8 +689,6 @@ public class ControladorTablero implements ActionListener{
         //EVENTOS RELACIONADOS AL ATAQUE DEL PERSONAJE
         
         else if(flagAtacar){
-            
-            this.vt.getBtnAtacar().setEnabled(false);
             
             for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
@@ -704,6 +705,7 @@ public class ControladorTablero implements ActionListener{
                         }else{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -714,6 +716,7 @@ public class ControladorTablero implements ActionListener{
                         }else{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -725,6 +728,7 @@ public class ControladorTablero implements ActionListener{
                         }else{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -735,6 +739,7 @@ public class ControladorTablero implements ActionListener{
                         }else{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -753,6 +758,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
 
@@ -772,6 +778,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -790,6 +797,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -808,6 +816,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -826,6 +835,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -844,6 +854,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -862,6 +873,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -880,6 +892,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -898,6 +911,7 @@ public class ControladorTablero implements ActionListener{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
                                 JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
                             }
+                            vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -907,7 +921,6 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
-            
             if(e.getSource() == this.vt.getBtnVerificarTerminar()){
                 
                 contadorMovimientos=0;

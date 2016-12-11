@@ -467,6 +467,8 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(300);
+                    
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Guerrero malo");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/MegaLucarioShiny.png");
@@ -499,6 +501,8 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Arquero malo");
                     
@@ -586,6 +590,8 @@ public class Escenario {
                    
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(300);
+                    
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Guerrero bueno");
@@ -614,6 +620,8 @@ public class Escenario {
                     // TIPO DE BANDO == malo , significa que es del equipo de la CPU
                     // TIPO DE BANDO == bueno, significa que es del equipo del usuario
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Arquero bueno");
                     
@@ -755,6 +763,41 @@ public class Escenario {
         
         return posicionesDeshabilitadas;
     }
+    /*CAMBIA LOS ATRIBUTOS DEL PERSONAJE A LA POSICION EN LA QUE SE ENCUENTRA EL PERSONAJE*/
+    public void moverAtributos(Personaje personaje,int posicion0,int posicion1){
+        String rol=personaje.getRolPersonaje();
+        String bando=personaje.getBandoPersonaje();
+        String nombre=personaje.getNombrePersonaje();
+        String ruta=personaje.getRuta();
+        String tipo=personaje.getTipoPersonaje();
+        int ataqueCorto=personaje.getPuntosAtaqueCorto();
+        int ataqueLargo=personaje.getPuntosAtaqueLargo();
+        int velocidad=personaje.getPuntosVelocidad();
+        int defensa=personaje.getPuntosDefensa();
+        matrizEscenario[posicion0][posicion1].getPersonaje().setRolPersonaje(rol);
+        System.out.println("rol de la nnueva pos");
+        System.out.println(this.matrizEscenario[posicion0][posicion1].getPersonaje().getRolPersonaje());
+        matrizEscenario[posicion0][posicion1].getPersonaje().setBandoPersonaje(bando);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setNombrePersonaje(nombre);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setRuta(ruta);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setTipoPersonaje(tipo);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setPuntosAtaqueCorto(ataqueCorto);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setPuntosAtaqueLargo(ataqueLargo);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setPuntosVelocidad(velocidad);
+        matrizEscenario[posicion0][posicion1].getPersonaje().setPuntosDefensa(defensa);
+        System.out.println("pos despues de mover");
+        System.out.println(posicion0+","+posicion1);
+    }
+    /*public void vaciarAtributos(int fila,int columna){
+        matrizEscenario[fila][columna].getPersonaje().setBandoPersonaje("");
+        matrizEscenario[fila][columna].getPersonaje().setNombrePersonaje("");
+        matrizEscenario[fila][columna].getPersonaje().setRuta("");
+        matrizEscenario[fila][columna].getPersonaje().setTipoPersonaje("");
+        matrizEscenario[fila][columna].getPersonaje().setPuntosAtaqueCorto(0);
+        matrizEscenario[fila][columna].getPersonaje().setPuntosAtaqueLargo(0);
+        matrizEscenario[fila][columna].getPersonaje().setPuntosVelocidad(0);
+        matrizEscenario[fila][columna].getPersonaje().setPuntosDefensa(0);
+    }*/
     
     /*CREACION LISTA DE POSICIONES DE LAS CASILLAS DEL TABLERO QUE ESTAN FUERA DEL RANGO DE 
     ATAQUE, INHABILITADAS AL ATAQUE DEL PERSONAJE EN TURNO
