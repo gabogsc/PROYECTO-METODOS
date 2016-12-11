@@ -1021,19 +1021,21 @@ public class ControladorTablero implements ActionListener{
                             
                         System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
                         
-                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()+1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
                             
                         }
                         
-                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()+1); 
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
    
                         }
                         
@@ -1049,19 +1051,21 @@ public class ControladorTablero implements ActionListener{
                         System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
                         
                         
-                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
                         
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
                      
                         }
-                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
                     
                         }
                     
@@ -1076,17 +1080,19 @@ public class ControladorTablero implements ActionListener{
                         System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
                         
                         
-                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()+1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
                         }
-                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()+1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
                             
                         }
                     }
@@ -1101,18 +1107,20 @@ public class ControladorTablero implements ActionListener{
                         
                         
                         
-                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
 
                         }
-                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personajeCPU,personajeCPU.getPosX(), personajeCPU.getPosY());
                         }
                     
                     
