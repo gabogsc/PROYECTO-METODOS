@@ -615,7 +615,7 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON TERMINAR
             
             else if(e.getSource() == this.vt.getBtnTerminar()){
-                this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
+                
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
                 this.vt.getBtnTerminar().setEnabled(false);
@@ -918,6 +918,12 @@ public class ControladorTablero implements ActionListener{
                 flagTurnoCPU=false;
                 flagTurno=true;
                 this.vt.getBtnVerificarTerminar().setEnabled(false);
+                
+                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
+                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
+                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
+                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
+                
                 
             }
             

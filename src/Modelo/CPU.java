@@ -30,7 +30,7 @@ public class CPU {
             double filaUsuario = personajeUsuario.getPosX();
             double columnaUsuario = personajeUsuario.getPosY();
             double distancia;
-            System.out.println("posicion Uusario" + personajeUsuario.getPosX() + "," + personajeUsuario.getPosY());
+            //System.out.println("posicion Uusario" + personajeUsuario.getPosX() + "," + personajeUsuario.getPosY());
             distancia = Math.sqrt(Math.pow(filaCPU - filaUsuario, 2) + Math.pow(columnaCPU - columnaUsuario, 2));
             distancias.add(distancia);
             distanciasOrdenadas.add(distancia);
@@ -40,13 +40,13 @@ public class CPU {
     ENEMIGO
     */
         Collections.sort(distanciasOrdenadas);
-        System.out.println("");
+        
         double min = distanciasOrdenadas.get(0);
-        System.out.println(distancias);
-        System.out.println(distanciasOrdenadas);
+        //System.out.println(distancias);
+        //System.out.println(distanciasOrdenadas);
     //ENCONTRAMOS AL PERSONAJE QUE PERTENECE LA DISTANCIA MENOR
         pjeMasCercano = personajesUsuario.get(distancias.indexOf(min));
-        System.out.println("Posicion lista personajes" + distancias.indexOf(min));
+        //System.out.println("Posicion lista personajes" + distancias.indexOf(min));
         System.out.println("Posicion CPU: " + personajeCPU.getPosX() + "," + personajeCPU.getPosY());
         System.out.println("Posicion Usuario: " + pjeMasCercano.getPosX() + "," + pjeMasCercano.getPosY());
         return pjeMasCercano;
@@ -61,7 +61,7 @@ public class CPU {
     
    public void MovimientoCPU(Personaje PersonajeUsuarioMasCerca, Personaje personajeCPU ){
        
-       
+    
         if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() ||
                 
                 personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && 
@@ -69,6 +69,7 @@ public class CPU {
 			personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
                             // SETEO POSICION X + 1
                             personajeCPU.setPosX(personajeCPU.getPosX()+1);
+                            
 
         }
         
@@ -107,8 +108,12 @@ public class CPU {
         
         
         }
-        
-    }
+       
+       System.out.println("COORDENADAS SETEADAS PERSONAJE");
+       System.out.println(personajeCPU.getPosX()+","+personajeCPU.getPosY());    
+       
+    
+   }
 
     
        
