@@ -42,6 +42,12 @@ public class ControladorTablero implements ActionListener{
     ArrayList<Personaje> personajesOrdenadosCPU;
     Personaje jugador;
     Personaje personCPU;
+    int filaActual = 0;
+    int columnaActual = 0;
+    int filaAnterior = 0;
+    int columnaAnterior = 0;
+    
+    
     
     
 
@@ -53,6 +59,10 @@ public class ControladorTablero implements ActionListener{
         // TIPO DE ASIGNATURA QUE ELIGIO EL USUARIO
         bat=new Batalla();
         cpu = new CPU();
+        this.vt.getBtnVerificarTerminar().setEnabled(false);
+        this.vt.getBtnCancelarTerminar().setEnabled(false);
+        this.vt.getBtnCancelarAtacar().setEnabled(false);
+        this.vt.getBtnCancelarMover().setEnabled(false);
 
         
         if(tipoDeAsignatura == 0){
@@ -463,8 +473,8 @@ public class ControladorTablero implements ActionListener{
         
     public void mostrarLeyenda(){
         
-        for (int i = 0;i<25; i++){
-            for(int j=0; j< 25; j++){
+        for (int i = 0; i < 25; i++){
+            for(int j = 0; j< 25; j++){
               
                 String disponibilidad;
                 String terreno;
@@ -556,9 +566,12 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON MOVER
         
             if(e.getSource() == this.vt.getBtnMover()){
+                
+                this.vt.getBtnCancelarMover().setEnabled(true);
+                this.vt.getBtnMover().setEnabled(false);
                 this.esc.casillasEnRango(fila, columna);
                 if(contadorMovimientos <= 3){
-                    if(contadorMovimientos==3){
+                    if(contadorMovimientos == 3){
                         this.vt.getBtnMover().setEnabled(false);
 
                         for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
@@ -602,7 +615,8 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON ATACAR
             
             else if(e.getSource() == this.vt.getBtnAtacar()){
-                
+                this.vt.getBtnCancelarAtacar().setEnabled(true);
+                this.vt.getBtnAtacar().setEnabled(false);
                 if(contadorMovimientos > 0){
                     this.vt.getBtnMover().setEnabled(false);
                 }
@@ -627,9 +641,12 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON TERMINAR
             
             else if(e.getSource() == this.vt.getBtnTerminar()){
-                personajesOrdenadosU.remove(0);
-                personajesOrdenadosU.add(jugador);
-                vt.getBtnTerminar().setEnabled(false);
+                
+                this.vt.getBtnVerificarTerminar().setEnabled(true);
+                this.vt.getBtnCancelarTerminar().setEnabled(true);
+                this.vt.getBtnTerminar().setEnabled(false);
+                
+                
                 flagTurnoCPU = true;
                 flagTurno = false;
                 
@@ -642,7 +659,9 @@ public class ControladorTablero implements ActionListener{
             
             for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
-                    this.mostrarLeyenda();
+                    
+                    this.vt.getBtnMover().setEnabled(true);
+                    this.vt.getBtnCancelarMover().setEnabled(false);
                     
                     
             //ELIMINAMOS LOS BORDES    
@@ -688,14 +707,30 @@ public class ControladorTablero implements ActionListener{
                                 personaje.setPosX(posicion.get(0));
                                 personaje.setPosY(posicion.get(1));
                                 esc.moverAtributos(jugador, posicion.get(0), posicion.get(1));
-                                esc.getMatrizEscenario()[fila][columna].getPersonaje().setRolPersonaje("");
                                 this.mostrarLeyenda();
+                                esc.getMatrizEscenario()[fila][columna].getPersonaje().setRolPersonaje("");
                                 flagMover = false;
                                 flagTurno = true;
+                                        
                                 contadorMovimientos++;
                             }
                         }
                     }
+                }
+                
+                else if(e.getSource() == this.vt.getBtnCancelarMover()){
+                    
+                    this.vt.getBtnCancelarMover().setEnabled(false);
+                    this.vt.getBtnMover().setEnabled(true);
+                    
+                    //ELIMINAMOS LOS BORDES    
+            
+                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasEnRango(fila, columna)){
+                        this.vt.getMatrizVista()[mismaPosicion.get(0)][mismaPosicion.get(1)].setBorder(BorderFactory.createLineBorder(Color.GRAY));
+                    }
+                    
+                    flagMover = false;
+                    flagTurno = true;
                 }
             }
         }
@@ -706,6 +741,8 @@ public class ControladorTablero implements ActionListener{
             
             for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]  && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getPersonaje().getRolPersonaje() != ""){
+                    
+                    this.vt.getBtnCancelarAtacar().setEnabled(false);
                     
             //ELIMINAMOS LOS BORDES
                     for(ArrayList<Integer> mismaPosicion: this.esc.casillasEnRangoAtaque(fila, columna)){
@@ -933,20 +970,39 @@ public class ControladorTablero implements ActionListener{
                         }
                     }                      
                 }
+                
+                else if(e.getSource() == this.vt.getBtnCancelarAtacar()){
+                    
+                    this.vt.getBtnCancelarAtacar().setEnabled(false);
+                    this.vt.getBtnAtacar().setEnabled(true);
+                    
+                    //ELIMINAMOS LOS BORDES
+                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                        this.vt.getMatrizVista()[mismaPosicion.get(0)][mismaPosicion.get(1)].setBorder(BorderFactory.createLineBorder(Color.GRAY));
+                    }
+                    
+                    flagAtacar = false;
+                    flagTurno = true;
+                }
             }
         }
         
         else if(flagTurnoCPU){
             if(e.getSource() == this.vt.getBtnVerificarTerminar()){
                 
+                this.vt.getBtnCancelarTerminar().setEnabled(false);
+                this.vt.getBtnVerificarTerminar().setEnabled(false);
+                this.vt.getBtnTerminar().setEnabled(true);
+                
+                personajesOrdenadosU.remove(0);
+                personajesOrdenadosU.add(jugador);
                 contadorMovimientos=0;
                 JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
                 vt.getBtnAtacar().setEnabled(true);
                 vt.getBtnMover().setEnabled(true);
-                vt.getBtnTerminar().setEnabled(true);
                 flagTurnoCPU = false;
-                flagTurno  =true;
-                this.vt.getBtnVerificarTerminar().setEnabled(false);
+                flagTurno  = true;
+                
                 Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 
                 
@@ -1072,11 +1128,19 @@ public class ControladorTablero implements ActionListener{
 
 
                 }
-              } 
-            }
+            } 
             
-        }  
-    }
+            else if(e.getSource() == this.vt.getBtnCancelarTerminar()){
+                
+                this.vt.getBtnCancelarTerminar().setEnabled(false);
+                this.vt.getBtnVerificarTerminar().setEnabled(false);
+                this.vt.getBtnTerminar().setEnabled(true);
+                flagTurnoCPU = false;
+                flagTurno = true;
+            }
+        }
+    }  
+}
 
 
     

@@ -82,6 +82,9 @@ public class VistaTablero extends javax.swing.JFrame {
         btnMover = new javax.swing.JButton();
         btnTerminar = new javax.swing.JButton();
         btnVerificarTerminar = new javax.swing.JButton();
+        btnCancelarTerminar = new javax.swing.JButton();
+        btnCancelarAtacar = new javax.swing.JButton();
+        btnCancelarMover = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 700));
@@ -113,6 +116,16 @@ public class VistaTablero extends javax.swing.JFrame {
         btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnVerificarTerminar.setText("Aceptar");
+        btnVerificarTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnCancelarTerminar.setText("Cancelar");
+        btnCancelarTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnCancelarAtacar.setText("Cancelar Ataque");
+        btnCancelarAtacar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnCancelarMover.setText("Cancelar Movimiento");
+        btnCancelarMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,24 +133,21 @@ public class VistaTablero extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRegresarVT)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(61, 61, 61)
-                                .addComponent(btnAtacar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addComponent(btnMover, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(65, 65, 65)
-                                .addComponent(btnVerificarTerminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(btnTerminar)
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addComponent(btnVerificarTerminar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnCancelarTerminar))
+                    .addComponent(btnTerminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCancelarMover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCancelarAtacar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAtacar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(btnRegresarVT)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(btnMover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(14, 14, 14))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -147,24 +157,33 @@ public class VistaTablero extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
                 .addComponent(btnRegresarVT)
-                .addGap(225, 225, 225)
+                .addGap(76, 76, 76)
                 .addComponent(btnAtacar)
-                .addGap(53, 53, 53)
-                .addComponent(btnMover)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelarAtacar)
+                .addGap(49, 49, 49)
+                .addComponent(btnMover, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnCancelarMover)
+                .addGap(79, 79, 79)
                 .addComponent(btnTerminar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnVerificarTerminar, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnVerificarTerminar)
+                    .addComponent(btnCancelarTerminar))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnTerminar, btnVerificarTerminar});
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCancelarTerminar, btnVerificarTerminar});
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtacar;
+    private javax.swing.JButton btnCancelarAtacar;
+    private javax.swing.JButton btnCancelarMover;
+    private javax.swing.JButton btnCancelarTerminar;
     private javax.swing.JButton btnMover;
     private javax.swing.JButton btnRegresarVT;
     private javax.swing.JButton btnTerminar;
@@ -176,9 +195,14 @@ public class VistaTablero extends javax.swing.JFrame {
         
         btnRegresarVT.addActionListener(al);
         btnMover.addActionListener(al);
+        btnCancelarMover.addActionListener(al);
         btnAtacar.addActionListener(al);
+        btnCancelarAtacar.addActionListener(al);
         btnTerminar.addActionListener(al);
         btnVerificarTerminar.addActionListener(al);
+        btnCancelarTerminar.addActionListener(al);
+        
+        
         
         
         
@@ -196,10 +220,6 @@ public class VistaTablero extends javax.swing.JFrame {
     
     
     public void agregarMouseListener(MouseListener m){ //metodo que escucha botones
-        
-       
-        
-        
         for(int i= 0; i<25; i++){
             for(int j= 0; j<25;j++){
                 
@@ -209,6 +229,13 @@ public class VistaTablero extends javax.swing.JFrame {
 
             }
         }
+    }
+    public JButton getBtnTerminar() {
+        return this.btnTerminar;
+    }
+    
+    public JButton getBtnCancelarTerminar(){
+        return this.btnCancelarTerminar;
     }
     
     public JButton getBtnVerificarTerminar(){
@@ -226,14 +253,20 @@ public class VistaTablero extends javax.swing.JFrame {
     public JButton getBtnAtacar() {
         return this.btnAtacar;
     }
+    
+    public JButton getBtnCancelarAtacar(){
+        return this.btnCancelarAtacar;
+    }
 
     public JButton getBtnMover() {
         return this.btnMover;
     }
-
-    public JButton getBtnTerminar() {
-        return this.btnTerminar;
+    
+    public JButton getBtnCancelarMover(){
+        return this.btnCancelarMover;
     }
+
+    
    
     
 
