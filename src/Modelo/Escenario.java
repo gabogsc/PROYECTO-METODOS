@@ -481,6 +481,10 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(50);
                     
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+                    
                     
                     aumentadorDeVelocidad =+ 100;
                     
@@ -509,6 +513,10 @@ public class Escenario {
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(50+aumentadorDeVelocidad);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(20);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+                    
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
                     
                     aumentadorDeVelocidad =+ 100;
                      
@@ -651,9 +659,8 @@ public class Escenario {
     public ArrayList<Personaje> ordenarTurnosUsuario(){
         
         ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
-        ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
         int[] lista= new int[1000];
-        posicionesPersonajes= new int[5];
+        posicionesPersonajes = new int[5];
         
         
         // CREAR LISTA DESDE EL 1 AL 1000
@@ -689,6 +696,12 @@ public class Escenario {
         
         ArrayList<Personaje> listaTurnosCPU = new ArrayList<>();
         int[] lista= new int[1000];
+        posicionesPersonajes = new int[5];
+        
+        // CREAR LISTA DESDE EL 1 AL 1000
+        for (int a = 0; a < lista.length; a++) {
+            lista[a] = a + 1;
+        }
         
         //RECORRER LA LISTA DE NUMEROS E IR COMPARANDOLOS CON EL ATRIBUTO PUNTOS DE VELOCIDAD E IR ORDENANDOLOS
         for(int numero: lista){ 

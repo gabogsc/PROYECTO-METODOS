@@ -7,6 +7,7 @@ package Controlador;
 import Modelo.Casilla;
 import Modelo.Escenario;
 import Modelo.Batalla;
+import Modelo.CPU;
 import Modelo.Personaje;
 import Vista.VistaRamosCivil;
 import Vista.VistaTablero;
@@ -29,6 +30,7 @@ import javax.swing.plaf.ColorUIResource;
 public class ControladorTablero implements ActionListener{
     private ControladorBatallaCorta bct;
     private Batalla bat;
+    private CPU cpu;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
     private boolean flagTurno = true;
@@ -37,6 +39,7 @@ public class ControladorTablero implements ActionListener{
     private boolean flagTurnoCPU;
     private int contadorMovimientos;
     ArrayList<Personaje> personajesOrdenadosU;
+    ArrayList<Personaje> personajesOrdenadosCPU;
     Personaje jugador;
     
     
@@ -513,6 +516,7 @@ public class ControladorTablero implements ActionListener{
             System.out.println(personaje.getPosX() + "," + personaje.getPosY());
         }
         personajesOrdenadosU = this.esc.ordenarTurnosUsuario();
+        personajesOrdenadosCPU = this.esc.ordenarTurnosCPU();
     }
 
     @Override
@@ -524,7 +528,8 @@ public class ControladorTablero implements ActionListener{
             ControladorRamosCivil crc = new ControladorRamosCivil();
         }
         
-        Personaje personaje=personajesOrdenadosU.get(0);
+        Personaje personaje = personajesOrdenadosU.get(0);
+        Personaje personajeCPU = personajesOrdenadosCPU.get(0);
         int fila = personaje.getPosX();
         int columna = personaje.getPosY();
         int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
@@ -898,6 +903,7 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
+            this.cpu.movimientoCPU(personajeCPU, personajesOrdenadosU);
             contadorMovimientos=0;
             JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
             vt.getBtnAtacar().setEnabled(true);
