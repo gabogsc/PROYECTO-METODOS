@@ -53,6 +53,7 @@ public class ControladorTablero implements ActionListener{
         // TIPO DE ASIGNATURA QUE ELIGIO EL USUARIO
         bat=new Batalla();
         cpu = new CPU();
+
         
         if(tipoDeAsignatura == 0){
             
@@ -444,12 +445,23 @@ public class ControladorTablero implements ActionListener{
 
                     }
                 }
-
             }
-    
         }
         
-        //MUESTRA UNA LEYENDA CON DATOS RESPECTO A AL CASILLA SOBRE LA QUE SE POSA EL CURSOR
+        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
+            System.out.println(personaje.getPosX() + "," + personaje.getPosY());
+        }
+    
+    personajesOrdenadosU = this.esc.ordenarTurnosUsuario();
+    personajesOrdenadosCPU = this.esc.ordenarTurnosCPU();
+    
+    this.mostrarLeyenda();
+    }    
+    
+    
+    //MUESTRA UNA LEYENDA CON DATOS RESPECTO A AL CASILLA SOBRE LA QUE SE POSA EL CURSOR
+        
+    public void mostrarLeyenda(){
         
         for (int i = 0;i<25; i++){
             for(int j=0; j< 25; j++){
@@ -494,7 +506,7 @@ public class ControladorTablero implements ActionListener{
                 }
                 
             //ROL, TRAICION, ATAQUE LARGO Y CORTO, VIDA Y DEFENSA
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje().equals("")==false){
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
                     traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + " ptos";
                     puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
@@ -513,13 +525,11 @@ public class ControladorTablero implements ActionListener{
                 this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
             }
         }
+    }    
         
-        for(Personaje personaje: this.esc.ordenarTurnosUsuario()){
-            System.out.println(personaje.getPosX() + "," + personaje.getPosY());
-        }
-        personajesOrdenadosU = this.esc.ordenarTurnosUsuario();
-        personajesOrdenadosCPU = this.esc.ordenarTurnosCPU();
-    }
+    
+
+
 
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -546,11 +556,12 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON MOVER
         
             if(e.getSource() == this.vt.getBtnMover()){
+                this.esc.casillasEnRango(fila, columna);
                 if(contadorMovimientos <= 3){
                     if(contadorMovimientos==3){
                         this.vt.getBtnMover().setEnabled(false);
 
-                        for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
+                        for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                             for (int i = 0; i < 25; i++){
                                 for(int j = 0; j < 25; j++){
                                     Border borde1;
@@ -569,7 +580,7 @@ public class ControladorTablero implements ActionListener{
                     }
                     
                     else{
-                        for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
+                        for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                             for (int i = 0;i<25; i++){
                                 for(int j=0; j< 25; j++){
                                     Border borde1;
@@ -596,7 +607,7 @@ public class ControladorTablero implements ActionListener{
                     this.vt.getBtnMover().setEnabled(false);
                 }
                 
-                for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
+                for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                     for (int i = 0;i<25; i++){
                         for(int j=0; j< 25; j++){
                             Border borde1;
@@ -629,12 +640,14 @@ public class ControladorTablero implements ActionListener{
         
         else if(flagMover){
             
-            for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRango(fila, columna)){
+            for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                    this.mostrarLeyenda();
+                    
                     
             //ELIMINAMOS LOS BORDES    
             
-                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasFueraDeRango(fila, columna)){
+                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasEnRango(fila, columna)){
                         this.vt.getMatrizVista()[mismaPosicion.get(0)][mismaPosicion.get(1)].setBorder(BorderFactory.createLineBorder(Color.GRAY));
                     }
                     
@@ -676,6 +689,7 @@ public class ControladorTablero implements ActionListener{
                                 personaje.setPosY(posicion.get(1));
                                 esc.moverAtributos(jugador, posicion.get(0), posicion.get(1));
                                 esc.getMatrizEscenario()[fila][columna].getPersonaje().setRolPersonaje("");
+                                this.mostrarLeyenda();
                                 flagMover = false;
                                 flagTurno = true;
                                 contadorMovimientos++;
@@ -690,15 +704,17 @@ public class ControladorTablero implements ActionListener{
         
         else if(flagAtacar){
             
-            for(ArrayList<Integer> posicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
-                if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+            for(ArrayList<Integer> posicion: this.esc.casillasEnRangoAtaque(fila, columna)){
+                if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]  && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getPersonaje().getRolPersonaje() != ""){
                     
             //ELIMINAMOS LOS BORDES
-                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasFueraDeRangoAtaque(fila, columna)){
+                    for(ArrayList<Integer> mismaPosicion: this.esc.casillasEnRangoAtaque(fila, columna)){
                         this.vt.getMatrizVista()[mismaPosicion.get(0)][mismaPosicion.get(1)].setBorder(BorderFactory.createLineBorder(Color.GRAY));
                     }
                     
-                    if(posicion.get(0)==fila&&(posicion.get(1)==columna+1||posicion.get(1)==columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
+            
+            //CASOS ATAQUE A CORTA DISTANCIA
+                    if(posicion.get(0) == fila && (posicion.get(1) == columna+1||posicion.get(1) == columna+2||posicion.get(1)==columna-1||posicion.get(1)==columna-2)){
                         System.out.println("ATAQUE CORTO MUMU");
                         if(this.vt.matrizVista[posicion.get(0)][posicion.get(1)].getText().equals("")){
                             System.out.println("NO HAY PERSONAJE");
@@ -928,13 +944,13 @@ public class ControladorTablero implements ActionListener{
                 vt.getBtnAtacar().setEnabled(true);
                 vt.getBtnMover().setEnabled(true);
                 vt.getBtnTerminar().setEnabled(true);
-                flagTurnoCPU=false;
-                flagTurno=true;
+                flagTurnoCPU = false;
+                flagTurno  =true;
                 this.vt.getBtnVerificarTerminar().setEnabled(false);
                 Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 
                 
-            for(int a=0; a<25;a++){
+            for(int a = 0; a < 25; a++){
                 
                 if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
                        
@@ -946,7 +962,7 @@ public class ControladorTablero implements ActionListener{
                         System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
                         
                         if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()+1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
@@ -954,7 +970,7 @@ public class ControladorTablero implements ActionListener{
                         }
                         
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()+1); 
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
@@ -975,14 +991,14 @@ public class ControladorTablero implements ActionListener{
                         
                         if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
                         
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                      
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosX(personajeCPU.getPosX()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
@@ -1001,13 +1017,13 @@ public class ControladorTablero implements ActionListener{
                         
                         
                         if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()+1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()+1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
@@ -1026,14 +1042,14 @@ public class ControladorTablero implements ActionListener{
                         
                         
                         if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
 
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
-                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
                             personajeCPU.setPosY(personajeCPU.getPosY()-1);
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);

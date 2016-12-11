@@ -739,11 +739,11 @@ public class Escenario {
     */
 
     
-    public ArrayList<ArrayList<Integer>> casillasFueraDeRango(int fila, int columna){
+    public ArrayList<ArrayList<Integer>> casillasEnRango(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
         //System.out.println(fila + "," + columna);
         
-        ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> posicionesHabilitadas = new ArrayList<>();
         for(int i = 0; i < 25; i++){
             for( int j = 0; j < 25; j++){
                 ArrayList<Integer> posicion = new ArrayList<>();
@@ -755,16 +755,19 @@ public class Escenario {
                     else{
                         posicion.add(i);
                         posicion.add(j);
-                        posicionesDeshabilitadas.add(posicion);
+                        posicionesHabilitadas.add(posicion);
                     }
                 }
             }
         }
-        
-        return posicionesDeshabilitadas;
+        System.out.println("Casillas fuera rango :" +  posicionesHabilitadas);
+        return posicionesHabilitadas;
     }
+    
     /*CAMBIA LOS ATRIBUTOS DEL PERSONAJE A LA POSICION EN LA QUE SE ENCUENTRA EL PERSONAJE*/
+    
     public void moverAtributos(Personaje personaje,int posicion0,int posicion1){
+        
         String rol=personaje.getRolPersonaje();
         String bando=personaje.getBandoPersonaje();
         String nombre=personaje.getNombrePersonaje();
@@ -774,6 +777,7 @@ public class Escenario {
         int ataqueLargo=personaje.getPuntosAtaqueLargo();
         int velocidad=personaje.getPuntosVelocidad();
         int defensa=personaje.getPuntosDefensa();
+        
         matrizEscenario[posicion0][posicion1].getPersonaje().setRolPersonaje(rol);
         System.out.println("rol de la nnueva pos");
         System.out.println(this.matrizEscenario[posicion0][posicion1].getPersonaje().getRolPersonaje());
@@ -803,10 +807,10 @@ public class Escenario {
     ATAQUE, INHABILITADAS AL ATAQUE DEL PERSONAJE EN TURNO
     */
 
-    public ArrayList<ArrayList<Integer>> casillasFueraDeRangoAtaque(int fila, int columna){
+    public ArrayList<ArrayList<Integer>> casillasEnRangoAtaque(int fila, int columna){
         //System.out.println("FILA Y COLUMNA INGRESADA");
         //System.out.println(fila + "," + columna);
-        ArrayList<ArrayList<Integer>> posicionesDeshabilitadas = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> posicionesHabilitadas = new ArrayList<>();
         for(int i = 0; i < 25; i++){
             for( int j = 0; j < 25; j++){
                 ArrayList<Integer> posicion = new ArrayList<>();
@@ -906,13 +910,15 @@ public class Escenario {
                     }else{
                         posicion.add(i);
                         posicion.add(j);
-                        posicionesDeshabilitadas.add(posicion);
+                        posicionesHabilitadas.add(posicion);
                     }
                     
                 }
             }
         }
-        return posicionesDeshabilitadas;
+        
+        System.out.println("Fuera rango ataque: " + posicionesHabilitadas);
+        return posicionesHabilitadas;
     }
     
     
