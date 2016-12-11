@@ -40,6 +40,7 @@ public class ControladorRamosCivil implements ActionListener{
         if(vr.getBtnCalculoI()== e.getSource()){
             ControladorTablero ct = new ControladorTablero(0);
             vr.dispose();
+            Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
             
         }
         

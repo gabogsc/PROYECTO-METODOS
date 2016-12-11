@@ -33,16 +33,19 @@ public class ControladorMenuPrincipal implements ActionListener {
         
         if(vmp.getBtnBiblioteca() == e.getSource()){
             ControladorBibliotecaCentral cbc = new ControladorBibliotecaCentral();
+            Otros.registroUsuario.actividadUsuario("Usuario Ingresa a la BIBLIOTECA CENTRAL");
             vmp.dispose();
             
         }
         
         if(vmp.getBtnEao() == e.getSource()){
             ControladorEAO ceao = new ControladorEAO();
+            Otros.registroUsuario.actividadUsuario("Usuario Ingresa a la EAO");
             
         }
         if(vmp.getBtnForoGriego() == e.getSource()){
             ControladorForoGriego cfg = new ControladorForoGriego();
+            Otros.registroUsuario.actividadUsuario("Usuario INGRESA AL FORO GRIEGO");
             
         }
         if(vmp.getBtnInventario() == e.getSource()){
@@ -52,6 +55,7 @@ public class ControladorMenuPrincipal implements ActionListener {
         if(vmp.getBtnRamos() == e.getSource()){
             ControladorRamosCivil cr = new ControladorRamosCivil();
             vmp.dispose();
+            Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
             
             
         }

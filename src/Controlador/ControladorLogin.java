@@ -62,6 +62,7 @@ public class ControladorLogin implements ActionListener {
               
         }
         if(vl.getBtnRegistrar() == (JButton)e.getSource()){
+            Otros.registroUsuario.actividadUsuario("Usuario se Registra");
             ControladorRegistro cR = new ControladorRegistro();
             vl.setVisible(false);
             

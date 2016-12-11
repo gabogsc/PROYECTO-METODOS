@@ -705,3 +705,6 @@
 2016/12/11 :: 18:22:31 =Usuario se logea
 2016/12/11 :: 18:24:05 =Usuario se logea
 2016/12/11 :: 18:25:05 =Usuario se logea
+2016/12/11 :: 18:22:26 =Usuario se logea
+2016/12/11 :: 18:22:28 =Usuario INGRESA A SU MALLA CURRICULAR
+2016/12/11 :: 18:22:29 =Usuario INGRESO A LA BATALLA CALCULO

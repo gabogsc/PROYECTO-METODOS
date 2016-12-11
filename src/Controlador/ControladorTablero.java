@@ -1006,7 +1006,7 @@ public class ControladorTablero implements ActionListener{
                 Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 
                 
-            for(int a = 0; a < 25; a++){
+            for(int a = 0; a < 4; a++){
                 
                 if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
                        
