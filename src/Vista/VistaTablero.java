@@ -103,28 +103,44 @@ public class VistaTablero extends javax.swing.JFrame {
             .addGap(0, 442, Short.MAX_VALUE)
         );
 
+        btnRegresarVT.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnRegresarVT.setText("Regresar");
+        btnRegresarVT.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnRegresarVT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnAtacar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnAtacar.setText("Atacar");
+        btnAtacar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnAtacar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnMover.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnMover.setText("Mover");
+        btnMover.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnTerminar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnTerminar.setText("Terminar Turno");
+        btnTerminar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnVerificarTerminar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnVerificarTerminar.setText("Aceptar");
+        btnVerificarTerminar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnVerificarTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnCancelarTerminar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnCancelarTerminar.setText("Cancelar");
+        btnCancelarTerminar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnCancelarTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnCancelarAtacar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnCancelarAtacar.setText("Cancelar Ataque");
+        btnCancelarAtacar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnCancelarAtacar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        btnCancelarMover.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnCancelarMover.setText("Cancelar Movimiento");
+        btnCancelarMover.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnCancelarMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

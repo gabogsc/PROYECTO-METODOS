@@ -1139,6 +1139,9 @@ public class ControladorTablero implements ActionListener{
                 flagTurno = true;
             }
         }
+        
+        personajesOrdenadosCPU.remove(0);
+        personajesOrdenadosCPU.add(personCPU);
     }  
 }
 
