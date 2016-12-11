@@ -51,6 +51,7 @@ public class ControladorTablero implements ActionListener{
     public ControladorTablero(int tipoDeAsignatura){
         // TIPO DE ASIGNATURA QUE ELIGIO EL USUARIO
         bat=new Batalla();
+        cpu = new CPU();
         
         if(tipoDeAsignatura == 0){
             

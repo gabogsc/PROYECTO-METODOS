@@ -2,11 +2,17 @@
 package Modelo;
 
 import java.util.ArrayList;
-
+import Modelo.Usuario;
+import Modelo.Personaje;
+import Modelo.Escenario;
 
 public class CPU {
-    
 
+    public CPU() {
+    
+   
+   
+    }
 
     // METODOS
     public void movimientoCPU(Personaje personajeCPU, ArrayList<Personaje> personajesUsuario){
@@ -23,8 +29,7 @@ public class CPU {
             distancia = Math.sqrt(Math.pow(filaCPU + filaUsuario, 2) + Math.pow(columnaCPU + columnaUsuario, 2));
             distancias.add(distancia);
         }
-        
-        System.out.println(distancias);
+       
     }
     public void ataqueCPU(Personaje personaje, int x, int y){}
 }
