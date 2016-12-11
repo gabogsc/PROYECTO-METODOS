@@ -904,7 +904,7 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
-            this.cpu.movimientoCPU(personajeCPU, personajesOrdenadosU);
+            this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
             contadorMovimientos=0;
             JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
             vt.getBtnAtacar().setEnabled(true);
