@@ -1007,7 +1007,11 @@ public class ControladorTablero implements ActionListener{
                 
                 
             for(int a = 0; a < 4; a++){
-                
+                try{
+                    Thread.sleep(500);
+                }catch(InterruptedException ie){
+                    System.out.println("Errror");
+                }    
                 if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
                        
             
