@@ -30,8 +30,8 @@ public class CPU {
             double filaUsuario = personajeUsuario.getPosX();
             double columnaUsuario = personajeUsuario.getPosY();
             double distancia;
-            
-            distancia = Math.sqrt(Math.pow(filaCPU + filaUsuario, 2) + Math.pow(columnaCPU + columnaUsuario, 2));
+            System.out.println("posicion Uusario" + personajeUsuario.getPosX() + "," + personajeUsuario.getPosY());
+            distancia = Math.sqrt(Math.pow(filaCPU - filaUsuario, 2) + Math.pow(columnaCPU - columnaUsuario, 2));
             distancias.add(distancia);
             distanciasOrdenadas.add(distancia);
         }
@@ -40,11 +40,15 @@ public class CPU {
     ENEMIGO
     */
         Collections.sort(distanciasOrdenadas);
-        double min = distancias.get(0);
-        
+        System.out.println("");
+        double min = distanciasOrdenadas.get(0);
+        System.out.println(distancias);
+        System.out.println(distanciasOrdenadas);
     //ENCONTRAMOS AL PERSONAJE QUE PERTENECE LA DISTANCIA MENOR
         pjeMasCercano = personajesUsuario.get(distancias.indexOf(min));
-        
+        System.out.println("Posicion lista personajes" + distancias.indexOf(min));
+        System.out.println("Posicion CPU: " + personajeCPU.getPosX() + "," + personajeCPU.getPosY());
+        System.out.println("Posicion Usuario: " + pjeMasCercano.getPosX() + "," + pjeMasCercano.getPosY());
         return pjeMasCercano;
     }
     

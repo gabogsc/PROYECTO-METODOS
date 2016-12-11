@@ -614,6 +614,7 @@ public class ControladorTablero implements ActionListener{
         //PRESIONAR BOTON TERMINAR
             
             else if(e.getSource() == this.vt.getBtnTerminar()){
+                this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
                 vt.getBtnTerminar().setEnabled(false);
@@ -904,7 +905,7 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
-            this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
+            
             contadorMovimientos=0;
             JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
             vt.getBtnAtacar().setEnabled(true);
