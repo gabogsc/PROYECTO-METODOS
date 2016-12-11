@@ -3,17 +3,17 @@ package Modelo;
 
 import java.util.ArrayList;
 
-import Modelo.Usuario;
+import Modelo.Escenario;
 import Modelo.Personaje;
 import java.util.*;
 import Modelo.Escenario;
 import java.util.stream.Collectors;
 
 public class CPU {
-
+    private Escenario es;
     public CPU() {
     
-   
+        es=new Escenario();
    
     }
 
@@ -62,14 +62,25 @@ public class CPU {
    public void MovimientoCPU(Personaje PersonajeUsuarioMasCerca, Personaje personajeCPU ){
        
     
+       
+       
+       
+       
         if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() ||
                 
                 personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && 
                 
 			personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
+                       
+            
+                        if(this.es.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno() != 3){
+            
                             // SETEO POSICION X + 1
-                            personajeCPU.setPosX(personajeCPU.getPosX()+1);
                             
+                            System.out.println(this.es.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                            personajeCPU.setPosX(personajeCPU.getPosX()+1);
+                        
+                        }    
 
         }
         

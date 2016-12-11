@@ -931,18 +931,137 @@ public class ControladorTablero implements ActionListener{
                 flagTurnoCPU=false;
                 flagTurno=true;
                 this.vt.getBtnVerificarTerminar().setEnabled(false);
-                
-                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
-                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
-                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
-                this.cpu.MovimientoCPU(this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU), personajeCPU);
+                Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 
                 
+            for(int a=0; a<25;a++){
+                
+                if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
+                       
+            
+                    if(this.esc.getMatrizEscenario()[personajeCPU.getPosX()+1][personajeCPU.getPosY()].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()+1][personajeCPU.getPosY()].isCaminable() == true){
+            
+                        // SETEO POSICION X + 1
+                            
+                        System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                        
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosX(personajeCPU.getPosX()+1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            
+                        }
+                        
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosX(personajeCPU.getPosX()+1); 
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+   
+                        }
+                        
+                        
+                    }    
+
+                }
+        
+                else if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() > PersonajeUsuarioMasCerca.getPosX() ){
+                    
+                    if(this.esc.getMatrizEscenario()[personajeCPU.getPosX()-1][personajeCPU.getPosY()].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()-1][personajeCPU.getPosY()].isCaminable() == true){
+                        // SETEO POSICION X -1
+                        System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                        
+                        
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                        
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosX(personajeCPU.getPosX()-1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                     
+                        }
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosX(personajeCPU.getPosX()-1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                    
+                        }
+                    
+                    }    
+
+                }
+                
+                else if( (personajeCPU.getPosY()+1 != PersonajeUsuarioMasCerca.getPosY() || personajeCPU.getPosY()-1 != PersonajeUsuarioMasCerca.getPosY()  ) && personajeCPU.getPosY() < PersonajeUsuarioMasCerca.getPosY() ){
+                    
+                    if(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()+1].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()+1].isCaminable() == true){
+                        // SETEO POSICION Y + 1
+                        System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                        
+                        
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosY(personajeCPU.getPosY()+1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                        }
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosY(personajeCPU.getPosY()+1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                            
+                        }
+                    }
+
+                }
+                else if( (personajeCPU.getPosY()+1 != PersonajeUsuarioMasCerca.getPosY() || personajeCPU.getPosY()-1 != PersonajeUsuarioMasCerca.getPosY()  ) && personajeCPU.getPosY() > PersonajeUsuarioMasCerca.getPosY() ){
+                    
+                    if(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()-1].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()-1].isCaminable() == true){
+                        // SETEO POSICION Y - 1
+                        System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                        
+                        
+                        
+                        
+                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "G"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosY(personajeCPU.getPosY()-1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+
+                        }
+                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText() == "A"){
+                            //this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
+                            personajeCPU.setPosY(personajeCPU.getPosY()-1);
+                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
+                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
+                        }
+                    
+                    
+                    }
+
+                }else{
+
+                                //PASAR
+                                System.out.println("TURNO CPU OBLIGADO A PASAR");
+
+                }
+                
+                
+
+                System.out.println("COORDENADAS SETEADAS PERSONAJE");
+                System.out.println(personajeCPU.getPosX()+","+personajeCPU.getPosY());    
+
+
+                }
+              } 
             }
             
         }  
     }
-}
+
 
     
         
