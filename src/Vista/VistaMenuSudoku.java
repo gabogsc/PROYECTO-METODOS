@@ -18,6 +18,7 @@ public class VistaMenuSudoku extends javax.swing.JFrame {
      */
     public VistaMenuSudoku() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

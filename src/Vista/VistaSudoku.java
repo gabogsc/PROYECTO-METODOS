@@ -25,6 +25,7 @@ public class VistaSudoku extends javax.swing.JFrame {
      */
     public VistaSudoku() {
         initComponents();
+        setLocationRelativeTo(null);
     }
     
     /*Atributos
