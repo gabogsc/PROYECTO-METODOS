@@ -5,9 +5,13 @@
  */
 package Controlador;
 
+import Sudoku.Sudoku;
 import Vista.VistaBibliotecaCentral;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -35,6 +39,12 @@ public class ControladorBibliotecaCentral implements ActionListener{
         }
         
         if(vbc.getBtnSudoku() == e.getSource()){
+            
+            try {
+                Sudoku sudoku = new Sudoku();
+            } catch (IOException ex) {
+                Logger.getLogger(ControladorBibliotecaCentral.class.getName()).log(Level.SEVERE, null, ex);
+            }
          
           
         }
