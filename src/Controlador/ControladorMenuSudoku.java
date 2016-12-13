@@ -23,6 +23,7 @@ public class ControladorMenuSudoku implements ActionListener{
     private VistaMenuSudoku vms;
     private ControladorSudoku cs;
     public static String nivel;
+    ControladorBibliotecaCentral cbc;
 
     
     //Constructor
@@ -49,7 +50,7 @@ public class ControladorMenuSudoku implements ActionListener{
             vms.dispose();        
         }
         
-        if  (ae.getActionCommand() == "Medio"){
+        else if  (ae.getActionCommand() == "Medio"){
             try {
                 this.nivel = ae.getActionCommand();
                 cs = new ControladorSudoku();
@@ -60,7 +61,7 @@ public class ControladorMenuSudoku implements ActionListener{
             vms.dispose();
         }
         
-        if (ae.getActionCommand() == "Dificil"){
+        else if (ae.getActionCommand() == "Dificil"){
             try {
                 this.nivel = ae.getActionCommand();
                 cs = new ControladorSudoku();
@@ -69,6 +70,11 @@ public class ControladorMenuSudoku implements ActionListener{
             }
             cs.mostrarVista(true);
             vms.dispose();
+        }
+        
+        else if (ae.getSource() == this.vms.getBtnRegresar()){
+            this.vms.dispose();
+            cbc= new ControladorBibliotecaCentral();
         }
     }
 }

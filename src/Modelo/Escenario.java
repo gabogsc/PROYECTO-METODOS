@@ -768,8 +768,8 @@ public class Escenario {
     
     public void moverAtributos(Personaje personaje,int posicion0,int posicion1){
         
-        String rol=personaje.getRolPersonaje();
-        String bando=personaje.getBandoPersonaje();
+        String rol = personaje.getRolPersonaje();
+        String bando = personaje.getBandoPersonaje();
         String nombre=personaje.getNombrePersonaje();
         String ruta=personaje.getRuta();
         String tipo=personaje.getTipoPersonaje();

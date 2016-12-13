@@ -516,7 +516,8 @@ public class ControladorTablero implements ActionListener{
                 }
                 
             //ROL, TRAICION, ATAQUE LARGO Y CORTO, VIDA Y DEFENSA
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() != ""){
+                if(this.esc.getMatrizEscenario()[i][j].isCaminable() == false && this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno() != 3){
+                    
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
                     traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + " ptos";
                     puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
@@ -533,7 +534,8 @@ public class ControladorTablero implements ActionListener{
                 UIManager.put("ToolTip.border", border);
                 ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
                 this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
-            }
+                System.out.println("El ROL DEL PJE En " + i + "," + j  + "es"+ this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
+            } 
         }
     }    
         
@@ -556,7 +558,7 @@ public class ControladorTablero implements ActionListener{
         int columna = personaje.getPosY();
         int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
         jugador = personaje;
-        personCPU=personajeCPU;
+        personCPU = personajeCPU;
         System.out.println("posicion " + fila + "," + columna);
         
         //EVENTOS RELACIONADOS A LA PULSACION DE UN BOTON
@@ -579,7 +581,8 @@ public class ControladorTablero implements ActionListener{
                                 for(int j = 0; j < 25; j++){
                                     Border borde1;
                                     Border borde2;
-                                    if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                    if((posicion.get(0)) != i && (posicion.get(1)) != j && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno() != 3
+                                            && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable() == true){
 
                                         borde1 = BorderFactory.createRaisedBevelBorder();
                                         borde2 = BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN);
@@ -598,7 +601,9 @@ public class ControladorTablero implements ActionListener{
                                 for(int j=0; j< 25; j++){
                                     Border borde1;
                                     Border borde2;
-                                    if((posicion.get(0)) != i && (posicion.get(1)) != j){
+                                    if((posicion.get(0)) != i && (posicion.get(1)) != j && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno() != 3
+                                            && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable() == true){
+                                        
                                         borde1 = BorderFactory.createRaisedBevelBorder();
                                         borde2 = BorderFactory.createMatteBorder(2, 2, 2, 2, Color.GREEN);
                                         this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setBorder(BorderFactory.createCompoundBorder(borde2, borde1));
@@ -658,7 +663,8 @@ public class ControladorTablero implements ActionListener{
         else if(flagMover){
             
             for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
-                if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)]){
+                if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)] && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno() != 3
+                        && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].isCaminable() == true){
                     
                     this.vt.getBtnMover().setEnabled(true);
                     this.vt.getBtnCancelarMover().setEnabled(false);
@@ -707,8 +713,9 @@ public class ControladorTablero implements ActionListener{
                                 personaje.setPosX(posicion.get(0));
                                 personaje.setPosY(posicion.get(1));
                                 esc.moverAtributos(jugador, posicion.get(0), posicion.get(1));
-                                this.mostrarLeyenda();
+                                
                                 esc.getMatrizEscenario()[fila][columna].getPersonaje().setRolPersonaje("");
+                                this.mostrarLeyenda();
                                 flagMover = false;
                                 flagTurno = true;
                                         
@@ -733,6 +740,8 @@ public class ControladorTablero implements ActionListener{
                     flagTurno = true;
                 }
             }
+            
+            
         }
         
         //EVENTOS RELACIONADOS AL ATAQUE DEL PERSONAJE
