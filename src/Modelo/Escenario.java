@@ -584,7 +584,7 @@ public class Escenario {
             }
 
             else {
-                if(tipoDeRol == 0){
+                if(tipoDeRol == 0  ){
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
                    

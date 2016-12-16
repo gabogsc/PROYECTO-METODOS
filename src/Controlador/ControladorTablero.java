@@ -8,6 +8,7 @@ import Modelo.Casilla;
 import Modelo.Escenario;
 import Modelo.Batalla;
 import Modelo.CPU;
+import Modelo.Usuario;
 import Modelo.Personaje;
 import Vista.VistaRamosCivil;
 import Vista.VistaTablero;

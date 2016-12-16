@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+
 /**
  *
  * @author Gabriel
@@ -213,8 +214,41 @@ public boolean validarInicio(String[] aux, String pss)
 
 
 
+public Personaje PersonajePrincipal(String nombrePP, String rolPP){
+    
+  Personaje PP = new Personaje(); 
+  
+  PP.setNombrePersonaje(nombrePP);
+  PP.setTipoPersonaje("alumno");
+  PP.setRolPersonaje(rolPP);
+  PP.setBandoPersonaje("bueno");
+  PP.setPuntosAtaqueCorto(5000);
+  PP.setPuntosAtaqueLargo(5000);
+  PP.setPuntosDefensa(5000);
+  PP.setPuntosVelocidad(5000);
+  PP.setPuntosVidaTotal(5000);
+  
+  return PP; 
+
+}
 
 
+public Personaje PersonajeSecundario(String nombrePS, String rolPS){
+    
+   Personaje PS = new Personaje(); 
+  
+  PS.setNombrePersonaje(nombrePS);
+  PS.setTipoPersonaje("alumno");
+  PS.setRolPersonaje(rolPS);
+  PS.setBandoPersonaje("bueno");
+  PS.setPuntosAtaqueCorto(5000);
+  PS.setPuntosAtaqueLargo(5000);
+  PS.setPuntosDefensa(5000);
+  PS.setPuntosVelocidad(5000);
+  PS.setPuntosVidaTotal(5000);
+  
+  return PS;
+}
 
 
 
