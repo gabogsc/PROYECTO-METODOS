@@ -285,6 +285,42 @@ public class Personaje {
     }
     
     
+public Personaje PersonajePrincipal(String nombrePP, String rolPP){
+    
+  Personaje PP = new Personaje(); 
+  
+  PP.setNombrePersonaje(nombrePP);
+  PP.setTipoPersonaje("alumno");
+  PP.setRolPersonaje(rolPP);
+  PP.setBandoPersonaje("bueno");
+  PP.setPpOps("pp");
+  PP.setPuntosAtaqueCorto(5000);
+  PP.setPuntosAtaqueLargo(5000);
+  PP.setPuntosDefensa(5000);
+  PP.setPuntosVelocidad(5000);
+  PP.setPuntosVidaTotal(5000);
+  
+  return PP; 
+
+}
+
+public Personaje PersonajeSecundario(String nombrePS, String rolPS){
+    
+   Personaje PS = new Personaje(); 
+  
+  PS.setNombrePersonaje(nombrePS);
+  PS.setTipoPersonaje("alumno");
+  PS.setRolPersonaje(rolPS);
+  PS.setBandoPersonaje("bueno");
+  PS.setPpOps("ps");
+  PS.setPuntosAtaqueCorto(5000);
+  PS.setPuntosAtaqueLargo(5000);
+  PS.setPuntosDefensa(5000);
+  PS.setPuntosVelocidad(5000);
+  PS.setPuntosVidaTotal(5000);
+  
+  return PS;
+}
     
     
 

@@ -188,7 +188,41 @@ public String[] ingresar(String user){
             Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
- }
+}
+
+// Obtener Nombre Personaje principal para despues nombrar a un personaje y posicionarlo en el tablero
+public String getNombrePP(String[] tablaBD){
+    
+    String nombrePP= tablaBD[2];
+
+return nombrePP;}
+// Obtener Rol Personaje principal para despues nombrar a un personaje y posicionarlo en el tablero
+public String getRolPP(String[] tablaBD){
+    
+    String rolPP= tablaBD[3];
+    
+return rolPP;}
+// Obtener Nombre Personaje secundario para despues nombrar a un personaje y posicionarlo en el tablero
+public String getNombrePS(String[] tablaBD){
+    
+    String nombrePS= tablaBD[4];
+    
+return nombrePS;}
+// Obtener rol Personaje scundario para despues nombrar a un personaje y posicionarlo en el tablero
+public String getRolPS(String[] tablaBD){
+    
+    String rolPS= tablaBD[5];
+    
+return rolPS;}
+
+// Obtener Carrera del usuario para saber que malla corresponde abrir
+
+public String getCarreraUsuario(String[] tablaBD){
+    
+    String carreraU= tablaBD[6];
+
+return carreraU;}
+
 
 public boolean validarInicio(String[] aux, String pss)
 {
@@ -211,52 +245,6 @@ public boolean validarInicio(String[] aux, String pss)
     
     
 }
-
-
-
-public Personaje PersonajePrincipal(String nombrePP, String rolPP){
-    
-  Personaje PP = new Personaje(); 
-  
-  PP.setNombrePersonaje(nombrePP);
-  PP.setTipoPersonaje("alumno");
-  PP.setRolPersonaje(rolPP);
-  PP.setBandoPersonaje("bueno");
-  PP.setPpOps("pp");
-  PP.setPuntosAtaqueCorto(5000);
-  PP.setPuntosAtaqueLargo(5000);
-  PP.setPuntosDefensa(5000);
-  PP.setPuntosVelocidad(5000);
-  PP.setPuntosVidaTotal(5000);
-  
-  return PP; 
-
-}
-
-
-public Personaje PersonajeSecundario(String nombrePS, String rolPS){
-    
-   Personaje PS = new Personaje(); 
-  
-  PS.setNombrePersonaje(nombrePS);
-  PS.setTipoPersonaje("alumno");
-  PS.setRolPersonaje(rolPS);
-  PS.setBandoPersonaje("bueno");
-  PS.setPpOps("ps");
-  PS.setPuntosAtaqueCorto(5000);
-  PS.setPuntosAtaqueLargo(5000);
-  PS.setPuntosDefensa(5000);
-  PS.setPuntosVelocidad(5000);
-  PS.setPuntosVidaTotal(5000);
-  
-  return PS;
-}
-
-
-
-
-
-
 
 
 

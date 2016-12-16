@@ -45,7 +45,7 @@ public class ControladorLogin implements ActionListener {
         
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
            if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
-               
+             
               Otros.registroUsuario.actividadUsuario("Usuario se logea");
                     ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
                     vl.dispose();
