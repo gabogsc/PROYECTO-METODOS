@@ -128,9 +128,9 @@ public class Usuario {
         try {
             String query = "INSERT INTO JUGADOR VALUES ('"+user+"','"+pass+"','"+per1+"',"
                     + "'"+rol1+"','"+per2+"','"+rol2+"','"+carrera+"',"+dinero+")";
-            System.out.println("hola ");
+            
             state = con.createStatement();
-            System.out.println("wenaaa");
+            
             
         int saber =  state.executeUpdate(query);
             
@@ -198,11 +198,11 @@ public boolean validarInicio(String[] aux, String pss)
         
     }else if (aux[1].equals(pss))
     {
-        JOptionPane.showMessageDialog(null, "Entraste de vioh!!!");
+        JOptionPane.showMessageDialog(null, "Ingreso Exitoso");
         return true;
         
     }else{
-        JOptionPane.showMessageDialog(null, "La contraseña esta mala shoro!");
+        JOptionPane.showMessageDialog(null, "La contraseña esta Erronea");
         return false;
     }
         

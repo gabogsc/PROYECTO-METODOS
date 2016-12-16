@@ -44,13 +44,13 @@ public class ControladorLogin implements ActionListener {
         //To change body of generated methods, choose Tools | Templates.
         
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
-           //if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
+           if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
                
               Otros.registroUsuario.actividadUsuario("Usuario se logea");
                     ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
                     vl.dispose();
         
-           //}
+           }
            
           
            

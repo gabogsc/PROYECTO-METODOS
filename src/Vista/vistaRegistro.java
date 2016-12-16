@@ -6,6 +6,7 @@
 package Vista;
 
 import java.awt.event.ActionListener;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
@@ -42,9 +43,7 @@ public class vistaRegistro extends javax.swing.JFrame {
         fieldUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         fieldPass = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        fieldPass2 = new javax.swing.JTextField();
-        aceptarBT = new javax.swing.JButton();
+        btnRegistrar = new javax.swing.JButton();
         botonAtras = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         textPP = new javax.swing.JTextField();
@@ -76,9 +75,7 @@ public class vistaRegistro extends javax.swing.JFrame {
 
         jLabel3.setText("Ingrese contraseña:");
 
-        jLabel4.setText("Repita contraseña:");
-
-        aceptarBT.setText("Registrarse");
+        btnRegistrar.setText("Registrarse");
 
         botonAtras.setText("Atras");
 
@@ -128,14 +125,7 @@ public class vistaRegistro extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(250, 250, 250)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4)
-                        .addGap(24, 24, 24)
-                        .addComponent(fieldPass2, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(300, 300, 300)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -152,7 +142,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                             .addComponent(radioCivil, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(90, 90, 90)
-                        .addComponent(aceptarBT)
+                        .addComponent(btnRegistrar)
                         .addGap(256, 256, 256)
                         .addComponent(botonAtras))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -183,13 +173,17 @@ public class vistaRegistro extends javax.swing.JFrame {
                                             .addComponent(radioArqueroPP)
                                             .addComponent(radioGuerreroPP))))))))
                 .addContainerGap(18, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(211, 211, 211))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(textPP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -220,11 +214,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                     .addComponent(radioGuerreroPS)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(fieldPass2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
@@ -234,7 +224,7 @@ public class vistaRegistro extends javax.swing.JFrame {
                     .addComponent(radioCivil))
                 .addGap(47, 47, 47)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(aceptarBT)
+                    .addComponent(btnRegistrar)
                     .addComponent(botonAtras))
                 .addContainerGap(26, Short.MAX_VALUE))
         );
@@ -279,15 +269,13 @@ public class vistaRegistro extends javax.swing.JFrame {
     private javax.swing.ButtonGroup GrupBtnsCarrera;
     private javax.swing.ButtonGroup GrupBtnsPP;
     private javax.swing.ButtonGroup GrupBtnsPS;
-    private javax.swing.JButton aceptarBT;
     private javax.swing.JButton botonAtras;
+    private javax.swing.JButton btnRegistrar;
     private javax.swing.JTextField fieldPass;
-    private javax.swing.JTextField fieldPass2;
     private javax.swing.JTextField fieldUsuario;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -304,8 +292,8 @@ public class vistaRegistro extends javax.swing.JFrame {
     private javax.swing.JTextField textPS;
     // End of variables declaration//GEN-END:variables
 
-    public JButton getBoton(){
-      return this.aceptarBT;
+    public JButton getRegistrar(){
+      return this.btnRegistrar;
     }
     public JButton getBotonAtras(){
       return this.botonAtras;
@@ -317,10 +305,7 @@ public class vistaRegistro extends javax.swing.JFrame {
     public JTextField getFieldPass() {
         return fieldPass;
     }
-    public JTextField getFieldPass2() {
-        return fieldPass2;
-    }
-
+    
     public JTextField getTextPP() {
         return textPP;
     }
@@ -353,11 +338,23 @@ public class vistaRegistro extends javax.swing.JFrame {
         return radioGuerreroPS;
     }
 
+    public ButtonGroup getGrupBtnsCarrera() {
+        return GrupBtnsCarrera;
+    }
+
+    public ButtonGroup getGrupBtnsPP() {
+        return GrupBtnsPP;
+    }
+
+    public ButtonGroup getGrupBtnsPS() {
+        return GrupBtnsPS;
+    }
+
     
     
     
     public void ActionListener(ActionListener al){
         this.botonAtras.addActionListener(al);
-        this.aceptarBT.addActionListener(al);
+        this.btnRegistrar.addActionListener(al);
     }  
 }
