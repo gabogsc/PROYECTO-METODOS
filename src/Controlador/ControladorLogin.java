@@ -45,8 +45,20 @@ public class ControladorLogin implements ActionListener {
         
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
            if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
-             
-              Otros.registroUsuario.actividadUsuario("Usuario se logea");
+                String nombrePP = us.getNombrePP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                String rolPP = us.getRolPP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                String nombrePS = us.getNombrePS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                String rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                String carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                
+                
+                System.out.println(nombrePP);
+                System.out.println(rolPP);
+                System.out.println(nombrePS);
+                System.out.println(rolPP);
+                System.out.println(carrera);
+
+            Otros.registroUsuario.actividadUsuario("Usuario se logea");
                     ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
                     vl.dispose();
         

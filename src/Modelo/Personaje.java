@@ -33,7 +33,6 @@ public class Personaje {
     private int contrato;
     private String tipoPersonaje;
     private String rolPersonaje;
-    private String ppOps;
     private ArrayList<String> inventario;
     private ArrayList<String> equipamiento;
     private String BandoPersonaje;
@@ -87,7 +86,6 @@ public class Personaje {
         this.posicionX = 0;
         this.posicionY = 0;
         this.BandoPersonaje = "";
-        this.ppOps = "";
 
     }
 
@@ -267,16 +265,6 @@ public class Personaje {
     public void setBandoPersonaje(String BandoPersonaje) {
         this.BandoPersonaje = BandoPersonaje;
     }
-
-    public String getPpOps() {
-        return ppOps;
-    }
-
-    public void setPpOps(String ppOps) {
-        this.ppOps = ppOps;
-    }
-    
-    
     public void setRuta(String ruta){
         this.ruta=ruta;
     }
@@ -285,42 +273,6 @@ public class Personaje {
     }
     
     
-public Personaje PersonajePrincipal(String nombrePP, String rolPP){
-    
-  Personaje PP = new Personaje(); 
-  
-  PP.setNombrePersonaje(nombrePP);
-  PP.setTipoPersonaje("alumno");
-  PP.setRolPersonaje(rolPP);
-  PP.setBandoPersonaje("bueno");
-  PP.setPpOps("pp");
-  PP.setPuntosAtaqueCorto(5000);
-  PP.setPuntosAtaqueLargo(5000);
-  PP.setPuntosDefensa(5000);
-  PP.setPuntosVelocidad(5000);
-  PP.setPuntosVidaTotal(5000);
-  
-  return PP; 
-
-}
-
-public Personaje PersonajeSecundario(String nombrePS, String rolPS){
-    
-   Personaje PS = new Personaje(); 
-  
-  PS.setNombrePersonaje(nombrePS);
-  PS.setTipoPersonaje("alumno");
-  PS.setRolPersonaje(rolPS);
-  PS.setBandoPersonaje("bueno");
-  PS.setPpOps("ps");
-  PS.setPuntosAtaqueCorto(5000);
-  PS.setPuntosAtaqueLargo(5000);
-  PS.setPuntosDefensa(5000);
-  PS.setPuntosVelocidad(5000);
-  PS.setPuntosVidaTotal(5000);
-  
-  return PS;
-}
     
     
 

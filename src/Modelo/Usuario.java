@@ -224,6 +224,10 @@ public String getCarreraUsuario(String[] tablaBD){
 return carreraU;}
 
 
+
+
+
+
 public boolean validarInicio(String[] aux, String pss)
 {
     if (aux[0] == null || aux[0]=="")

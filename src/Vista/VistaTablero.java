@@ -87,13 +87,11 @@ public class VistaTablero extends javax.swing.JFrame {
         btnCancelarMover = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 700));
         setResizable(false);
-        getContentPane().setLayout(null);
 
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
@@ -108,78 +106,102 @@ public class VistaTablero extends javax.swing.JFrame {
             .addGap(0, 600, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 600, 600);
-
         btnRegresarVT.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnRegresarVT.setText("Regresar");
         btnRegresarVT.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnRegresarVT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnRegresarVT);
-        btnRegresarVT.setBounds(618, 6, 107, 36);
 
         btnAtacar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnAtacar.setText("Atacar");
         btnAtacar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnAtacar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnAtacar);
-        btnAtacar.setBounds(618, 54, 368, 36);
 
         btnMover.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnMover.setText("Mover");
         btnMover.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnMover);
-        btnMover.setBounds(618, 144, 368, 36);
 
         btnTerminar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnTerminar.setText("Terminar Turno");
         btnTerminar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnTerminar);
-        btnTerminar.setBounds(618, 234, 368, 36);
 
         btnVerificarTerminar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnVerificarTerminar.setText("Aceptar");
         btnVerificarTerminar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnVerificarTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnVerificarTerminar);
-        btnVerificarTerminar.setBounds(618, 276, 95, 36);
 
         btnCancelarTerminar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnCancelarTerminar.setText("Cancelar");
         btnCancelarTerminar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnCancelarTerminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnCancelarTerminar);
-        btnCancelarTerminar.setBounds(880, 276, 106, 36);
 
         btnCancelarAtacar.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnCancelarAtacar.setText("Cancelar Ataque");
         btnCancelarAtacar.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnCancelarAtacar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnCancelarAtacar);
-        btnCancelarAtacar.setBounds(618, 96, 368, 36);
 
         btnCancelarMover.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 24)); // NOI18N
         btnCancelarMover.setText("Cancelar Movimiento");
         btnCancelarMover.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(102, 102, 255)));
         btnCancelarMover.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(btnCancelarMover);
-        btnCancelarMover.setBounds(618, 186, 368, 36);
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(618, 485, 368, 209);
 
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(780, 390, 45, 16);
+        jLabel1.setText("Equipo CPU: Color Rojo");
 
-        jLabel2.setText("jLabel2");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(780, 410, 45, 16);
+        jLabel3.setText("Equipo Usuario: Color Verde");
 
-        jLabel3.setText("jLabel3");
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(780, 360, 45, 16);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRegresarVT)
+                    .addComponent(btnAtacar, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancelarAtacar, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMover, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCancelarMover, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnTerminar, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(btnVerificarTerminar)
+                        .addGap(167, 167, 167)
+                        .addComponent(btnCancelarTerminar))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(112, 112, 112)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnRegresarVT)
+                .addGap(12, 12, 12)
+                .addComponent(btnAtacar)
+                .addGap(6, 6, 6)
+                .addComponent(btnCancelarAtacar)
+                .addGap(12, 12, 12)
+                .addComponent(btnMover)
+                .addGap(6, 6, 6)
+                .addComponent(btnCancelarMover)
+                .addGap(12, 12, 12)
+                .addComponent(btnTerminar)
+                .addGap(6, 6, 6)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnVerificarTerminar)
+                    .addComponent(btnCancelarTerminar))
+                .addGap(48, 48, 48)
+                .addComponent(jLabel3)
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addGap(79, 79, 79)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -194,7 +216,6 @@ public class VistaTablero extends javax.swing.JFrame {
     private javax.swing.JButton btnTerminar;
     private javax.swing.JButton btnVerificarTerminar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

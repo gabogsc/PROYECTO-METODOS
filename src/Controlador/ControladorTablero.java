@@ -8,6 +8,7 @@ import Modelo.Casilla;
 import Modelo.Escenario;
 import Modelo.Batalla;
 import Modelo.CPU;
+import Controlador.ControladorLogin;
 import Modelo.Personaje;
 import Vista.VistaRamosCivil;
 import Vista.VistaTablero;
@@ -31,6 +32,7 @@ public class ControladorTablero implements ActionListener{
     private ControladorBatallaCorta bct;
     private Batalla bat;
     private CPU cpu;
+    private ControladorLogin cl;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
     private boolean flagTurno = true;
@@ -72,7 +74,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario();
+            this.esc.PosicionarPjesUsuario("Personaje Principal","Guerrero","Personaje Secundario","Arquero");
 
             
         }   
@@ -81,7 +83,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEspecialidad();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario();
+            this.esc.PosicionarPjesUsuario("Personaje Principal","Guerrero","Personaje Secundario","Arquero");
 
         }
         else if(tipoDeAsignatura == 2){
@@ -89,7 +91,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEconomia();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario();
+            this.esc.PosicionarPjesUsuario("Personaje Principal","Guerrero","Personaje Secundario","Arquero");
 
         }
             
