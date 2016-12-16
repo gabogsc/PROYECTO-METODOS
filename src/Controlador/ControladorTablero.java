@@ -37,6 +37,8 @@ public class ControladorTablero implements ActionListener{
     private boolean flagMover = false;
     private boolean flagAtacar = false;
     private boolean flagTurnoCPU;
+    private boolean flagMoverCPU=false;
+    private boolean flagAtacarCPU=false;
     private int contadorMovimientos;
     ArrayList<Personaje> personajesOrdenadosU;
     ArrayList<Personaje> personajesOrdenadosCPU;
@@ -534,7 +536,7 @@ public class ControladorTablero implements ActionListener{
                 UIManager.put("ToolTip.border", border);
                 ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
                 this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
-                System.out.println("El ROL DEL PJE En " + i + "," + j  + "es"+ this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
+                //System.out.println("El ROL DEL PJE En " + i + "," + j  + "es"+ this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
             } 
         }
     }    
@@ -545,7 +547,7 @@ public class ControladorTablero implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        
+        this.mostrarLeyenda();
         //PRESIONAR BOTON REGRESAR
         if(e.getSource() == this.vt.getBtnRegresarVT()){
             vt.dispose();
@@ -768,6 +770,27 @@ public class ControladorTablero implements ActionListener{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
                             vt.getBtnAtacar().setEnabled(false);
+                            if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
+                            
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -779,6 +802,26 @@ public class ControladorTablero implements ActionListener{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
                             vt.getBtnAtacar().setEnabled(false);
+                            if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -791,6 +834,26 @@ public class ControladorTablero implements ActionListener{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
                             vt.getBtnAtacar().setEnabled(false);
+                            if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -802,6 +865,26 @@ public class ControladorTablero implements ActionListener{
                             Personaje enemigo=this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].obtenerPersonaje();
                             bct=new ControladorBatallaCorta(personaje,enemigo);
                             vt.getBtnAtacar().setEnabled(false);
+                            if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             flagAtacar=false;
                             flagTurno=true;
                         }
@@ -818,8 +901,30 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
                             }
+                            }
+                            
+                            
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
@@ -838,8 +943,29 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
                             }
+                            }
+                            
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
                             flagTurno=true;
@@ -857,7 +983,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -876,7 +1022,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -895,7 +1061,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -914,7 +1100,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -933,7 +1139,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -952,7 +1178,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -971,7 +1217,27 @@ public class ControladorTablero implements ActionListener{
                                 JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
                             }else{
                                 int vidaEnemigo=enemigo.getPuntosVidaTotal();
-                                JOptionPane.showMessageDialog(null,"DAÑOS AL PERSONAJE:"+vidaEnemigo);
+                                JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                                if(enemigo.getPuntosVidaTotal()<=0){
+                                System.out.println("personaje mmuerto");
+                                Personaje personajeAux=new Personaje();
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(personajeAux);
+                                this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("");
+                                this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
+                                int xCPU=enemigo.getPosX();
+                                int yCPU=enemigo.getPosY();
+                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
+                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
+                                        personajesOrdenadosCPU.remove(i);
+                                        System.out.println("se removio personaje");
+                                        break;
+                                    }else{
+                                        
+                                    }
+                                }
+                            }else{
+                                
+                            }
                             }
                             vt.getBtnAtacar().setEnabled(false);
                             flagAtacar=false;
@@ -997,6 +1263,7 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
+            System.out.println("turno de:"+personajeCPU.getPosX()+","+personajeCPU.getPosY());
             if(e.getSource() == this.vt.getBtnVerificarTerminar()){
                 
                 this.vt.getBtnCancelarTerminar().setEnabled(false);
@@ -1009,19 +1276,30 @@ public class ControladorTablero implements ActionListener{
                 JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
                 vt.getBtnAtacar().setEnabled(true);
                 vt.getBtnMover().setEnabled(true);
-                flagTurnoCPU = false;
-                flagTurno  = true;
                 
+                flagMoverCPU=true;
+                flagTurnoCPU = false;
+                vt.getBtnTerminar().doClick();
+            }else if(e.getSource() == this.vt.getBtnCancelarTerminar()){
+                
+                this.vt.getBtnCancelarTerminar().setEnabled(false);
+                this.vt.getBtnVerificarTerminar().setEnabled(false);
+                this.vt.getBtnTerminar().setEnabled(true);
+                flagTurnoCPU = false;
+                flagTurno = true;
+            } 
+        }else if(flagMoverCPU){
                 Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 
                 
             for(int a = 0; a < 4; a++){
-                try{
-                    Thread.sleep(500);
-                }catch(InterruptedException ie){
-                    System.out.println("Errror");
+                //try{
+                  //  Thread.sleep(500);
+                //}catch(InterruptedException ie){
+                  //  System.out.println("Errror");
                     //
-                }    
+                //}   
+                System.out.println("nyus");
                 if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
                        
             
@@ -1029,7 +1307,7 @@ public class ControladorTablero implements ActionListener{
             
                         // SETEO POSICION X + 1
                             
-                        System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                       // System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
                         
                         if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
@@ -1037,7 +1315,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
-                            
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
                         }
                         
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
@@ -1046,6 +1325,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
    
                         }
                         
@@ -1068,6 +1349,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
                      
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
@@ -1076,6 +1359,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
                     
                         }
                     
@@ -1096,6 +1381,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
@@ -1103,6 +1390,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
                             
                         }
                     }
@@ -1123,6 +1412,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
 
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
@@ -1131,6 +1422,8 @@ public class ControladorTablero implements ActionListener{
                             this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
                             this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
                             esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            System.out.println("nueva pos");
+                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
                         }
                     
                     
@@ -1149,21 +1442,52 @@ public class ControladorTablero implements ActionListener{
                 System.out.println(personajeCPU.getPosX()+","+personajeCPU.getPosY());    
 
 
-                }
-            } 
-            
-            else if(e.getSource() == this.vt.getBtnCancelarTerminar()){
-                
-                this.vt.getBtnCancelarTerminar().setEnabled(false);
-                this.vt.getBtnVerificarTerminar().setEnabled(false);
-                this.vt.getBtnTerminar().setEnabled(true);
-                flagTurnoCPU = false;
-                flagTurno = true;
             }
+            flagMoverCPU=false;
+            flagAtacarCPU=true;
+            vt.getBtnTerminar().doClick();
+           
+        }else if(flagAtacarCPU){
+            int x=personajeCPU.getPosX();
+            int y=personajeCPU.getPosY();
+            Personaje personajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
+            int posX=personajeUsuarioMasCerca.getPosX();
+            int posY=personajeUsuarioMasCerca.getPosY();
+            if(posY==y && (posX==x+1||posX==x+2||posX==x-1||posX==x-2)){
+                Personaje personajeUs=esc.getMatrizEscenario()[posX][posY].getPersonaje();
+                bct=new ControladorBatallaCorta(personajeUs,personajeCPU);
+            }else if(posX==x && (posY==y+1||posY==y+2||posY==y-1||posY==y-2)){
+                Personaje personajeUs=esc.getMatrizEscenario()[posX][posY].getPersonaje();
+                bct=new ControladorBatallaCorta(personajeUs,personajeCPU);
+            }else if(posX==x && (posY==y+5||posY==y-5||posY==y+6||posY==y-6||posY==y+7||posY==y-7||posY==y+8||posY==y-8)){
+                Personaje personajeUs=this.esc.getMatrizEscenario()[posX][posY].obtenerPersonaje();
+                int probabilidadFallo=this.esc.getMatrizEscenario()[posX][posY].getProbabilidadDeFallo();
+                int resultado=bat.atacarLargo(probabilidadFallo, personajeCPU, personajeUs);
+                if(resultado==0){
+                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                }else{
+                    int vidaEnemigo=personajeUs.getPuntosVidaTotal();
+                    JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                }
+            }else if(posY==y && (posX==x+5||posX==x-5||posX==x+6||posX==x-6||posX==x+7||posX==x-7||posX==x+8||posX==x-8)){
+                Personaje personajeUs=this.esc.getMatrizEscenario()[posX][posY].obtenerPersonaje();
+                int probabilidadFallo=this.esc.getMatrizEscenario()[posX][posY].getProbabilidadDeFallo();
+                int resultado=bat.atacarLargo(probabilidadFallo, personajeCPU, personajeUs);
+                if(resultado==0){
+                    JOptionPane.showMessageDialog(null,"EL ATAQUE FALLO :c");
+                }else{
+                    int vidaEnemigo=personajeUs.getPuntosVidaTotal();
+                    JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
+                }
+            }
+            personajesOrdenadosCPU.remove(0);
+            personajesOrdenadosCPU.add(personCPU);
+            flagAtacarCPU=false;
+            flagTurno=true;
+            //vt.getBtnTerminar().doClick();
+            
         }
         
-        personajesOrdenadosCPU.remove(0);
-        personajesOrdenadosCPU.add(personCPU);
     }  
 }
 

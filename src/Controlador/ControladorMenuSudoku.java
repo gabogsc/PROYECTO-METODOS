@@ -72,10 +72,10 @@ public class ControladorMenuSudoku implements ActionListener{
             vms.dispose();
         }
         
-        else if (ae.getSource() == this.vms.getBtnRegresar()){
+        /*else if (ae.getSource() == this.vms.getBtnRegresar()){
             this.vms.dispose();
             cbc= new ControladorBibliotecaCentral();
-        }
+        }*/
     }
 }
     

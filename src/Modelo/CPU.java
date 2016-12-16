@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 public class CPU {
     private Escenario es;
+   
     public CPU() {
     
         es=new Escenario();
@@ -136,5 +137,5 @@ public class CPU {
    
    
     
-    public void ataqueCPU(Personaje personaje, int x, int y){}
+   
 }

@@ -268,7 +268,7 @@ public class ControladorBatallaCorta implements ActionListener{
                 System.out.println(HPFinalJ);
                 System.out.println("HP enemigo despues de calculo daño");
                 System.out.println(HPFinalE);
-                JOptionPane.showMessageDialog(null, "Resultados:"+resultanyusFinal.get(0)+"|"+resultanyusFinal.get(1)+"|"+resultanyusFinal.get(2)+"|"+resultanyusFinal.get(3)+"|"+resultanyusFinal.get(4)+"|"+resultanyusFinal.get(5)+"|"+resultanyusFinal.get(6)+"|\n"+"Daño al jugador="+HPFinalJ+"\n"+"Daño al enemigo="+HPFinalE);
+                JOptionPane.showMessageDialog(null, "Resultados:"+resultanyusFinal.get(0)+"|"+resultanyusFinal.get(1)+"|"+resultanyusFinal.get(2)+"|"+resultanyusFinal.get(3)+"|"+resultanyusFinal.get(4)+"|"+resultanyusFinal.get(5)+"|"+resultanyusFinal.get(6)+"|\n"+"Vida restante jugador="+HPFinalJ+"\n"+"Vida restante enemigo="+HPFinalE);
                 vbc.dispose();
                 
 

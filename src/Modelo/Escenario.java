@@ -631,7 +631,7 @@ public class Escenario {
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(20);
                     
-                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(100);
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(10000000);
                     
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(50+aumentadorDeVelocidad);
                     
@@ -779,8 +779,8 @@ public class Escenario {
         int defensa=personaje.getPuntosDefensa();
         
         matrizEscenario[posicion0][posicion1].getPersonaje().setRolPersonaje(rol);
-        System.out.println("rol de la nnueva pos");
-        System.out.println(this.matrizEscenario[posicion0][posicion1].getPersonaje().getRolPersonaje());
+        //System.out.println("rol de la nnueva pos");
+        //System.out.println(this.matrizEscenario[posicion0][posicion1].getPersonaje().getRolPersonaje());
         matrizEscenario[posicion0][posicion1].getPersonaje().setBandoPersonaje(bando);
         matrizEscenario[posicion0][posicion1].getPersonaje().setNombrePersonaje(nombre);
         matrizEscenario[posicion0][posicion1].getPersonaje().setRuta(ruta);

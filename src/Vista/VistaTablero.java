@@ -85,6 +85,7 @@ public class VistaTablero extends javax.swing.JFrame {
         btnCancelarTerminar = new javax.swing.JButton();
         btnCancelarAtacar = new javax.swing.JButton();
         btnCancelarMover = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(900, 700));
@@ -162,7 +163,8 @@ public class VistaTablero extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(btnRegresarVT)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(btnMover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnMover, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
                 .addGap(14, 14, 14))
         );
         layout.setVerticalGroup(
@@ -187,7 +189,9 @@ public class VistaTablero extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnVerificarTerminar)
                     .addComponent(btnCancelarTerminar))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1)
+                .addContainerGap())
         );
 
         layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnCancelarTerminar, btnVerificarTerminar});
@@ -205,6 +209,7 @@ public class VistaTablero extends javax.swing.JFrame {
     private javax.swing.JButton btnTerminar;
     private javax.swing.JButton btnVerificarTerminar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 
     public void agregarListener(ActionListener al){ //metodo que escucha botones
