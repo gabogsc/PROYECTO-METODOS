@@ -918,3 +918,7 @@
 2016/12/16 :: 03:30:41 =Usuario se Registra
 2016/12/16 :: 03:31:06 =Usuario se Registra
 2016/12/16 :: 03:39:56 =Usuario se Registra
+2016/12/16 :: 03:49:09 =Usuario se Registra
+2016/12/16 :: 03:49:25 =Usuario se logea
+2016/12/16 :: 03:49:27 =Usuario INGRESA A SU MALLA CURRICULAR
+2016/12/16 :: 03:49:28 =Usuario INGRESO A LA BATALLA CALCULO

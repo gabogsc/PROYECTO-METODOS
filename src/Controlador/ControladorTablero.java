@@ -1273,7 +1273,7 @@ public class ControladorTablero implements ActionListener{
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
                 contadorMovimientos=0;
-                JOptionPane.showMessageDialog(null,"AUN NO HAGO NADA D: XD");
+                JOptionPane.showMessageDialog(null,"Turno Computadora");
                 vt.getBtnAtacar().setEnabled(true);
                 vt.getBtnMover().setEnabled(true);
                 
