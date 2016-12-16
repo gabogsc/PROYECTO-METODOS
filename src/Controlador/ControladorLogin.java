@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import static Controlador.ControladorRegistro.dinero;
 import Modelo.Usuario;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -50,26 +51,31 @@ public class ControladorLogin implements ActionListener {
         //To change body of generated methods, choose Tools | Templates.
         
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
-           if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
-                nombrePP = us.getNombrePP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                rolPP = us.getRolPP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                nombrePS = us.getNombrePS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                
-                
-                System.out.println(nombrePP);
-                System.out.println(rolPP);
-                System.out.println(nombrePS);
-                System.out.println(rolPP);
-                System.out.println(carrera);
+            if(this.vl.getTxtUsuario().getText().equals("")== false ){    
+               if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
+                    nombrePP = us.getNombrePP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                    rolPP = us.getRolPP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                    nombrePS = us.getNombrePS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                    rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                    carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
 
-            Otros.registroUsuario.actividadUsuario("Usuario se logea");
+
+                    System.out.println(nombrePP);
+                    System.out.println(rolPP);
+                    System.out.println(nombrePS);
+                    System.out.println(rolPP);
+                    System.out.println(carrera);
+
+                    Otros.registroUsuario.actividadUsuario("Usuario se logea");
                     ControladorMenuPrincipal cmp = new ControladorMenuPrincipal();
                     vl.dispose();
-        
-           }
-           
+
+               }
+            }else{
+                
+                JOptionPane.showMessageDialog(vl, "Rellene todos los campos ", "Error", 0);
+                
+            }   
           //
            
             

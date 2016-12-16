@@ -23,6 +23,7 @@ public class ControladorRegistro implements ActionListener {
     private Registro mR;
     private vistaRegistro vr;
     private Usuario us;
+    public static int dinero;
     
     public ControladorRegistro(){
         this.vr = new vistaRegistro();
@@ -35,6 +36,7 @@ public class ControladorRegistro implements ActionListener {
         this.us = new Usuario();
         this.vr.setVisible(true);
         this.vr.ActionListener(this);
+        
     }
 
     @Override
@@ -43,7 +45,7 @@ public class ControladorRegistro implements ActionListener {
             
            
             String rolPP="", rolPS="", carrera="";
-            int dinero = 500;
+            dinero = 0;
             
         // Verificacion de que todos los campos esten Rellenados para poder Registrarte
         if((this.vr.getRadioArqueroPP().isSelected() == true || this.vr.getRadioGuerreroPP().isSelected() == true) && 

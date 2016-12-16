@@ -5,10 +5,12 @@
  */
 package Controlador;
 
+import static Controlador.ControladorRegistro.dinero;
 import Vista.VistaGato;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Modelo.ModeloGato;
+import javax.swing.JOptionPane;
 
 
 
@@ -47,6 +49,12 @@ public class ControladorGato implements ActionListener{
                                 this.vg.getMatriz()[r][s].setEnabled(false);
                             }
                         }
+                        JOptionPane.showMessageDialog(vg, "Felicidades has Ganado 1000 Monedas", "Ganaste", 1);
+                        JOptionPane.showMessageDialog(vg, "Dinero Anterior: "+dinero, "Recompensa", 1);
+                        dinero=dinero + 1000;
+                        JOptionPane.showMessageDialog(vg, "Dinero Actual: "+ dinero, "Recompensa ", 1);
+                        
+                        
                        
                         //vg.dispose();
                         return;

@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controlador;
+import static Controlador.ControladorRegistro.dinero;
 import Vista.VistaAhorcado;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -125,6 +126,10 @@ public class ControladorAhorcado implements ActionListener {
                         //SE VERIFICA SI EL USUARIO GANO. EN CASO DE GANAR ES DEVUELTO A LAS VISTA MENU PRINCIPAL.
                         if(contadorGanar==palabrita.length()){
                             JOptionPane.showMessageDialog(null, "Has ganado, ¡Felicidades!");
+                            JOptionPane.showMessageDialog(va, "Felicidades has Ganado 1500 Monedas", "Ganaste", 1);
+                            JOptionPane.showMessageDialog(va, "Dinero Anterior: "+dinero, "Recompensa", 1);
+                            dinero=dinero + 1000;
+                            JOptionPane.showMessageDialog(va, "Dinero Actual: "+ dinero, "Recompensa ", 1);
                             this.va.dispose();
                             cp= new ControladorPrincipalAhorcado();
                         }else{
