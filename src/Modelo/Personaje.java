@@ -33,6 +33,7 @@ public class Personaje {
     private int contrato;
     private String tipoPersonaje;
     private String rolPersonaje;
+    private String ppOps;
     private ArrayList<String> inventario;
     private ArrayList<String> equipamiento;
     private String BandoPersonaje;
@@ -86,6 +87,7 @@ public class Personaje {
         this.posicionX = 0;
         this.posicionY = 0;
         this.BandoPersonaje = "";
+        this.ppOps = "";
 
     }
 
@@ -265,6 +267,16 @@ public class Personaje {
     public void setBandoPersonaje(String BandoPersonaje) {
         this.BandoPersonaje = BandoPersonaje;
     }
+
+    public String getPpOps() {
+        return ppOps;
+    }
+
+    public void setPpOps(String ppOps) {
+        this.ppOps = ppOps;
+    }
+    
+    
     public void setRuta(String ruta){
         this.ruta=ruta;
     }

@@ -131,6 +131,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1267, 960));
 
         filler1.setBackground(new java.awt.Color(0, 0, 0));
 

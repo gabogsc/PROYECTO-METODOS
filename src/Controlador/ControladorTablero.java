@@ -32,6 +32,7 @@ public class ControladorTablero implements ActionListener{
     private ControladorBatallaCorta bct;
     private Batalla bat;
     private CPU cpu;
+    private Usuario us;
     private Escenario esc = new Escenario();
     private VistaTablero vt = new VistaTablero();
     private boolean flagTurno = true;
@@ -73,7 +74,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario();
+            this.esc.PosicionarPjesUsuario(this.us.PersonajePrincipal(nombrePP, rolPP),this.us.PersonajeSecundario(nombrePS, rolPS));
 
             
         }   
@@ -82,7 +83,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEspecialidad();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario();
+            this.esc.PosicionarPjesUsuario(this.us.PersonajePrincipal(nombrePP, rolPP),this.us.PersonajeSecundario(nombrePS, rolPS));
 
         }
         else if(tipoDeAsignatura == 2){
@@ -90,7 +91,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEconomia();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario();
+            this.esc.PosicionarPjesUsuario(this.us.PersonajePrincipal(nombrePP, rolPP),this.us.PersonajeSecundario(nombrePS, rolPS));
 
         }
             

@@ -561,13 +561,61 @@ public class Escenario {
     
     
     
-    public void PosicionarPjesUsuario(){
+    public void PosicionarPjesUsuario(Personaje PP, Personaje PS){
         
         
 
         int aumentadorDeVelocidad = 50;
         
-       for(int nPjesUsuario=0; nPjesUsuario < 5;){
+        
+        for(int PPyPS = 0;PPyPS < 2; PPyPS++){  
+
+            Random numero1 = new Random();
+            int posx = (numero1.nextInt(25));
+            int posy = (numero1.nextInt(13));
+            int tipoRol = (numero1.nextInt(2));
+
+
+
+            if(matrizEscenario[posx][posy].getTipoDeTerreno()== 3){
+
+
+                    System.out.println("NO SE PUSO PERSONAJE era un rio");
+            }
+
+
+            else{
+                // posicionamiento Personaje Principal
+                if(PP.getPpOps()== "pp"){
+
+                    this.matrizEscenario[posx][posy].obtenerPersonaje().setPosX(posx);
+
+                    this.matrizEscenario[posx][posy].obtenerPersonaje().setPosY(posy);
+
+                    this.matrizEscenario[posx][posy].obtenerPersonaje().setRuta("src/Imagenes/MegaLucario.png");
+
+
+                }
+                // posicionamiento Personaje Secundario
+                else if(PS.getPpOps() == "ps"){
+
+                    this.matrizEscenario[posx][posy].obtenerPersonaje().setPosX(posx);
+
+                    this.matrizEscenario[posx][posy].obtenerPersonaje().setPosY(posy);
+
+                    this.matrizEscenario[posx][posy].obtenerPersonaje().setRuta("src/Imagenes/MegaLucario.png");
+
+                }
+
+                this.matrizEscenario[posx][posy].setCaminable(false);
+                listaPersonajesUsuario.add(matrizEscenario[posx][posy].obtenerPersonaje());
+                PPyPS++;
+                System.out.println("Se Posiciono un PP o PS");
+
+            }
+        }        
+    
+        for(int nPjesUsuario=0; nPjesUsuario < 3;){
             
             
             Random numero = new Random();

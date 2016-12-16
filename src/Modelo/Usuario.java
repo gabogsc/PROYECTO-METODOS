@@ -222,6 +222,7 @@ public Personaje PersonajePrincipal(String nombrePP, String rolPP){
   PP.setTipoPersonaje("alumno");
   PP.setRolPersonaje(rolPP);
   PP.setBandoPersonaje("bueno");
+  PP.setPpOps("pp");
   PP.setPuntosAtaqueCorto(5000);
   PP.setPuntosAtaqueLargo(5000);
   PP.setPuntosDefensa(5000);
@@ -241,6 +242,7 @@ public Personaje PersonajeSecundario(String nombrePS, String rolPS){
   PS.setTipoPersonaje("alumno");
   PS.setRolPersonaje(rolPS);
   PS.setBandoPersonaje("bueno");
+  PS.setPpOps("ps");
   PS.setPuntosAtaqueCorto(5000);
   PS.setPuntosAtaqueLargo(5000);
   PS.setPuntosDefensa(5000);
