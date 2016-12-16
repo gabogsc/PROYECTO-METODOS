@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import static Controlador.ControladorRegistro.dinero;
+import static Controlador.ControladorLogin.dinero;
 import java.awt.Component;
 import Modelo.AdivinaLaPalabra;
 import Vista.vistaJuego;
@@ -47,7 +47,7 @@ public class controladorJuego implements ActionListener{
                     JOptionPane.showMessageDialog(frame, "Acertaste, usted ha ganado!."); 
                     JOptionPane.showMessageDialog(vj, "Felicidades has Ganado 100 Monedas", "Ganaste", 1);
                     JOptionPane.showMessageDialog(vj, "Dinero Anterior: "+dinero, "Recompensa", 1);
-                    dinero=dinero + 1000;
+                    dinero=dinero + 100;
                     JOptionPane.showMessageDialog(vj, "Dinero Actual: "+ dinero, "Recompensa ", 1);
                     controladorInicioMenu cInicioM = new controladorInicioMenu();
                 }

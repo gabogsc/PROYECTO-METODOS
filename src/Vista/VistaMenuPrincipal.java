@@ -2,6 +2,7 @@
 package Vista;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 public class VistaMenuPrincipal extends javax.swing.JFrame {
 
@@ -29,6 +30,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         btnEao = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnCerrarSesion = new javax.swing.JButton();
+        dinerolabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,44 +50,56 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
 
         btnCerrarSesion.setText("Cerrar Sesión");
 
+        dinerolabel.setFont(new java.awt.Font("Skia", 0, 24)); // NOI18N
+        dinerolabel.setForeground(new java.awt.Color(153, 153, 0));
+        dinerolabel.setText("Dinero: 0");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(80, 80, 80)
+                .addComponent(btnRamos, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnRamos, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnCerrarSesion)
-                            .addComponent(btnEao, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(80, 80, 80)
+                        .addComponent(btnEao, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnCerrarSesion)
+                        .addGap(45, 45, 45)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnBiblioteca)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(1, 1, 1)
-                                .addComponent(jLabel1)
-                                .addContainerGap(215, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGap(64, 64, 64)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(btnBiblioteca)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnForoGriego, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
-                                        .addGap(53, 53, 53)
-                                        .addComponent(btnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(76, 76, 76))))))
+                                .addComponent(btnForoGriego, javax.swing.GroupLayout.DEFAULT_SIZE, 199, Short.MAX_VALUE)
+                                .addGap(53, 53, 53)
+                                .addComponent(btnInventario, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(76, 76, 76))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(dinerolabel)
+                        .addGap(50, 50, 50))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnCerrarSesion)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnCerrarSesion)
+                            .addComponent(dinerolabel))))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBiblioteca, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -149,6 +163,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnForoGriego;
     private javax.swing.JButton btnInventario;
     private javax.swing.JButton btnRamos;
+    private javax.swing.JLabel dinerolabel;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 
@@ -186,6 +201,16 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         return this.btnCerrarSesion;
         
     }
+
+    public String getDineroLabel() {
+        return dinerolabel.getText();
+    }
+
+    public void setDinerolabel(String dinerolabel) {
+        this.dinerolabel.setText(dinerolabel);
+    }
+    
+    
 
 
 

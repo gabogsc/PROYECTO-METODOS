@@ -23,7 +23,7 @@ public class ControladorRegistro implements ActionListener {
     private Registro mR;
     private vistaRegistro vr;
     private Usuario us;
-    public static int dinero;
+    public  int dinero1;
     
     public ControladorRegistro(){
         this.vr = new vistaRegistro();
@@ -45,7 +45,7 @@ public class ControladorRegistro implements ActionListener {
             
            
             String rolPP="", rolPS="", carrera="";
-            dinero = 0;
+            dinero1 = 0;
             
         // Verificacion de que todos los campos esten Rellenados para poder Registrarte
         if((this.vr.getRadioArqueroPP().isSelected() == true || this.vr.getRadioGuerreroPP().isSelected() == true) && 
@@ -81,7 +81,7 @@ public class ControladorRegistro implements ActionListener {
             
                 
                             if(this.us.registrar(this.vr.getFieldUsuario().getText(), this.vr.getFieldPass().getText()
-                                , this.vr.getTextPP().getText(), rolPP, this.vr.getTextPS().getText(), rolPS, carrera , dinero)){
+                                , this.vr.getTextPP().getText(), rolPP, this.vr.getTextPS().getText(), rolPS, carrera , dinero1)){
                                 
                                 JOptionPane.showMessageDialog(null, "Jugador Registrado Exitosamente !!!","Aviso",JOptionPane.INFORMATION_MESSAGE);
                                 this.vr.dispose();

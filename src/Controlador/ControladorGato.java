@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import static Controlador.ControladorRegistro.dinero;
+import static Controlador.ControladorLogin.dinero;
 import Vista.VistaGato;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

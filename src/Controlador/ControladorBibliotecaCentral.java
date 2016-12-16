@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import static Controlador.ControladorLogin.dinero;
 import Sudoku.Sudoku;
 import Vista.VistaBibliotecaCentral;
 import java.awt.event.ActionEvent;
@@ -24,6 +25,7 @@ public class ControladorBibliotecaCentral implements ActionListener{
         this.vbc = new VistaBibliotecaCentral();
         vbc.setVisible(true);
         vbc.agregarListener(this);
+        vbc.setDineroLabel("Dinero: "+ dinero);
         
         
     }

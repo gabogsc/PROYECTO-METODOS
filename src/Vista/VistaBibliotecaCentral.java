@@ -8,6 +8,7 @@ package Vista;
 import Controlador.ControladorGato;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 
 /**
  *
@@ -39,6 +40,7 @@ public class VistaBibliotecaCentral extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         btnRegresarAMP = new javax.swing.JButton();
+        dineroLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +60,10 @@ public class VistaBibliotecaCentral extends javax.swing.JFrame {
         jLabel2.setText("BIBLIOTECA CENTRAL");
 
         btnRegresarAMP.setText("Regresar");
+
+        dineroLabel.setFont(new java.awt.Font("Skia", 0, 24)); // NOI18N
+        dineroLabel.setForeground(new java.awt.Color(153, 153, 0));
+        dineroLabel.setText("Dinero: 0 ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -81,7 +87,9 @@ public class VistaBibliotecaCentral extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(btnRegresarAMP)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(dineroLabel)
+                .addGap(108, 108, 108))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 404, Short.MAX_VALUE)
@@ -92,14 +100,16 @@ public class VistaBibliotecaCentral extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(btnRegresarAMP)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnRegresarAMP)
+                    .addComponent(dineroLabel))
                 .addGap(42, 42, 42)
                 .addComponent(jLabel2)
                 .addGap(34, 34, 34)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnAhorcado, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAdivinaLaPalabra, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGato, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSudoku, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -156,6 +166,7 @@ public class VistaBibliotecaCentral extends javax.swing.JFrame {
     private javax.swing.JButton btnGato;
     private javax.swing.JButton btnRegresarAMP;
     private javax.swing.JButton btnSudoku;
+    private javax.swing.JLabel dineroLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
@@ -188,6 +199,15 @@ public void agregarListener(ActionListener al)
     public JButton getBtnRegresarAMP() {
         return this.btnRegresarAMP;
     }
+
+    public String getDineroLabel() {
+        return dineroLabel.getText();
+    }
+
+    public void setDineroLabel(String dineroLabel) {
+        this.dineroLabel.setText(dineroLabel);
+    }
+    
     
 
 

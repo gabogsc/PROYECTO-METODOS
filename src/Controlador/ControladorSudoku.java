@@ -6,7 +6,7 @@
 package Controlador;
 
 
-import static Controlador.ControladorRegistro.dinero;
+import static Controlador.ControladorLogin.dinero;
 import Modelo.TableroSudoku;
 import Vista.VistaMenuSudoku;
 import Vista.VistaSudoku;
@@ -275,7 +275,7 @@ class ControladorSudoku implements ActionListener{
                     JOptionPane.showMessageDialog(null,"Sudoku Resuelto !!!");
                     JOptionPane.showMessageDialog(vs, "Felicidades has Ganado 3000 Monedas", "Ganaste", 1);
                     JOptionPane.showMessageDialog(vs, "Dinero Anterior: "+dinero, "Recompensa", 1);
-                    dinero=dinero + 1000;
+                    dinero=dinero + 3000;
                     JOptionPane.showMessageDialog(vs, "Dinero Actual: "+ dinero, "Recompensa ", 1);
                     flag0 = false;
                 }

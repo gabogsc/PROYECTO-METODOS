@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import static Controlador.ControladorLogin.dinero;
 import Vista.VistaMenuPrincipal;
 import Vista.VistaRamosCivil;
 import java.awt.event.ActionEvent;
@@ -23,6 +24,7 @@ public class ControladorMenuPrincipal implements ActionListener {
        this.vmp = new VistaMenuPrincipal();
        vmp.setVisible(true);
        vmp.agregarListener(this);
+       this.vmp.setDinerolabel("Dinero: "+ dinero);
        
   
    }

@@ -5,7 +5,7 @@
  */
 package Controlador;
 
-import static Controlador.ControladorRegistro.dinero;
+
 import Modelo.Usuario;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -32,7 +32,7 @@ public class ControladorLogin implements ActionListener {
     public static String nombrePS;
     public static String rolPS;
     public static String carrera;
-    
+    public static int dinero;
     
     
     public ControladorLogin(){
@@ -40,6 +40,7 @@ public class ControladorLogin implements ActionListener {
         this.us = new Usuario();
         vl.setVisible(true);  
         vl.agregarListener(this);
+        
             
       
     }    
@@ -59,7 +60,7 @@ public class ControladorLogin implements ActionListener {
                     rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                     carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
 
-
+                    dinero = 500;
                     System.out.println(nombrePP);
                     System.out.println(rolPP);
                     System.out.println(nombrePS);
