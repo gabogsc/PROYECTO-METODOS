@@ -9,6 +9,10 @@ import Modelo.Escenario;
 import Modelo.Batalla;
 import Modelo.CPU;
 import Controlador.ControladorLogin;
+import static Controlador.ControladorLogin.nombrePP;
+import static Controlador.ControladorLogin.nombrePS;
+import static Controlador.ControladorLogin.rolPP;
+import static Controlador.ControladorLogin.rolPS;
 import Modelo.Personaje;
 import Vista.VistaRamosCivil;
 import Vista.VistaTablero;
@@ -74,7 +78,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario("Personaje Principal","Guerrero","Personaje Secundario","Arquero");
+            this.esc.PosicionarPjesUsuario("wena","Guerrero","wena","Arquero");
 
             
         }   

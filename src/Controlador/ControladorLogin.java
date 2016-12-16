@@ -26,6 +26,11 @@ import javax.swing.JOptionPane;
 public class ControladorLogin implements ActionListener {
     private Usuario us;
     private VistaLogin vl;
+    public static String nombrePP;
+    public static String rolPP;
+    public static String nombrePS;
+    public static String rolPS;
+    public static String carrera;
     
     
     
@@ -34,6 +39,7 @@ public class ControladorLogin implements ActionListener {
         this.us = new Usuario();
         vl.setVisible(true);  
         vl.agregarListener(this);
+            
       
     }    
     
@@ -45,11 +51,11 @@ public class ControladorLogin implements ActionListener {
         
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
            if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
-                String nombrePP = us.getNombrePP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                String rolPP = us.getRolPP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                String nombrePS = us.getNombrePS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                String rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-                String carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                nombrePP = us.getNombrePP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                rolPP = us.getRolPP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                nombrePS = us.getNombrePS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                 
                 
                 System.out.println(nombrePP);

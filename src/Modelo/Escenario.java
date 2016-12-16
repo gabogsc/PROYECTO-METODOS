@@ -573,9 +573,10 @@ public class Escenario {
             int posX = (numero.nextInt(25));
             int posY = (numero.nextInt(13));
             int tipoDeRol = (numero.nextInt(2));
+        
+            
 
-
-            if(nPjesUsuario == 0){
+            if(nPjesUsuario == 0 && matrizEscenario[posX][posY].getTipoDeTerreno()!= 3){
                 
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje(nombrePP);
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje(rolPP);               
@@ -596,7 +597,7 @@ public class Escenario {
                 
             }
             
-            else if(nPjesUsuario == 1){
+            else if(nPjesUsuario == 1 & matrizEscenario[posX][posY].getTipoDeTerreno()!= 3){
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje(nombrePS);
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje(rolPS);               
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
