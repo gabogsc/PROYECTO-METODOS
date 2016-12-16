@@ -583,11 +583,11 @@ public class Escenario {
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");                
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/MegaLucario.png");
-                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(5000);               
-                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(5000);
-                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(5000);
-                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(5000);
-                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(5000);
+                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(4500);               
+                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(4500);
+                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(4500);
+                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(4500);
+                this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(4500);
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
                 this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
 
@@ -706,7 +706,7 @@ public class Escenario {
     public ArrayList<Personaje> ordenarTurnosUsuario(){
         
         ArrayList<Personaje> listaTurnosUsuario = new ArrayList<>() ;
-        int[] lista= new int[1000];
+        int[] lista= new int[5000];
         posicionesPersonajes = new int[5];
         
         

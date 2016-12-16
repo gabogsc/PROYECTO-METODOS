@@ -55,25 +55,25 @@ public class ControladorRegistro implements ActionListener {
                             // SI EL USUARIO SELECCIONA GUERRERO O ARQUERO PARA EL PERSONAJE PRINCIPAL
                             if(this.vr.getRadioArqueroPP().isSelected()==true)
                             {
-                                rolPP="Arquero";
+                                rolPP= "Arquero";
                             }else if(this.vr.getRadioGuerreroPP().isSelected()==true){
-                                rolPP="Guerrero";
+                                rolPP= "Guerrero";
                             }
 
                             // SI EL USUARIO SELECCIONA GUERRERO O ARQUERO PARA EL PERSONAJE SECUNDARIO
                             if(this.vr.getRadioArqueroPS().isSelected()==true)
                             {
-                                rolPS="Arquero";
+                                rolPS= "Arquero";
                             }else if(this.vr.getRadioGuerreroPS().isSelected()==true){
-                                rolPS="Guerrero";
+                                rolPS= "Guerrero";
                             }
 
                             // SI EL USUARIO SELECCIONA CARRERA CIVIL O CARRERA EJECUCION PARA EL PERSONAJE SECUNDARIO
                             if(this.vr.getRadioCivil().isSelected()==true)
                             {
-                                carrera="Ing. Civil";
+                                carrera="Ing.Civil";
                             }else if(this.vr.getRadioEjecu().isSelected()==true){
-                                carrera ="Ing. Ejecucion";
+                                carrera ="Ing.Ejecucion";
                             }
 
             

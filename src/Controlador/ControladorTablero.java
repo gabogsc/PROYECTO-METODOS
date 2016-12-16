@@ -78,7 +78,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario("wena","Guerrero","wena","Arquero");
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
 
             
         }   
@@ -87,7 +87,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEspecialidad();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario("Personaje Principal","Guerrero","Personaje Secundario","Arquero");
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
 
         }
         else if(tipoDeAsignatura == 2){
@@ -95,7 +95,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEconomia();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario("Personaje Principal","Guerrero","Personaje Secundario","Arquero");
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
 
         }
             
@@ -421,15 +421,15 @@ public class ControladorTablero implements ActionListener{
                 
             
                 
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje() == "malo"){    
-                    if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje().equals("malo")){    
+                    if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje().equals("Guerrero")){
 
                        this.vt.getMatrizVista()[i][j].setText("G");
                        this.vt.getMatrizVista()[i][j].setForeground(Color.red);
 
                     }
 
-                    else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
+                    else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje().equals("Arquero")){
 
                         this.vt.getMatrizVista()[i][j].setText("A");
                         this.vt.getMatrizVista()[i][j].setForeground(Color.red);
@@ -446,17 +446,19 @@ public class ControladorTablero implements ActionListener{
         for (int i = 0;i<25; i++){
             for(int j=0; j< 25; j++){
                 
-            
-                
-                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje() == "bueno"){    
-                    if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Guerrero"){
+                System.out.println(this.esc.getMatrizEscenario()[i][j].getPersonaje().getNombrePersonaje());
+                System.out.println(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje());
+                System.out.println(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
+                System.out.println(this.esc.getMatrizEscenario()[i][j].getPersonaje().getTipoPersonaje());
+                if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getBandoPersonaje().equals("bueno")){    
+                    if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje().equals("Guerrero")){
 
                        this.vt.getMatrizVista()[i][j].setText("G");
                        this.vt.getMatrizVista()[i][j].setForeground(Color.GREEN);
 
                     }
 
-                    else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() == "Arquero"){
+                    else if(this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje().equals("Arquero")){
 
                         this.vt.getMatrizVista()[i][j].setText("A");
                         this.vt.getMatrizVista()[i][j].setForeground(Color.GREEN);
