@@ -1123,3 +1123,17 @@
 2016/12/16 :: 21:31:19 =Usuario se Registra
 2016/12/16 :: 21:40:11 =Usuario se Registra
 2016/12/16 :: 21:41:04 =Usuario se Registra
+2016/12/17 :: 00:20:20 =Usuario se Registra
+2016/12/17 :: 00:24:34 =Usuario se Registra
+2016/12/17 :: 00:35:41 =Usuario se logea
+2016/12/17 :: 00:35:42 =Usuario INGRESA A SU MALLA CURRICULAR
+2016/12/17 :: 00:35:47 =Usuario INGRESO A LA BATALLA CALCULO
+2016/12/17 :: 01:23:17 =Usuario se logea
+2016/12/17 :: 01:23:27 =Usuario Ingresa a la EAO
+2016/12/17 :: 01:23:29 =Usuario Ingresa a la EAO
+2016/12/17 :: 01:23:31 =Usuario Ingresa a la BIBLIOTECA CENTRAL
+2016/12/17 :: 15:12:17 =Usuario se logea
+2016/12/17 :: 15:12:21 =Usuario INGRESA A SU MALLA CURRICULAR
+2016/12/17 :: 15:12:23 =Usuario INGRESO A LA BATALLA CALCULO
+2016/12/17 :: 15:20:22 =Usuario se logea
+2016/12/17 :: 15:20:23 =Usuario INGRESA A SU MALLA CURRICULAR
