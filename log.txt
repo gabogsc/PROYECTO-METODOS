@@ -1120,3 +1120,6 @@
 2016/12/16 :: 18:58:12 =Usuario se logea
 2016/12/16 :: 18:58:14 =Usuario Ingresa a la BIBLIOTECA CENTRAL
 2016/12/16 :: 18:59:18 =Usuario se logea
+2016/12/16 :: 21:31:19 =Usuario se Registra
+2016/12/16 :: 21:40:11 =Usuario se Registra
+2016/12/16 :: 21:41:04 =Usuario se Registra

@@ -244,6 +244,10 @@ public class VistaMenuSudoku extends javax.swing.JFrame {
         btnNivelMedio.addActionListener(aL);
         btnNivelDificil.addActionListener(aL);
     }
+
+    public Object getBtnRegresar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
         
     }
         
