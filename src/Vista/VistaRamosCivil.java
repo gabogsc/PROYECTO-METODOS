@@ -159,10 +159,12 @@ public class VistaRamosCivil extends javax.swing.JFrame {
 
         filler12.setBackground(new java.awt.Color(0, 0, 0));
 
+        labelSemestre2.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre2.setText("Semestre 2");
 
-        btnFundaProgramacion.setFont(new java.awt.Font("Lucida Grande", 0, 7)); // NOI18N
+        btnFundaProgramacion.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnFundaProgramacion.setText("<html><center>FUNDAMENTOS DE LA <br><center>COMPUTACIÓN Y LA <br><center>PROGRAMACIÓN");
+        btnFundaProgramacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnFundaProgramacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFundaProgramacion.setMaximumSize(new java.awt.Dimension(95, 25));
         btnFundaProgramacion.addActionListener(new java.awt.event.ActionListener() {
@@ -171,8 +173,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnIntroIngenieria.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
+        btnIntroIngenieria.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnIntroIngenieria.setText("<html><center>INTRODUCCION <br><center> A LA <br><center>INGENIERIA");
+        btnIntroIngenieria.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnIntroIngenieria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIntroIngenieria.setFocusable(false);
         btnIntroIngenieria.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -184,16 +187,18 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnDesarrolloPersonal.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
+        btnDesarrolloPersonal.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnDesarrolloPersonal.setText("<html><center>TALLER DE DESARROLLO <center>PERSONAL E INTEGRAL");
+        btnDesarrolloPersonal.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnDesarrolloPersonal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDesarrolloPersonal.setFocusable(false);
         btnDesarrolloPersonal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnDesarrolloPersonal.setMaximumSize(new java.awt.Dimension(95, 25));
         btnDesarrolloPersonal.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        btnMetodosEstudio.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnMetodosEstudio.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnMetodosEstudio.setText("<html><center>METODOS <br><center>DE <br><center>ESTUDIO");
+        btnMetodosEstudio.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnMetodosEstudio.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosEstudio.setFocusable(false);
         btnMetodosEstudio.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -205,8 +210,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnAlgebraI.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnAlgebraI.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnAlgebraI.setText("ALGEBRA I");
+        btnAlgebraI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAlgebraI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlgebraI.setFocusable(false);
         btnAlgebraI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -216,29 +222,34 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel14.setText("Primer Año");
 
-        btnFisicaI.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnFisicaI.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnFisicaI.setText("FISICA I");
+        btnFisicaI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnFisicaI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFisicaI.setFocusable(false);
         btnFisicaI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFisicaI.setMaximumSize(new java.awt.Dimension(95, 25));
         btnFisicaI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        btnQuimica.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnQuimica.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnQuimica.setText("QUÍMICA");
+        btnQuimica.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnQuimica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnQuimica.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre1.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre1.setText("Semestre 1");
 
-        btnCalculoII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnCalculoII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnCalculoII.setText("CALCULO II");
+        btnCalculoII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnCalculoII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCalculoII.setMaximumSize(new java.awt.Dimension(95, 25));
         btnCalculoII.setMinimumSize(new java.awt.Dimension(95, 25));
 
-        btnAlgebraII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnAlgebraII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnAlgebraII.setText("ALGEBRA II");
+        btnAlgebraII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAlgebraII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlgebraII.setMaximumSize(new java.awt.Dimension(95, 25));
         btnAlgebraII.addActionListener(new java.awt.event.ActionListener() {
@@ -247,16 +258,18 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnCalculoI.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnCalculoI.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnCalculoI.setText("CALCULO I");
+        btnCalculoI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnCalculoI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCalculoI.setFocusable(false);
         btnCalculoI.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCalculoI.setMinimumSize(new java.awt.Dimension(50, 23));
         btnCalculoI.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        btnFisicaII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnFisicaII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnFisicaII.setText("FISICA II");
+        btnFisicaII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnFisicaII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFisicaII.setMaximumSize(new java.awt.Dimension(95, 25));
 
@@ -281,12 +294,12 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelPrimerAñoLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(labelSemestre1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(labelSemestre2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(labelSemestre1, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(labelSemestre2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addComponent(btnDesarrolloPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -326,10 +339,10 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelSemestre1)
                     .addComponent(labelSemestre2))
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCalculoII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalculoI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -352,48 +365,56 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnMetodosEstudio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(btnQuimica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         panelPrimerAñoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAlgebraI, btnAlgebraII, btnCalculoI, btnCalculoII, btnDesarrolloPersonal, btnFisicaI, btnFisicaII, btnFundaProgramacion, btnIntroIngenieria, btnMetodosEstudio, btnQuimica});
 
-        btnEDECO.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnEDECO.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnEDECO.setText("<html><center>ESTRUCTURA <br><center>DE <br><center>COMPUTADORES");
+        btnEDECO.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnEDECO.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEDECO.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnInglesI.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnInglesI.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnInglesI.setText("INGLES I");
+        btnInglesI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnInglesI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInglesI.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre3.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre3.setText("Semestre 3");
 
-        btnAnalisisEstadistico.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        btnAnalisisEstadistico.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnAnalisisEstadistico.setText("<html><center>ANALISIS <br><center>ESTADISTICO");
+        btnAnalisisEstadistico.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAnalisisEstadistico.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAnalisisEstadistico.setMaximumSize(new java.awt.Dimension(95, 25));
 
         jLabel15.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel15.setText("Segundo Año");
 
-        btnAnalisisAlgoritmosEstructuraDatos.setFont(new java.awt.Font("Lucida Grande", 0, 7)); // NOI18N
+        btnAnalisisAlgoritmosEstructuraDatos.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnAnalisisAlgoritmosEstructuraDatos.setText("<html><center>ANALISIS DE ALGORITMOS Y <br><center>Y ESTRUCTURA DE DATOS");
+        btnAnalisisAlgoritmosEstructuraDatos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAnalisisAlgoritmosEstructuraDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAnalisisAlgoritmosEstructuraDatos.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnCalculoIII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnCalculoIII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnCalculoIII.setText("CALCULO III");
+        btnCalculoIII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnCalculoIII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnCalculoIII.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnElectromagnetismo.setFont(new java.awt.Font("Lucida Grande", 0, 8)); // NOI18N
+        btnElectromagnetismo.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnElectromagnetismo.setText("<html><center>ELECTRICIDAD <br><center>Y<br><center>MAGENTISMO");
+        btnElectromagnetismo.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnElectromagnetismo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnElectromagnetismo.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnInglesII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnInglesII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnInglesII.setText("INGLES II");
+        btnInglesII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnInglesII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInglesII.setMaximumSize(new java.awt.Dimension(95, 25));
         btnInglesII.addActionListener(new java.awt.event.ActionListener() {
@@ -402,20 +423,24 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnEcuaDiferenciales.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
+        btnEcuaDiferenciales.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnEcuaDiferenciales.setText("<html><center>ECUACIONES <br><center>DIFERENCIALES");
+        btnEcuaDiferenciales.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnEcuaDiferenciales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEcuaDiferenciales.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnComunicacionEfectiva.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnComunicacionEfectiva.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnComunicacionEfectiva.setText("<html><center>COMUNICACION<br><center> EFECTIVA");
+        btnComunicacionEfectiva.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnComunicacionEfectiva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnComunicacionEfectiva.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre4.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre4.setText("Semestre 4");
 
-        btnFundaEconomia.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnFundaEconomia.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnFundaEconomia.setText("<html><center>FUNDAMENTOS<br><center> DE LA<br><center> ECONOMIA");
+        btnFundaEconomia.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnFundaEconomia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFundaEconomia.setMaximumSize(new java.awt.Dimension(95, 25));
         btnFundaEconomia.addActionListener(new java.awt.event.ActionListener() {
@@ -424,8 +449,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnMetodosProgramacion.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnMetodosProgramacion.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnMetodosProgramacion.setText("<html><center>METODOS <br><center>DE <br><center>PROGRAMACIÓN");
+        btnMetodosProgramacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnMetodosProgramacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosProgramacion.setMaximumSize(new java.awt.Dimension(95, 25));
         btnMetodosProgramacion.addActionListener(new java.awt.event.ActionListener() {
@@ -434,8 +460,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnParadigmasProgramacion.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnParadigmasProgramacion.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnParadigmasProgramacion.setText("<html><center>PARADIGMAS<br><center>DE<br><center>PROGRAMACIÓN");
+        btnParadigmasProgramacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnParadigmasProgramacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnParadigmasProgramacion.setMaximumSize(new java.awt.Dimension(95, 25));
 
@@ -484,20 +511,22 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                     .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelSegundoAñoLayout.createSequentialGroup()
-                                .addComponent(btnComunicacionEfectiva, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInglesII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelSegundoAñoLayout.createSequentialGroup()
-                                .addComponent(btnElectromagnetismo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnCalculoIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
+                                        .addComponent(btnComunicacionEfectiva, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnInglesII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
+                                        .addComponent(btnElectromagnetismo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btnCalculoIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(labelSemestre3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSegundoAñoLayout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jLabel15))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSegundoAñoLayout.createSequentialGroup()
-                                .addComponent(labelSemestre3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelSemestre4)))
+                                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(labelSemestre4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(58, 58, 58))))
         );
         panelSegundoAñoLayout.setVerticalGroup(
@@ -511,7 +540,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                         .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                                 .addComponent(labelSemestre4)
-                                .addGap(18, 18, 18)
+                                .addGap(40, 40, 40)
                                 .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnCalculoIII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnElectromagnetismo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -538,23 +567,29 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnTallerBaseDatos.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTallerBaseDatos.setText("<html><center>TALLER DE BASE<br><center>DE DATOS");
+        btnTallerBaseDatos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTallerBaseDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTallerBaseDatos.setMaximumSize(new java.awt.Dimension(95, 25));
         btnTallerBaseDatos.setMinimumSize(new java.awt.Dimension(74, 37));
 
+        btnSISTOPE.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnSISTOPE.setText("<html><center>SISTEMAS <br><center>OPERATIVOS");
         btnSISTOPE.setToolTipText("");
+        btnSISTOPE.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnSISTOPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSISTOPE.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnProsLenguajesFormales.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnProsLenguajesFormales.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnProsLenguajesFormales.setText("<html><center>PROCESAMIENTO <br><center>DE LENGUAJES<br><center>FORMALES");
+        btnProsLenguajesFormales.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnProsLenguajesFormales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnProsLenguajesFormales.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnOrgaComputadores.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnOrgaComputadores.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnOrgaComputadores.setText("<html><center>ORGANIZACIÓN <br><center>DE<br><center>COMPUTADORES");
+        btnOrgaComputadores.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnOrgaComputadores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnOrgaComputadores.setMaximumSize(new java.awt.Dimension(95, 25));
         btnOrgaComputadores.addActionListener(new java.awt.event.ActionListener() {
@@ -566,19 +601,24 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel16.setText("Tercer Año");
 
-        btnFINGESO.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnFINGESO.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnFINGESO.setText("<html><center>FUNDAMENTOS<br><center>DE INGENIERÍA<br><center> DE SOFTWARE");
+        btnFINGESO.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnFINGESO.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFINGESO.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnIngenieriaSistemas.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnIngenieriaSistemas.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnIngenieriaSistemas.setText("<html><center>INGENIERIA <br><center>DE <br><center>SISTEMAS");
+        btnIngenieriaSistemas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnIngenieriaSistemas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngenieriaSistemas.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre6.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre6.setText("Semestre 6");
 
+        btnAntroIngenieria.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnAntroIngenieria.setText("<html><center>ANTROPOLOGIA<br><center>E INGENIERIA");
+        btnAntroIngenieria.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAntroIngenieria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAntroIngenieria.setMaximumSize(new java.awt.Dimension(95, 25));
         btnAntroIngenieria.addActionListener(new java.awt.event.ActionListener() {
@@ -587,31 +627,38 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnInglesIII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnInglesIII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnInglesIII.setText("<html><center>INGLES III");
         btnInglesIII.setToolTipText("<html><center>INGLES III\n");
+        btnInglesIII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnInglesIII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInglesIII.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnInglesIV.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnInglesIV.setText("<html><center>INGLES IV");
+        btnInglesIV.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnInglesIV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInglesIV.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnAlgoritmosAvanzados.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
+        btnAlgoritmosAvanzados.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnAlgoritmosAvanzados.setText("<html><center>ALGORITMOS<br><center>AVANZADOS");
+        btnAlgoritmosAvanzados.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAlgoritmosAvanzados.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlgoritmosAvanzados.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnAlgoritmosNumericos.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnAlgoritmosNumericos.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnAlgoritmosNumericos.setText("<html><center>ALGORITMOS<br><center>NUMERICOS");
+        btnAlgoritmosNumericos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAlgoritmosNumericos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlgoritmosNumericos.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnDiseñoBaseDatos.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
+        btnDiseñoBaseDatos.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnDiseñoBaseDatos.setText("<html><center>DISEÑO DE<br><center>BASES DE DATOS");
+        btnDiseñoBaseDatos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnDiseñoBaseDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDiseñoBaseDatos.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre5.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre5.setText("Semestre 5");
 
         panelTercerAño.setLayer(btnTallerBaseDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -638,41 +685,34 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                        .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(labelSemestre5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnIngenieriaSistemas, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
-                        .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(labelSemestre6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnInglesIV, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addComponent(btnFINGESO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAntroIngenieria, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelTercerAñoLayout.createSequentialGroup()
+                        .addComponent(btnAlgoritmosAvanzados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAlgoritmosNumericos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelTercerAñoLayout.createSequentialGroup()
+                        .addComponent(btnDiseñoBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnSISTOPE, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelTercerAñoLayout.createSequentialGroup()
+                        .addComponent(btnOrgaComputadores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnProsLenguajesFormales, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelTercerAñoLayout.createSequentialGroup()
+                        .addComponent(btnInglesIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnTallerBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelTercerAñoLayout.createSequentialGroup()
                         .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addComponent(btnFINGESO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAntroIngenieria, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addComponent(btnAlgoritmosAvanzados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnAlgoritmosNumericos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addComponent(btnDiseñoBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnSISTOPE, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addComponent(btnOrgaComputadores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnProsLenguajesFormales, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
-                                .addComponent(btnInglesIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnTallerBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnIngenieriaSistemas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelSemestre5, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btnInglesIV, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelSemestre6, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(panelTercerAñoLayout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(jLabel16)
@@ -687,22 +727,22 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelSemestre6)
                     .addComponent(labelSemestre5))
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnIngenieriaSistemas, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(btnInglesIV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnInglesIV, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnDiseñoBaseDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnDiseñoBaseDatos, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(btnSISTOPE, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnOrgaComputadores, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(btnProsLenguajesFormales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnProsLenguajesFormales, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnFINGESO, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(btnAntroIngenieria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnAntroIngenieria, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnInglesIII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -714,15 +754,18 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGap(122, 122, 122))
         );
 
+        labelSemestre7.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre7.setText("Semestre 7");
 
-        btnRedesComputadores.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnRedesComputadores.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnRedesComputadores.setText("<html><center>REDES DE<br><center>COMPUTADORES");
+        btnRedesComputadores.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnRedesComputadores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRedesComputadores.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnMetodosOptimizacion.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnMetodosOptimizacion.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnMetodosOptimizacion.setText("<html><center>METODOS DE<br><center>OMPTIMIZACION");
+        btnMetodosOptimizacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnMetodosOptimizacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosOptimizacion.setMaximumSize(new java.awt.Dimension(95, 25));
         btnMetodosOptimizacion.addActionListener(new java.awt.event.ActionListener() {
@@ -731,46 +774,57 @@ public class VistaRamosCivil extends javax.swing.JFrame {
             }
         });
 
-        btnSistemasComunicacion.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnSistemasComunicacion.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnSistemasComunicacion.setText("<html><center>SISTEMAS DE<br><center>COMUNICACION");
+        btnSistemasComunicacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnSistemasComunicacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSistemasComunicacion.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre8.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre8.setText("Semestre 8");
 
-        btnFinanzasContabilidad.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
+        btnFinanzasContabilidad.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnFinanzasContabilidad.setText("<html><center>FINANZAS Y<br><center>CONTABILIDAD");
+        btnFinanzasContabilidad.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnFinanzasContabilidad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFinanzasContabilidad.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnMacroeconomia.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnMacroeconomia.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnMacroeconomia.setText("<html><center>MACROECONOMIA<br><center>Y GLOBALIZACION");
+        btnMacroeconomia.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnMacroeconomia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMacroeconomia.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnInfModelosEstadisticos.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnInfModelosEstadisticos.setText("<html><center>INFERENCIA Y<br><center>MODELOS<br><center>ESTADISTICOS");
+        btnInfModelosEstadisticos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnInfModelosEstadisticos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInfModelosEstadisticos.setMaximumSize(new java.awt.Dimension(95, 25));
 
         jLabel18.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel18.setText("Cuarto Año");
 
-        btnMetodosIngSoftware.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnMetodosIngSoftware.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnMetodosIngSoftware.setText("<html><center>METODOS DE<br><center>INGENIERIA DE<br><center>SOFTWARE");
+        btnMetodosIngSoftware.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnMetodosIngSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosIngSoftware.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnAnalisisDatos.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnAnalisisDatos.setText("<html><center>ANALISIS DE<br><center>DATOS");
+        btnAnalisisDatos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAnalisisDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAnalisisDatos.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnLogicaTeoComputacion.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnLogicaTeoComputacion.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnLogicaTeoComputacion.setText("<html><center>LLÓGICA Y TEORIA<br><center>DE LA<br><center>COMPUTACION");
+        btnLogicaTeoComputacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnLogicaTeoComputacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogicaTeoComputacion.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnAdminProyectosSoftware.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnAdminProyectosSoftware.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnAdminProyectosSoftware.setText("<html><center>ADMINISTRACION<br><center>DE PROYECTOS<br><center>DE SOFTWARE");
+        btnAdminProyectosSoftware.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnAdminProyectosSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAdminProyectosSoftware.setMaximumSize(new java.awt.Dimension(95, 25));
 
@@ -796,11 +850,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(panelCuartoAñoLayout.createSequentialGroup()
-                                .addComponent(labelSemestre7)
-                                .addGap(54, 54, 54)
-                                .addComponent(labelSemestre8))
+                                .addComponent(labelSemestre7, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(labelSemestre8, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                                 .addComponent(btnRedesComputadores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -835,7 +889,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelSemestre7)
                     .addComponent(labelSemestre8))
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnMetodosOptimizacion, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(btnRedesComputadores, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
@@ -855,58 +909,74 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAdminProyectosSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLogicaTeoComputacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(125, Short.MAX_VALUE))
+                .addContainerGap(109, Short.MAX_VALUE))
         );
 
-        btnModelacSimulac.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
+        btnModelacSimulac.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnModelacSimulac.setText("<html><center>MODELACION<br><center>Y SIMULACION");
+        btnModelacSimulac.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnModelacSimulac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnModelacSimulac.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnSegAuditInformatica.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnSegAuditInformatica.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnSegAuditInformatica.setText("<html><center>SEGURIDAD Y<br><center>AUDITORIA<br><center>INFORMATICA");
+        btnSegAuditInformatica.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnSegAuditInformatica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSegAuditInformatica.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnEvaluacionProyectos.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnEvaluacionProyectos.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnEvaluacionProyectos.setText("<html><center>EVALUACION<br><center>DE PROYECTOS");
+        btnEvaluacionProyectos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnEvaluacionProyectos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEvaluacionProyectos.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnTallerIngSoftware.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnTallerIngSoftware.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnTallerIngSoftware.setText("<html><center>TALLER DE<br><center>INGENIERIA DE<br><center>SOFTWARE");
+        btnTallerIngSoftware.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTallerIngSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTallerIngSoftware.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre10.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre10.setText("Semestre 10");
 
+        btnSistDistribuidos.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnSistDistribuidos.setText("<html><center>SISTEMAS<br><center>DISTRIBUIDOS");
+        btnSistDistribuidos.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnSistDistribuidos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSistDistribuidos.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnProyectoIngInformatica.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnProyectoIngInformatica.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnProyectoIngInformatica.setText("<html><center>PROYECTO DE<br><center>INGENIERIA<br><center>INFORMATICA");
+        btnProyectoIngInformatica.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnProyectoIngInformatica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
+        labelSemestre9.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre9.setText("Semestre 9");
 
+        btnTopicEspecIII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTopicEspecIII.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD III");
+        btnTopicEspecIII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTopicEspecIII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecIII.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnIngSociedad.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnIngSociedad.setText("<html><center>INGENIERIA Y<br><center>SOCIEDAD");
+        btnIngSociedad.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnIngSociedad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngSociedad.setMaximumSize(new java.awt.Dimension(95, 25));
 
         jLabel19.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel19.setText("Quinto Año");
 
+        btnTopicEspecII.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTopicEspecII.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD II");
+        btnTopicEspecII.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTopicEspecII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecII.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        btnTopicEspecI.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        btnTopicEspecI.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTopicEspecI.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD I");
+        btnTopicEspecI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTopicEspecI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecI.setMaximumSize(new java.awt.Dimension(95, 25));
 
@@ -948,12 +1018,12 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                             .addComponent(btnModelacSimulac, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelQuintoAñoLayout.createSequentialGroup()
                                 .addGap(4, 4, 4)
-                                .addComponent(labelSemestre9)))
+                                .addComponent(labelSemestre9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelSemestre10)
                             .addComponent(btnTopicEspecI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnTopicEspecII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(btnTopicEspecII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelSemestre10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(panelQuintoAñoLayout.createSequentialGroup()
                         .addGap(4, 4, 4)
                         .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -968,7 +1038,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelSemestre9)
                     .addComponent(labelSemestre10))
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnTopicEspecI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnIngSociedad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -988,39 +1058,52 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnProyectoIngInformatica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnTallerIngSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
-        btnDirecGesEmpresas.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
+        btnDirecGesEmpresas.setFont(new java.awt.Font("Lucida Bright", 0, 8)); // NOI18N
         btnDirecGesEmpresas.setText("<html><center>DIRECCION Y<br><center>GESTION DE<br><center>EMPRESAS");
+        btnDirecGesEmpresas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnDirecGesEmpresas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDirecGesEmpresas.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre11.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre11.setText("Semestre 11");
 
+        btnTopicEspecVI.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTopicEspecVI.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD VI");
+        btnTopicEspecVI.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTopicEspecVI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecVI.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnSeminarioInf.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnSeminarioInf.setText("<html><center>SEMINARIO DE<br><center>INFORMATICA");
+        btnSeminarioInf.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnSeminarioInf.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSeminarioInf.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnTopicEspecIV.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTopicEspecIV.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD IV");
+        btnTopicEspecIV.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTopicEspecIV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecIV.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        btnTopicEspecV.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTopicEspecV.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD V");
+        btnTopicEspecV.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTopicEspecV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecV.setMaximumSize(new java.awt.Dimension(95, 25));
 
         jLabel13.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
         jLabel13.setText("Sexto Año");
 
+        btnTrabajoTitulacion.setFont(new java.awt.Font("Lucida Bright", 0, 10)); // NOI18N
         btnTrabajoTitulacion.setText("<html><center>TRABAJO DE<br><center>TITULACION"); // NOI18N
+        btnTrabajoTitulacion.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), new java.awt.Color(102, 102, 102), new java.awt.Color(0, 0, 0)));
         btnTrabajoTitulacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTrabajoTitulacion.setMaximumSize(new java.awt.Dimension(95, 25));
 
+        labelSemestre12.setFont(new java.awt.Font("Tempus Sans ITC", 3, 14)); // NOI18N
         labelSemestre12.setText("Semestre 12");
 
         panelSextoAño.setLayer(btnDirecGesEmpresas, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -1052,10 +1135,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                             .addComponent(btnSeminarioInf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(panelSextoAñoLayout.createSequentialGroup()
                                 .addGap(4, 4, 4)
-                                .addComponent(labelSemestre11)
-                                .addGap(42, 42, 42)
-                                .addComponent(labelSemestre12)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(labelSemestre11, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSextoAñoLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(labelSemestre12, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSextoAñoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -1071,10 +1155,10 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(labelSemestre11)
                     .addComponent(labelSemestre12))
-                .addGap(18, 18, 18)
+                .addGap(40, 40, 40)
                 .addGroup(panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnTrabajoTitulacion, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(btnTopicEspecIV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnTopicEspecIV, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnTopicEspecV, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1083,7 +1167,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addComponent(btnDirecGesEmpresas, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnSeminarioInf, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Viner Hand ITC", 0, 36)); // NOI18N
@@ -1099,7 +1183,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(panelPrimerAño, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(2, 2, 2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelSegundoAño, javax.swing.GroupLayout.PREFERRED_SIZE, 228, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panelTercerAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1121,21 +1205,22 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(100, 100, 100)
                                 .addComponent(filler8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(filler6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(filler7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(filler5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(panelQuintoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(filler6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(filler5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(220, 220, 220)
+                                .addComponent(panelSextoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addComponent(panelQuintoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(panelSextoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
+                        .addGap(326, 326, 326)
                         .addComponent(filler10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(226, 226, 226)
                         .addComponent(filler9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(386, 386, 386)
+                .addGap(401, 401, 401)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(filler13, javax.swing.GroupLayout.PREFERRED_SIZE, 1100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(filler11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1163,23 +1248,24 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                         .addGap(620, 620, 620)
                         .addComponent(filler13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(panelPrimerAño)
                             .addComponent(panelSegundoAño)
-                            .addComponent(panelTercerAño, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                            .addComponent(panelTercerAño, javax.swing.GroupLayout.PREFERRED_SIZE, 498, Short.MAX_VALUE)
                             .addComponent(panelCuartoAño))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(panelSextoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(panelQuintoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(panelQuintoAño)
+                            .addComponent(panelSextoAño))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(filler8, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(filler7, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(filler9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(filler9, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11))))
         );
 
         pack();
