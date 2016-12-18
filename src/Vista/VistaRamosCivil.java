@@ -45,8 +45,8 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         filler11 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
         filler12 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0));
         filler13 = new javax.swing.Box.Filler(new java.awt.Dimension(0, 0), new java.awt.Dimension(0, 0), new java.awt.Dimension(32767, 0));
-        jLayeredPane3 = new javax.swing.JLayeredPane();
-        jLabel3 = new javax.swing.JLabel();
+        panelPrimerAño = new javax.swing.JLayeredPane();
+        labelSemestre2 = new javax.swing.JLabel();
         btnFundaProgramacion = new javax.swing.JButton();
         btnIntroIngenieria = new javax.swing.JButton();
         btnDesarrolloPersonal = new javax.swing.JButton();
@@ -55,28 +55,28 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         btnFisicaI = new javax.swing.JButton();
         btnQuimica = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        labelSemestre1 = new javax.swing.JLabel();
         btnCalculoII = new javax.swing.JButton();
         btnAlgebraII = new javax.swing.JButton();
         btnCalculoI = new javax.swing.JButton();
         btnFisicaII = new javax.swing.JButton();
-        jLayeredPane4 = new javax.swing.JLayeredPane();
+        panelSegundoAño = new javax.swing.JLayeredPane();
         btnEDECO = new javax.swing.JButton();
         btnInglesI = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
+        labelSemestre3 = new javax.swing.JLabel();
         btnAnalisisEstadistico = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        btnAnalisisEstructuraDatos = new javax.swing.JButton();
+        btnAnalisisAlgoritmosEstructuraDatos = new javax.swing.JButton();
         btnCalculoIII = new javax.swing.JButton();
         btnElectromagnetismo = new javax.swing.JButton();
         btnInglesII = new javax.swing.JButton();
         btnEcuaDiferenciales = new javax.swing.JButton();
         btnComunicacionEfectiva = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
+        labelSemestre4 = new javax.swing.JLabel();
         btnFundaEconomia = new javax.swing.JButton();
         btnMetodosProgramacion = new javax.swing.JButton();
         btnParadigmasProgramacion = new javax.swing.JButton();
-        jLayeredPane5 = new javax.swing.JLayeredPane();
+        panelTercerAño = new javax.swing.JLayeredPane();
         btnTallerBaseDatos = new javax.swing.JButton();
         btnSISTOPE = new javax.swing.JButton();
         btnProsLenguajesFormales = new javax.swing.JButton();
@@ -84,20 +84,20 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         btnFINGESO = new javax.swing.JButton();
         btnIngenieriaSistemas = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
+        labelSemestre6 = new javax.swing.JLabel();
         btnAntroIngenieria = new javax.swing.JButton();
         btnInglesIII = new javax.swing.JButton();
         btnInglesIV = new javax.swing.JButton();
         btnAlgoritmosAvanzados = new javax.swing.JButton();
         btnAlgoritmosNumericos = new javax.swing.JButton();
         btnDiseñoBaseDatos = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLayeredPane1 = new javax.swing.JLayeredPane();
-        jLabel8 = new javax.swing.JLabel();
+        labelSemestre5 = new javax.swing.JLabel();
+        panelCuartoAño = new javax.swing.JLayeredPane();
+        labelSemestre7 = new javax.swing.JLabel();
         btnRedesComputadores = new javax.swing.JButton();
         btnMetodosOptimizacion = new javax.swing.JButton();
         btnSistemasComunicacion = new javax.swing.JButton();
-        jLabel9 = new javax.swing.JLabel();
+        labelSemestre8 = new javax.swing.JLabel();
         btnFinanzasContabilidad = new javax.swing.JButton();
         btnMacroeconomia = new javax.swing.JButton();
         btnInfModelosEstadisticos = new javax.swing.JButton();
@@ -106,30 +106,30 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnAnalisisDatos = new javax.swing.JButton();
         btnLogicaTeoComputacion = new javax.swing.JButton();
         btnAdminProyectosSoftware = new javax.swing.JButton();
-        jLayeredPane2 = new javax.swing.JLayeredPane();
+        panelQuintoAño = new javax.swing.JLayeredPane();
         btnModelacSimulac = new javax.swing.JButton();
         btnSegAuditInformatica = new javax.swing.JButton();
         btnEvaluacionProyectos = new javax.swing.JButton();
         btnTallerIngSoftware = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
+        labelSemestre10 = new javax.swing.JLabel();
         btnSistDistribuidos = new javax.swing.JButton();
         btnProyectoIngInformatica = new javax.swing.JButton();
-        jLabel10 = new javax.swing.JLabel();
+        labelSemestre9 = new javax.swing.JLabel();
         btnTopicEspecIII = new javax.swing.JButton();
         btnIngSociedad = new javax.swing.JButton();
         jLabel19 = new javax.swing.JLabel();
         btnTopicEspecII = new javax.swing.JButton();
         btnTopicEspecI = new javax.swing.JButton();
-        jLayeredPane6 = new javax.swing.JLayeredPane();
+        panelSextoAño = new javax.swing.JLayeredPane();
         btnDirecGesEmpresas = new javax.swing.JButton();
-        jLabel12 = new javax.swing.JLabel();
+        labelSemestre11 = new javax.swing.JLabel();
         btnTopicEspecVI = new javax.swing.JButton();
         btnSeminarioInf = new javax.swing.JButton();
         btnTopicEspecIV = new javax.swing.JButton();
         btnTopicEspecV = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         btnTrabajoTitulacion = new javax.swing.JButton();
-        jLabel17 = new javax.swing.JLabel();
+        labelSemestre12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -157,7 +157,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
 
         filler12.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel3.setText("Semestre 2");
+        labelSemestre2.setText("Semestre 2");
 
         btnFundaProgramacion.setFont(new java.awt.Font("Lucida Grande", 0, 7)); // NOI18N
         btnFundaProgramacion.setText("<html><center>FUNDAMENTOS DE LA <br><center>COMPUTACIÓN Y LA <br><center>PROGRAMACIÓN");
@@ -227,7 +227,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnQuimica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnQuimica.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLabel2.setText("Semestre 1");
+        labelSemestre1.setText("Semestre 1");
 
         btnCalculoII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         btnCalculoII.setText("CALCULO II");
@@ -258,93 +258,93 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnFisicaII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFisicaII.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLayeredPane3.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnFundaProgramacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnIntroIngenieria, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnDesarrolloPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnMetodosEstudio, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnAlgebraI, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(jLabel14, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnFisicaI, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnQuimica, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnCalculoII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnAlgebraII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnCalculoI, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane3.setLayer(btnFisicaII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(labelSemestre2, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnFundaProgramacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnIntroIngenieria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnDesarrolloPersonal, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnMetodosEstudio, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnAlgebraI, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(jLabel14, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnFisicaI, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnQuimica, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(labelSemestre1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnCalculoII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnAlgebraII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnCalculoI, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelPrimerAño.setLayer(btnFisicaII, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jLayeredPane3Layout = new javax.swing.GroupLayout(jLayeredPane3);
-        jLayeredPane3.setLayout(jLayeredPane3Layout);
-        jLayeredPane3Layout.setHorizontalGroup(
-            jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane3Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelPrimerAñoLayout = new javax.swing.GroupLayout(panelPrimerAño);
+        panelPrimerAño.setLayout(panelPrimerAñoLayout);
+        panelPrimerAñoLayout.setHorizontalGroup(
+            panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelSemestre1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                        .addComponent(labelSemestre2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addComponent(btnDesarrolloPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnQuimica, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                    .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                             .addComponent(btnMetodosEstudio, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(107, 107, 107))
-                        .addGroup(jLayeredPane3Layout.createSequentialGroup()
-                            .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelPrimerAñoLayout.createSequentialGroup()
+                            .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(btnAlgebraI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btnCalculoI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(btnCalculoII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(btnAlgebraII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addComponent(btnFisicaI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnFundaProgramacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addComponent(btnIntroIngenieria, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnFisicaII, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addGap(60, 60, 60)
                         .addComponent(jLabel14)))
                 .addGap(0, 10, Short.MAX_VALUE))
         );
 
-        jLayeredPane3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAlgebraI, btnAlgebraII, btnCalculoI, btnCalculoII, btnDesarrolloPersonal, btnFisicaI, btnFisicaII, btnFundaProgramacion, btnIntroIngenieria, btnMetodosEstudio, btnQuimica});
+        panelPrimerAñoLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnAlgebraI, btnAlgebraII, btnCalculoI, btnCalculoII, btnDesarrolloPersonal, btnFisicaI, btnFisicaII, btnFundaProgramacion, btnIntroIngenieria, btnMetodosEstudio, btnQuimica});
 
-        jLayeredPane3Layout.setVerticalGroup(
-            jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane3Layout.createSequentialGroup()
+        panelPrimerAñoLayout.setVerticalGroup(
+            panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(labelSemestre1)
+                    .addComponent(labelSemestre2))
                 .addGap(6, 6, 6)
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnCalculoII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnCalculoI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAlgebraI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAlgebraII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnFundaProgramacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnFisicaI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnIntroIngenieria, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnFisicaII, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane3Layout.createSequentialGroup()
+                .addGroup(panelPrimerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelPrimerAñoLayout.createSequentialGroup()
                         .addComponent(btnDesarrolloPersonal, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnMetodosEstudio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -352,7 +352,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addContainerGap(68, Short.MAX_VALUE))
         );
 
-        jLayeredPane3Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAlgebraI, btnAlgebraII, btnCalculoI, btnCalculoII, btnDesarrolloPersonal, btnFisicaI, btnFisicaII, btnFundaProgramacion, btnIntroIngenieria, btnMetodosEstudio, btnQuimica});
+        panelPrimerAñoLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {btnAlgebraI, btnAlgebraII, btnCalculoI, btnCalculoII, btnDesarrolloPersonal, btnFisicaI, btnFisicaII, btnFundaProgramacion, btnIntroIngenieria, btnMetodosEstudio, btnQuimica});
 
         btnEDECO.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnEDECO.setText("<html><center>ESTRUCTURA <br><center>DE <br><center>COMPUTADORES");
@@ -364,7 +364,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnInglesI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInglesI.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLabel4.setText("Semestre 3");
+        labelSemestre3.setText("Semestre 3");
 
         btnAnalisisEstadistico.setFont(new java.awt.Font("Lucida Grande", 0, 10)); // NOI18N
         btnAnalisisEstadistico.setText("<html><center>ANALISIS <br><center>ESTADISTICO");
@@ -374,10 +374,10 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jLabel15.setText("Segundo Año");
 
-        btnAnalisisEstructuraDatos.setFont(new java.awt.Font("Lucida Grande", 0, 7)); // NOI18N
-        btnAnalisisEstructuraDatos.setText("<html><center>ANALISIS DE DATOS Y <br><center>ESTRUCTURA DE DATOS");
-        btnAnalisisEstructuraDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAnalisisEstructuraDatos.setMaximumSize(new java.awt.Dimension(95, 25));
+        btnAnalisisAlgoritmosEstructuraDatos.setFont(new java.awt.Font("Lucida Grande", 0, 7)); // NOI18N
+        btnAnalisisAlgoritmosEstructuraDatos.setText("<html><center>ANALISIS DE ALGORITMOS Y <br><center>Y ESTRUCTURA DE DATOS");
+        btnAnalisisAlgoritmosEstructuraDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAnalisisAlgoritmosEstructuraDatos.setMaximumSize(new java.awt.Dimension(95, 25));
 
         btnCalculoIII.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
         btnCalculoIII.setText("CALCULO III");
@@ -409,7 +409,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnComunicacionEfectiva.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnComunicacionEfectiva.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLabel5.setText("Semestre 4");
+        labelSemestre4.setText("Semestre 4");
 
         btnFundaEconomia.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnFundaEconomia.setText("<html><center>FUNDAMENTOS<br><center> DE LA<br><center> ECONOMIA");
@@ -436,98 +436,98 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnParadigmasProgramacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnParadigmasProgramacion.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLayeredPane4.setLayer(btnEDECO, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnInglesI, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnAnalisisEstadistico, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(jLabel15, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnAnalisisEstructuraDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnCalculoIII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnElectromagnetismo, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnInglesII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnEcuaDiferenciales, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnComunicacionEfectiva, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnFundaEconomia, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnMetodosProgramacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane4.setLayer(btnParadigmasProgramacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnEDECO, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnInglesI, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(labelSemestre3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnAnalisisEstadistico, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(jLabel15, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnAnalisisAlgoritmosEstructuraDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnCalculoIII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnElectromagnetismo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnInglesII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnEcuaDiferenciales, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnComunicacionEfectiva, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(labelSemestre4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnFundaEconomia, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnMetodosProgramacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSegundoAño.setLayer(btnParadigmasProgramacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jLayeredPane4Layout = new javax.swing.GroupLayout(jLayeredPane4);
-        jLayeredPane4.setLayout(jLayeredPane4Layout);
-        jLayeredPane4Layout.setHorizontalGroup(
-            jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane4Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelSegundoAñoLayout = new javax.swing.GroupLayout(panelSegundoAño);
+        panelSegundoAño.setLayout(panelSegundoAñoLayout);
+        panelSegundoAñoLayout.setHorizontalGroup(
+            panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addComponent(btnComunicacionEfectiva, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnInglesII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addComponent(btnElectromagnetismo, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnCalculoIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
-                        .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
+                        .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnMetodosProgramacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnInglesI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnEcuaDiferenciales, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnFundaEconomia, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnEDECO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnAnalisisEstadistico, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnParadigmasProgramacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnAnalisisEstructuraDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                            .addComponent(btnAnalisisAlgoritmosEstructuraDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
+                        .addComponent(labelSemestre3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel5)
+                        .addComponent(labelSemestre4)
                         .addGap(46, 46, 46))
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addGap(58, 58, 58)
                         .addComponent(jLabel15)))
                 .addGap(12, 12, 12))
         );
-        jLayeredPane4Layout.setVerticalGroup(
-            jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane4Layout.createSequentialGroup()
+        panelSegundoAñoLayout.setVerticalGroup(
+            panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jLayeredPane4Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
-                                        .addComponent(jLabel5)
+                        .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(panelSegundoAñoLayout.createSequentialGroup()
+                                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
+                                        .addComponent(labelSemestre4)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(btnCalculoIII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(btnElectromagnetismo, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addComponent(jLabel4))
+                                    .addComponent(labelSemestre3))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnInglesII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(btnComunicacionEfectiva, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnInglesI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btnAnalisisEstadistico, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(6, 6, 6)
-                .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnEcuaDiferenciales, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEDECO, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnFundaEconomia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnParadigmasProgramacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jLayeredPane4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                .addGroup(panelSegundoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addGap(6, 6, 6)
-                        .addComponent(btnAnalisisEstructuraDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane4Layout.createSequentialGroup()
+                        .addComponent(btnAnalisisAlgoritmosEstructuraDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelSegundoAñoLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnMetodosProgramacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -542,13 +542,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnSISTOPE.setToolTipText("");
         btnSISTOPE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSISTOPE.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnSISTOPE.setMinimumSize(new java.awt.Dimension(97, 37));
 
         btnProsLenguajesFormales.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnProsLenguajesFormales.setText("<html><center>PROCESAMIENTO <br><center>DE LENGUAJES<br><center>FORMALES");
         btnProsLenguajesFormales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnProsLenguajesFormales.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnProsLenguajesFormales.setMinimumSize(new java.awt.Dimension(97, 39));
 
         btnOrgaComputadores.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnOrgaComputadores.setText("<html><center>ORGANIZACIÓN <br><center>DE<br><center>COMPUTADORES");
@@ -573,12 +571,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnIngenieriaSistemas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngenieriaSistemas.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLabel7.setText("Semestre 6");
+        labelSemestre6.setText("Semestre 6");
 
         btnAntroIngenieria.setText("<html><center>ANTROPOLOGIA<br><center>E INGENIERIA");
         btnAntroIngenieria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAntroIngenieria.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnAntroIngenieria.setMinimumSize(new java.awt.Dimension(115, 37));
         btnAntroIngenieria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAntroIngenieriaActionPerformed(evt);
@@ -594,7 +591,6 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnInglesIV.setText("<html><center>INGLES IV");
         btnInglesIV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInglesIV.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnInglesIV.setMinimumSize(new java.awt.Dimension(68, 23));
 
         btnAlgoritmosAvanzados.setFont(new java.awt.Font("Lucida Grande", 0, 11)); // NOI18N
         btnAlgoritmosAvanzados.setText("<html><center>ALGORITMOS<br><center>AVANZADOS");
@@ -605,122 +601,119 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnAlgoritmosNumericos.setText("<html><center>ALGORITMOS<br><center>NUMERICOS");
         btnAlgoritmosNumericos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAlgoritmosNumericos.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnAlgoritmosNumericos.setMinimumSize(new java.awt.Dimension(113, 41));
 
         btnDiseñoBaseDatos.setFont(new java.awt.Font("Lucida Grande", 0, 9)); // NOI18N
         btnDiseñoBaseDatos.setText("<html><center>DISEÑO DE<br><center>BASES DE DATOS");
         btnDiseñoBaseDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDiseñoBaseDatos.setMaximumSize(new java.awt.Dimension(95, 25));
 
-        jLabel1.setText("Semestre 5");
+        labelSemestre5.setText("Semestre 5");
 
-        jLayeredPane5.setLayer(btnTallerBaseDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnSISTOPE, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnProsLenguajesFormales, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnOrgaComputadores, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnFINGESO, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnIngenieriaSistemas, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnAntroIngenieria, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnInglesIII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnInglesIV, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnAlgoritmosAvanzados, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnAlgoritmosNumericos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(btnDiseñoBaseDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane5.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnTallerBaseDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnSISTOPE, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnProsLenguajesFormales, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnOrgaComputadores, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(jLabel16, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnFINGESO, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnIngenieriaSistemas, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(labelSemestre6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnAntroIngenieria, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnInglesIII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnInglesIV, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnAlgoritmosAvanzados, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnAlgoritmosNumericos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(btnDiseñoBaseDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelTercerAño.setLayer(labelSemestre5, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jLayeredPane5Layout = new javax.swing.GroupLayout(jLayeredPane5);
-        jLayeredPane5.setLayout(jLayeredPane5Layout);
-        jLayeredPane5Layout.setHorizontalGroup(
-            jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane5Layout.createSequentialGroup()
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane5Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelTercerAñoLayout = new javax.swing.GroupLayout(panelTercerAño);
+        panelTercerAño.setLayout(panelTercerAñoLayout);
+        panelTercerAñoLayout.setHorizontalGroup(
+            panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTercerAñoLayout.createSequentialGroup()
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelTercerAñoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jLayeredPane5Layout.createSequentialGroup()
+                        .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
                                 .addComponent(btnFINGESO, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnAntroIngenieria, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jLayeredPane5Layout.createSequentialGroup()
+                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
                                 .addComponent(btnAlgoritmosAvanzados, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnAlgoritmosNumericos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jLayeredPane5Layout.createSequentialGroup()
+                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
                                 .addComponent(btnDiseñoBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnSISTOPE, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jLayeredPane5Layout.createSequentialGroup()
+                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
                                 .addComponent(btnOrgaComputadores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnProsLenguajesFormales, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jLayeredPane5Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
+                                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelSemestre5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnIngenieriaSistemas, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelSemestre6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnInglesIV, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jLayeredPane5Layout.createSequentialGroup()
+                            .addGroup(panelTercerAñoLayout.createSequentialGroup()
                                 .addComponent(btnInglesIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnTallerBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jLayeredPane5Layout.createSequentialGroup()
+                    .addGroup(panelTercerAñoLayout.createSequentialGroup()
                         .addGap(76, 76, 76)
                         .addComponent(jLabel16)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jLayeredPane5Layout.setVerticalGroup(
-            jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane5Layout.createSequentialGroup()
+        panelTercerAñoLayout.setVerticalGroup(
+            panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTercerAñoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel1))
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelSemestre6)
+                    .addComponent(labelSemestre5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnIngenieriaSistemas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnInglesIV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnDiseñoBaseDatos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnSISTOPE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnOrgaComputadores, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnProsLenguajesFormales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnFINGESO, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAntroIngenieria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnInglesIII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnTallerBaseDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelTercerAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAlgoritmosNumericos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAlgoritmosAvanzados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(122, 122, 122))
         );
 
-        jLabel8.setText("Semestre 7");
+        labelSemestre7.setText("Semestre 7");
 
         btnRedesComputadores.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnRedesComputadores.setText("<html><center>REDES DE<br><center>COMPUTADORES");
         btnRedesComputadores.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnRedesComputadores.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnRedesComputadores.setMinimumSize(new java.awt.Dimension(93, 29));
 
         btnMetodosOptimizacion.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnMetodosOptimizacion.setText("<html><center>METODOS DE<br><center>OMPTIMIZACION");
         btnMetodosOptimizacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosOptimizacion.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnMetodosOptimizacion.setMinimumSize(new java.awt.Dimension(93, 29));
         btnMetodosOptimizacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMetodosOptimizacionActionPerformed(evt);
@@ -731,26 +724,22 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnSistemasComunicacion.setText("<html><center>SISTEMAS DE<br><center>COMUNICACION");
         btnSistemasComunicacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSistemasComunicacion.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnSistemasComunicacion.setMinimumSize(new java.awt.Dimension(91, 29));
 
-        jLabel9.setText("Semestre 8");
+        labelSemestre8.setText("Semestre 8");
 
         btnFinanzasContabilidad.setFont(new java.awt.Font("Tahoma", 0, 9)); // NOI18N
         btnFinanzasContabilidad.setText("<html><center>FINANZAS Y<br><center>CONTABILIDAD");
         btnFinanzasContabilidad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnFinanzasContabilidad.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnFinanzasContabilidad.setMinimumSize(new java.awt.Dimension(107, 31));
 
         btnMacroeconomia.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnMacroeconomia.setText("<html><center>MACROECONOMIA<br><center>Y GLOBALIZACION");
         btnMacroeconomia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMacroeconomia.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnMacroeconomia.setMinimumSize(new java.awt.Dimension(103, 29));
 
         btnInfModelosEstadisticos.setText("<html><center>INFERENCIA Y<br><center>MODELOS<br><center>ESTADISTICOS");
         btnInfModelosEstadisticos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnInfModelosEstadisticos.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnInfModelosEstadisticos.setMinimumSize(new java.awt.Dimension(105, 51));
 
         jLabel18.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jLabel18.setText("Cuarto Año");
@@ -759,104 +748,100 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnMetodosIngSoftware.setText("<html><center>METODOS DE<br><center>INGENIERIA DE<br><center>SOFTWARE");
         btnMetodosIngSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMetodosIngSoftware.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnMetodosIngSoftware.setMinimumSize(new java.awt.Dimension(78, 39));
 
         btnAnalisisDatos.setText("<html><center>ANALISIS DE<br><center>DATOS");
         btnAnalisisDatos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAnalisisDatos.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnAnalisisDatos.setMinimumSize(new java.awt.Dimension(82, 37));
 
         btnLogicaTeoComputacion.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnLogicaTeoComputacion.setText("<html><center>LLÓGICA Y TEORIA<br><center>DE LA<br><center>COMPUTACION");
         btnLogicaTeoComputacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLogicaTeoComputacion.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnLogicaTeoComputacion.setMinimumSize(new java.awt.Dimension(87, 39));
 
         btnAdminProyectosSoftware.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnAdminProyectosSoftware.setText("<html><center>ADMINISTRACION<br><center>DE PROYECTOS<br><center>DE SOFTWARE");
         btnAdminProyectosSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAdminProyectosSoftware.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnAdminProyectosSoftware.setMinimumSize(new java.awt.Dimension(101, 39));
 
-        jLayeredPane1.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnRedesComputadores, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnMetodosOptimizacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnSistemasComunicacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnFinanzasContabilidad, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnMacroeconomia, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnInfModelosEstadisticos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnMetodosIngSoftware, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnAnalisisDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnLogicaTeoComputacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(btnAdminProyectosSoftware, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(labelSemestre7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnRedesComputadores, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnMetodosOptimizacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnSistemasComunicacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(labelSemestre8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnFinanzasContabilidad, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnMacroeconomia, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnInfModelosEstadisticos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(jLabel18, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnMetodosIngSoftware, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnAnalisisDatos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnLogicaTeoComputacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelCuartoAño.setLayer(btnAdminProyectosSoftware, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
-        jLayeredPane1.setLayout(jLayeredPane1Layout);
-        jLayeredPane1Layout.setHorizontalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelCuartoAñoLayout = new javax.swing.GroupLayout(panelCuartoAño);
+        panelCuartoAño.setLayout(panelCuartoAñoLayout);
+        panelCuartoAñoLayout.setHorizontalGroup(
+            panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                .addComponent(jLabel8)
+                        .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
+                                .addComponent(labelSemestre7)
                                 .addGap(54, 54, 54)
-                                .addComponent(jLabel9))
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                                .addComponent(labelSemestre8))
+                            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                                 .addComponent(btnRedesComputadores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnMetodosOptimizacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
+                                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnInfModelosEstadisticos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnLogicaTeoComputacion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnFinanzasContabilidad, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnAdminProyectosSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                                 .addComponent(btnMacroeconomia, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnAnalisisDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                                 .addComponent(btnMetodosIngSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btnSistemasComunicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
+                    .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addComponent(jLabel18)))
                 .addGap(424, 424, 424))
         );
-        jLayeredPane1Layout.setVerticalGroup(
-            jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane1Layout.createSequentialGroup()
+        panelCuartoAñoLayout.setVerticalGroup(
+            panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelCuartoAñoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(jLabel9))
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelSemestre7)
+                    .addComponent(labelSemestre8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnMetodosOptimizacion, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                     .addComponent(btnRedesComputadores, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAnalisisDatos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMacroeconomia, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSistemasComunicacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnMetodosIngSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnFinanzasContabilidad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnInfModelosEstadisticos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelCuartoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAdminProyectosSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLogicaTeoComputacion, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(50, Short.MAX_VALUE))
@@ -866,48 +851,41 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnModelacSimulac.setText("<html><center>MODELACION<br><center>Y SIMULACION");
         btnModelacSimulac.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnModelacSimulac.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnModelacSimulac.setMinimumSize(new java.awt.Dimension(101, 31));
 
         btnSegAuditInformatica.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnSegAuditInformatica.setText("<html><center>SEGURIDAD Y<br><center>AUDITORIA<br><center>INFORMATICA");
         btnSegAuditInformatica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSegAuditInformatica.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnSegAuditInformatica.setMinimumSize(new java.awt.Dimension(85, 39));
 
         btnEvaluacionProyectos.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnEvaluacionProyectos.setText("<html><center>EVALUACION<br><center>DE PROYECTOS");
         btnEvaluacionProyectos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEvaluacionProyectos.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnEvaluacionProyectos.setMinimumSize(new java.awt.Dimension(83, 29));
 
         btnTallerIngSoftware.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnTallerIngSoftware.setText("<html><center>TALLER DE<br><center>INGENIERIA DE<br><center>SOFTWARE");
         btnTallerIngSoftware.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTallerIngSoftware.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTallerIngSoftware.setMinimumSize(new java.awt.Dimension(78, 39));
 
-        jLabel11.setText("Semestre 10");
+        labelSemestre10.setText("Semestre 10");
 
         btnSistDistribuidos.setText("<html><center>SISTEMAS<br><center>DISTRIBUIDOS");
         btnSistDistribuidos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSistDistribuidos.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnSistDistribuidos.setMinimumSize(new java.awt.Dimension(105, 37));
 
         btnProyectoIngInformatica.setFont(new java.awt.Font("Tahoma", 0, 8)); // NOI18N
         btnProyectoIngInformatica.setText("<html><center>PROYECTO DE<br><center>INGENIERIA<br><center>INFORMATICA");
         btnProyectoIngInformatica.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel10.setText("Semestre 9");
+        labelSemestre9.setText("Semestre 9");
 
         btnTopicEspecIII.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD III");
         btnTopicEspecIII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecIII.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTopicEspecIII.setMinimumSize(new java.awt.Dimension(104, 37));
 
         btnIngSociedad.setText("<html><center>INGENIERIA Y<br><center>SOCIEDAD");
         btnIngSociedad.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnIngSociedad.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnIngSociedad.setMinimumSize(new java.awt.Dimension(95, 37));
 
         jLabel19.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jLabel19.setText("Quinto Año");
@@ -915,92 +893,90 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnTopicEspecII.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD II");
         btnTopicEspecII.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecII.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTopicEspecII.setMinimumSize(new java.awt.Dimension(104, 37));
 
         btnTopicEspecI.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         btnTopicEspecI.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD I");
         btnTopicEspecI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecI.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTopicEspecI.setMinimumSize(new java.awt.Dimension(104, 35));
 
-        jLayeredPane2.setLayer(btnModelacSimulac, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnSegAuditInformatica, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnEvaluacionProyectos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnTallerIngSoftware, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jLabel11, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnSistDistribuidos, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnProyectoIngInformatica, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jLabel10, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnTopicEspecIII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnIngSociedad, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnTopicEspecII, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(btnTopicEspecI, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnModelacSimulac, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnSegAuditInformatica, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnEvaluacionProyectos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnTallerIngSoftware, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(labelSemestre10, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnSistDistribuidos, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnProyectoIngInformatica, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(labelSemestre9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnTopicEspecIII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnIngSociedad, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(jLabel19, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnTopicEspecII, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelQuintoAño.setLayer(btnTopicEspecI, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
-        jLayeredPane2.setLayout(jLayeredPane2Layout);
-        jLayeredPane2Layout.setHorizontalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelQuintoAñoLayout = new javax.swing.GroupLayout(panelQuintoAño);
+        panelQuintoAño.setLayout(panelQuintoAñoLayout);
+        panelQuintoAñoLayout.setHorizontalGroup(
+            panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelQuintoAñoLayout.createSequentialGroup()
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelQuintoAñoLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelQuintoAñoLayout.createSequentialGroup()
+                                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnSistDistribuidos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnEvaluacionProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnTallerIngSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                         .addComponent(btnSegAuditInformatica, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(btnProyectoIngInformatica, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(btnTopicEspecIII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelQuintoAñoLayout.createSequentialGroup()
+                                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btnIngSociedad, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnModelacSimulac, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                                    .addGroup(panelQuintoAñoLayout.createSequentialGroup()
                                         .addGap(4, 4, 4)
-                                        .addComponent(jLabel10)))
+                                        .addComponent(labelSemestre9)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
+                                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(labelSemestre10)
                                     .addComponent(btnTopicEspecI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(btnTopicEspecII, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                    .addGroup(panelQuintoAñoLayout.createSequentialGroup()
                         .addGap(69, 69, 69)
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jLayeredPane2Layout.setVerticalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane2Layout.createSequentialGroup()
+        panelQuintoAñoLayout.setVerticalGroup(
+            panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelQuintoAñoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(jLabel11))
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelSemestre9)
+                    .addComponent(labelSemestre10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnTopicEspecI, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnIngSociedad, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnTopicEspecII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnModelacSimulac, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnTopicEspecIII, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSistDistribuidos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSegAuditInformatica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEvaluacionProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelQuintoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnProyectoIngInformatica, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnTallerIngSoftware, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(179, Short.MAX_VALUE))
@@ -1010,29 +986,24 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnDirecGesEmpresas.setText("<html><center>DIRECCION Y<br><center>GESTION DE<br><center>EMPRESAS");
         btnDirecGesEmpresas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnDirecGesEmpresas.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnDirecGesEmpresas.setMinimumSize(new java.awt.Dimension(76, 39));
 
-        jLabel12.setText("Semestre 11");
+        labelSemestre11.setText("Semestre 11");
 
         btnTopicEspecVI.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD VI");
         btnTopicEspecVI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecVI.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTopicEspecVI.setMinimumSize(new java.awt.Dimension(104, 37));
 
         btnSeminarioInf.setText("<html><center>SEMINARIO DE<br><center>INFORMATICA");
         btnSeminarioInf.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSeminarioInf.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnSeminarioInf.setMinimumSize(new java.awt.Dimension(103, 37));
 
         btnTopicEspecIV.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD IV");
         btnTopicEspecIV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecIV.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTopicEspecIV.setMinimumSize(new java.awt.Dimension(104, 37));
 
         btnTopicEspecV.setText("<html><center>TOPICOS DE<br><center>ESPECIALIDAD V");
         btnTopicEspecV.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTopicEspecV.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTopicEspecV.setMinimumSize(new java.awt.Dimension(104, 37));
 
         jLabel13.setFont(new java.awt.Font("Lucida Grande", 0, 15)); // NOI18N
         jLabel13.setText("Sexto Año");
@@ -1040,62 +1011,61 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         btnTrabajoTitulacion.setText("<html><center>TRABAJO DE<br><center>TITULACION"); // NOI18N
         btnTrabajoTitulacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnTrabajoTitulacion.setMaximumSize(new java.awt.Dimension(95, 25));
-        btnTrabajoTitulacion.setMinimumSize(new java.awt.Dimension(94, 37));
 
-        jLabel17.setText("Semestre 12");
+        labelSemestre12.setText("Semestre 12");
 
-        jLayeredPane6.setLayer(btnDirecGesEmpresas, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(btnTopicEspecVI, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(btnSeminarioInf, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(btnTopicEspecIV, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(btnTopicEspecV, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(jLabel13, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(btnTrabajoTitulacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane6.setLayer(jLabel17, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(btnDirecGesEmpresas, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(labelSemestre11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(btnTopicEspecVI, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(btnSeminarioInf, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(btnTopicEspecIV, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(btnTopicEspecV, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(jLabel13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(btnTrabajoTitulacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        panelSextoAño.setLayer(labelSemestre12, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
-        javax.swing.GroupLayout jLayeredPane6Layout = new javax.swing.GroupLayout(jLayeredPane6);
-        jLayeredPane6.setLayout(jLayeredPane6Layout);
-        jLayeredPane6Layout.setHorizontalGroup(
-            jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane6Layout.createSequentialGroup()
+        javax.swing.GroupLayout panelSextoAñoLayout = new javax.swing.GroupLayout(panelSextoAño);
+        panelSextoAño.setLayout(panelSextoAñoLayout);
+        panelSextoAñoLayout.setHorizontalGroup(
+            panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSextoAñoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                .addGroup(panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSextoAñoLayout.createSequentialGroup()
                         .addComponent(btnTopicEspecIV, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnTrabajoTitulacion, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))
-                    .addGroup(jLayeredPane6Layout.createSequentialGroup()
-                        .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelSextoAñoLayout.createSequentialGroup()
+                        .addGroup(panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnDirecGesEmpresas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnTopicEspecVI, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnTopicEspecV, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(btnSeminarioInf, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jLayeredPane6Layout.createSequentialGroup()
+                            .addGroup(panelSextoAñoLayout.createSequentialGroup()
                                 .addGap(4, 4, 4)
-                                .addComponent(jLabel12)
+                                .addComponent(labelSemestre11)
                                 .addGap(42, 42, 42)
-                                .addComponent(jLabel17)))
+                                .addComponent(labelSemestre12)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane6Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelSextoAñoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41))
         );
-        jLayeredPane6Layout.setVerticalGroup(
-            jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jLayeredPane6Layout.createSequentialGroup()
+        panelSextoAñoLayout.setVerticalGroup(
+            panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelSextoAñoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel17))
+                .addGroup(panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(labelSemestre11)
+                    .addComponent(labelSemestre12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jLayeredPane6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(panelSextoAñoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnTrabajoTitulacion, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-                    .addComponent(btnTopicEspecIV, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE))
+                    .addComponent(btnTopicEspecIV, javax.swing.GroupLayout.PREFERRED_SIZE, 45, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnTopicEspecV, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1115,21 +1085,21 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(240, 240, 240))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelPrimerAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelSegundoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelTercerAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(272, 272, 272)
+                        .addGap(0, 0, 0)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(filler3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(251, 251, 251)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(filler4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1153,11 +1123,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                         .addComponent(filler12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelCuartoAño, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelQuintoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLayeredPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(panelSextoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
@@ -1166,12 +1136,12 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLayeredPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLayeredPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLayeredPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(132, 132, 132)
+                            .addComponent(panelTercerAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelCuartoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelQuintoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelSextoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(panelPrimerAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(28, 28, 28)
@@ -1197,7 +1167,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
                             .addComponent(filler5, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(filler4, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(filler12, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLayeredPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(panelSegundoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -1300,9 +1270,9 @@ public class VistaRamosCivil extends javax.swing.JFrame {
     private javax.swing.JButton btnAlgebraII;
     private javax.swing.JButton btnAlgoritmosAvanzados;
     private javax.swing.JButton btnAlgoritmosNumericos;
+    private javax.swing.JButton btnAnalisisAlgoritmosEstructuraDatos;
     private javax.swing.JButton btnAnalisisDatos;
     private javax.swing.JButton btnAnalisisEstadistico;
-    private javax.swing.JButton btnAnalisisEstructuraDatos;
     private javax.swing.JButton btnAntroIngenieria;
     private javax.swing.JButton btnCalculoI;
     private javax.swing.JButton btnCalculoII;
@@ -1369,60 +1339,67 @@ public class VistaRamosCivil extends javax.swing.JFrame {
     private javax.swing.Box.Filler filler7;
     private javax.swing.Box.Filler filler8;
     private javax.swing.Box.Filler filler9;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JLayeredPane jLayeredPane2;
-    private javax.swing.JLayeredPane jLayeredPane3;
-    private javax.swing.JLayeredPane jLayeredPane4;
-    private javax.swing.JLayeredPane jLayeredPane5;
-    private javax.swing.JLayeredPane jLayeredPane6;
+    private javax.swing.JLabel labelSemestre1;
+    private javax.swing.JLabel labelSemestre10;
+    private javax.swing.JLabel labelSemestre11;
+    private javax.swing.JLabel labelSemestre12;
+    private javax.swing.JLabel labelSemestre2;
+    private javax.swing.JLabel labelSemestre3;
+    private javax.swing.JLabel labelSemestre4;
+    private javax.swing.JLabel labelSemestre5;
+    private javax.swing.JLabel labelSemestre6;
+    private javax.swing.JLabel labelSemestre7;
+    private javax.swing.JLabel labelSemestre8;
+    private javax.swing.JLabel labelSemestre9;
+    private javax.swing.JLayeredPane panelCuartoAño;
+    private javax.swing.JLayeredPane panelPrimerAño;
+    private javax.swing.JLayeredPane panelQuintoAño;
+    private javax.swing.JLayeredPane panelSegundoAño;
+    private javax.swing.JLayeredPane panelSextoAño;
+    private javax.swing.JLayeredPane panelTercerAño;
     // End of variables declaration//GEN-END:variables
 
     
     public void agregarListener(ActionListener al){
-        this.btnCalculoI.addActionListener(al);
-        this.btnMetodosProgramacion.addActionListener(al);
-        this.btnFundaEconomia.addActionListener(al);
+        
+        //Area Plan Comun
         this.btnAlgebraI.addActionListener(al);
         this.btnAlgebraII.addActionListener(al);
         this.btnCalculoI.addActionListener(al);
         this.btnCalculoII.addActionListener(al);
-        this.btnCalculoIII.addActionListener(al);
-        this.btnIntroIngenieria.addActionListener(al);
+        this.btnComunicacionEfectiva.addActionListener(al);
+        this.btnDesarrolloPersonal.addActionListener(al);
+        this.btnAnalisisEstadistico.addActionListener(al);
+        this.btnElectromagnetismo.addActionListener(al);
         this.btnFisicaI.addActionListener(al);
         this.btnFisicaII.addActionListener(al);
-        this.btnElectromagnetismo.addActionListener(al);
-        this.btnDesarrolloPersonal.addActionListener(al);
-        this.btnComunicacionEfectiva.addActionListener(al);
         this.btnFundaProgramacion.addActionListener(al);
+        this.btnInglesI.addActionListener(al);
+        this.btnInglesII.addActionListener(al);
+        this.btnInglesIII.addActionListener(al);
+        this.btnInglesIV.addActionListener(al);
+        this.btnIntroIngenieria.addActionListener(al);
         this.btnMetodosEstudio.addActionListener(al);
         this.btnQuimica.addActionListener(al);
+        
+        //Area Especialidad
         this.btnAdminProyectosSoftware.addActionListener(al);
         this.btnAlgoritmosAvanzados.addActionListener(al);
         this.btnAlgoritmosNumericos.addActionListener(al);
+        this.btnAnalisisAlgoritmosEstructuraDatos.addActionListener(al);
         this.btnAnalisisDatos.addActionListener(al);
-        this.btnAnalisisEstructuraDatos.addActionListener(al);
         this.btnAntroIngenieria.addActionListener(al);
+        this.btnCalculoIII.addActionListener(al);
         this.btnDirecGesEmpresas.addActionListener(al);
         this.btnDiseñoBaseDatos.addActionListener(al);
         this.btnEDECO.addActionListener(al);
+        this.btnEcuaDiferenciales.addActionListener(al);
         this.btnEvaluacionProyectos.addActionListener(al);
         this.btnFINGESO.addActionListener(al);
         this.btnInfModelosEstadisticos.addActionListener(al);
@@ -1452,9 +1429,11 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         this.btnTopicEspecV.addActionListener(al);
         this.btnTopicEspecVI.addActionListener(al);
         this.btnTrabajoTitulacion.addActionListener(al);
-        this.btnAnalisisEstadistico.addActionListener(al);
         
-  
+        //Area Economia
+        this.btnFundaEconomia.addActionListener(al);
+        this.btnMacroeconomia.addActionListener(al);
+        this.btnFinanzasContabilidad.addActionListener(al);
     }
 
     
@@ -1496,7 +1475,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
     }
 
     public JButton getBtnAnalisisEstructuraDatos() {
-        return btnAnalisisEstructuraDatos;
+        return btnAnalisisAlgoritmosEstructuraDatos;
     }
 
     public JButton getBtnAntroIngenieria() {
@@ -1711,24 +1690,21 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         asignaturasPlanComun.add(this.btnAlgebraII);
         asignaturasPlanComun.add(this.btnCalculoI);
         asignaturasPlanComun.add(this.btnCalculoII);
-        asignaturasPlanComun.add(this.btnCalculoIII);
-        asignaturasPlanComun.add(this.btnIntroIngenieria);
+        asignaturasPlanComun.add(this.btnComunicacionEfectiva);
+        asignaturasPlanComun.add(this.btnDesarrolloPersonal);
+        asignaturasPlanComun.add(this.btnAnalisisEstadistico);
+        asignaturasPlanComun.add(this.btnElectromagnetismo);
         asignaturasPlanComun.add(this.btnFisicaI);
         asignaturasPlanComun.add(this.btnFisicaII);
-        asignaturasPlanComun.add(this.btnElectromagnetismo);
-        asignaturasPlanComun.add(this.btnDesarrolloPersonal);
-        asignaturasPlanComun.add(this.btnComunicacionEfectiva);
         asignaturasPlanComun.add(this.btnFundaProgramacion);
-        asignaturasPlanComun.add(this.btnMetodosEstudio);
-        asignaturasPlanComun.add(this.btnQuimica);
-        asignaturasPlanComun.add(this.btnAnalisisEstadistico);
         asignaturasPlanComun.add(this.btnInglesI);
         asignaturasPlanComun.add(this.btnInglesII);
         asignaturasPlanComun.add(this.btnInglesIII);
         asignaturasPlanComun.add(this.btnInglesIV);
-        
-        
-        
+        asignaturasPlanComun.add(this.btnIntroIngenieria);
+        asignaturasPlanComun.add(this.btnMetodosEstudio);
+        asignaturasPlanComun.add(this.btnQuimica);
+
         return asignaturasPlanComun;
     }
     
@@ -1739,12 +1715,14 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         asignaturasEspecialidad.add(this.btnAdminProyectosSoftware);
         asignaturasEspecialidad.add(this.btnAlgoritmosAvanzados);
         asignaturasEspecialidad.add(this.btnAlgoritmosNumericos);
+        asignaturasEspecialidad.add(this.btnAnalisisAlgoritmosEstructuraDatos);
         asignaturasEspecialidad.add(this.btnAnalisisDatos);
-        asignaturasEspecialidad.add(this.btnAnalisisEstructuraDatos);
         asignaturasEspecialidad.add(this.btnAntroIngenieria);
+        asignaturasEspecialidad.add(this.btnCalculoIII);
         asignaturasEspecialidad.add(this.btnDirecGesEmpresas);
         asignaturasEspecialidad.add(this.btnDiseñoBaseDatos);
         asignaturasEspecialidad.add(this.btnEDECO);
+        asignaturasEspecialidad.add(this.btnEcuaDiferenciales);
         asignaturasEspecialidad.add(this.btnEvaluacionProyectos);
         asignaturasEspecialidad.add(this.btnFINGESO);
         asignaturasEspecialidad.add(this.btnInfModelosEstadisticos);
@@ -1785,6 +1763,7 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         
         asignaturasEconomia.add(this.btnFinanzasContabilidad);
         asignaturasEconomia.add(this.btnFundaEconomia);
+        asignaturasEconomia.add(this.btnMacroeconomia);
         
         return asignaturasEconomia;
     }

@@ -27,13 +27,7 @@ public class ControladorRamosCivil implements ActionListener{
         
         
     }
-    
-    
-    
-    
-    
-    
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         
@@ -45,7 +39,6 @@ public class ControladorRamosCivil implements ActionListener{
                 ControladorTablero ct = new ControladorTablero(0);
                 vr.dispose();
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
-
             }
         }
         

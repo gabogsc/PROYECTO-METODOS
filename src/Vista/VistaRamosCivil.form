@@ -27,25 +27,25 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="filler1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="240" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jLayeredPane3" min="-2" max="-2" attributes="0"/>
+                      <Component id="panelPrimerAño" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <Component id="jLayeredPane4" min="-2" max="-2" attributes="0"/>
+              <Component id="panelSegundoAño" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLayeredPane5" min="-2" max="-2" attributes="0"/>
+              <Component id="panelTercerAño" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="272" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="filler2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="filler3" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="251" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Component id="filler4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -76,11 +76,11 @@
                       <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLayeredPane1" min="-2" pref="225" max="-2" attributes="0"/>
+                      <Component id="panelCuartoAño" min="-2" pref="225" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
+                      <Component id="panelQuintoAño" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLayeredPane6" min="-2" max="-2" attributes="0"/>
+                      <Component id="panelSextoAño" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -93,13 +93,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLayeredPane5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLayeredPane1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLayeredPane2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLayeredPane6" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLayeredPane3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelTercerAño" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelCuartoAño" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelQuintoAño" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelSextoAño" min="-2" max="-2" attributes="0"/>
+                          <Component id="panelPrimerAño" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="132" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
@@ -133,7 +133,7 @@
                           <Component id="filler12" min="-2" pref="300" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="jLayeredPane4" min="-2" max="-2" attributes="0"/>
+                  <Component id="panelSegundoAño" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -235,7 +235,7 @@
         <AuxValue name="classDetails" type="java.lang.String" value="Box.Filler.HorizontalGlue"/>
       </AuxValues>
     </Component>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane3">
+    <Container class="javax.swing.JLayeredPane" name="panelPrimerA&#xf1;o">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -245,9 +245,9 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="jLabel2" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="labelSemestre1" min="-2" pref="90" max="-2" attributes="0"/>
                           <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="jLabel3" min="-2" pref="90" max="-2" attributes="0"/>
+                          <Component id="labelSemestre2" min="-2" pref="90" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnDesarrolloPersonal" linkSize="2" min="-2" pref="100" max="-2" attributes="0"/>
@@ -297,8 +297,8 @@
                   <Component id="jLabel14" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre1" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre2" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -335,7 +335,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="labelSemestre2">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 2"/>
           </Properties>
@@ -470,7 +470,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="labelSemestre1">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 1"/>
           </Properties>
@@ -542,7 +542,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane4">
+    <Container class="javax.swing.JLayeredPane" name="panelSegundoA&#xf1;o">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -572,13 +572,13 @@
                               <Component id="btnEDECO" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="btnAnalisisEstadistico" min="-2" pref="100" max="-2" attributes="0"/>
                               <Component id="btnParadigmasProgramacion" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                              <Component id="btnAnalisisEstructuraDatos" min="-2" pref="100" max="-2" attributes="0"/>
+                              <Component id="btnAnalisisAlgoritmosEstructuraDatos" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelSemestre3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                          <Component id="labelSemestre4" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
@@ -602,14 +602,14 @@
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelSemestre4" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="btnCalculoIII" min="-2" pref="45" max="-2" attributes="0"/>
                                               <Component id="btnElectromagnetismo" min="-2" pref="45" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelSemestre3" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="btnInglesII" min="-2" pref="45" max="-2" attributes="0"/>
@@ -637,7 +637,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                          <Component id="btnAnalisisEstructuraDatos" min="-2" pref="45" max="-2" attributes="0"/>
+                          <Component id="btnAnalisisAlgoritmosEstructuraDatos" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
@@ -678,7 +678,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="labelSemestre3">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 3"/>
           </Properties>
@@ -705,12 +705,12 @@
             <Property name="text" type="java.lang.String" value="Segundo A&#xf1;o"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="btnAnalisisEstructuraDatos">
+        <Component class="javax.swing.JButton" name="btnAnalisisAlgoritmosEstructuraDatos">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Lucida Grande" size="7" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;ANALISIS DE DATOS Y &lt;br&gt;&lt;center&gt;ESTRUCTURA DE DATOS"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;&lt;center&gt;ANALISIS DE ALGORITMOS Y &lt;br&gt;&lt;center&gt;Y ESTRUCTURA DE DATOS"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor de Mano"/>
             </Property>
@@ -792,7 +792,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="labelSemestre4">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 4"/>
           </Properties>
@@ -847,7 +847,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane5">
+    <Container class="javax.swing.JLayeredPane" name="panelTercerA&#xf1;o">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -879,12 +879,12 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel1" min="-2" pref="100" max="-2" attributes="0"/>
+                                      <Component id="labelSemestre5" min="-2" pref="100" max="-2" attributes="0"/>
                                       <Component id="btnIngenieriaSistemas" alignment="1" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel7" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="labelSemestre6" min="-2" pref="90" max="-2" attributes="0"/>
                                       <Component id="btnInglesIV" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
@@ -911,8 +911,8 @@
                   <Component id="jLabel16" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre5" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -974,9 +974,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[97, 37]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnProsLenguajesFormales">
@@ -990,9 +987,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[97, 39]"/>
             </Property>
           </Properties>
         </Component>
@@ -1049,7 +1043,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="labelSemestre6">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 6"/>
           </Properties>
@@ -1062,9 +1056,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[115, 37]"/>
             </Property>
           </Properties>
           <Events>
@@ -1095,9 +1086,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[68, 23]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnAlgoritmosAvanzados">
@@ -1126,9 +1114,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[113, 41]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnDise&#xf1;oBaseDatos">
@@ -1145,14 +1130,14 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="labelSemestre5">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 5"/>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane1">
+    <Container class="javax.swing.JLayeredPane" name="panelCuartoA&#xf1;o">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1163,9 +1148,9 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelSemestre7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                                  <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelSemestre8" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Component id="btnRedesComputadores" min="-2" pref="100" max="-2" attributes="0"/>
@@ -1211,8 +1196,8 @@
                   <Component id="jLabel18" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre8" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1245,7 +1230,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="labelSemestre7">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 7"/>
           </Properties>
@@ -1262,9 +1247,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[93, 29]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnMetodosOptimizacion">
@@ -1278,9 +1260,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[93, 29]"/>
             </Property>
           </Properties>
           <Events>
@@ -1299,12 +1278,9 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[91, 29]"/>
-            </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="labelSemestre8">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 8"/>
           </Properties>
@@ -1321,9 +1297,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[107, 31]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnMacroeconomia">
@@ -1338,9 +1311,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[103, 29]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnInfModelosEstadisticos">
@@ -1351,9 +1321,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[105, 51]"/>
             </Property>
           </Properties>
         </Component>
@@ -1377,9 +1344,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[78, 39]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnAnalisisDatos">
@@ -1390,9 +1354,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[82, 37]"/>
             </Property>
           </Properties>
         </Component>
@@ -1408,9 +1369,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[87, 39]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnAdminProyectosSoftware">
@@ -1425,14 +1383,11 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[101, 39]"/>
-            </Property>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane2">
+    <Container class="javax.swing.JLayeredPane" name="panelQuintoA&#xf1;o">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1463,12 +1418,12 @@
                                       <Component id="btnModelacSimulac" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                          <Component id="labelSemestre9" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      <Component id="labelSemestre10" min="-2" max="-2" attributes="0"/>
                                       <Component id="btnTopicEspecI" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                                       <Component id="btnTopicEspecII" min="-2" pref="100" max="-2" attributes="0"/>
                                   </Group>
@@ -1491,8 +1446,8 @@
                   <Component id="jLabel19" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre9" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre10" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -1537,9 +1492,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[101, 31]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnSegAuditInformatica">
@@ -1553,9 +1505,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[85, 39]"/>
             </Property>
           </Properties>
         </Component>
@@ -1571,9 +1520,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[83, 29]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnTallerIngSoftware">
@@ -1588,12 +1534,9 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[78, 39]"/>
-            </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel11">
+        <Component class="javax.swing.JLabel" name="labelSemestre10">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 10"/>
           </Properties>
@@ -1606,9 +1549,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[105, 37]"/>
             </Property>
           </Properties>
         </Component>
@@ -1623,7 +1563,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="labelSemestre9">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 9"/>
           </Properties>
@@ -1637,9 +1577,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 37]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnIngSociedad">
@@ -1650,9 +1587,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[95, 37]"/>
             </Property>
           </Properties>
         </Component>
@@ -1673,9 +1607,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 37]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnTopicEspecI">
@@ -1690,14 +1621,11 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 35]"/>
-            </Property>
           </Properties>
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JLayeredPane" name="jLayeredPane6">
+    <Container class="javax.swing.JLayeredPane" name="panelSextoA&#xf1;o">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -1718,9 +1646,9 @@
                               <Component id="btnSeminarioInf" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelSemestre11" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                  <Component id="labelSemestre12" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -1742,8 +1670,8 @@
                   <Component id="jLabel13" min="-2" pref="30" max="-2" attributes="0"/>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre11" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="labelSemestre12" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1776,12 +1704,9 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[76, 39]"/>
-            </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel12">
+        <Component class="javax.swing.JLabel" name="labelSemestre11">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 11"/>
           </Properties>
@@ -1795,9 +1720,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 37]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnSeminarioInf">
@@ -1808,9 +1730,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[103, 37]"/>
             </Property>
           </Properties>
         </Component>
@@ -1823,9 +1742,6 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 37]"/>
-            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btnTopicEspecV">
@@ -1836,9 +1752,6 @@
             </Property>
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
-            </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[104, 37]"/>
             </Property>
           </Properties>
         </Component>
@@ -1859,12 +1772,9 @@
             <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
               <Dimension value="[95, 25]"/>
             </Property>
-            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[94, 37]"/>
-            </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel17">
+        <Component class="javax.swing.JLabel" name="labelSemestre12">
           <Properties>
             <Property name="text" type="java.lang.String" value="Semestre 12"/>
           </Properties>
