@@ -84,7 +84,7 @@ public class ControladorMenuPrincipal implements ActionListener {
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
             }
             else if(carrera.equals("Ing.Ejecucion")){
-                //ControladorRamosCivil cr = new ControladorRamosCivil();
+                ControladorRamosEjecucion cre = new ControladorRamosEjecucion();
                 vmp.dispose();
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
             }

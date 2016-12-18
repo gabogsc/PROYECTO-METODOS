@@ -1172,3 +1172,8 @@
 2016/12/17 :: 21:13:11 =Usuario se logea
 2016/12/17 :: 21:17:43 =Usuario se Registra
 2016/12/17 :: 21:18:52 =Usuario se logea
+2016/12/17 :: 21:27:54 =Usuario se Registra
+2016/12/17 :: 21:28:01 =Usuario se logea
+2016/12/17 :: 21:28:10 =Usuario Ingresa a la BIBLIOTECA CENTRAL
+2016/12/17 :: 21:28:24 =Usuario se logea
+2016/12/17 :: 21:28:27 =Usuario INGRESA A SU MALLA CURRICULAR

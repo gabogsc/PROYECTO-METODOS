@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+import Vista.VistaRamosCivil;
 import Vista.VistaRamosEjecucion;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,5 +14,27 @@ import java.awt.event.ActionListener;
  * @author Gabriel
  */
 public class ControladorRamosEjecucion {
+    private VistaRamosEjecucion vre = new VistaRamosEjecucion();
+    
+    public ControladorRamosEjecucion(){
+ 
+        this.vre.setVisible(true);
+        
+        
+        
+    }
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
     
 }
