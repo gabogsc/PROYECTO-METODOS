@@ -78,7 +78,7 @@ public class ControladorMenuPrincipal implements ActionListener {
         }
         if(vmp.getBtnRamos() == e.getSource()){
             
-            if(carrera.equals("Ing.civil")){
+            if(carrera.equals("Ing.Civil")){
                 ControladorRamosCivil cr = new ControladorRamosCivil();
                 vmp.dispose();
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
