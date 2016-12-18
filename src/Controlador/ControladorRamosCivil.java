@@ -8,6 +8,7 @@ package Controlador;
 import Vista.VistaRamosCivil;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -15,6 +16,7 @@ import java.awt.event.ActionListener;
  */
 public class ControladorRamosCivil implements ActionListener{
     private VistaRamosCivil vr = new VistaRamosCivil();
+    
    
     
     
@@ -37,21 +39,30 @@ public class ControladorRamosCivil implements ActionListener{
         
         //To change body of generated methods, choose Tools | Templates.
         
-        if(vr.getBtnCalculoI()== e.getSource()){
-            ControladorTablero ct = new ControladorTablero(0);
-            vr.dispose();
-            Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
+        for(JButton ramo: this.vr.areaPlanComun()){
             
+            if(e.getSource() == ramo){
+                ControladorTablero ct = new ControladorTablero(0);
+                vr.dispose();
+                Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
+
+            }
         }
         
-        if(vr.getBtnMetodosDeProgramacion() == e.getSource()){
-            ControladorTablero ct = new ControladorTablero(1);
-            vr.dispose();
+        for(JButton ramo: this.vr.areaEspecialidad()){
+            
+            if(e.getSource() == ramo){
+                ControladorTablero ct = new ControladorTablero(1);
+                vr.dispose();
+            }
         }
         
-        if(vr.getBtnFundaEconomia() == e.getSource()){
-            ControladorTablero ct = new ControladorTablero(2);
-            vr.dispose();
+        for(JButton ramo: this.vr.areaEconomia()){
+            
+            if(e.getSource() == ramo){
+                ControladorTablero ct = new ControladorTablero(2);
+                vr.dispose();
+            }
         }
         
             
@@ -62,3 +73,4 @@ public class ControladorRamosCivil implements ActionListener{
     }
     
 }
+

@@ -6,6 +6,7 @@
 package Vista;
 
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JButton;
 
 /**
@@ -1399,16 +1400,64 @@ public class VistaRamosCivil extends javax.swing.JFrame {
         this.btnCalculoI.addActionListener(al);
         this.btnMetodosProgramacion.addActionListener(al);
         this.btnFundaEconomia.addActionListener(al);
+        this.btnAlgebraI.addActionListener(al);
+        this.btnAlgebraII.addActionListener(al);
+        this.btnCalculoI.addActionListener(al);
+        this.btnCalculoII.addActionListener(al);
+        this.btnCalculoIII.addActionListener(al);
+        this.btnIntroIngenieria.addActionListener(al);
+        this.btnFisicaI.addActionListener(al);
+        this.btnFisicaII.addActionListener(al);
+        this.btnElectromagnetismo.addActionListener(al);
+        this.btnDesarrolloPersonal.addActionListener(al);
+        this.btnComunicacionEfectiva.addActionListener(al);
+        this.btnFundaProgramacion.addActionListener(al);
+        this.btnMetodosEstudio.addActionListener(al);
+        this.btnQuimica.addActionListener(al);
+        this.btnAdminProyectosSoftware.addActionListener(al);
+        this.btnAlgoritmosAvanzados.addActionListener(al);
+        this.btnAlgoritmosNumericos.addActionListener(al);
+        this.btnAnalisisDatos.addActionListener(al);
+        this.btnAnalisisEstructuraDatos.addActionListener(al);
+        this.btnAntroIngenieria.addActionListener(al);
+        this.btnDirecGesEmpresas.addActionListener(al);
+        this.btnDiseñoBaseDatos.addActionListener(al);
+        this.btnEDECO.addActionListener(al);
+        this.btnEvaluacionProyectos.addActionListener(al);
+        this.btnFINGESO.addActionListener(al);
+        this.btnInfModelosEstadisticos.addActionListener(al);
+        this.btnIngSociedad.addActionListener(al);
+        this.btnIngenieriaSistemas.addActionListener(al);
+        this.btnLogicaTeoComputacion.addActionListener(al);
+        this.btnMetodosIngSoftware.addActionListener(al);
+        this.btnMetodosOptimizacion.addActionListener(al);
+        this.btnMetodosProgramacion.addActionListener(al);
+        this.btnModelacSimulac.addActionListener(al);
+        this.btnOrgaComputadores.addActionListener(al);
+        this.btnParadigmasProgramacion.addActionListener(al);
+        this.btnProsLenguajesFormales.addActionListener(al);
+        this.btnProyectoIngInformatica.addActionListener(al);
+        this.btnRedesComputadores.addActionListener(al);
+        this.btnSISTOPE.addActionListener(al);
+        this.btnSegAuditInformatica.addActionListener(al);
+        this.btnSeminarioInf.addActionListener(al);
+        this.btnSistDistribuidos.addActionListener(al);
+        this.btnSistemasComunicacion.addActionListener(al);
+        this.btnTallerBaseDatos.addActionListener(al);
+        this.btnTallerIngSoftware.addActionListener(al);
+        this.btnTopicEspecI.addActionListener(al);
+        this.btnTopicEspecII.addActionListener(al);
+        this.btnTopicEspecIII.addActionListener(al);
+        this.btnTopicEspecIV.addActionListener(al);
+        this.btnTopicEspecV.addActionListener(al);
+        this.btnTopicEspecVI.addActionListener(al);
+        this.btnTrabajoTitulacion.addActionListener(al);
+        this.btnAnalisisEstadistico.addActionListener(al);
         
-        
-        
-            
-        
+  
     }
 
-    public JButton getBtnCalculoI() {
-        return this.btnCalculoI;
-    }
+    
 
     public JButton getBtnMetodosDeProgramacion() {
         return this.btnMetodosProgramacion;
@@ -1417,6 +1466,332 @@ public class VistaRamosCivil extends javax.swing.JFrame {
     public JButton getBtnFundaEconomia() {
         return this.btnFundaEconomia;
     }
+
+    public JButton getBtnAdminProyectosSoftware() {
+        return btnAdminProyectosSoftware;
+    }
+
+    public JButton getBtnAlgebraI() {
+        return btnAlgebraI;
+    }
+
+    public JButton getBtnAlgebraII() {
+        return btnAlgebraII;
+    }
+
+    public JButton getBtnAlgoritmosAvanzados() {
+        return btnAlgoritmosAvanzados;
+    }
+
+    public JButton getBtnAlgoritmosNumericos() {
+        return btnAlgoritmosNumericos;
+    }
+
+    public JButton getBtnAnalisisDatos() {
+        return btnAnalisisDatos;
+    }
+
+    public JButton getBtnAnalisisEstadistico() {
+        return btnAnalisisEstadistico;
+    }
+
+    public JButton getBtnAnalisisEstructuraDatos() {
+        return btnAnalisisEstructuraDatos;
+    }
+
+    public JButton getBtnAntroIngenieria() {
+        return btnAntroIngenieria;
+    }
+
+    public JButton getBtnCalculoII() {
+        return btnCalculoII;
+    }
+
+    public JButton getBtnCalculoIII() {
+        return btnCalculoIII;
+    }
+
+    public JButton getBtnComunicacionEfectiva() {
+        return btnComunicacionEfectiva;
+    }
+
+    public JButton getBtnDesarrolloPersonal() {
+        return btnDesarrolloPersonal;
+    }
+
+    public JButton getBtnDirecGesEmpresas() {
+        return btnDirecGesEmpresas;
+    }
+
+    public JButton getBtnDiseñoBaseDatos() {
+        return btnDiseñoBaseDatos;
+    }
+
+    public JButton getBtnEDECO() {
+        return btnEDECO;
+    }
+
+    public JButton getBtnEcuaDiferenciales() {
+        return btnEcuaDiferenciales;
+    }
+
+    public JButton getBtnElectromagnetismo() {
+        return btnElectromagnetismo;
+    }
+
+    public JButton getBtnEvaluacionProyectos() {
+        return btnEvaluacionProyectos;
+    }
+
+    public JButton getBtnFINGESO() {
+        return btnFINGESO;
+    }
+
+    public JButton getBtnFinanzasContabilidad() {
+        return btnFinanzasContabilidad;
+    }
+
+    public JButton getBtnFisicaI() {
+        return btnFisicaI;
+    }
+
+    public JButton getBtnFisicaII() {
+        return btnFisicaII;
+    }
+
+    public JButton getBtnFundaProgramacion() {
+        return btnFundaProgramacion;
+    }
+
+    public JButton getBtnInfModelosEstadisticos() {
+        return btnInfModelosEstadisticos;
+    }
+
+    public JButton getBtnIngSociedad() {
+        return btnIngSociedad;
+    }
+
+    public JButton getBtnIngenieriaSistemas() {
+        return btnIngenieriaSistemas;
+    }
+
+    public JButton getBtnInglesI() {
+        return btnInglesI;
+    }
+
+    public JButton getBtnInglesII() {
+        return btnInglesII;
+    }
+
+    public JButton getBtnInglesIII() {
+        return btnInglesIII;
+    }
+
+    public JButton getBtnInglesIV() {
+        return btnInglesIV;
+    }
+
+    public JButton getBtnIntroIngenieria() {
+        return btnIntroIngenieria;
+    }
+
+    public JButton getBtnLogicaTeoComputacion() {
+        return btnLogicaTeoComputacion;
+    }
+
+    public JButton getBtnMacroeconomia() {
+        return btnMacroeconomia;
+    }
+
+    public JButton getBtnMetodosEstudio() {
+        return btnMetodosEstudio;
+    }
+
+    public JButton getBtnMetodosIngSoftware() {
+        return btnMetodosIngSoftware;
+    }
+
+    public JButton getBtnMetodosOptimizacion() {
+        return btnMetodosOptimizacion;
+    }
+
+    public JButton getBtnMetodosProgramacion() {
+        return btnMetodosProgramacion;
+    }
+
+    public JButton getBtnModelacSimulac() {
+        return btnModelacSimulac;
+    }
+
+    public JButton getBtnOrgaComputadores() {
+        return btnOrgaComputadores;
+    }
+
+    public JButton getBtnParadigmasProgramacion() {
+        return btnParadigmasProgramacion;
+    }
+
+    public JButton getBtnProsLenguajesFormales() {
+        return btnProsLenguajesFormales;
+    }
+
+    public JButton getBtnProyectoIngInformatica() {
+        return btnProyectoIngInformatica;
+    }
+
+    public JButton getBtnQuimica() {
+        return btnQuimica;
+    }
+
+    public JButton getBtnRedesComputadores() {
+        return btnRedesComputadores;
+    }
+
+    public JButton getBtnSISTOPE() {
+        return btnSISTOPE;
+    }
+
+    public JButton getBtnSegAuditInformatica() {
+        return btnSegAuditInformatica;
+    }
+
+    public JButton getBtnSeminarioInf() {
+        return btnSeminarioInf;
+    }
+
+    public JButton getBtnSistDistribuidos() {
+        return btnSistDistribuidos;
+    }
+
+    public JButton getBtnSistemasComunicacion() {
+        return btnSistemasComunicacion;
+    }
+
+    public JButton getBtnTallerBaseDatos() {
+        return btnTallerBaseDatos;
+    }
+
+    public JButton getBtnTallerIngSoftware() {
+        return btnTallerIngSoftware;
+    }
+
+    public JButton getBtnTopicEspecI() {
+        return btnTopicEspecI;
+    }
+
+    public JButton getBtnTopicEspecII() {
+        return btnTopicEspecII;
+    }
+
+    public JButton getBtnTopicEspecIII() {
+        return btnTopicEspecIII;
+    }
+
+    public JButton getBtnTopicEspecIV() {
+        return btnTopicEspecIV;
+    }
+
+    public JButton getBtnTopicEspecV() {
+        return btnTopicEspecV;
+    }
+
+    public JButton getBtnTopicEspecVI() {
+        return btnTopicEspecVI;
+    }
+
+    public JButton getBtnTrabajoTitulacion() {
+        return btnTrabajoTitulacion;
+    }
+    
+    public ArrayList<JButton> areaPlanComun() {
+        
+        ArrayList<JButton> asignaturasPlanComun = new ArrayList<>();
+        
+        asignaturasPlanComun.add(this.btnAlgebraI);
+        asignaturasPlanComun.add(this.btnAlgebraII);
+        asignaturasPlanComun.add(this.btnCalculoI);
+        asignaturasPlanComun.add(this.btnCalculoII);
+        asignaturasPlanComun.add(this.btnCalculoIII);
+        asignaturasPlanComun.add(this.btnIntroIngenieria);
+        asignaturasPlanComun.add(this.btnFisicaI);
+        asignaturasPlanComun.add(this.btnFisicaII);
+        asignaturasPlanComun.add(this.btnElectromagnetismo);
+        asignaturasPlanComun.add(this.btnDesarrolloPersonal);
+        asignaturasPlanComun.add(this.btnComunicacionEfectiva);
+        asignaturasPlanComun.add(this.btnFundaProgramacion);
+        asignaturasPlanComun.add(this.btnMetodosEstudio);
+        asignaturasPlanComun.add(this.btnQuimica);
+        asignaturasPlanComun.add(this.btnAnalisisEstadistico);
+        asignaturasPlanComun.add(this.btnInglesI);
+        asignaturasPlanComun.add(this.btnInglesII);
+        asignaturasPlanComun.add(this.btnInglesIII);
+        asignaturasPlanComun.add(this.btnInglesIV);
+        
+        
+        
+        return asignaturasPlanComun;
+    }
+    
+    public ArrayList<JButton> areaEspecialidad() {
+        
+        ArrayList<JButton> asignaturasEspecialidad = new ArrayList<JButton>();
+        
+        asignaturasEspecialidad.add(this.btnAdminProyectosSoftware);
+        asignaturasEspecialidad.add(this.btnAlgoritmosAvanzados);
+        asignaturasEspecialidad.add(this.btnAlgoritmosNumericos);
+        asignaturasEspecialidad.add(this.btnAnalisisDatos);
+        asignaturasEspecialidad.add(this.btnAnalisisEstructuraDatos);
+        asignaturasEspecialidad.add(this.btnAntroIngenieria);
+        asignaturasEspecialidad.add(this.btnDirecGesEmpresas);
+        asignaturasEspecialidad.add(this.btnDiseñoBaseDatos);
+        asignaturasEspecialidad.add(this.btnEDECO);
+        asignaturasEspecialidad.add(this.btnEvaluacionProyectos);
+        asignaturasEspecialidad.add(this.btnFINGESO);
+        asignaturasEspecialidad.add(this.btnInfModelosEstadisticos);
+        asignaturasEspecialidad.add(this.btnIngSociedad);
+        asignaturasEspecialidad.add(this.btnIngenieriaSistemas);
+        asignaturasEspecialidad.add(this.btnLogicaTeoComputacion);
+        asignaturasEspecialidad.add(this.btnMetodosIngSoftware);
+        asignaturasEspecialidad.add(this.btnMetodosOptimizacion);
+        asignaturasEspecialidad.add(this.btnMetodosProgramacion);
+        asignaturasEspecialidad.add(this.btnModelacSimulac);
+        asignaturasEspecialidad.add(this.btnOrgaComputadores);
+        asignaturasEspecialidad.add(this.btnParadigmasProgramacion);
+        asignaturasEspecialidad.add(this.btnProsLenguajesFormales);
+        asignaturasEspecialidad.add(this.btnProyectoIngInformatica);
+        asignaturasEspecialidad.add(this.btnRedesComputadores);
+        asignaturasEspecialidad.add(this.btnSISTOPE);
+        asignaturasEspecialidad.add(this.btnSegAuditInformatica);
+        asignaturasEspecialidad.add(this.btnSeminarioInf);
+        asignaturasEspecialidad.add(this.btnSistDistribuidos);
+        asignaturasEspecialidad.add(this.btnSistemasComunicacion);
+        asignaturasEspecialidad.add(this.btnTallerBaseDatos);
+        asignaturasEspecialidad.add(this.btnTallerIngSoftware);
+        asignaturasEspecialidad.add(this.btnTopicEspecI);
+        asignaturasEspecialidad.add(this.btnTopicEspecII);
+        asignaturasEspecialidad.add(this.btnTopicEspecIII);
+        asignaturasEspecialidad.add(this.btnTopicEspecIV);
+        asignaturasEspecialidad.add(this.btnTopicEspecV);
+        asignaturasEspecialidad.add(this.btnTopicEspecVI);
+        asignaturasEspecialidad.add(this.btnTrabajoTitulacion);
+        
+        return asignaturasEspecialidad;
+        
+    }
+    
+    public ArrayList<JButton> areaEconomia() {
+        
+        ArrayList<JButton> asignaturasEconomia = new ArrayList<JButton>();
+        
+        asignaturasEconomia.add(this.btnFinanzasContabilidad);
+        asignaturasEconomia.add(this.btnFundaEconomia);
+        
+        return asignaturasEconomia;
+    }
+
+      
+    
+    
 
 
 
