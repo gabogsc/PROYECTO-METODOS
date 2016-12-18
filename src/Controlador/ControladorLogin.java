@@ -27,6 +27,8 @@ import javax.swing.JOptionPane;
 public class ControladorLogin implements ActionListener {
     private Usuario us;
     private VistaLogin vl;
+    public static String usuario;
+    public static String pass;
     public static String nombrePP;
     public static String rolPP;
     public static String nombrePS;
@@ -54,13 +56,15 @@ public class ControladorLogin implements ActionListener {
         if(vl.getBtnIngresar()== (JButton)e.getSource()){
             if(this.vl.getTxtUsuario().getText().equals("")== false ){    
                if(this.us.validarInicio(this.us.ingresar(this.vl.getTxtUsuario().getText()),this.vl.getTxtContraseña().getText())){
+                    usuario = us.getUser(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                    pass = us.getPass(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                     nombrePP = us.getNombrePP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                     rolPP = us.getRolPP(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                     nombrePS = us.getNombrePS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                     rolPS = us.getRolPS(this.us.ingresar(this.vl.getTxtUsuario().getText()));
                     carrera = us.getCarreraUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
-
-                    dinero = 500;
+                    dinero = us.getDineroUsuario(this.us.ingresar(this.vl.getTxtUsuario().getText()));
+                    
                     System.out.println(nombrePP);
                     System.out.println(rolPP);
                     System.out.println(nombrePS);

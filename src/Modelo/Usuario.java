@@ -190,6 +190,45 @@ public String[] ingresar(String user){
         return null;
 }
 
+public boolean eliminarParaReemplazar(String user, String pass, String per1, String rol1,
+                        String per2, String rol2, String carrera, int dinero){
+        
+        try {
+            String query = "DELETE FROM JUGADOR WHERE USUARIO = '"+user+"'";
+                    //+ ",'"+pass+"','"+per1+"',"
+                    //+ "'"+rol1+"','"+per2+"','"+rol2+"','"+carrera+"',"+dinero+")";
+            
+            state = con.createStatement();
+            
+            
+        int saber =  state.executeUpdate(query);
+            
+          if(saber > 0)
+          {
+              return true;
+          }
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Usuario.class.getName()).log(Level.SEVERE, null, ex);
+            
+        }
+        return false;
+    }
+
+
+
+public String getUser(String[] tablaBD){
+   String user= tablaBD[0]; 
+    
+return user;}
+
+public String getPass(String[] tablaBD){
+    
+    String pass= tablaBD[1];
+    
+return pass;}
+
 // Obtener Nombre Personaje principal para despues nombrar a un personaje y posicionarlo en el tablero
 public String getNombrePP(String[] tablaBD){
     
@@ -222,6 +261,12 @@ public String getCarreraUsuario(String[] tablaBD){
     String carreraU= tablaBD[6];
 
 return carreraU;}
+
+public int getDineroUsuario(String[] tablaBD){
+    
+    int dinero= Integer.parseInt(tablaBD[7]);
+return dinero;}
+
 
 
 

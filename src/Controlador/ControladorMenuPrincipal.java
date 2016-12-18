@@ -5,11 +5,31 @@
  */
 package Controlador;
 
+import static Controlador.ControladorLogin.carrera;
 import static Controlador.ControladorLogin.dinero;
+import static Controlador.ControladorLogin.nombrePP;
+import static Controlador.ControladorLogin.nombrePS;
+import static Controlador.ControladorLogin.pass;
+import static Controlador.ControladorLogin.rolPP;
+import static Controlador.ControladorLogin.rolPS;
+import static Controlador.ControladorLogin.usuario;
 import Vista.VistaMenuPrincipal;
 import Vista.VistaRamosCivil;
+import Modelo.Usuario;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import Vista.VistaLogin;
+import Vista.vistaRegistro;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import static java.awt.image.ImageObserver.HEIGHT;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -17,6 +37,7 @@ import java.awt.event.ActionListener;
  */
 public class ControladorMenuPrincipal implements ActionListener {
    private VistaMenuPrincipal vmp;
+   private Usuario us;
    private ControladorBibliotecaCentral cbc;
    
    
@@ -24,6 +45,7 @@ public class ControladorMenuPrincipal implements ActionListener {
        this.vmp = new VistaMenuPrincipal();
        vmp.setVisible(true);
        vmp.agregarListener(this);
+       
        this.vmp.setDinerolabel("Dinero: "+ dinero);
        
   
@@ -63,10 +85,13 @@ public class ControladorMenuPrincipal implements ActionListener {
         }
         
         if(vmp.getBtnCerrarSesion() == e.getSource()){ 
-            //Regrear a la Ventana del Login
-           ControladorLogin cl = new ControladorLogin();
-           vmp.dispose();
-           
+            //Regresar a la Ventana del Login y guardar Dinero
+            us = new Usuario();
+           if(this.us.eliminarParaReemplazar(usuario, pass, nombrePP, rolPP, nombrePS, rolPS, carrera, dinero)) 
+           if(this.us.registrar(usuario, pass, nombrePP, rolPP, nombrePS, rolPS, carrera, dinero)){;
+            ControladorLogin cl = new ControladorLogin();
+            vmp.dispose();
+           }  
         }
         
         
