@@ -906,80 +906,122 @@ public class VistaRamosEjecucion extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
 
-public void agregarListener(ActionListener al) {
-    
-    this.btnAlgebraI.addActionListener(al);
-    this.btnAlgebraII.addActionListener(al);
-    this.btnAlgoritmosNumericos.addActionListener(al);
-    this.btnAnalisisAlgoritmosEstructuraDatos.addActionListener(al);
-    this.btnAnalisisEstadistico.addActionListener(al);
-    this.btnCalculoI.addActionListener(al);
-    this.btnCalculoII.addActionListener(al);
-    this.btnComunicacionEfectiva.addActionListener(al);
-    this.btnDesarrolloPersonal.addActionListener(al);
-    this.btnDiseñoBaseDatos.addActionListener(al);
-    this.btnEDECO.addActionListener(al);
-    this.btnEcuaDiferenciales.addActionListener(al);
-    this.btnElectromagnetismo.addActionListener(al);
-    this.btnEvaluacGestProyectos.addActionListener(al);
-    this.btnFINGESO.addActionListener(al);
-    this.btnFisicaI.addActionListener(al);
-    this.btnFisicaII.addActionListener(al);
-    this.btnFundaEconomia.addActionListener(al);
-    this.btnFundaProgramacion.addActionListener(al);
-    this.btnInformaticaSociedad.addActionListener(al);
-    this.btnIngenieriaSistemas.addActionListener(al);
-    this.btnInglesI.addActionListener(al);
-    this.btnInglesII.addActionListener(al);
-    this.btnInglesIII.addActionListener(al);
-    this.btnInglesIV.addActionListener(al);
-    this.btnIntroIngenieria.addActionListener(al);
-    this.btnMetodosEstudio.addActionListener(al);
-    this.btnMetodosProgramacion.addActionListener(al);
-    this.btnOrgaComputadores.addActionListener(al);
-    this.btnParadigmasProgramacion.addActionListener(al);
-    this.btnProyectoIngSoftware.addActionListener(al);
-    this.btnQuimica.addActionListener(al);
-    this.btnRedesComputadores.addActionListener(al);
-    this.btnSISTOPE.addActionListener(al);
-    this.btnSeminarioCompInf.addActionListener(al);
-    this.btnSistemasInformacion.addActionListener(al);
-    this.btnTallerBaseDatos.addActionListener(al);
-    this.btnTecnicasIngSoftware.addActionListener(al);
-    this.btnTopicEspecI.addActionListener(al);
-    this.btnTopicEspecII.addActionListener(al);
-    this.btnTopicEspecIII.addActionListener(al);
-    this.btnTrabajoTitulacion.addActionListener(al);
-    
-}
+    public void agregarListener(ActionListener al) {
 
-public ArrayList<JButton> areaPlanComun() {
-        
+        //Area Plan Comun
+        this.btnAlgebraI.addActionListener(al);
+        this.btnAlgebraII.addActionListener(al);
+        this.btnCalculoI.addActionListener(al);
+        this.btnCalculoII.addActionListener(al);
+        this.btnAnalisisEstadistico.addActionListener(al);
+        this.btnComunicacionEfectiva.addActionListener(al);
+        this.btnDesarrolloPersonal.addActionListener(al);
+        this.btnElectromagnetismo.addActionListener(al);
+        this.btnFisicaI.addActionListener(al);
+        this.btnFisicaII.addActionListener(al);
+        this.btnFundaProgramacion.addActionListener(al);
+        this.btnInglesI.addActionListener(al);
+        this.btnInglesII.addActionListener(al);
+        this.btnInglesIII.addActionListener(al);
+        this.btnInglesIV.addActionListener(al);
+        this.btnIntroIngenieria.addActionListener(al);
+        this.btnMetodosEstudio.addActionListener(al);
+        this.btnQuimica.addActionListener(al);
+
+        //Area Especialidad
+        this.btnAlgoritmosNumericos.addActionListener(al);
+        this.btnAnalisisAlgoritmosEstructuraDatos.addActionListener(al);
+        this.btnDiseñoBaseDatos.addActionListener(al);
+        this.btnEDECO.addActionListener(al);
+        this.btnEcuaDiferenciales.addActionListener(al);
+        this.btnEvaluacGestProyectos.addActionListener(al);
+        this.btnFINGESO.addActionListener(al);
+        this.btnInformaticaSociedad.addActionListener(al);
+        this.btnIngenieriaSistemas.addActionListener(al);
+        this.btnMetodosProgramacion.addActionListener(al);
+        this.btnOrgaComputadores.addActionListener(al);
+        this.btnParadigmasProgramacion.addActionListener(al);
+        this.btnProyectoIngSoftware.addActionListener(al);
+        this.btnRedesComputadores.addActionListener(al);
+        this.btnSISTOPE.addActionListener(al);
+        this.btnSeminarioCompInf.addActionListener(al);
+        this.btnSistemasInformacion.addActionListener(al);
+        this.btnTallerBaseDatos.addActionListener(al);
+        this.btnTecnicasIngSoftware.addActionListener(al);
+        this.btnTopicEspecI.addActionListener(al);
+        this.btnTopicEspecII.addActionListener(al);
+        this.btnTopicEspecIII.addActionListener(al);
+        this.btnTrabajoTitulacion.addActionListener(al);
+
+        //Area Economia
+        this.btnFundaEconomia.addActionListener(al);
+    }
+
+
+    public ArrayList<JButton> areaPlanComun() {
+
         ArrayList<JButton> asignaturasPlanComun = new ArrayList<>();
-        
+
         asignaturasPlanComun.add(this.btnAlgebraI);
         asignaturasPlanComun.add(this.btnAlgebraII);
         asignaturasPlanComun.add(this.btnCalculoI);
         asignaturasPlanComun.add(this.btnCalculoII);
-        asignaturasPlanComun.add(this.btnIntroIngenieria);
+        asignaturasPlanComun.add(this.btnAnalisisEstadistico);
+        asignaturasPlanComun.add(this.btnComunicacionEfectiva);
+        asignaturasPlanComun.add(this.btnDesarrolloPersonal);
+        asignaturasPlanComun.add(this.btnElectromagnetismo);
         asignaturasPlanComun.add(this.btnFisicaI);
         asignaturasPlanComun.add(this.btnFisicaII);
-        asignaturasPlanComun.add(this.btnElectromagnetismo);
-        asignaturasPlanComun.add(this.btnDesarrolloPersonal);
-        asignaturasPlanComun.add(this.btnComunicacionEfectiva);
         asignaturasPlanComun.add(this.btnFundaProgramacion);
-        asignaturasPlanComun.add(this.btnMetodosEstudio);
-        asignaturasPlanComun.add(this.btnQuimica);
-        asignaturasPlanComun.add(this.btnAnalisisEstadistico);
         asignaturasPlanComun.add(this.btnInglesI);
         asignaturasPlanComun.add(this.btnInglesII);
         asignaturasPlanComun.add(this.btnInglesIII);
         asignaturasPlanComun.add(this.btnInglesIV);
-        
-        
-        
+        asignaturasPlanComun.add(this.btnIntroIngenieria);
+        asignaturasPlanComun.add(this.btnMetodosEstudio);
+        asignaturasPlanComun.add(this.btnQuimica);
+
         return asignaturasPlanComun;
     }
 
+    public ArrayList<JButton> areaEspecialidad() {
+        
+        ArrayList<JButton> asignaturasEspecialidad = new ArrayList<>();
+        
+        asignaturasEspecialidad.add(this.btnAlgoritmosNumericos);
+        asignaturasEspecialidad.add(this.btnAnalisisAlgoritmosEstructuraDatos);
+        asignaturasEspecialidad.add(this.btnDiseñoBaseDatos);
+        asignaturasEspecialidad.add(this.btnEDECO);
+        asignaturasEspecialidad.add(this.btnEcuaDiferenciales);
+        asignaturasEspecialidad.add(this.btnEvaluacGestProyectos);
+        asignaturasEspecialidad.add(this.btnFINGESO);
+        asignaturasEspecialidad.add(this.btnInformaticaSociedad);
+        asignaturasEspecialidad.add(this.btnIngenieriaSistemas);
+        asignaturasEspecialidad.add(this.btnMetodosProgramacion);
+        asignaturasEspecialidad.add(this.btnOrgaComputadores);
+        asignaturasEspecialidad.add(this.btnParadigmasProgramacion);
+        asignaturasEspecialidad.add(this.btnProyectoIngSoftware);
+        asignaturasEspecialidad.add(this.btnRedesComputadores);
+        asignaturasEspecialidad.add(this.btnSISTOPE);
+        asignaturasEspecialidad.add(this.btnSeminarioCompInf);
+        asignaturasEspecialidad.add(this.btnSistemasInformacion);
+        asignaturasEspecialidad.add(this.btnTallerBaseDatos);
+        asignaturasEspecialidad.add(this.btnTecnicasIngSoftware);
+        asignaturasEspecialidad.add(this.btnTopicEspecI);
+        asignaturasEspecialidad.add(this.btnTopicEspecII);
+        asignaturasEspecialidad.add(this.btnTopicEspecIII);
+        asignaturasEspecialidad.add(this.btnTrabajoTitulacion);
+        
+        return asignaturasEspecialidad;
+    }
+    
+    public ArrayList<JButton> areaEconomia() {
+        
+        ArrayList<JButton> asignaturasEconomia = new ArrayList<>();
+        
+        asignaturasEconomia.add(this.btnFundaEconomia);
+        
+        return asignaturasEconomia;
+    }
 
 }

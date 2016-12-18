@@ -29,13 +29,13 @@ public class ControladorRamosCivil implements ActionListener{
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent ae) {
         
         //To change body of generated methods, choose Tools | Templates.
         
         for(JButton ramo: this.vr.areaPlanComun()){
             
-            if(e.getSource() == ramo){
+            if(ae.getSource() == ramo){
                 ControladorTablero ct = new ControladorTablero(0);
                 vr.dispose();
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
@@ -44,7 +44,7 @@ public class ControladorRamosCivil implements ActionListener{
         
         for(JButton ramo: this.vr.areaEspecialidad()){
             
-            if(e.getSource() == ramo){
+            if(ae.getSource() == ramo){
                 ControladorTablero ct = new ControladorTablero(1);
                 vr.dispose();
             }
@@ -52,7 +52,7 @@ public class ControladorRamosCivil implements ActionListener{
         
         for(JButton ramo: this.vr.areaEconomia()){
             
-            if(e.getSource() == ramo){
+            if(ae.getSource() == ramo){
                 ControladorTablero ct = new ControladorTablero(2);
                 vr.dispose();
             }
