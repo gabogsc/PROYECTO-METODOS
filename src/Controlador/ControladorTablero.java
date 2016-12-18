@@ -548,10 +548,6 @@ public class ControladorTablero implements ActionListener{
             } 
         }
     }    
-        
-    
-
-
 
     @Override
     public void actionPerformed(ActionEvent e) {
