@@ -1162,3 +1162,13 @@
 2016/12/17 :: 21:07:47 =Usuario se logea
 2016/12/17 :: 21:07:51 =Usuario Ingresa a la BIBLIOTECA CENTRAL
 2016/12/17 :: 21:08:11 =Usuario se logea
+2016/12/17 :: 21:10:17 =Usuario se logea
+2016/12/17 :: 21:10:19 =Usuario Ingresa a la BIBLIOTECA CENTRAL
+2016/12/17 :: 21:10:37 =Usuario se logea
+2016/12/17 :: 21:10:45 =Usuario Ingresa a la BIBLIOTECA CENTRAL
+2016/12/17 :: 21:10:59 =Usuario se logea
+2016/12/17 :: 21:12:49 =Usuario se logea
+2016/12/17 :: 21:12:54 =Usuario Ingresa a la BIBLIOTECA CENTRAL
+2016/12/17 :: 21:13:11 =Usuario se logea
+2016/12/17 :: 21:17:43 =Usuario se Registra
+2016/12/17 :: 21:18:52 =Usuario se logea

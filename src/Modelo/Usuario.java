@@ -190,8 +190,7 @@ public String[] ingresar(String user){
         return null;
 }
 
-public boolean eliminarParaReemplazar(String user, String pass, String per1, String rol1,
-                        String per2, String rol2, String carrera, int dinero){
+public boolean eliminarParaReemplazar(String user){
         
         try {
             String query = "DELETE FROM JUGADOR WHERE USUARIO = '"+user+"'";

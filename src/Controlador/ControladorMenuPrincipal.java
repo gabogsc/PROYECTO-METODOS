@@ -77,17 +77,24 @@ public class ControladorMenuPrincipal implements ActionListener {
             
         }
         if(vmp.getBtnRamos() == e.getSource()){
-            ControladorRamosCivil cr = new ControladorRamosCivil();
-            vmp.dispose();
-            Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
             
+            if(carrera.equals("Ing.civil")){
+                ControladorRamosCivil cr = new ControladorRamosCivil();
+                vmp.dispose();
+                Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
+            }
+            else if(carrera.equals("Ing.Ejecucion")){
+                //ControladorRamosCivil cr = new ControladorRamosCivil();
+                vmp.dispose();
+                Otros.registroUsuario.actividadUsuario("Usuario INGRESA A SU MALLA CURRICULAR");
+            }
             
         }
         
         if(vmp.getBtnCerrarSesion() == e.getSource()){ 
             //Regresar a la Ventana del Login y guardar Dinero
             us = new Usuario();
-           if(this.us.eliminarParaReemplazar(usuario, pass, nombrePP, rolPP, nombrePS, rolPS, carrera, dinero)) 
+           if(this.us.eliminarParaReemplazar(usuario)) 
            if(this.us.registrar(usuario, pass, nombrePP, rolPP, nombrePS, rolPS, carrera, dinero)){;
             ControladorLogin cl = new ControladorLogin();
             vmp.dispose();
