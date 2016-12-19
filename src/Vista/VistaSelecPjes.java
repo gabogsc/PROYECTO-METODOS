@@ -33,13 +33,16 @@ public class VistaSelecPjes extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel3 = new javax.swing.JLabel();
-        btnUlloa = new javax.swing.JRadioButton();
-        btnRusio = new javax.swing.JRadioButton();
-        btnCharlie = new javax.swing.JRadioButton();
-        btnArru = new javax.swing.JRadioButton();
-        btnPoto = new javax.swing.JRadioButton();
         jTextField1 = new javax.swing.JTextField();
         btnSelec = new javax.swing.JButton();
+        btnCharlie = new javax.swing.JButton();
+        btnUlloa = new javax.swing.JButton();
+        btnArru = new javax.swing.JButton();
+        btnPoto = new javax.swing.JButton();
+        btnRusio = new javax.swing.JButton();
+        btnDeshacer = new javax.swing.JButton();
+        btnVaciar = new javax.swing.JButton();
+        btnTerminarSeleccion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,50 +50,52 @@ public class VistaSelecPjes extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 102, 51));
         jLabel3.setText("Selección De Personajes");
 
-        buttonGroup1.add(btnUlloa);
-        btnUlloa.setText("Ulloa Machine");
-        btnUlloa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUlloaActionPerformed(evt);
-            }
-        });
-
-        buttonGroup1.add(btnRusio);
-        btnRusio.setText("rusio");
-
-        buttonGroup1.add(btnCharlie);
-        btnCharlie.setText("Charlie Killer 17");
-
-        buttonGroup1.add(btnArru);
-        btnArru.setText("CumbiArru");
-
-        buttonGroup1.add(btnPoto);
-        btnPoto.setText("Potokslfjksd");
-
         jTextField1.setText("jTextField1");
 
         btnSelec.setText("Seleccionar");
+
+        btnCharlie.setText("Charlie Killer");
+
+        btnUlloa.setText("Ulloa");
+
+        btnArru.setText("Arru");
+
+        btnPoto.setText("Potojsdsadasd");
+
+        btnRusio.setText("Rusio");
+
+        btnDeshacer.setText("Deshacer");
+
+        btnVaciar.setText("Vaciar");
+
+        btnTerminarSeleccion.setText("Terminar Seleccion");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(159, 159, 159)
+                .addGap(80, 80, 80)
+                .addComponent(btnVaciar)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnPoto)
-                            .addComponent(btnArru)
-                            .addComponent(btnCharlie)
-                            .addComponent(btnUlloa)
-                            .addComponent(btnRusio))
-                        .addGap(101, 101, 101)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(btnSelec)))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(btnUlloa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnArru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnPoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnRusio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnCharlie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnSelec)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnDeshacer, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
+                            .addComponent(btnTerminarSeleccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(185, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -98,32 +103,30 @@ public class VistaSelecPjes extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel3)
+                .addGap(26, 26, 26)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(btnUlloa)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRusio)
-                        .addGap(18, 18, 18)
                         .addComponent(btnCharlie)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnUlloa)
                         .addGap(18, 18, 18)
                         .addComponent(btnArru)
                         .addGap(18, 18, 18)
-                        .addComponent(btnPoto))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(26, 26, 26)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(22, 22, 22)
-                .addComponent(btnSelec)
-                .addContainerGap(102, Short.MAX_VALUE))
+                        .addComponent(btnPoto)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRusio)))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSelec)
+                    .addComponent(btnDeshacer)
+                    .addComponent(btnVaciar)
+                    .addComponent(btnTerminarSeleccion))
+                .addContainerGap(90, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnUlloaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUlloaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnUlloaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,47 +164,71 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton btnArru;
-    private javax.swing.JRadioButton btnCharlie;
-    private javax.swing.JRadioButton btnPoto;
-    private javax.swing.JRadioButton btnRusio;
+    private javax.swing.JButton btnArru;
+    private javax.swing.JButton btnCharlie;
+    private javax.swing.JButton btnDeshacer;
+    private javax.swing.JButton btnPoto;
+    private javax.swing.JButton btnRusio;
     private javax.swing.JButton btnSelec;
-    private javax.swing.JRadioButton btnUlloa;
+    private javax.swing.JButton btnTerminarSeleccion;
+    private javax.swing.JButton btnUlloa;
+    private javax.swing.JButton btnVaciar;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
-    public void AgregarActionListener(ActionListener e){
+    public void AgregarActionListener(ActionListener al){
         
-        this.btnSelec.addActionListener(e);
-        
-        
+        this.btnSelec.addActionListener(al);
+        this.btnDeshacer.addActionListener(al);
+        this.btnArru.addActionListener(al);
+        this.btnCharlie.addActionListener(al);
+        this.btnRusio.addActionListener(al);
+        this.btnPoto.addActionListener(al);
+        this.btnUlloa.addActionListener(al);
+        this.btnVaciar.addActionListener(al);
+        this.btnTerminarSeleccion.addActionListener(al);
     }
     
-    public JRadioButton getRadioBtnULLOA() {
+    public JButton getBtnULLOA() {
         return btnUlloa;
     }
 
-    public JRadioButton getRadioBtnRusio() {
+    public JButton getBtnRusio() {
         return btnRusio;
     }
 
-    public JRadioButton getRadioBtnCharlie() {
+    public JButton getBtnCharlie() {
         return btnCharlie;
     }
 
-    public JRadioButton getRadioBtnArru() {
+    public JButton getBtnArru() {
         return btnArru;
     }
 
-    public JRadioButton getRadioBtnPoto() {
+    public JButton getBtnPoto() {
         return btnPoto;
     }
 
     public JButton getBtnSelec() {
         return btnSelec;
     }
+    
+    public JButton getBtnDeshacer() {
+        return btnDeshacer;
+    }
+
+    public JButton getBtnVaciar() {
+        return btnVaciar;
+    }
+
+    public JButton getBtnTerminarSeleccion() {
+        return btnTerminarSeleccion;
+    }
+
+    
+    
     
     
     

@@ -28,23 +28,31 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
+              <Component id="btnVaciar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                  <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="btnPoto" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnArru" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnCharlie" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnUlloa" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="btnRusio" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="165" max="-2" attributes="0"/>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
-                      <Component id="btnSelec" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="btnUlloa" max="32767" attributes="0"/>
+                              <Component id="btnArru" max="32767" attributes="0"/>
+                              <Component id="btnPoto" max="32767" attributes="0"/>
+                              <Component id="btnRusio" max="32767" attributes="0"/>
+                              <Component id="btnCharlie" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="btnSelec" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="btnDeshacer" min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jTextField1" pref="165" max="32767" attributes="0"/>
+                          <Component id="btnTerminarSeleccion" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
               <EmptySpace pref="185" max="32767" attributes="0"/>
@@ -56,27 +64,29 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jTextField1" min="-2" pref="227" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="btnCharlie" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnUlloa" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnRusio" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="btnCharlie" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                       <Component id="btnArru" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btnPoto" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="jTextField1" min="-2" pref="227" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="btnRusio" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-              <Component id="btnSelec" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="102" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="btnSelec" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnDeshacer" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnVaciar" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnTerminarSeleccion" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="90" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -93,49 +103,6 @@
         <Property name="text" type="java.lang.String" value="Selecci&#xf3;n De Personajes"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="btnUlloa">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Ulloa Machine"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUlloaActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnRusio">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="rusio"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnCharlie">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Charlie Killer 17"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnArru">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="CumbiArru"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JRadioButton" name="btnPoto">
-      <Properties>
-        <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-          <ComponentRef name="buttonGroup1"/>
-        </Property>
-        <Property name="text" type="java.lang.String" value="Potokslfjksd"/>
-      </Properties>
-    </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">
       <Properties>
         <Property name="text" type="java.lang.String" value="jTextField1"/>
@@ -144,6 +111,46 @@
     <Component class="javax.swing.JButton" name="btnSelec">
       <Properties>
         <Property name="text" type="java.lang.String" value="Seleccionar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnCharlie">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Charlie Killer"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnUlloa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Ulloa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnArru">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Arru"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnPoto">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Potojsdsadasd"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnRusio">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rusio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnDeshacer">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Deshacer"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnVaciar">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Vaciar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="btnTerminarSeleccion">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Terminar Seleccion"/>
       </Properties>
     </Component>
   </SubComponents>
