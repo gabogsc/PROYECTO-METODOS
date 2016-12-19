@@ -967,6 +967,19 @@ public class Escenario {
         personajeEntregable=personyus.get(indice);
         return personajeEntregable;
     }
+    public void eliminarPersonaje(int posX,int posY){
+        this.matrizEscenario[posX][posY].setCaminable(true);
+        this.matrizEscenario[posX][posY].getPersonaje().setBandoPersonaje("");
+        this.matrizEscenario[posX][posY].getPersonaje().setNombrePersonaje("");
+        this.matrizEscenario[posX][posY].getPersonaje().setPuntosAtaqueCorto(0);
+        this.matrizEscenario[posX][posY].getPersonaje().setPuntosAtaqueLargo(0);
+        this.matrizEscenario[posX][posY].getPersonaje().setPuntosDefensa(0);
+        this.matrizEscenario[posX][posY].getPersonaje().setPuntosVelocidad(0);
+        this.matrizEscenario[posX][posY].getPersonaje().setTipoPersonaje("");
+        this.matrizEscenario[posX][posY].getPersonaje().setRuta("");
+        this.matrizEscenario[posX][posY].getPersonaje().setRolPersonaje("");
+        
+    }
 
 
     

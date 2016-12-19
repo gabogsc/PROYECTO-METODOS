@@ -563,12 +563,12 @@ public class ControladorTablero implements ActionListener{
         }
         
         Personaje personaje = personajesOrdenadosU.get(0);
-        Personaje personajeCPU = personajesOrdenadosCPU.get(0);
+        
         int fila = personaje.getPosX();
         int columna = personaje.getPosY();
         int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
         jugador = personaje;
-        personCPU = personajeCPU;
+        
         System.out.println("posicion " + fila + "," + columna);
         
         //EVENTOS RELACIONADOS A LA PULSACION DE UN BOTON
@@ -795,6 +795,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -836,6 +837,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -877,6 +879,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -917,6 +920,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -963,6 +967,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1014,6 +1019,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1063,6 +1069,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1111,6 +1118,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1159,6 +1167,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1207,6 +1216,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1255,6 +1265,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1303,6 +1314,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1351,6 +1363,7 @@ public class ControladorTablero implements ActionListener{
                                         CPUMuerta=personajesOrdenadosCPU.get(i);
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
+                                        esc.eliminarPersonaje(xCPU, yCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
@@ -1392,8 +1405,9 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
-            
-            System.out.println("turno de:"+personajeCPU.getPosX()+","+personajeCPU.getPosY());
+            Personaje personajeCPU = personajesOrdenadosCPU.get(0);
+            personCPU = personajeCPU;
+            System.out.println("turno de:"+personCPU.getPosX()+","+personCPU.getPosY());
             if(e.getSource() == this.vt.getBtnVerificarTerminar()){
                 
                 this.vt.getBtnCancelarTerminar().setEnabled(false);
@@ -1403,6 +1417,7 @@ public class ControladorTablero implements ActionListener{
                 personajesOrdenadosU.remove(0);
                 personajesOrdenadosU.add(jugador);
                 contadorMovimientos=0;
+                
                 JOptionPane.showMessageDialog(null,"Turno Computadora");
                 vt.getBtnAtacar().setEnabled(true);
                 vt.getBtnMover().setEnabled(true);
@@ -1424,7 +1439,7 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagMoverCPU){
-                Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
+                Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personCPU, personajesOrdenadosU);
                 
                 
             for(int a = 0; a < 4; a++){
@@ -1435,33 +1450,33 @@ public class ControladorTablero implements ActionListener{
                     //
                 //}   
                 System.out.println("nyus");
-                if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
+                if( (personCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personCPU.getPosX() < PersonajeUsuarioMasCerca.getPosX() ){
                        
             
-                    if(this.esc.getMatrizEscenario()[personajeCPU.getPosX()+1][personajeCPU.getPosY()].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()+1][personajeCPU.getPosY()].isCaminable() == true){
+                    if(this.esc.getMatrizEscenario()[personCPU.getPosX()+1][personCPU.getPosY()].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personCPU.getPosX()+1][personCPU.getPosY()].isCaminable() == true){
             
                         // SETEO POSICION X + 1
                             
                        // System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
                         
-                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
-                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
-                            personajeCPU.setPosX(personajeCPU.getPosX()+1);
-                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
-                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
-                            esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                        if (this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].getText().equals("G")){
+                            this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].setText(null);
+                            personCPU.setPosX(personCPU.getPosX()+1);
+                            this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].setText("G");
+                            this.vt.getMatrizVista()[personCPU.getPosX()][personCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personCPU, personCPU.getPosX(), personCPU.getPosY());
                             System.out.println("nueva pos");
-                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
+                            System.out.println(personCPU.getPosX()+","+personaje.getPosY());
                         }
                         
-                        else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
-                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
-                            personajeCPU.setPosX(personajeCPU.getPosX()+1); 
-                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("A");
-                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
-                            esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                        else if(this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].getText().equals("A")){
+                            this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].setText(null);
+                            personCPU.setPosX(personCPU.getPosX()+1); 
+                            this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].setText("A");
+                            this.vt.getMatrizVista()[personCPU.getPosX()][personCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personCPU, personCPU.getPosX(), personCPU.getPosY());
                             System.out.println("nueva pos");
-                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
+                            System.out.println(personCPU.getPosX()+","+personaje.getPosY());
    
                         }
                         
@@ -1470,22 +1485,22 @@ public class ControladorTablero implements ActionListener{
 
                 }
         
-                else if( (personajeCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personajeCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() > PersonajeUsuarioMasCerca.getPosX() ){
+                else if( (personCPU.getPosX()+1 != PersonajeUsuarioMasCerca.getPosX() || personCPU.getPosX()-1 != PersonajeUsuarioMasCerca.getPosX()  ) && personajeCPU.getPosX() > PersonajeUsuarioMasCerca.getPosX() ){
                     
-                    if(this.esc.getMatrizEscenario()[personajeCPU.getPosX()-1][personajeCPU.getPosY()].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()-1][personajeCPU.getPosY()].isCaminable() == true){
+                    if(this.esc.getMatrizEscenario()[personCPU.getPosX()-1][personCPU.getPosY()].getTipoDeTerreno() != 3 && this.esc.getMatrizEscenario()[personajeCPU.getPosX()-1][personajeCPU.getPosY()].isCaminable() == true){
                         // SETEO POSICION X -1
-                        System.out.println(this.esc.getMatrizEscenario()[personajeCPU.getPosX()][personajeCPU.getPosY()].getTipoDeTerreno());
+                        System.out.println(this.esc.getMatrizEscenario()[personCPU.getPosX()][personCPU.getPosY()].getTipoDeTerreno());
                         
                         
-                        if (this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("G")){
+                        if (this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].getText().equals("G")){
                         
-                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText(null);
-                            personajeCPU.setPosX(personajeCPU.getPosX()-1);
-                            this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].setText("G");
-                            this.vt.getMatrizVista()[personajeCPU.getPosX()][personajeCPU.getPosY()].setForeground(Color.red);
-                            esc.moverAtributos(personajeCPU, personajeCPU.getPosX(), personajeCPU.getPosY());
+                            this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].setText(null);
+                            personCPU.setPosX(personCPU.getPosX()-1);
+                            this.vt.matrizVista[personCPU.getPosX()][personCPU.getPosY()].setText("G");
+                            this.vt.getMatrizVista()[personCPU.getPosX()][personCPU.getPosY()].setForeground(Color.red);
+                            esc.moverAtributos(personCPU, personCPU.getPosX(), personCPU.getPosY());
                             System.out.println("nueva pos");
-                            System.out.println(personajeCPU.getPosX()+","+personaje.getPosY());
+                            System.out.println(personCPU.getPosX()+","+personaje.getPosY());
                      
                         }
                         else if(this.vt.matrizVista[personajeCPU.getPosX()][personajeCPU.getPosY()].getText().equals("A")){
