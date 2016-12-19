@@ -8,6 +8,7 @@ package Vista;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 
 /**
  *
@@ -224,6 +225,16 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     public JButton getBtnTerminarSeleccion() {
         return btnTerminarSeleccion;
     }
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public void setjTextField1(JTextField jTextField1) {
+        this.jTextField1 = jTextField1;
+    }
+    
+    
 
     
     
