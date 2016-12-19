@@ -50,8 +50,6 @@ public class VistaSelecPjes extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 102, 51));
         jLabel3.setText("Selección De Personajes");
 
-        jTextField1.setText("jTextField1");
-
         btnSelec.setText("Seleccionar");
 
         btnCharlie.setText("Charlie Killer");
