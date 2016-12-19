@@ -34,7 +34,7 @@ public class ControladorRamosEjecucion implements ActionListener{
         for(JButton ramo: this.vre.areaPlanComun()){
             
             if(ae.getSource() == ramo){
-                
+                ControladorSelecPjes csp = new ControladorSelecPjes();
                 vre.dispose();
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
                 areaRamo = 0;
@@ -44,7 +44,7 @@ public class ControladorRamosEjecucion implements ActionListener{
         for(JButton ramo: this.vre.areaEspecialidad()){
             
             if(ae.getSource() == ramo){
-                
+                ControladorSelecPjes csp = new ControladorSelecPjes();
                 vre.dispose();
                 areaRamo = 1;
             }
@@ -53,7 +53,7 @@ public class ControladorRamosEjecucion implements ActionListener{
         for(JButton ramo: this.vre.areaEconomia()){
             
             if(ae.getSource() == ramo){
-                
+                ControladorSelecPjes csp = new ControladorSelecPjes();
                 vre.dispose();
                 areaRamo = 2;
             }
