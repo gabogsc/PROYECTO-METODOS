@@ -693,7 +693,7 @@ public class ControladorTablero implements ActionListener{
                     }
                 //MOVIMIENTO INHABILITADO POR DIFERENCIA DE ALTURAS Y PRESENCIA DE PERSONAJES
                     else{
-                        if(alturaFinal-alturaInicial > 2 || alturaFinal-alturaInicial < (-2)){
+                        if(alturaFinal - alturaInicial > 2 || alturaFinal - alturaInicial < (-2)){
                             contadorMovimientos = contadorMovimientos;
                         }
                         else{
@@ -1271,6 +1271,7 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
+            
             System.out.println("turno de:"+personajeCPU.getPosX()+","+personajeCPU.getPosY());
             if(e.getSource() == this.vt.getBtnVerificarTerminar()){
                 
@@ -1285,10 +1286,13 @@ public class ControladorTablero implements ActionListener{
                 vt.getBtnAtacar().setEnabled(true);
                 vt.getBtnMover().setEnabled(true);
                 
-                flagMoverCPU=true;
+                flagMoverCPU = true;
                 flagTurnoCPU = false;
                 vt.getBtnTerminar().doClick();
-            }else if(e.getSource() == this.vt.getBtnCancelarTerminar()){
+                
+            }
+            
+            else if(e.getSource() == this.vt.getBtnCancelarTerminar()){
                 
                 this.vt.getBtnCancelarTerminar().setEnabled(false);
                 this.vt.getBtnVerificarTerminar().setEnabled(false);
@@ -1296,7 +1300,9 @@ public class ControladorTablero implements ActionListener{
                 flagTurnoCPU = false;
                 flagTurno = true;
             } 
-        }else if(flagMoverCPU){
+        }
+        
+        else if(flagMoverCPU){
                 Personaje PersonajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
                 
                 
@@ -1439,23 +1445,24 @@ public class ControladorTablero implements ActionListener{
 
                 }else{
 
-                                //PASAR
-                                System.out.println("TURNO CPU OBLIGADO A PASAR");
+                    //PASAR
+                    System.out.println("TURNO CPU OBLIGADO A PASAR");
 
                 }
-                
-                
 
                 System.out.println("COORDENADAS SETEADAS PERSONAJE");
                 System.out.println(personajeCPU.getPosX()+","+personajeCPU.getPosY());    
 
 
             }
+            
             flagMoverCPU=false;
             flagAtacarCPU=true;
             vt.getBtnTerminar().doClick();
            
-        }else if(flagAtacarCPU){
+        }
+        
+        else if(flagAtacarCPU){
             int x=personajeCPU.getPosX();
             int y=personajeCPU.getPosY();
             Personaje personajeUsuarioMasCerca = this.cpu.personajeMasCercano(personajeCPU, personajesOrdenadosU);
