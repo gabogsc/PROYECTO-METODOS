@@ -13,9 +13,6 @@ import static Controlador.ControladorLogin.nombrePP;
 import static Controlador.ControladorLogin.nombrePS;
 import static Controlador.ControladorLogin.rolPP;
 import static Controlador.ControladorLogin.rolPS;
-import static Controlador.ControladorSelecPjes.personaje3;
-import static Controlador.ControladorSelecPjes.personaje4;
-import static Controlador.ControladorSelecPjes.personaje5;
 import Modelo.Personaje;
 import Vista.VistaRamosCivil;
 import Vista.VistaTablero;
@@ -85,7 +82,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS,personaje3,personaje4,personaje5);
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
 
             
         }   
@@ -94,7 +91,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEspecialidad();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS,personaje3,personaje4,personaje5);
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
 
         }
         else if(tipoDeAsignatura == 2){
@@ -102,7 +99,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEconomia();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS,personaje3,personaje4,personaje5);
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
 
         }
             
@@ -567,7 +564,9 @@ public class ControladorTablero implements ActionListener{
         }
         
         Personaje personaje = personajesOrdenadosU.get(0);
-        
+        personCPU=personajesOrdenadosCPU.get(0);
+        personajesOrdenadosCPU.remove(0);
+        personajesOrdenadosCPU.add(personCPU);
         int fila = personaje.getPosX();
         int columna = personaje.getPosY();
         int alturaInicial= this.esc.getMatrizEscenario()[fila][columna].getAltura();
@@ -794,10 +793,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -838,10 +838,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -882,10 +883,10 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -925,10 +926,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -974,10 +976,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1028,10 +1031,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1080,10 +1084,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1131,10 +1136,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1182,10 +1188,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1233,10 +1240,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1284,10 +1292,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1335,10 +1344,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1386,10 +1396,11 @@ public class ControladorTablero implements ActionListener{
                                 this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setCaminable(true);
                                 int xCPU=enemigo.getPosX();
                                 int yCPU=enemigo.getPosY();
-                                for(int i=0;i<personajesOrdenadosCPU.size();i++){
-                                    if(personajesOrdenadosCPU.get(i).getPosX()==xCPU &&personajesOrdenadosCPU.get(i).getPosY()==yCPU){
-                                        CPUMuerta=personajesOrdenadosCPU.get(i);
-                                        personajesOrdenadosCPU.remove(i);
+                                int tamaño=personajesOrdenadosCPU.size();
+                                for(Personaje person:personajesOrdenadosCPU){
+                                    if(person.getPuntosVidaTotal()<0 || person.getPuntosVidaTotal()==0){  
+                                        CPUMuerta=person;
+                                        personajesOrdenadosCPU.remove(person);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
                                         contadorMuertesCPU++;
@@ -1435,10 +1446,11 @@ public class ControladorTablero implements ActionListener{
         }
         
         else if(flagTurnoCPU){
-            Personaje personajeCPU = personajesOrdenadosCPU.get(0);
-            personCPU = personajeCPU;
-            System.out.println("turno de:"+personCPU.getPosX()+","+personCPU.getPosY());
+            
             if(e.getSource() == this.vt.getBtnVerificarTerminar()){
+                Personaje personajeCPU = personajesOrdenadosCPU.get(0);
+                personCPU = personajeCPU;
+                System.out.println("turno de:"+personCPU.getPosX()+","+personCPU.getPosY());
                 
                 this.vt.getBtnCancelarTerminar().setEnabled(false);
                 this.vt.getBtnVerificarTerminar().setEnabled(false);
@@ -1661,8 +1673,6 @@ public class ControladorTablero implements ActionListener{
                     JOptionPane.showMessageDialog(null,"VIDA RESTANTE:"+vidaEnemigo);
                 }
             }
-            personajesOrdenadosCPU.remove(0);
-            personajesOrdenadosCPU.add(personCPU);
             flagAtacarCPU=false;
             flagTurno=true;
             //vt.getBtnTerminar().doClick();
