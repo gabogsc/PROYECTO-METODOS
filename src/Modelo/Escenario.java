@@ -619,7 +619,7 @@ public class Escenario {
             
             else if(nPjesUsuario >= 2 & matrizEscenario[posX][posY].getTipoDeTerreno()!= 3){
 
-                if(personaje3.equals("ulloa") || personaje4.equals("ulloa") || personaje5.equals("ulloa")){
+                if(personaje3.equals("ulloa")){
 
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
 
@@ -637,7 +637,7 @@ public class Escenario {
 
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(500);
 
-                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(3000);
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(300);
 
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(200);
 
@@ -650,12 +650,86 @@ public class Escenario {
                     listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
                     System.out.println("personaje3 , Ulloa Machine");
                     System.out.println(listaPersonajesUsuario);
+                    personaje3 = "";
+                    
                     nPjesUsuario++;
                 }
                 
-                else if(personaje3.equals("rusio") || personaje4.equals("rusio") || personaje5.equals("rusio")){
+                else if(personaje4.equals("ulloa")){
 
-                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(400);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("ayudante");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Ulloa Machine");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/MegaLucario.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(150);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(300);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(200);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje3 , Ulloa Machine");
+                    System.out.println(listaPersonajesUsuario);
+                    
+                    personaje4 = "";
+                    nPjesUsuario++;
+                }
+                
+                else if(personaje5.equals("ulloa")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(400);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("ayudante");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Ulloa Machine");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/MegaLucario.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(150);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(300);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(200);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje3 , Ulloa Machine");
+                    System.out.println(listaPersonajesUsuario);
+                    
+                    personaje5 = "";
+                    nPjesUsuario++;
+                }
+                
+                else if(personaje3.equals("rusio")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
                     // TIPO DE BANDO == malo , significa que es del equipo de la CPU
                     // TIPO DE BANDO == bueno, significa que es del equipo del usuario
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
@@ -687,11 +761,90 @@ public class Escenario {
                     listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
                     System.out.println("personaje4, rusio");
                     System.out.println(listaPersonajesUsuario);
+                    personaje3 = "";
                     nPjesUsuario++;
 
 
                 }
-                else if(personaje3.equals("charlie") || personaje4.equals("charlie") || personaje5.equals("charlie")){
+                else if(personaje4.equals("rusio")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("rusio");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(400);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(100);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                   
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje4, rusio");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje4 = "";
+                    nPjesUsuario++;
+
+
+                }
+                else if(personaje5.equals("rusio")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Guerrero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("rusio");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(400);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(100);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                   
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje4, rusio");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje5 = "";
+                    nPjesUsuario++;
+
+
+                }
+                else if(personaje3.equals("charlie")){
 
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
                     // TIPO DE BANDO == malo , significa que es del equipo de la CPU
@@ -725,11 +878,91 @@ public class Escenario {
                     listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
                     System.out.println("personaje5, CharlieKIller17");
                     System.out.println(listaPersonajesUsuario);
+                    personaje3 = "";
                     nPjesUsuario++;
 
 
                 }
-                else if(personaje3.equals("arru") || personaje4.equals("arru") || personaje5.equals("arru")){
+                else if(personaje4.equals("charlie")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("CharlieKiller17");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(600);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(700);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(800);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(600);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                 
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje5, CharlieKIller17");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje4 = "";
+                    nPjesUsuario++;
+
+
+                }
+                else if(personaje5.equals("charlie")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("CharlieKiller17");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(600);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(700);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(800);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(600);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                 
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje5, CharlieKIller17");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje5 = "";
+                    nPjesUsuario++;
+
+
+                }
+                
+                else if(personaje3.equals("arru")){
 
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
                     // TIPO DE BANDO == malo , significa que es del equipo de la CPU
@@ -763,10 +996,87 @@ public class Escenario {
                     listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
                     System.out.println("personaje5, CumbiArru");
                     System.out.println(listaPersonajesUsuario);
+                    personaje3 = "";
                     nPjesUsuario++;
 
                 }
-                else if(personaje3.equals("poto") || personaje4.equals("poto") || personaje5.equals("poto")){
+                else if(personaje4.equals("arru")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("CumbiArru");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(200);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(900);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                    
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje5, CumbiArru");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje4 = "";
+                    nPjesUsuario++;
+
+                }
+                else if(personaje5.equals("arru")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(250);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("CumbiArru");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(200);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(900);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(500);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                    
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje5, CumbiArru");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje5 = "";
+                    nPjesUsuario++;
+
+                }
+                else if(personaje3.equals("poto")){
 
                     this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
                     // TIPO DE BANDO == malo , significa que es del equipo de la CPU
@@ -799,6 +1109,79 @@ public class Escenario {
                     listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
                     System.out.println("personaje7 ,Potokslfjksd");
                     System.out.println(listaPersonajesUsuario);
+                    personaje3 = "";
+                    nPjesUsuario++;
+                }
+                else if(personaje4.equals("poto")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(15);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Potokslfjksd");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(25);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(5);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(4);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(14);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje7 ,Potokslfjksd");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje4 = "";
+                    nPjesUsuario++;
+                }
+                else if(personaje5.equals("poto")){
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRolPersonaje("Arquero");
+                    // TIPO DE BANDO == malo , significa que es del equipo de la CPU
+                    // TIPO DE BANDO == bueno, significa que es del equipo del usuario
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setBandoPersonaje("bueno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVidaTotal(15);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setNombrePersonaje("Potokslfjksd");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setRuta("src/Imagenes/Decidueye.png");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setTipoPersonaje("alumno");
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(25);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(5);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(4);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosDefensa(14);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosX(posX);
+
+                    this.matrizEscenario[posX][posY].obtenerPersonaje().setPosY(posY);
+
+                    aumentadorDeVelocidad =+ 100;
+
+                    matrizEscenario[posX][posY].setCaminable(false);
+                    listaPersonajesUsuario.add(matrizEscenario[posX][posY].obtenerPersonaje());
+                    System.out.println("personaje7 ,Potokslfjksd");
+                    System.out.println(listaPersonajesUsuario);
+                    personaje5 = "";
                     nPjesUsuario++;
                 }
  
