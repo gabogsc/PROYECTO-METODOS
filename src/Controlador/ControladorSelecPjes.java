@@ -30,6 +30,7 @@ public class ControladorSelecPjes implements ActionListener{
         
         vsp = new VistaSelecPjes();
         vsp.setVisible(true);
+        vsp.AgregarActionListener(this);
         
     }
     
@@ -52,11 +53,11 @@ public class ControladorSelecPjes implements ActionListener{
         
         
         
-        int aux=0;
-        
+    int aux=0;
+    for(int h=0; h<3;){    
         if(this.vsp.getBtnSelec() == ae.getSource()){
+
            
-           /*for(int h=3; h<3;){
                 if(this.vsp.getRadioBtnArru().isSelected() == true){
                     if(aux == 0){
                         personaje3 = "arru";
@@ -70,7 +71,7 @@ public class ControladorSelecPjes implements ActionListener{
 
                     this.vsp.getRadioBtnArru().setEnabled(false);
                     aux++;
-                    h++;
+                    //h++;
                 }
                 else if(this.vsp.getRadioBtnCharlie().isSelected() == true){
                     if(aux == 0){
@@ -85,7 +86,7 @@ public class ControladorSelecPjes implements ActionListener{
 
                     this.vsp.getRadioBtnCharlie().setEnabled(false);
                     aux++;
-                    h++;
+                    //h++;
                     
 
 
@@ -103,7 +104,7 @@ public class ControladorSelecPjes implements ActionListener{
 
                     this.vsp.getRadioBtnPoto().setEnabled(false);
                     aux++;
-                    h++;
+                    //h++;
                     
 
 
@@ -121,7 +122,7 @@ public class ControladorSelecPjes implements ActionListener{
 
                     this.vsp.getRadioBtnULLOA().setEnabled(false);
                     aux++;
-                    h++;
+                    //h++;
                     
 
 
@@ -139,11 +140,11 @@ public class ControladorSelecPjes implements ActionListener{
 
                     this.vsp.getRadioBtnRusio().setEnabled(false);
                     aux++;
-                    h++;
+                    //h++;
                     
                 }
         
-            }*/
+            }
 
         }
     }

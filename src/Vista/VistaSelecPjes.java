@@ -31,6 +31,7 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel3 = new javax.swing.JLabel();
         btnUlloa = new javax.swing.JRadioButton();
         btnRusio = new javax.swing.JRadioButton();
@@ -46,6 +47,7 @@ public class VistaSelecPjes extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 102, 51));
         jLabel3.setText("Selección De Personajes");
 
+        buttonGroup1.add(btnUlloa);
         btnUlloa.setText("Ulloa Machine");
         btnUlloa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -53,12 +55,16 @@ public class VistaSelecPjes extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(btnRusio);
         btnRusio.setText("rusio");
 
+        buttonGroup1.add(btnCharlie);
         btnCharlie.setText("Charlie Killer 17");
 
+        buttonGroup1.add(btnArru);
         btnArru.setText("CumbiArru");
 
+        buttonGroup1.add(btnPoto);
         btnPoto.setText("Potokslfjksd");
 
         jTextField1.setText("jTextField1");
@@ -161,6 +167,7 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     private javax.swing.JRadioButton btnRusio;
     private javax.swing.JButton btnSelec;
     private javax.swing.JRadioButton btnUlloa;
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
