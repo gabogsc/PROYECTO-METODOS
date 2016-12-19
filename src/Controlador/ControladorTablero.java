@@ -57,6 +57,7 @@ public class ControladorTablero implements ActionListener{
     int columnaActual = 0;
     int filaAnterior = 0;
     int columnaAnterior = 0;
+    int contadorMuertesCPU=0;
     
     
     
@@ -796,13 +797,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -838,13 +841,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -880,13 +885,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -921,13 +928,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -968,13 +977,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1020,13 +1031,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1070,13 +1083,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1119,13 +1134,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1168,13 +1185,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1217,13 +1236,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1266,13 +1287,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1315,13 +1338,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
@@ -1364,13 +1389,15 @@ public class ControladorTablero implements ActionListener{
                                         personajesOrdenadosCPU.remove(i);
                                         personajesMuertosCPU.add(CPUMuerta);
                                         esc.eliminarPersonaje(xCPU, yCPU);
+                                        contadorMuertesCPU++;
+                                        System.out.println(contadorMuertesCPU);
                                         System.out.println("se removio personaje");
                                         break;
                                     }else{
                                         
                                     }
                                 }
-                                if (personajesMuertosCPU.size()==5){
+                                if (contadorMuertesCPU==5){
                                     JOptionPane.showMessageDialog(null,"HAS GANADO LA BATALLA!!!!");
                                     personajeEntregable=esc.obtenerPersonaje(personajesMuertosCPU);
                                     JOptionPane.showMessageDialog(null,"TEN AQUI TU RECOMPENSA:"+personajeEntregable+"\n"+"Nombre:"+personajeEntregable.getNombrePersonaje()+"\n"+"Rol:"+personajeEntregable.getRolPersonaje()+"\n"+"AtaqueCorto/Largo/Defensa:"+personajeEntregable.getPuntosAtaqueCorto()+"/"+personajeEntregable.getPuntosAtaqueLargo()+"/"+personajeEntregable.getPuntosDefensa());
