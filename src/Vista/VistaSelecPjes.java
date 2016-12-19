@@ -44,85 +44,58 @@ public class VistaSelecPjes extends javax.swing.JFrame {
         btnDeshacer = new javax.swing.JButton();
         btnVaciar = new javax.swing.JButton();
         btnTerminarSeleccion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(null);
 
         jLabel3.setFont(new java.awt.Font("Skia", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 51));
         jLabel3.setText("Selección De Personajes");
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(180, 22, 378, 36);
+        getContentPane().add(jTextField1);
+        jTextField1.setBounds(438, 84, 165, 227);
 
         btnSelec.setText("Seleccionar");
+        getContentPane().add(btnSelec);
+        btnSelec.setBounds(180, 345, 115, 29);
 
         btnCharlie.setText("Charlie Killer");
+        getContentPane().add(btnCharlie);
+        btnCharlie.setBounds(180, 84, 135, 29);
 
         btnUlloa.setText("Ulloa");
+        getContentPane().add(btnUlloa);
+        btnUlloa.setBounds(180, 131, 135, 29);
 
         btnArru.setText("Arru");
+        getContentPane().add(btnArru);
+        btnArru.setBounds(180, 178, 135, 29);
 
         btnPoto.setText("Potojsdsadasd");
+        getContentPane().add(btnPoto);
+        btnPoto.setBounds(180, 225, 135, 29);
 
         btnRusio.setText("Rusio");
+        getContentPane().add(btnRusio);
+        btnRusio.setBounds(180, 272, 135, 29);
 
         btnDeshacer.setText("Deshacer");
+        getContentPane().add(btnDeshacer);
+        btnDeshacer.setBounds(313, 345, 90, 29);
 
         btnVaciar.setText("Vaciar");
+        getContentPane().add(btnVaciar);
+        btnVaciar.setBounds(80, 345, 82, 29);
 
         btnTerminarSeleccion.setText("Terminar Seleccion");
+        getContentPane().add(btnTerminarSeleccion);
+        btnTerminarSeleccion.setBounds(438, 345, 165, 29);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(btnVaciar)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnUlloa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnArru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnPoto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnRusio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnCharlie, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnSelec)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnDeshacer, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(35, 35, 35)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 165, Short.MAX_VALUE)
-                            .addComponent(btnTerminarSeleccion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(185, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(22, 22, 22)
-                .addComponent(jLabel3)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnCharlie)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnUlloa)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnArru)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnPoto)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnRusio)))
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnSelec)
-                    .addComponent(btnDeshacer)
-                    .addComponent(btnVaciar)
-                    .addComponent(btnTerminarSeleccion))
-                .addContainerGap(90, Short.MAX_VALUE))
-        );
+        jLabel1.setText("Personajes Seleccionados");
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(440, 70, 170, 16);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -173,6 +146,7 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     private javax.swing.JButton btnUlloa;
     private javax.swing.JButton btnVaciar;
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables

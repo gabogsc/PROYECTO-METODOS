@@ -32,6 +32,7 @@ public class ControladorSelecPjes implements ActionListener{
     
     
     
+    
             
     public ControladorSelecPjes(){
         
