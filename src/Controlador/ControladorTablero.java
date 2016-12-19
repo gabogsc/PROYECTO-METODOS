@@ -529,6 +529,7 @@ public class ControladorTablero implements ActionListener{
                 if(this.esc.getMatrizEscenario()[i][j].isCaminable() == false && this.esc.getMatrizEscenario()[i][j].getTipoDeTerreno() != 3){
                     
                     rol = "Rol del personaje: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje() + "<br/>";
+                    nombre = "Nombre: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getNombrePersonaje() + "<br/>";
                     traicion = "-Nivel de Traicion: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosTraicion() + " ptos";
                     puntosAtaqueLargo = "-Ataque Largo: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueLargo() + " ptos" + "<br/>";
                     puntosAtaqueCorto = "-Ataque Corto: " + this.esc.getMatrizEscenario()[i][j].getPersonaje().getPuntosAtaqueCorto() + " ptos" + "<br/>";
@@ -543,7 +544,7 @@ public class ControladorTablero implements ActionListener{
                 Border border = BorderFactory.createLineBorder(new Color(76,79,83)); 
                 UIManager.put("ToolTip.border", border);
                 ToolTipManager.sharedInstance().setDismissDelay(5000); // 15 second delay  
-                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
+                this.vt.getMatrizVista()[i][j].setToolTipText("<html>"+ coordenadas + altura + disponibilidad + terreno + nombre + rol + "<br/>" + vida + defensa + puntosAtaqueLargo + puntosAtaqueCorto + traicion + ".<html>"); // Message to display
                 //System.out.println("El ROL DEL PJE En " + i + "," + j  + "es"+ this.esc.getMatrizEscenario()[i][j].getPersonaje().getRolPersonaje());
             } 
         }
