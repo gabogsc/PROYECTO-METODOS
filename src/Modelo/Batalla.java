@@ -84,8 +84,10 @@ public class Batalla {
             }return dañoRealizado;
         
         }
-  
-    }
+    
+    
+}
+
 
    
 

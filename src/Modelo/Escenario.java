@@ -639,7 +639,7 @@ public class Escenario {
 
                         this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueCorto(100);
 
-                        this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(20);
+                        this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosAtaqueLargo(200000);
 
                         this.matrizEscenario[posX][posY].obtenerPersonaje().setPuntosVelocidad(25+aumentadorDeVelocidad);
 
@@ -960,27 +960,13 @@ public class Escenario {
         return posicionesHabilitadas;
     }
     
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    public void eliminarPersonaje(){}
+    public Personaje obtenerPersonaje(ArrayList<Personaje> personyus){
+        Personaje personajeEntregable;
+        int maximoValor= (personyus.size())-1;
+        int indice=new Random().nextInt(maximoValor);
+        personajeEntregable=personyus.get(indice);
+        return personajeEntregable;
+    }
 
 
     
