@@ -26,7 +26,9 @@ public class ControladorSelecPjes implements ActionListener{
     public static String personaje3;
     public static String personaje4;
     public static String personaje5;
-    public JButton personajeSeleccionado;
+    private JButton personajeSeleccionado;
+    private int aux = 0;
+    private int acompañantes = 0;
     
     
     
@@ -49,12 +51,13 @@ public class ControladorSelecPjes implements ActionListener{
         //To change body of generated methods, choose Tools | Templates
         
         
-        int aux = 0;  
-        int acompañantes = 0;
+        
         
     //ACCIONES RELACIONADAS CON LA SELECCION DE UN PERSONAJE
         if(flagPersonajes) {
             
+
+            System.out.println(acompañantes);
             if(ae.getSource() == this.vsp.getBtnCharlie()){
                 if(aux == 0){
                     personaje3 = "charlie";
@@ -117,13 +120,13 @@ public class ControladorSelecPjes implements ActionListener{
             
             this.personajeSeleccionado = (JButton) ae.getSource();  //PERSONAJE SELECCIONADO
             
-            if(acompañantes <= 3){
+            if(acompañantes <= 2){
                 this.vsp.getBtnSelec().setEnabled(true);
             }
             this.vsp.getBtnVaciar().setEnabled(true);
             this.vsp.getBtnDeshacer().setEnabled(true);
             
-            if(acompañantes == 3){
+            if(acompañantes == 2){
                 this.vsp.getBtnTerminarSeleccion().setEnabled(true);
             }
             
@@ -139,18 +142,15 @@ public class ControladorSelecPjes implements ActionListener{
         //AÑADIR UN PERSONAJE A LA BATALLA    
             if(ae.getSource() == this.vsp.getBtnSelec()){
                 
-                this.personajeSeleccionado.setEnabled(false);
-                acompañantes ++;
-                aux ++;
-                flagAccion = false;
-                flagPersonajes = true;
+                personajeSeleccionado.setEnabled(false);
+                acompañantes++;
+                aux++;
+                
             }
         
         //DESHACER LA SELECCION DE PERSONAJE
             else if(ae.getSource() == this.vsp.getBtnDeshacer()){
                 
-                flagAccion = false;
-                flagPersonajes = true;
             }
             
         //VACIAR LA SELECCION DE PERSONAJES    
@@ -167,19 +167,20 @@ public class ControladorSelecPjes implements ActionListener{
                 this.vsp.getBtnULLOA().setEnabled(true);
                 this.vsp.getBtnRusio().setEnabled(true);
                 
-                flagAccion = false;
-                flagPersonajes = true;
             }
             
         //TERMINAR CON LA SELECCION DE PERSONAJES
             else if(ae.getSource() == this.vsp.getBtnTerminarSeleccion()){
                 
                 ControladorTablero ct = new ControladorTablero(areaRamo);
+                this.vsp.dispose();
             }
             
             this.vsp.getBtnDeshacer().setEnabled(false);
             this.vsp.getBtnVaciar().setEnabled(true);
             this.vsp.getBtnSelec().setEnabled(false);
+            flagAccion = false;
+            flagPersonajes = true;
 
         }
     }
