@@ -16,9 +16,10 @@ import Vista.vistaJuego;
  * @author sebastian
  */
 public class controladorInicioMenu implements ActionListener{
-    
+    //Atributo
     vistaInicioMenu vInicioM;
     
+    //Constructor
     public controladorInicioMenu(){
         vInicioM = new vistaInicioMenu();
         vInicioM.ActionListener(this);

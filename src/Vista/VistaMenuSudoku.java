@@ -6,6 +6,7 @@
 package Vista;
 
 import java.awt.event.ActionListener;
+import javax.swing.JButton;
 
 /**
  *
@@ -245,8 +246,12 @@ public class VistaMenuSudoku extends javax.swing.JFrame {
         btnNivelDificil.addActionListener(aL);
     }
 
-    public Object getBtnRegresar() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public JButton getbtnRegresar() {
+        return btnRegresar;
+    }
+
+    public void setbtnRegresar(JButton btnRegresar) {
+        this.btnRegresar = btnRegresar;
     }
         
     }

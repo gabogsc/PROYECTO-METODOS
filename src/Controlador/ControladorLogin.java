@@ -76,12 +76,13 @@ public class ControladorLogin implements ActionListener {
                     vl.dispose();
 
                }
-            }else{
+            }
+            else{
                 
                 JOptionPane.showMessageDialog(vl, "Rellene todos los campos ", "Error", 0);
                 
             }   
-          //
+          
            
             
             
@@ -94,8 +95,6 @@ public class ControladorLogin implements ActionListener {
             Otros.registroUsuario.actividadUsuario("Usuario se Registra");
             ControladorRegistro cR = new ControladorRegistro();
             vl.setVisible(false);
-            
-       
         }
         
         if(vl.getBtnProbarCon()== (JButton)e.getSource()){

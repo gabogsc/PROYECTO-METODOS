@@ -27,28 +27,30 @@ public class controladorJuego implements ActionListener{
    
             
     public controladorJuego(){
-        this.ALP = new AdivinaLaPalabra();
+        this.ALP = new AdivinaLaPalabra();   
         this.vj = new vistaJuego();
         this.vj.ActionListener(this);
-        //this.ALP 
+        String palabra = ALP.palabra;
+        String encontrarHint = ALP.encontrarHint(palabra);
+        this.vj.setHint(encontrarHint);
         vj.setVisible(true);
     }
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-        this.vj.setHint("Salacadula Chachicomula Bibidi Babidi Buu");
         if(ALP.getCantidad() > 0){
             if(vj.getAceptar()== (JButton)ae.getSource()){
                 System.out.println("Acepteichon");
                 Component frame = null;
                 if(ALP.verificar((vj.getIngresar()))){
-                    vj.dispose();
                     System.out.println("Correcto");
                     JOptionPane.showMessageDialog(frame, "Acertaste, usted ha ganado!."); 
-                    JOptionPane.showMessageDialog(vj, "Felicidades has Ganado 100 Monedas", "Ganaste", 1);
+                    JOptionPane.showMessageDialog(vj, "Felicidades has Ganado 500 Monedas", "Ganaste", 1);
+                    System.out.println("Gano 500 Monedas");
                     JOptionPane.showMessageDialog(vj, "Dinero Anterior: "+dinero, "Recompensa", 1);
-                    dinero=dinero + 100;
+                    dinero=dinero + 500;
                     JOptionPane.showMessageDialog(vj, "Dinero Actual: "+ dinero, "Recompensa ", 1);
+                    vj.dispose();
                     controladorInicioMenu cInicioM = new controladorInicioMenu();
                 }
                 else{
@@ -58,9 +60,10 @@ public class controladorJuego implements ActionListener{
                     vj.setContador(contador);
                 }
             if (ALP.getCantidad() == 0){
-                vj.dispose();
                 System.out.println("Perdeichon");
                 JOptionPane.showMessageDialog(frame, "Usted ha perdido.");
+                vj.dispose();
+                controladorInicioMenu cInicioM = new controladorInicioMenu();
             }
                 if(vj.getAtras()== (JButton)ae.getSource()){
                     vj.dispose();

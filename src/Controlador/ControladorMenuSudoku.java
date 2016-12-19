@@ -12,6 +12,7 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import Vista.VistaBibliotecaCentral;
 
 /**
  *
@@ -72,10 +73,11 @@ public class ControladorMenuSudoku implements ActionListener{
             vms.dispose();
         }
         
-        /*else if (ae.getSource() == this.vms.getBtnRegresar()){
-            this.vms.dispose();
-            cbc= new ControladorBibliotecaCentral();
-        }*/
+        else if (ae.getSource() == this.vms.getbtnRegresar()){
+            VistaBibliotecaCentral vbc = new VistaBibliotecaCentral();
+            vms.dispose();
+            
+        }
     }
 }
     

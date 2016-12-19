@@ -282,8 +282,7 @@ class ControladorSudoku implements ActionListener{
             }
             
             else if((JButton)ae.getSource() == this.vs.getBtnRegresarNiveles()){
-                
-                this.cms = new ControladorMenuSudoku();
+                this.vms = new VistaMenuSudoku();
                 this.vs.setVisible(false);
             }
         }

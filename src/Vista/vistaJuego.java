@@ -77,7 +77,7 @@ public class vistaJuego extends javax.swing.JFrame {
         atras.setText("Atras");
 
         contador.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        contador.setText("6");
+        contador.setText("5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
