@@ -16,7 +16,7 @@ import javax.swing.JButton;
  */
 public class ControladorRamosCivil implements ActionListener{
     private VistaRamosCivil vr = new VistaRamosCivil();
-    
+    public static int areaRamo;
    
     
     
@@ -36,8 +36,10 @@ public class ControladorRamosCivil implements ActionListener{
         for(JButton ramo: this.vr.areaPlanComun()){
             
             if(ae.getSource() == ramo){
-                ControladorTablero ct = new ControladorTablero(0);
+                ControladorSelecPjes csp = new ControladorSelecPjes();
                 vr.dispose();
+                areaRamo = 0;
+                
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
             }
         }
@@ -45,16 +47,18 @@ public class ControladorRamosCivil implements ActionListener{
         for(JButton ramo: this.vr.areaEspecialidad()){
             
             if(ae.getSource() == ramo){
-                ControladorTablero ct = new ControladorTablero(1);
+                ControladorSelecPjes csp = new ControladorSelecPjes();
                 vr.dispose();
+                areaRamo = 1;
             }
         }
         
         for(JButton ramo: this.vr.areaEconomia()){
             
             if(ae.getSource() == ramo){
-                ControladorTablero ct = new ControladorTablero(2);
+                ControladorSelecPjes csp = new ControladorSelecPjes();
                 vr.dispose();
+                areaRamo = 2;
             }
         }
         

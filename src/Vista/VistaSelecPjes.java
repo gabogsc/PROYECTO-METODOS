@@ -5,6 +5,10 @@
  */
 package Vista;
 
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JRadioButton;
+
 /**
  *
  * @author Gabriel
@@ -27,91 +31,93 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        btnUlloa = new javax.swing.JRadioButton();
+        btnRusio = new javax.swing.JRadioButton();
+        btnCharlie = new javax.swing.JRadioButton();
+        btnArru = new javax.swing.JRadioButton();
+        btnPoto = new javax.swing.JRadioButton();
+        jTextField1 = new javax.swing.JTextField();
+        btnSelec = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
-
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList2);
-
-        jButton1.setText("Agregar");
-
-        jButton2.setText("Eliminar");
-
-        jLabel1.setText("Lista De Personajes");
-
-        jLabel2.setText("Personajes Elegidos");
 
         jLabel3.setFont(new java.awt.Font("Skia", 0, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 51));
         jLabel3.setText("Selección De Personajes");
+
+        btnUlloa.setText("Ulloa Machine");
+        btnUlloa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUlloaActionPerformed(evt);
+            }
+        });
+
+        btnRusio.setText("rusio");
+
+        btnCharlie.setText("Charlie Killer 17");
+
+        btnArru.setText("CumbiArru");
+
+        btnPoto.setText("Potokslfjksd");
+
+        jTextField1.setText("jTextField1");
+
+        btnSelec.setText("Seleccionar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(92, 92, 92)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))
-                .addGap(121, 121, 121))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(136, 136, 136))
-            .addGroup(layout.createSequentialGroup()
                 .addGap(159, 159, 159)
-                .addComponent(jLabel3)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnPoto)
+                            .addComponent(btnArru)
+                            .addComponent(btnCharlie)
+                            .addComponent(btnUlloa)
+                            .addComponent(btnRusio))
+                        .addGap(101, 101, 101)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(btnSelec)))
+                .addContainerGap(185, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel3)
-                .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 225, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(47, 47, 47)
+                        .addComponent(btnUlloa)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRusio)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnCharlie)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnArru)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnPoto))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(22, 22, 22)
+                .addComponent(btnSelec)
+                .addContainerGap(102, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnUlloaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUlloaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUlloaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,14 +155,61 @@ public class VistaSelecPjes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JRadioButton btnArru;
+    private javax.swing.JRadioButton btnCharlie;
+    private javax.swing.JRadioButton btnPoto;
+    private javax.swing.JRadioButton btnRusio;
+    private javax.swing.JButton btnSelec;
+    private javax.swing.JRadioButton btnUlloa;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public void AgregarActionListener(ActionListener e){
+        
+        this.btnSelec.addActionListener(e);
+        
+        
+    }
+    
+    public JRadioButton getRadioBtnULLOA() {
+        return btnUlloa;
+    }
+
+    public JRadioButton getRadioBtnRusio() {
+        return btnRusio;
+    }
+
+    public JRadioButton getRadioBtnCharlie() {
+        return btnCharlie;
+    }
+
+    public JRadioButton getRadioBtnArru() {
+        return btnArru;
+    }
+
+    public JRadioButton getRadioBtnPoto() {
+        return btnPoto;
+    }
+
+    public JButton getBtnSelec() {
+        return btnSelec;
+    }
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

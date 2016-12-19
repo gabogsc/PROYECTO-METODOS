@@ -13,6 +13,9 @@ import static Controlador.ControladorLogin.nombrePP;
 import static Controlador.ControladorLogin.nombrePS;
 import static Controlador.ControladorLogin.rolPP;
 import static Controlador.ControladorLogin.rolPS;
+import static Controlador.ControladorSelecPjes.personaje3;
+import static Controlador.ControladorSelecPjes.personaje4;
+import static Controlador.ControladorSelecPjes.personaje5;
 import Modelo.Personaje;
 import Vista.VistaRamosCivil;
 import Vista.VistaTablero;
@@ -82,7 +85,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaPlanComun();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS,personaje3,personaje4,personaje5);
 
             
         }   
@@ -91,7 +94,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEspecialidad();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS,personaje3,personaje4,personaje5);
 
         }
         else if(tipoDeAsignatura == 2){
@@ -99,7 +102,7 @@ public class ControladorTablero implements ActionListener{
             this.esc.GenerarTerrenoAreaDeEconomia();
             this.esc.RevisarRios();
             this.esc.posicionarPjesCPU();
-            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS);
+            this.esc.PosicionarPjesUsuario(nombrePP,rolPP,nombrePS,rolPS,personaje3,personaje4,personaje5);
 
         }
             

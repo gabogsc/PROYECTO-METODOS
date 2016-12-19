@@ -5,6 +5,7 @@
  */
 package Controlador;
 
+
 import Vista.VistaRamosCivil;
 import Vista.VistaRamosEjecucion;
 import java.awt.event.ActionEvent;
@@ -16,6 +17,7 @@ import javax.swing.JButton;
  */
 public class ControladorRamosEjecucion implements ActionListener{
     private VistaRamosEjecucion vre = new VistaRamosEjecucion();
+    private static int areaRamo;
     
     
     public ControladorRamosEjecucion(){
@@ -32,25 +34,28 @@ public class ControladorRamosEjecucion implements ActionListener{
         for(JButton ramo: this.vre.areaPlanComun()){
             
             if(ae.getSource() == ramo){
-                ControladorTablero ct = new ControladorTablero(0);
+                
                 vre.dispose();
                 Otros.registroUsuario.actividadUsuario("Usuario INGRESO A LA BATALLA CALCULO");
+                areaRamo = 0;
             }
         }
         
         for(JButton ramo: this.vre.areaEspecialidad()){
             
             if(ae.getSource() == ramo){
-                ControladorTablero ct = new ControladorTablero(1);
+                
                 vre.dispose();
+                areaRamo = 1;
             }
         }
         
         for(JButton ramo: this.vre.areaEconomia()){
             
             if(ae.getSource() == ramo){
-                ControladorTablero ct = new ControladorTablero(2);
+                
                 vre.dispose();
+                areaRamo = 2;
             }
         }
     }
