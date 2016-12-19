@@ -18,6 +18,7 @@ import javax.swing.JButton;
  */
 
 public class ControladorSelecPjes implements ActionListener{
+    
     private ControladorTablero ct;
     private VistaSelecPjes vsp;
     private boolean flagPersonajes = true;
@@ -30,7 +31,7 @@ public class ControladorSelecPjes implements ActionListener{
     
     
             
-    public ControladorSelecPjes() {
+    public ControladorSelecPjes(){
         
         
         vsp = new VistaSelecPjes();
@@ -42,20 +43,7 @@ public class ControladorSelecPjes implements ActionListener{
         vsp.getBtnTerminarSeleccion().setEnabled(false);
         
     }
-    
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @Override
     public void actionPerformed(ActionEvent ae) {
         //To change body of generated methods, choose Tools | Templates
@@ -138,6 +126,9 @@ public class ControladorSelecPjes implements ActionListener{
             if(acompañantes == 3){
                 this.vsp.getBtnTerminarSeleccion().setEnabled(true);
             }
+            
+            flagPersonajes = false; //ESTA WEA ES
+            flagAccion = true;
 
         }
         
