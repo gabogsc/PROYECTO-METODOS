@@ -577,10 +577,11 @@ public class ControladorTablero implements ActionListener{
                 
                 this.vt.getBtnCancelarMover().setEnabled(true);
                 this.vt.getBtnMover().setEnabled(false);
-                this.esc.casillasEnRango(fila, columna);
+                
                 if(contadorMovimientos <= 3){
                     if(contadorMovimientos == 3){
                         this.vt.getBtnMover().setEnabled(false);
+
 
                         for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                             for (int i = 0; i < 25; i++){
@@ -653,6 +654,8 @@ public class ControladorTablero implements ActionListener{
             
             else if(e.getSource() == this.vt.getBtnTerminar()){
                 
+                
+                
                 this.vt.getBtnVerificarTerminar().setEnabled(true);
                 this.vt.getBtnCancelarTerminar().setEnabled(true);
                 this.vt.getBtnTerminar().setEnabled(false);
@@ -667,6 +670,7 @@ public class ControladorTablero implements ActionListener{
         //EVENTOS RELACIONADOS AL MOVIMIENTO EL PERSONAJE
         
         else if(flagMover){
+            System.out.println("El rol actual es:" + this.esc.getMatrizEscenario()[fila][columna].getPersonaje().getRolPersonaje());
             
             for(ArrayList<Integer> posicion: this.esc.casillasEnRango(fila, columna)){
                 if(e.getSource() == this.vt.matrizVista[posicion.get(0)][posicion.get(1)] && this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].getTipoDeTerreno() != 3
@@ -704,7 +708,7 @@ public class ControladorTablero implements ActionListener{
                                         
                                     }
 
-                                    else{
+                                    else if(personaje.getRolPersonaje().equals("Arquero")){
                                         this.vt.matrizVista[posicion.get(0)][posicion.get(1)].setText("A");
                                         this.esc.getMatrizEscenario()[posicion.get(0)][posicion.get(1)].setPersonaje(jugador);
                                     }
@@ -720,8 +724,8 @@ public class ControladorTablero implements ActionListener{
                                 personaje.setPosY(posicion.get(1));
                                 esc.moverAtributos(jugador, posicion.get(0), posicion.get(1));
                                 
-                                esc.getMatrizEscenario()[fila][columna].getPersonaje().setRolPersonaje("");
                                 this.mostrarLeyenda();
+                                
                                 flagMover = false;
                                 flagTurno = true;
                                         

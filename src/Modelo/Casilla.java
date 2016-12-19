@@ -83,7 +83,7 @@ public class Casilla {
     }
 
     public void setPersonaje(Personaje personaje) {
-        String rol=personaje.getRolPersonaje();
+        String rol = personaje.getRolPersonaje();
         String bando=personaje.getBandoPersonaje();
         String nombre=personaje.getNombrePersonaje();
         String ruta=personaje.getRuta();
